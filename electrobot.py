@@ -22,7 +22,7 @@ def is_owner(ctx):
 @bot.command(pass_context=True)
 @commands.check(is_owner)
 async def oof():
-	await bot.change_presence(game=discord.Game(name='with '+str(len(set(bot.get_all_members())))+' users in '+str(len(bot.servers))+ ' servers'))
+	await bot.change_presence(game=discord.Game(name='with '+str(len(set(bot.get_all_members())))+' users in ' +str(len(bot.servers))+ ' servers'))
  						
 @bot.command(pass_context = True)
 async def ping(ctx):
