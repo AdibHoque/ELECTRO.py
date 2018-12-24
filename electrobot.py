@@ -14,7 +14,7 @@ async def on_ready():
     print('the bot is ready')
     print(bot.user.name)
     print(bot.user.id)
-    bot.loop.create_task(adib())
+    print('working') 
 
 def is_owner(ctx):
     return ctx.message.author.id == "488353416599306270" 
