@@ -4,6 +4,7 @@ import asyncio
 import colorsys
 import random
 import time
+import os
 
 bot = commands.Bot(command_prefix='.')
 bot.remove_command("help")
