@@ -24,7 +24,7 @@ async def _prefix(ctx, new_prefix):
     prefixes[ctx.message.server.id] = new_prefix
     with open("prefixes.json", "w") as f:
         json.dump(prefixes, f)
-        await bot.say('{} is the new prefix'.format(new_prefix))
+        await bot.say('{} is the new prefix!'.format(new_prefix))
 
 @bot.event
 async def on_ready():
@@ -39,7 +39,7 @@ def is_owner(ctx):
 @bot.command(pass_context=True)
 @commands.check(is_owner)
 async def oof():
-	await bot.change_presence(game=discord.Game(name='For e!help with '+str(len(set(bot.get_all_members())))+' users in' +str(len(bot.servers))+' servers'))
+	await bot.change_presence(game=discord.Game(name='For e!help | with '+str(len(set(bot.get_all_members())))+' Users | in ' +str(len(bot.servers))+' Servers'))
  						
 @bot.command(pass_context = True)
 async def ping(ctx):
