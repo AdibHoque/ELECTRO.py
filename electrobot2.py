@@ -119,7 +119,7 @@ async def kiss(ctx, user: discord.User):
 async def hug(ctx, user: discord.User):
 	author = ctx.message.author
 	channel = ctx.message.channel
-	await bot.say('{} was hugged by {}                                https://cdn.discordapp.com/attachments/508674404788600832/527073064144338954/hug-Hk4qu_XvZ.gif'.format(user, author))
+	await bot.say('{} was hugged by {}!https://cdn.discordapp.com/attachments/508674404788600832/527073064144338954/hug-Hk4qu_XvZ.gif'.format(user, author))
 	if user is None:
 		await bot.say('You need to mention a user!')
 
