@@ -1,1 +1,1 @@
-worker: python electrobot2.py 
+worker: python Electro.py 
