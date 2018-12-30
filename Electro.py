@@ -419,32 +419,32 @@ async def membercount(ctx, *args):
     await bot.delete_message(ctx.message)
     
 @bot.command()
-async def fortnite(ctx):
+async def fortnite():
 	await bot.delete_message(ctx.message)
 	await bot.say('<a:fortnite1:527116722369593365> <a:fortnite2:527116726249193472> <a:fortnite1:527116722369593365>')
 	
 @bot.command()
-async def hundred(ctx):
+async def hundred():
 	await bot.delete_message(ctx.message)
 	await bot.say('<a:100:527116694506700819>')
 	
 @bot.command()
-async def party(ctx):
+async def party():
 	await bot.delete_message(ctx.message)
 	await bot.say('<a:PartyGlasses:527116697791102977>')	
 	
 @bot.command()
-async def dogdance(ctx):
+async def dogdance():
 	await bot.delete_message(ctx.message)
 	await bot.say('<a:dogdance:527116702580867092>')
 	
 @bot.command()
-async def hype(ctx):
+async def hype():
 	await bot.delete_message(ctx.message)
 	await bot.say('<a:DiscordHype:527116695253286933>')
 	
 @bot.command()
-async def plsboi(ctx):
+async def plsboi():
 	await bot.delete_message(ctx.message)
 	await bot.say('<a:plsboi:527116722218467328>')
 	
