@@ -468,7 +468,7 @@ async def help1(ctx):
     author = ctx.message.author
     r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
     embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
-    embed.set_author(name='General Commands')
+    embed.set_author(name='GENERAL COMMANDS')
     embed.set_image(url = 'https://cdn.discordapp.com/attachments/526757013745696769/527492677558599696/electro.png')
     embed.add_field(name = 'Ping',value ='Returns ping lantency! **USAGE:**``e!ping``',inline = False)
     embed.add_field(name = 'Userinfo',value ='Shows info about mentioned user! **USAGE:**``e!userinfo @user``',inline = False)
@@ -485,7 +485,7 @@ async def help2(ctx):
     author = ctx.message.author
     r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
     embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
-    embed.set_author(name='Moderation Commands')
+    embed.set_author(name='MODERATION COMMANDS')
     embed.set_image(url = 'https://cdn.discordapp.com/attachments/526757013745696769/527492677558599696/electro.png')
     embed.add_field(name = 'Kick',value ='Kicks out mentioned user from the server! **USAGE:**``e!kick @user``',inline = False)
     embed.add_field(name = 'Ban',value ='Bans mentioned user from the server! **USAGE:**``e!ban @user``',inline = False) 
@@ -504,7 +504,7 @@ async def help3(ctx):
     author = ctx.message.author
     r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
     embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
-    embed.set_author(name='Fun Commands')
+    embed.set_author(name='FUN COMMANDS')
     embed.set_image(url = 'https://cdn.discordapp.com/attachments/526757013745696769/527492677558599696/electro.png')
     embed.add_field(name = 'Joke',value ='Sends a random joke! **USAGE:**``e!joke``',inline = False)
     embed.add_field(name = 'Love',value ='Detect love percentage between two users! **USAGE:**``e!love @user @user``',inline = False) 
@@ -524,7 +524,7 @@ async def help4(ctx):
     author = ctx.message.author
     r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
     embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
-    embed.set_author(name='Emoji Commands')
+    embed.set_author(name='EMOJI COMMANDS')
     embed.set_image(url = 'https://cdn.discordapp.com/attachments/526757013745696769/527492677558599696/electro.png')
     embed.add_field(name = 'Fortnite',value ='<a:fortnite1:527116722369593365> <a:fortnite2:527116726249193472> <a:fortnite1:527116722369593365>',inline = False)
     embed.add_field(name = 'Hundred',value ='<a:100:527116694506700819>',inline = False)
