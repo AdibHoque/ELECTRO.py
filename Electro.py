@@ -47,7 +47,7 @@ async def status_task():
         await asyncio.sleep(5)
         await bot.change_presence(game=discord.Game(name='with '+str(len(set(bot.get_all_members())))+' users'))
         await asyncio.sleep(5)
-        await bot.change_presence(ame=discord.Game(name='in '+str(len(bot.servers))+' servers'))
+        await bot.change_presence(game=discord.Game(name='in '+str(len(bot.servers))+' servers'))
         await asyncio.sleep(5)
 
 @bot.event
