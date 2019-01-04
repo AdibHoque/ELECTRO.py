@@ -93,7 +93,7 @@ async def upvote():
 
 @bot.command(pass_context = True)  
 async def userinfo(ctx, user: discord.Member):
-    r, , b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
+    r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
     embed = discord.Embed(title="{}'s info".format(user.name), description="HERE WHAT I FOUND!", color = discord.Color((r << 16) + (g << 8) + b))
     embed.add_field(name="Name", value=user.name, inline=True)
     embed.add_field(name="ID", value=user.id, inline=True)
