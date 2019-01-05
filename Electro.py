@@ -38,7 +38,7 @@ def setup(bot):
     logger = logging.getLogger('bot')
     bot.add_cog(DiscordBotsOrgAPI(bot))
 
-bot = commands.Bot(command_prefix='e!')
+bot = commands.Bot(command_prefix=commands.when_mentioned_or('e!'))
 bot.remove_command("help")
 
 async def status_task():
