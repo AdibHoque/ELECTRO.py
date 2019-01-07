@@ -378,8 +378,11 @@ async def slap(ctx, user: discord.Member = None):
         embed.set_image(url=random.choice(gifs))
         await bot.say(embed=embed)
    
+@bot.command(pass_context=True)
+async def howgay(ctx):
+	await bot.say('no u')
+
 @bot.command(pass_context=True, aliases=['server'])
-@commands.has_permissions(kick_members=True)
 async def membercount(ctx, *args):
     g = ctx.message.server
 
