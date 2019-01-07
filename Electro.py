@@ -382,7 +382,7 @@ async def slap(ctx, user: discord.Member = None):
 async def howgay(ctx):
 	await bot.say('no u')
 
-@bot.command(pass_context=True, aliases=['server'])
+@bot.command(pass_context=True)
 async def membercount(ctx, *args):
     g = ctx.message.server
 
