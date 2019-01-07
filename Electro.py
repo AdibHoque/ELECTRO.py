@@ -68,14 +68,14 @@ async def on_member_join(member):
             return
         if channel.name == '々joins':
             await bot.say(channel, '**{member.name}** Welcome to **{member.server.name}** Hope you will be active here!')
-            await bot.say(channel, '**We now have** 👨‍👩‍👦‍👦`{}` **members!**'.format(str(member.server.member_count)))
+            await bot.say(channel, '**We now have** :family_mwbb:`{}` **members!**'.format(str(member.server.member_count)))
 
 @bot.event
 async def on_member_remove(member):
     for channel in member.server.channels:
         if channel.name == '々leaves':
             await bot.say(channel, '**{member.name}** Just left **{member.server.name}!** Hope you will come back soon!')
-            await bot.say(channel, '**We now have** 👨‍👩‍👦‍👦`{}` **members!**'.format(str(member.server.member_count)))
+            await bot.say(channel, '**We now have** :family_mwbb:`{}` **members!**'.format(str(member.server.member_count)))
    
 @bot.command(pass_context = True)
 @commands.check(is_owner)
