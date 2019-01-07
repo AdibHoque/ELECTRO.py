@@ -528,6 +528,6 @@ async def help4(ctx):
     embed.add_field(name = 'Hype',value ='<a:DiscordHype:527116695253286933>',inline = False)
     embed.add_field(name = 'Plsboi',value ='<a:plsboi:527116722218467328>',inline = False)
     await bot.send_message(author ,embed=embed)
-    await bot.say('📨 Check Your DMs For General Commands!')    
+    await bot.say('📨 Check Your DMs For Emoji Commands!')    
 	 		   	 		   	  		        
 bot.run(os.getenv('Token'))
