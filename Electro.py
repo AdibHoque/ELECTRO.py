@@ -255,7 +255,7 @@ async def ban(ctx,user:discord.Member=None):
       await bot.ban(user)
       await bot.say(user.name+' was banned. Good bye '+user.name+'!')
       
- @bot.command(pass_context=True)
+@bot.command(pass_context=True)
 async def tweet(ctx, usernamename:str, *, txt:str):
     url = f"https://nekobot.xyz/api/imagegen?type=tweet&username={usernamename}&text={txt}"
     async with aiohttp.ClientSession() as cs:
