@@ -400,7 +400,7 @@ async def role(ctx, user:discord.Member=None,*, role:discord.Role=None):
         return
     if role in user.roles:
         await bot.remove_roles(user, role)
-        await bot.say("<:ElectroSucess:527118398753079317> Changed roles for {}, -{}".format(role, user))
+        await bot.say("<:ElectroSucess:527118398753079317> Changed roles for {}, -{}".format(user, role))
         return
     if role not in ctx.message.server.roles:
         await bot.say(f"There isn't any role named {role}.Please specify a valid role!")
