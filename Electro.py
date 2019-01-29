@@ -396,7 +396,7 @@ async def membercount(ctx, *args):
 @commands.has_permissions(manage_roles=True)  
 async def role(ctx, user:discord.Member=None,*, role:discord.Role=None):
     if user is None or role is None:
-        await bot.say('There was a error executing this command!**PROPER USAGE:**`e!role @user @role')
+        await bot.say('There was a error executing this command!**PROPER USAGE:**`e!role @user @role`')
         return
     if role in user.roles:
         await bot.remove_roles(user, role)
