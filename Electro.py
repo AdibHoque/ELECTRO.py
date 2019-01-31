@@ -607,7 +607,7 @@ async def rolecolour(ctx, role:discord.Role=None, value:str=None):
         await bot.edit_role(ctx.message.server, role, color = discord.Color(int(colour, base=16)))
         await bot.say("<:ElectroSucess:527118398753079317> {} role colour has been changed!".format(role))  
         
- @bot.command(pass_context=True)
+ @bot.command()
  async def alldm(ctx):
  	msg = 'Hey thanks for using our bot! We will really appreciate it if you take a min and upvote me!\nhttps://discordbots.org/bot/510491243155816449'
  	for user in ctx.message.server.members:
