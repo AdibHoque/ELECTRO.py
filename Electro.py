@@ -610,6 +610,6 @@ async def rolecolour(ctx, role:discord.Role=None, value:str=None):
         
 @bot.command()
 async def emoji(emoji: discord.Emoji):
-    await bot.say('**Name:** {} **Link:**\n{}'.fomat(emoji, emoji.url)
+    await bot.say('**Name:**{} **Link:**\n{}'.fomat(emoji, emoji.url)
 
 bot.run(os.getenv('Token'))
