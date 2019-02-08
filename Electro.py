@@ -60,7 +60,7 @@ async def on_ready():
     
 @bot.command(pass_context = True)
 async def prefix(ctx):
-	await bot.say('The prefix for the bot is **e!**'
+	await bot.say('The prefix for the bot is **e!**') 
 
 def is_owner(ctx):
     return ctx.message.author.id == "488353416599306270" 
