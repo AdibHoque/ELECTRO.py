@@ -633,13 +633,13 @@ async def ban(ctx, user:discord.Member):
 async def on_message_edit(before, after):
     if before.content == after.content:
       return
-    if before.author == client.user:
+    if before.author == bot.user:
       return
     else:
       user = before.author
       member = after.author
       for channel in user.server.channels:
-        if channel.name == '📡ᴇʟᴇᴄᴛʀᴏ-ʟᴏɢs':
+        if channel.name == '📡electro-logs':
             r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
             embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
             embed.set_author(name='MESSAGE EDITED')
@@ -652,7 +652,7 @@ async def on_message_edit(before, after):
 @bot.event
 async def on_reaction_add(reaction, user):
   for channel in user.server.channels:
-    if channel.name == '📡ᴇʟᴇᴄᴛʀᴏ-ʟᴏɢs':
+    if channel.name == '📡electro-logs':
         logchannel = channel
         r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
         embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
@@ -666,7 +666,7 @@ async def on_reaction_add(reaction, user):
 @bot.event
 async def on_reaction_remove(reaction, user):
   for channel in user.server.channels:
-    if channel.name == '📡ᴇʟᴇᴄᴛʀᴏ-ʟᴏɢs':
+    if channel.name == '📡electro-logs':
         logchannel = channel
         r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
         embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
