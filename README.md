@@ -1,7 +1,7 @@
 <div align="center">
   <img src="https://cdn.discordapp.com/attachments/519145981917265921/543001500079882260/ELECTROHEADER.png" align="center">
   <br>
-  <strong><i>A SIMPLE MODERATION AND FUN BOT FOR DISCORD</i></strong>
+  <strong><b>A SIMPLE MODERATION AND FUN BOT FOR DISCORD</b></strong>
   <br>
   <br>
     
