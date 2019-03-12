@@ -140,7 +140,7 @@ async def dm(ctx, user: discord.User, *, message=None):
     await bot.delete_message(ctx.message)
     
 @bot.command(pass_context = True)
-async def embed(ctx, msg:str, *, msg2:str):
+async def customembed(ctx, msg:str, *, msg2:str):
     channel = ctx.message.channel
     if member.server_permissions.administrator == False:
     	await bot.say('**Your role must have admin permission to use this command!**')
