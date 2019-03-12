@@ -677,7 +677,7 @@ async def unbanall(ctx):
       for member in ban_list:
       	await bot.unban(server,member)
       	
-@bpt.command(pass_context=True)
+@bot.command(pass_context=True)
 @commands.has_permissions(administrator=True)
 async def embed(ctx, *args):
     if ctx.message.author.bot:
