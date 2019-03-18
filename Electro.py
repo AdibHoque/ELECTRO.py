@@ -808,7 +808,7 @@ async def on_member_ban(guild, user):
 			await bot.send_message(logchannel,  embed=embed)	
 			
 @bot.event
-async def on_message_delete(message):
+async def on_message_delete(message, user):
 	for channel in user.server.channels:
 		if channel.name == '📡electro-logs':
 			logchannel = channel
