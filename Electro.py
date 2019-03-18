@@ -563,7 +563,7 @@ async def howgay(ctx, user: discord.Member = None):
     score = random.randint(0, 100)
     r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
     embed = discord.Embed(title=f"Gayrate machine", description=f"{user} is **{score}%** gay :rainbow:", color = discord.Color((r << 16) + (g << 8) + b))
-    embed.set_footer(text ='Made with ❤ by @ADIB HOQUE#6969', url ='https://cdn.discordapp.com/avatars/488353416599306270/a_b988450dd84e4afbe86ba3ea62ea3971.gif?size=1024')
+    embed.set_footer(text ='Made with ❤ by @ADIB HOQUE#6969')
     await bot.say(embed=embed)
     
 @bot.command(pass_context=True)
