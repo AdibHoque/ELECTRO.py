@@ -175,7 +175,7 @@ async def english(ctx, *, msg = None):
 	await bot.delete_message(ctx.message)
 	
 @bot.command(pass_context=True)
-@commands.check(is_masstyper)
+@commands.check(is_owner)
 async def masstype(ctx, *, message=None):
     message = message or "Please specify a word to masstype!"
     await bot.delete_message(ctx.message)
@@ -808,7 +808,7 @@ async def on_member_ban(guild, user):
 			await bot.send_message(logchannel,  embed=embed)	
 			
 @bot.event
-async def on_message_delete(message, user):
+async def on_message_delete(user):
 	for channel in user.server.channels:
 		if channel.name == '📡electro-logs':
 			logchannel = channel
