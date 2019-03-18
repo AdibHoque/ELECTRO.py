@@ -772,7 +772,7 @@ async def on_message(message):
     await bot.process_commands(message)
     channel = bot.get_channel('543425282195980294')
     if message.server is None and message.author != bot.user:
-    	 check = '✅'
+    	 check = '<:ElectroSucess:527118398753079317>'
     	 await bot.add_reaction(message, check)
     	 r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
     	 embed=discord.Embed(title=f"{message.author.name}", description=f"{message.content}", color = discord.Color((r << 16) + (g << 8) + b))
@@ -846,7 +846,7 @@ async def on_guild_remove(guild):
 			await bot.send_message(logchannel,  embed=embed)
 			
 @bot.event
-async def on_guild_role_create(role):
+async def on_guild_role_create(role, user):
 	for channel in user.server.channels:
 		if channel.name == '📡electro-logs':
 			logchannel = channel
@@ -859,7 +859,7 @@ async def on_guild_role_create(role):
 			await bot.send_message(logchannel,  embed=embed)
 			
 @bot.event
-async def on_guild_role_delete(role):
+async def on_guild_role_delete(role, user):
 	for channel in user.server.channels:
 		if channel.name == '📡electro-logs':
 			logchannel = channel
@@ -872,7 +872,7 @@ async def on_guild_role_delete(role):
 			await bot.send_message(logchannel,  embed=embed)	
 			
 @bot.event
-async def on_guild_channel_create(channel):
+async def on_guild_channel_create(channel, user):
 	for channel in user.server.channels:
 		if channel.name == '📡electro-logs':
 			logchannel = channel
