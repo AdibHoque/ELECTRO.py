@@ -73,7 +73,7 @@ def is_masstyper(ctx):
 async def servers(ctx):
   servers = list(bot.servers)
   await bot.say(f"Connected on {str(len(servers))} servers:")
-  print('{bot.servers.name}')
+  await bot.say('Error too many servers')
   print('Done')
  																
 @bot.command(pass_context = True)
