@@ -73,8 +73,8 @@ def is_masstyper(ctx):
 async def servers(ctx):
   servers = list(bot.servers)
   await bot.say(f"Connected on {str(len(servers))} servers:")
-  s = server.name for server in servers)
-  print('{s}')
+  print('{bot.servers.name}')
+  print('Done')
  																
 @bot.command(pass_context = True)
 async def ping(ctx):
