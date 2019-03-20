@@ -73,7 +73,7 @@ def is_masstyper(ctx):
 async def servers(ctx):
   servers = list(bot.servers)
   await bot.say(f"Connected on {str(len(servers))} servers:")
-  await bot.say(join(server.name for server in servers))						
+  print(join(server.name for server in servers))						
  																
 @bot.command(pass_context = True)
 async def ping(ctx):
@@ -697,7 +697,7 @@ async def lockdown(ctx, channelname: discord.Channel=None):
     if not channelname:
         role = discord.utils.get(ctx.message.server.roles, name='@everyone')
         await bot.edit_channel_permissions(ctx.message.channel, role, overwrite)
-        await bot.say("Channel will be locked untill `e!unlock` is used!")
+        await bot.say("**Channe Locked!**\nUse `e!unlock` to Unlock it!")
     else:
         role = discord.utils.get(ctx.message.server.roles, name='@everyone')
         await client.edit_channel_permissions(channelname, role, overwrite)
@@ -714,7 +714,7 @@ async def unlock(ctx, channelname: discord.Channel=None):
     else:
         role = discord.utils.get(ctx.message.server.roles, name='@everyone')
         await bot.edit_channel_permissions(channelname, role, overwrite)
-        await bot.say("Channel unlocked by: {}".format(ctx.message.author))
+        await bot.say("Channel Unlocked!")
        	
 @bot.event
 async def on_message_edit(before, after):
@@ -772,7 +772,7 @@ async def on_message(message):
     await bot.process_commands(message)
     channel = bot.get_channel('543425282195980294')
     if message.server is None and message.author != bot.user:
-    	 check = '<:ElectroSucess:527118398753079317>'
+    	 check = '✅'
     	 await bot.add_reaction(message, check)
     	 r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
     	 embed=discord.Embed(title=f"{message.author.name}", description=f"{message.content}", color = discord.Color((r << 16) + (g << 8) + b))
@@ -808,7 +808,7 @@ async def on_member_ban(guild, user):
 			await bot.send_message(logchannel,  embed=embed)	
 			
 @bot.event
-async def on_message_delete(user):
+async def on_message_delete(user, message):
 	for channel in user.server.channels:
 		if channel.name == '📡electro-logs':
 			logchannel = channel
