@@ -23,7 +23,7 @@ class dbl:
             'content-type' : 'application/json'
         }
 
-        url = '{0}/bots/439919013766758420/stats'.format(uri)
+        url = '{0}/bots/510491243155816449/stats'.format(uri)
 
         async with self.session.post(url, data=dump, headers=head) as resp:
             print('returned {0.status} for {1} on dbl'.format(resp, dump))
