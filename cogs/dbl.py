@@ -19,7 +19,7 @@ class dbl:
             'server_count': len(self.bot.guilds)
         })
         head = {
-            'authorization': os.environ.get('DBLAPI'),
+            'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjUxMDQ5MTI0MzE1NTgxNjQ0OSIsImJvdCI6dHJ1ZSwiaWF0IjoxNTQ2NDExNzYxfQ.V_7sJcSceSDB93OR5ZaTkoGHQqQN2ic2uO7U8cSeQlM',
             'content-type' : 'application/json'
         }
 
