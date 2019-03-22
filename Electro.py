@@ -783,7 +783,7 @@ async def on_message(message):
     	 embed=discord.Embed(title=f"{message.author.name}", description=f"{message.content}", color = discord.Color((r << 16) + (g << 8) + b))
     	 embed.set_thumbnail(url= message.author.avatar_url)
     	 await bot.send_message(channel, '{} ID: {}'.format(message.author, message.author.id))
-    	 embed.set_footer(text ='Today at {datetime.datetime.now()}')
+    	 embed.set_footer(text ='Today at datetime.datetime.now()')
     	 await bot.send_message(channel, embed=embed)    	 
     	 
 @bot.event
