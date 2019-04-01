@@ -120,7 +120,7 @@ async def userinfo(ctx, user: discord.Member):
     await bot.say(embed=embed)	
 
 @bot.command(pass_context = True)  
-async def avatar(ctx, user: discord.Member):
+async def avatarurl(ctx, user: discord.Member):
 	url = user.avatar_url
 	await bot.say(url)
 
