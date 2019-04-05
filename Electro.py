@@ -749,11 +749,11 @@ async def unlock(ctx, channelname: discord.Channel=None):
     if not channelname:
         role = discord.utils.get(ctx.message.server.roles, name='@everyone')
         await bot.edit_channel_permissions(ctx.message.channel, role, overwrite)
-        await bot.say("<:ElectroUnlock:561925605717704706>**Channel Unlocked**\nUse `e!lock` to lock it!")
+        await bot.say("<:ElectroUnlock:561925605717704706>**Channel Unlocked**\nUse `e!lockdown` to lock it!")
     else:
         role = discord.utils.get(ctx.message.server.roles, name='@everyone')
         await bot.edit_channel_permissions(channelname, role, overwrite)
-        await bot.say("<:ElectroUnlock:561925605717704706>**Channel Unlocked**\nUse `e!lock` to lock it!")
+        await bot.say("<:ElectroUnlock:561925605717704706>**Channel Unlocked**\nUse `e!lockdown` to lock it!")
        	
 @bot.event
 async def on_message_edit(before, after):
@@ -817,7 +817,7 @@ async def on_message(message):
     	await bot.add_reaction(message, emoji) 
     channel = bot.get_channel('558530588076802056')
     if message.server is None and message.author != bot.user:
-    	 check = '✅'
+    	 check = ':ElectroSucess:527118398753079317'
     	 await bot.add_reaction(message, check)
     	 r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
     	 embed=discord.Embed(title=f"{message.author.name}", description=f"{message.content}", color = discord.Color((r << 16) + (g << 8) + b))
