@@ -538,7 +538,7 @@ async def help2(ctx):
     embed.add_field(name = 'Embed',value ='Embeds your text!\n**USAGE:**``e!embed [text]``',inline = False)
     embed.add_field(name = 'Lockdown',value ='Locks the channel, only admins can chat after locking!\n**USAGE:**``e!lockdown``',inline = False)
     embed.add_field(name = 'Unlock',value ='Unlocks the channel for everyone to chat in!\n**USAGE:**``e!unlock``',inline = False)
-    embed.add_field(name = 'Unbanall',value ='Unbans all banned the users!\n**USAGE:**``e!unbanall``',inline = False)
+    embed.add_field(name = 'Unbanall',value ='Unbans all the banned users!\n**USAGE:**``e!unbanall``',inline = False)
     embed.add_field(name = 'Menro',value ='Mentions the role!\n**USAGE:**``e!menro [role name]``',inline = False)
     embed.set_footer(text ='Made with ❤ by @ADIB HOQUE#6969')
     await bot.send_message(author ,embed=embed)
