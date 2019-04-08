@@ -953,8 +953,8 @@ async def setuplog(ctx):
       await bot.say("<:ElectroSucess:527118398753079317>**Log channel created!**\nDon't rename it or it won't work!'")
 								 
 @bot.command(pass_context=True)
-async def tweet(ctx, usernamename:str, *, txt:str):
-    url = f"https://nekobot.xyz/api/imagegen?type=captcha&url={user.avatar_url}&username={user.name} "
+async def captcha(ctx, user:discord.Member):
+    url = f"https://nekobot.xyz/api/imagegen?type=captcha&url={user.avatar_url}&username={user.name}"
     async with aiohttp.ClientSession() as cs:
     	async with cs.get(url) as r:
             res = await r.json()
