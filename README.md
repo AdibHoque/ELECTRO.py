@@ -39,11 +39,11 @@ ELECTRO commands can be used by the prefix `e!` or by mentioning `@ELECTRO`. If 
 ## PAGE 2 | MODERATION COMMANDS
 
 
-`kick`,`ban`,`setnick`,`role`,`say`,`DM`,`english`,`rolecolor` 
+`kick`,`ban`,`setnick`,`role`,`say`,`DM`,`english`,`rolecolor`,`lockdown`,`unlock`,`menro`
 
 ## PAGE 3 | FUN COMMANDS
 
-`joke`,`love`,`slap`, `kiss`, `hug`, `virgin`, `gender`, `tweet`, `rolldice`, `flipcoin`, `howgay` 
+`joke`,`love`,`slap`, `kiss`, `hug`, `virgin`, `gender`, `tweet`, `rolldice`, `flipcoin`, `howgay`, `whowouldwin`, `captcha`,`magik`,`deepfry`
 
 ## PAGE 4 | EMOJI COMMANDS
 
