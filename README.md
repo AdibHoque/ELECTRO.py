@@ -12,7 +12,7 @@
   <a href="https://www.YouTube.com/AdibHoque">
     <img src="https://cdn.discordapp.com/attachments/519145981917265921/543764882059690000/SubOurYTg.png">
   </a>
-  
+  <background src="https://cdn.discordapp.com/attachments/529939494007341067/565928893043834895/bg.png">
 
 </div>
 
