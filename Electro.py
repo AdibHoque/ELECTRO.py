@@ -885,29 +885,29 @@ async def on_message_delete(message):
 			
 @bot.event
 async def on_server_join(server):
-	channel = bot.get_channel('558530588076802056')
+	channel = bot.get_channel('529937996024119297')
 	r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
 	embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
 	embed.set_author(name='IM IN A NEW SERVER')
 	embed.add_field(name = 'Server Name:',value ='{}'.format(server.name),inline = False)
-	embed.add_field(name = 'Membercount',value ='{str(len(server.members))}',inline = False)
+	embed.add_field(name = 'Membercount',value ='{}'.fomat(server.members),inline = False)
 	embed.set_footer(text ='Made with ❤ by @ADIB HOQUE#6969')
 	await bot.send_message(channel, embed=embed)		
 			
 @bot.event
 async def on_server_remove(server):
-		channel = bot.get_channel('558530588076802056')
+		channel = bot.get_channel('529937996741476353')
 		r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
 		embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
 		embed.set_author(name='I WAS REMOVED FROM A SERVER')
 		embed.add_field(name = 'Server Name:',value ='{}'.format(server.name),inline = False)
-		embed.add_field(name = 'Membercount',value ='{str(len(server.members))}',inline = False)
+		embed.add_field(name = 'Membercount',value ='{}'.format(server.members),inline = False)
 		embed.set_footer(text ='Made with ❤ by @ADIB HOQUE#6969')
 		await bot.send_message(channel,  embed=embed)
 			
 @bot.event
-async def on_guild_role_create(role, user):
-	for channel in user.server.channels:
+async def on_server_role_create(role, server):
+	for channel in server.channels:
 		if channel.name == '📡electro-logs':
 			logchannel = channel
 			r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
@@ -919,8 +919,8 @@ async def on_guild_role_create(role, user):
 			await bot.send_message(logchannel,  embed=embed)
 			
 @bot.event
-async def on_guild_role_delete(role, user):
-	for channel in user.server.channels:
+async def on_server_role_delete(role, server):
+	for channel in server.channels:
 		if channel.name == '📡electro-logs':
 			logchannel = channel
 			r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
@@ -932,8 +932,8 @@ async def on_guild_role_delete(role, user):
 			await bot.send_message(logchannel,  embed=embed)	
 			
 @bot.event
-async def on_guild_channel_create(channel, user):
-	for channel in user.server.channels:
+async def on_server_channel_create(channel, server):
+	for channel in server.channels:
 		if channel.name == '📡electro-logs':
 			logchannel = channel
 			r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
