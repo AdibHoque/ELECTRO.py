@@ -901,7 +901,7 @@ async def on_server_remove(server):
 		embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
 		embed.set_author(name='I WAS REMOVED FROM A SERVER')
 		embed.add_field(name = 'Server Name:',value ='{}'.format(server.name),inline = False)
-		embed.add_field(name = 'Membercount',value ='{}'..format(str(member.server.member_count)),inline = False)
+		embed.add_field(name = 'Membercount',value ='{}'.format(str(member.server.member_count)),inline = False)
 		embed.set_footer(text ='Made with ❤ by @ADIB HOQUE#6969')
 		await bot.send_message(channel,  embed=embed)
 			
