@@ -796,11 +796,11 @@ async def on_reaction_add(reaction, user):
         embed.set_author(name='REACTION ADDED')
         embed.add_field(name = 'Reaction by:',value ='{}'.format(user),inline = False)
         embed.add_field(name = 'Message:',value ='{}'.format(reaction.message.content),inline = False)
-        embed.add_field(name = 'Channel:',value ='{}'.format(reaction.message.channel),inline = False)
+        embed.add_field(name = 'Channel:',value ='{}'.format(reaction.message.channel.mention),inline = False)
         embed.add_field(name = 'Emoji:',value ='{}'.format(reaction.emoji),inline = False)
         embed.timestamp = datetime.datetime.utcnow()
         embed.set_footer(text ='REACTION ADDED')
-        await bot.send_message(logchannel,  embed=embed)
+        await bot.send_message(logchannel, embed=embed)
         
 @bot.event
 async def on_reaction_remove(reaction, user):
@@ -812,11 +812,11 @@ async def on_reaction_remove(reaction, user):
         embed.set_author(name='REACTION REMOVED')
         embed.add_field(name = 'Reaction by:',value ='{}'.format(user),inline = False)
         embed.add_field(name = 'Message:',value ='{}'.format(reaction.message.content),inline = False)
-        embed.add_field(name = 'Channel:',value ='{}'.format(reaction.message.channel),inline = False)
+        embed.add_field(name = 'Channel:',value ='{}'.format(reaction.message.channel.mention),inline = False)
         embed.add_field(name = 'Emoji:',value ='{}'.format(reaction.emoji),inline = False)
         embed.timestamp = datetime.datetime.utcnow()
         embed.set_footer(text ='REACTION REMOVED')
-        await bot.send_message(logchannel,  embed=embed)   
+        await bot.send_message(logchannel, embed=embed)   
         
 @bot.event
 async def on_message(message):
@@ -1067,7 +1067,7 @@ async def iphonex(ctx, user:discord.Member):
 @bot.command(pass_context=True)
 async def trash(ctx, user:discord.Member):
 	if user is None:
-		url = f"https://nekobot.xyz/api/imagegen?type=trash&image={ctx.message.author.avatar_url}"
+		url = f"https://nekobot.xyz/api/imagegen?type=trash&url={ctx.message.author.avatar_url}"
 		async with aiohttp.ClientSession() as cs:
 			async with cs.get(url) as r:
 				res = await r.json()
@@ -1076,7 +1076,7 @@ async def trash(ctx, user:discord.Member):
 				embed.set_image(url=res['message'])
 				await bot.say(embed=embed)
 	else:
-		url = f"https://nekobot.xyz/api/imagegen?type=trash&image={user.avatar_url}"
+		url = f"https://nekobot.xyz/api/imagegen?type=trash&url={user.avatar_url}"
 		async with aiohttp.ClientSession() as cs:
 			async with cs.get(url) as r:
 				res = await r.json()
