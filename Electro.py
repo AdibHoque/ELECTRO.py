@@ -237,9 +237,9 @@ async def menro(ctx, *, role: discord.Role):
 	if role is 'everyone':
 		await bot.say('@everyone')
 	else:
-		await bot.edit_role(role, mentionable=True)
+		await bot.edit_role(server = ctx.message.server, role = role, mentionable=True)
 		await bot.say('{}'.format(role.mention))
-		await bot.edit_role(role, mentionable=False)
+		await bot.edit_role(server = ctx.message.server, role = role, mentionable=False)
 	     
 @bot.command(pass_context = True) 
 @commands.has_permissions(manage_roles=True)
