@@ -902,7 +902,7 @@ async def on_server_join(server):
 	embed = discord.Embed(title="IM IN A NEW SERVER", color = discord.Color((r << 16) + (g << 8) + b))
 	embed.add_field(name = 'Server Name:',value ='{}'.format(server.name),inline = False)
 	embed.add_field(name = 'Membercount',value ='{}'.format(str(server.member_count)),inline = False)
-	embed.set_thumbnail(url= server.avatar_url)
+	embed.set_thumbnail(url = server.icon_url)
 	embed.set_footer(text ='Made with ❤ by @ADIB HOQUE#6969')
 	await bot.send_message(channel, embed=embed)		
 			
@@ -913,7 +913,7 @@ async def on_server_remove(server):
 		embed = discord.Embed(title="I WAS REMOVED FROM A SERVER", color = discord.Color((r << 16) + (g << 8) + b))
 		embed.add_field(name = 'Server Name:',value ='{}'.format(server.name),inline = False)
 		embed.add_field(name = 'Membercount',value ='{}'.format(str(server.member_count)),inline = False)
-		embed.set_thumbnail(url = server.avatar_url)
+		embed.set_thumbnail(url = server.icon_url)
 		embed.set_footer(text ='Made with ❤ by @ADIB HOQUE#6969')
 		await bot.send_message(channel,  embed=embed)
 			
