@@ -244,7 +244,7 @@ async def giverole(ctx, user: discord.Member, *, role: discord.Role = None):
 @bot.command(pass_context = True)
 @commands.has_permissions(administrator=True)
 async def menro(ctx, *, role: discord.Role):
-	if role ='everyone':
+	if role is 'everyone':
 		await bot.say('@everyone')
 	else:
 		await bot.edit_role(server=ctx.message.server, role=role, mentionable=True)
