@@ -66,7 +66,7 @@ def is_owner(ctx):
     return ctx.message.author.id == "488353416599306270"
     
 def is_masstyper(ctx):
-    return ctx.message.author.id == "488353416599306270, 517729298355060736"      
+    return ctx.message.author.id == "488353416599306270", "517729298355060736"      
    
 @bot.command(pass_context = True)
 @commands.check(is_owner)
@@ -74,7 +74,7 @@ async def servers(ctx):
   servers = list(bot.servers)
   await bot.say(f"Connected on {str(len(servers))} servers:")
   await bot.say('Error too many servers')
-  print('Done')
+  print('nothing')
  																
 @bot.command(pass_context = True)
 async def ping(ctx):
@@ -503,7 +503,7 @@ async def help(ctx):
     r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
     embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
     embed.set_author(name='ELECTRO COMMANDS')
-    embed.set_image(url = 'https://cdn.discordapp.com/attachments/526757013745696769/527492677558599696/electro.png')
+    embed.set_image(url = 'https://cdn.discordapp.com/attachments/571274963529498634/571275153800167425/ELECTRO_COMMANDS.png')
     embed.add_field(name = '``USAGE:`` ',value ='To see a page, just add the page number after the `e!help` command.Like this `e!help1`, `e!help2` Etc.',inline = False)
     embed.add_field(name = 'PAGE 1 | General Commands ',value ='General commands which everyone can use!.',inline = False)
     embed.add_field(name = 'PAGE 2 | Moderation Commands',value ='Commands that are used for moderation and can only be used by server moderators.',inline = False)
@@ -520,7 +520,7 @@ async def help1(ctx):
     r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
     embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
     embed.set_author(name='GENERAL COMMANDS')
-    embed.set_image(url = 'https://cdn.discordapp.com/attachments/526757013745696769/527492677558599696/electro.png')
+    embed.set_image(url = 'https://cdn.discordapp.com/attachments/565933128452145153/571281132298174465/ehelp1.png')
     embed.add_field(name = 'Ping',value ='Returns ping lantency!\n**USAGE:**``e!ping``',inline = False)
     embed.add_field(name = 'Userinfo',value ='Shows info about mentioned user!\n**USAGE:**``e!userinfo @user``',inline = False)
     embed.add_field(name = 'Serverinfo',value ='Shows info about the server!\n**USAGE:**``e!serverinfo``',inline = False)
@@ -540,7 +540,7 @@ async def help2(ctx):
     r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
     embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
     embed.set_author(name='MODERATION COMMANDS')
-    embed.set_image(url = 'https://cdn.discordapp.com/attachments/526757013745696769/527492677558599696/electro.png')
+    embed.set_image(url = 'https://cdn.discordapp.com/attachments/565933128452145153/571281132922994689/ehelp2.png')
     embed.add_field(name = 'Kick',value ='Kicks out mentioned user from the server!\n**USAGE:**``e!kick @user``',inline = False)
     embed.add_field(name = 'Ban',value ='Bans mentioned user from the server!\n**USAGE:**``e!ban @user``',inline = False) 
     embed.add_field(name = 'Setnick',value ='Changes nickname of mentioned user!\n**USAGE:**``e!setnick @user [new nickname]``',inline = False)
@@ -566,7 +566,7 @@ async def help3(ctx):
     r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
     embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
     embed.set_author(name='FUN COMMANDS')
-    embed.set_image(url = 'https://cdn.discordapp.com/attachments/526757013745696769/527492677558599696/electro.png')
+    embed.set_image(url = 'https://cdn.discordapp.com/attachments/565933128452145153/571281132298174466/ehelp3.png')
     embed.add_field(name = 'Joke',value ='Sends a random joke!\n**USAGE:**``e!joke``',inline = False)
     embed.add_field(name = 'Love',value ='Detect love percentage between two users!\n**USAGE:**``e!love @user @user``',inline = False) 
     embed.add_field(name = 'Slap',value ='Slaps mentioned user!\n**USAGE:**``e!slap @user``',inline = False)
@@ -597,7 +597,7 @@ async def help4(ctx):
     r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
     embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
     embed.set_author(name='EMOJI COMMANDS')
-    embed.set_image(url = 'https://cdn.discordapp.com/attachments/526757013745696769/527492677558599696/electro.png')
+    embed.set_image(url = 'https://cdn.discordapp.com/attachments/565933128452145153/571281133463928834/ehelp4.png')
     embed.add_field(name = 'Fortnite',value ='<a:fortnite1:527116722369593365> <a:fortnite2:527116726249193472> <a:fortnite1:527116722369593365>',inline = False)
     embed.add_field(name = 'Hundred',value ='<a:100:527116694506700819>',inline = False)
     embed.add_field(name = 'Party',value ='<a:PartyGlasses:527116697791102977>',inline = False)
