@@ -901,9 +901,9 @@ async def on_server_join(server):
 	r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
 	embed = discord.Embed(title="IM IN A NEW SERVER", color = discord.Color((r << 16) + (g << 8) + b))
 	embed.add_field(name = 'Server Name:',value ='{}'.format(server.name),inline = False)
-	embed.add_field(name = 'Membercount',value ='{}'.format(str(server.member_count)),inline = False)
+	embed.add_field(name = 'Membercount:',value ='{}'.format(str(server.member_count)),inline = False)
 	embed.set_thumbnail(url = server.icon_url)
-	embed.set_footer(text ='Made with ❤ by @ADIB HOQUE#6969')
+	embed.set_footer(text ='IM NOW IN {str(len(bot.servers))} guilds!')
 	await bot.send_message(channel, embed=embed)		
 			
 @bot.event
@@ -912,9 +912,9 @@ async def on_server_remove(server):
 		r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
 		embed = discord.Embed(title="I WAS REMOVED FROM A SERVER", color = discord.Color((r << 16) + (g << 8) + b))
 		embed.add_field(name = 'Server Name:',value ='{}'.format(server.name),inline = False)
-		embed.add_field(name = 'Membercount',value ='{}'.format(str(server.member_count)),inline = False)
+		embed.add_field(name = 'Membercount:',value ='{}'.format(str(server.member_count)),inline = False)
 		embed.set_thumbnail(url = server.icon_url)
-		embed.set_footer(text ='Made with ❤ by @ADIB HOQUE#6969')
+		embed.set_footer(text ='IM NOW IN {str(len(bot.servers))} guilds!')
 		await bot.send_message(channel,  embed=embed)
 			
 @bot.event
