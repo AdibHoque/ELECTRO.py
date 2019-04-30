@@ -41,5 +41,5 @@ class dbl:
     
         
 
-def setup(bot):
-    bot.add_cog(dbl(bot))
+def setup(Electro):
+    bot.add_cog(dbl(Electro))
