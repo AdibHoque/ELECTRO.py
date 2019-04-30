@@ -173,6 +173,7 @@ async def say(ctx, *, message=None):
     await bot.delete_message(ctx.message)
 
 @bot.command(pass_context=True)
+@commands.has_permissions(manage_messages=True) 
 async def purge(ctx, number):
     mgs = [] 
     number = int(number) 
@@ -244,7 +245,7 @@ async def giverole(ctx, user: discord.Member, *, role: discord.Role = None):
 @bot.command(pass_context = True)
 @commands.has_permissions(administrator=True)
 async def menro(ctx, *, role: discord.Role):
-	if role is 'everyone':
+	if role == 'everyone':
 		await bot.say('@everyone')
 	else:
 		await bot.edit_role(server=ctx.message.server, role=role, mentionable=True)
@@ -685,49 +686,48 @@ async def rolecolour(ctx, role:discord.Role=None, value:str=None):
 async def kick(ctx, user:discord.Member):
 	if user is None:
 		await bot.say('Please mention a user to kick!')
-		if user.server_permissions.kick_members:
-			await bot.say("**{} is Mod/Admin, I can't do that!**".format(user))
-			return
-		else:
-			await bot.delete_message(ctx.message)
-			await bot.send_message(user, 'You have been kicked from {}'.format(ctx.message.server.name))
-			await bot.kick(user)
-			await bot.say('<:ElectroSucess:527118398753079317>'+user+' was kicked!')
-			for channel in user.server.channels:
-				if channel.name == '📡electro-logs':
-					r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
-					embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
-					embed.set_author(name='Kick COMMAND USED')
-					embed.add_field(name = 'Kicked User:',value ='{}'.format(user),inline = False)
-					embed.add_field(name = 'Kicked by:',value ='{}'.format(ctx.message.author),inline = False)
-					embed.add_field(name = 'Channel:',value ='{}'.format(ctx.message.channel),inline = False)
-					embed.timestamp = datetime.datetime.utcnow()
-					embed.set_footer(text ='USER KICKED')
-					await bot.send_message(channel, embed=embed)      
-    	
+        if user.server_permissions.kick_members:
+		await bot.say("**{} is Mod/Admin, I can't do that!**".format(user))
+		return
+	else:
+		await bot.delete_message(ctx.message)
+		await bot.send_message(user, 'You have been kicked from {}'.format(ctx.message.server.name))
+		await bot.kick(user)
+		await bot.say('<:ElectroSucess:527118398753079317>'+user+' was kicked!')
+		for channel in user.server.channels:
+			if channel.name == '📡electro-logs':
+				r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
+				embed = discord.Embed(title = 'KICK COMMAND USED', color = discord.Color((r << 16) + (g << 8) + b))
+				embed.add_field(name = 'Kicked User:',value ='{}'.format(user),inline = False)
+				embed.add_field(name = 'Kicked by:',value ='{}'.format(ctx.message.author),inline = False)
+				embed.add_field(name = 'Channel:',value ='{}'.format(ctx.message.channel.mention),inline = False)
+				embed.timestamp = datetime.datetime.utcnow()
+				embed.set_footer(text ='USER KICKED')
+				await bot.send_message(channel, embed=embed)      
+ 
+@bot.command(pass_context=True) 
 @commands.has_permissions(kick_members=True)     
 async def ban(ctx, user:discord.Member):
     if user is None:
     	await bot.say('Please mention a user to ban!')
-    	if user.server_permissions.ban_members:
-    		await bot.say("**{} is Mod/Admin, I can't do that!**".format(user))
-    		return
-    	else:
-    		await bot.delete_message(ctx.message)
-    		await bot.send_message(user, 'You have been banned from {}'.format(ctx.message.server.name))
-    		await bot.ban(user)
-    		await bot.say('<:ElectroSucess:527118398753079317>'+user+' was banned!')
-    		for channel in user.server.channels:
-    			if channel.name == '📡electro-logs':
-    				r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
-    				embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
-    				embed.set_author(name='BAN COMMAND USED')
-    				embed.add_field(name = 'Banned User:',value ='{}'.format(user),inline = False)
-    				embed.add_field(name = 'Banned by:',value ='{}'.format(ctx.message.author),inline = False)
-    				embed.add_field(name = 'Channel:',value ='{}'.format(ctx.message.channel),inline = False)
-    				embed.timestamp = datetime.datetime.utcnow()
-    				embed.set_footer(text ='USER BANNED')
-    				await bot.send_message(channel, embed=embed)   
+    if user.server_permissions.ban_members:
+    	await bot.say("**{} is Mod/Admin, I can't do that!**".format(user))
+    	return
+    else:
+    	await bot.delete_message(ctx.message)
+    	await bot.send_message(user, 'You have been banned from {}'.format(ctx.message.server.name))
+    	await bot.ban(user)
+    	await bot.say('<:ElectroSucess:527118398753079317>'+user+' was banned!')
+    	for channel in user.server.channels:
+    		if channel.name == '📡electro-logs':
+    			r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
+    			embed = discord.Embed(title = 'BAN COMMAND USED', color = discord.Color((r << 16) + (g << 8) + b))
+    			embed.embed.add_field(name = 'Banned User:',value ='{}'.format(user),inline = False)
+    			embed.add_field(name = 'Banned by:',value ='{}'.format(ctx.message.author),inline = False)
+    			embed.add_field(name = 'Channel:',value ='{}'.format(ctx.message.channel.mention),inline = False)
+    			embed.timestamp = datetime.datetime.utcnow()
+    			embed.set_footer(text ='USER BANNED')
+    			await bot.send_message(channel, embed=embed)   
     			
 @bot.command(pass_context=True)
 @commands.has_permissions(ban_members=True)
@@ -903,7 +903,7 @@ async def on_server_join(server):
 	embed.add_field(name = 'Server Name:',value ='{}'.format(server.name),inline = False)
 	embed.add_field(name = 'Membercount:',value ='{}'.format(str(server.member_count)),inline = False)
 	embed.set_thumbnail(url = server.icon_url)
-	embed.set_footer(text ='IM NOW IN {} GUILDS!'.format(str(len(servers))))
+	embed.set_footer(text ='IM NOW IN {str(len(servers))} GUILDS!')
 	await bot.send_message(channel, embed=embed)		
 			
 @bot.event
@@ -914,7 +914,7 @@ async def on_server_remove(server):
 		embed.add_field(name = 'Server Name:',value ='{}'.format(server.name),inline = False)
 		embed.add_field(name = 'Membercount:',value ='{}'.format(str(server.member_count)),inline = False)
 		embed.set_thumbnail(url = server.icon_url)
-		embed.set_footer(text ='IM NOW IN {} GUILDS!'.format(str(len(servers))))
+		embed.set_footer(text ='IM NOW IN {str(len(servers))} GUILDS!')
 		await bot.send_message(channel,  embed=embed)
 			
 @bot.event
