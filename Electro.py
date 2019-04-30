@@ -903,7 +903,7 @@ async def on_server_join(server):
 	embed.add_field(name = 'Server Name:',value ='{}'.format(server.name),inline = False)
 	embed.add_field(name = 'Membercount:',value ='{}'.format(str(server.member_count)),inline = False)
 	embed.set_thumbnail(url = server.icon_url)
-	embed.set_footer(text ='IM NOW IN {str(len(bot.servers))} guilds!')
+	embed.set_footer(text ='IM NOW IN {} GUILDS!'.format(str(len(servers))))
 	await bot.send_message(channel, embed=embed)		
 			
 @bot.event
@@ -914,7 +914,7 @@ async def on_server_remove(server):
 		embed.add_field(name = 'Server Name:',value ='{}'.format(server.name),inline = False)
 		embed.add_field(name = 'Membercount:',value ='{}'.format(str(server.member_count)),inline = False)
 		embed.set_thumbnail(url = server.icon_url)
-		embed.set_footer(text ='IM NOW IN {str(len(bot.servers))} guilds!')
+		embed.set_footer(text ='IM NOW IN {} GUILDS!'.format(str(len(servers))))
 		await bot.send_message(channel,  embed=embed)
 			
 @bot.event
