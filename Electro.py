@@ -707,7 +707,7 @@ async def announce(ctx, *, msg: str):
 async def embed(ctx, *, msg: str):
     r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
     embed=discord.Embed(description="{}".format(msg), color = discord.Color((r << 16) + (g << 8) + b))
-    embed.set_author(text ='{ctx.message.author}', icon_url='{ctx.message.author.avatar_url}')
+    embed.set_author(name='{ctx.message.author}', icon_url='{ctx.message.author.avatar_url}')
     channel = ctx.message.channel
     await bot.send_message(channel, embed=embed)
     await bot.delete_message(ctx.message)
