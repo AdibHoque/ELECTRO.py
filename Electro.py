@@ -704,7 +704,7 @@ async def announce(ctx, *, msg: str):
     
 @bot.command(pass_context = True)
 @commands.has_permissions(administrator=True) 
-async def embed(ctx, *, msg: str):
+async def embed(ctx, *, msg: None):
     r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
     embed=discord.Embed(description="{}".format(msg), color = discord.Color((r << 16) + (g << 8) + b))
     embed.set_author(name='{ctx.message.author}', icon_url='{ctx.message.author.avatar_url}')
