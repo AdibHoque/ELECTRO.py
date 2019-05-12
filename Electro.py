@@ -695,7 +695,7 @@ async def unbanall(ctx):
 @commands.has_permissions(administrator=True) 
 async def announce(ctx, channel: discord.Channel=None, *, msg: str):
 	embed=discord.Embed(description="{}".format(msg), color=0x7D7D7D)
-	embed.set_author(name="{}".format(ctx.message.author))
+	embed.set_author(name="{}".format(ctx.message.author), icon_url=ctx.message.author.avatar_url)
 	embed.timestamp = datetime.datetime.utcnow()
 	await bot.send_message(channel, embed=embed)
 	await bot.delete_message(ctx.message)
@@ -705,7 +705,7 @@ async def announce(ctx, channel: discord.Channel=None, *, msg: str):
 async def embed(ctx, *, msg: str):
     r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
     embed=discord.Embed(description="{}".format(msg), color = discord.Color((r << 16) + (g << 8) + b))
-    embed.set_author(text ='{ctx.message.author}', icon_url='{ctx.message.author.avatar_url}')
+    embed.set_author(text ='{ctx.message.author}', icon_url=ctx.message.author.avatar_url)
     channel = ctx.message.channel
     await bot.send_message(channel, embed=embed)
     await bot.delete_message(ctx.message)
