@@ -791,7 +791,7 @@ async def on_reaction_remove(reaction, user):
 async def on_message(message):
     await bot.process_commands(message)
     if '<@488353416599306270>' in message.content:
-    	emoji = 'a:AdibReeeeee:558181398670737408'
+    	emoji = '🇵','🇮','🇳','🇬','❓'
     	await bot.add_reaction(message, emoji) 
     channel = bot.get_channel('558530588076802056')
     if message.server is None and message.author != bot.user:
