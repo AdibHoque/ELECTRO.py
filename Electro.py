@@ -243,7 +243,7 @@ async def giverole(ctx, user: discord.Member, *, role: discord.Role = None):
 			return await bot.say("<:ElectroSucess:527118398753079317> **{}** role has been added to **{}**.".format(role, user))
 
 @bot.command(pass_context = True)
-@commands.has_permissions(administrator=True)
+@commands.has_permissions(manage_roles=True)
 async def menro(ctx, *, role: discord.Role):
 	if role is 'everyone':
 		await bot.say('@everyone')
