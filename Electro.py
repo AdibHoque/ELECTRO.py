@@ -693,7 +693,7 @@ async def unbanall(ctx):
   
 @bot.command(pass_context = True)
 @commands.has_permissions(administrator=True) 
-async def announce(ctx, channel: discord.Channel=None, *, msg: str):
+async def announce(ctx, channel: discord.channel=None, *, msg: str):
 	embed=discord.Embed(description="{}".format(msg), color=0x43464B)
 	embed.set_author(name="{}".format(ctx.message.author), icon_url=ctx.message.author.avatar_url)
 	embed.timestamp = datetime.datetime.utcnow()
