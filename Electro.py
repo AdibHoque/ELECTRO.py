@@ -13,7 +13,7 @@ import dbl
 import logging
 
 class DiscordBotsOrgAPI:
-    """Handles interactions with the discordbots.org API"""
+    """dosent Handles interactions with the discordbots.org API"""
 
     def __init__(self, bot):
         self.bot = bot
