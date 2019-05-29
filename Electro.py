@@ -693,7 +693,7 @@ async def unbanall(ctx):
   
 @bot.command(pass_context = True)
 @commands.has_permissions(administrator=True) 
-async def announce(ctx, channel: discord.channel=None, *, msg: str):
+async def announce(ctx, channel: discord.Channel=None, *, msg: str):
 	embed=discord.Embed(description="{}".format(msg), color=0x43464B)
 	embed.set_author(name="{}".format(ctx.message.author), icon_url=ctx.message.author.avatar_url)
 	embed.timestamp = datetime.datetime.utcnow()
@@ -712,7 +712,7 @@ async def embed(ctx, *, msg: str):
       
 @bot.command(pass_context = True)
 @commands.has_permissions(kick_members=True) 
-async def lockdown(ctx, channelname: discord.channel=None):
+async def lockdown(ctx, channelname: discord.Channel=None):
     overwrite = discord.PermissionOverwrite(send_messages=False, read_messages=True)
     if not channelname:
         role = discord.utils.get(ctx.message.server.roles, name='@everyone')
@@ -725,7 +725,7 @@ async def lockdown(ctx, channelname: discord.channel=None):
 	
 @bot.command(pass_context = True)
 @commands.has_permissions(kick_members=True) 
-async def unlock(ctx, channelname: discord.channel=None):
+async def unlock(ctx, channelname: discord.Channel=None):
     overwrite = discord.PermissionOverwrite(send_messages=None, read_messages=True)
     if not channelname:
         role = discord.utils.get(ctx.message.server.roles, name='@everyone')
