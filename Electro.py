@@ -725,7 +725,7 @@ async def lockdown(ctx, channelname: discord.channel=None):
 	
 @bot.command(pass_context = True)
 @commands.has_permissions(kick_members=True) 
-async def unlock(ctx, channelname: discord.Channel=None):
+async def unlock(ctx, channelname: discord.channel=None):
     overwrite = discord.PermissionOverwrite(send_messages=None, read_messages=True)
     if not channelname:
         role = discord.utils.get(ctx.message.server.roles, name='@everyone')
