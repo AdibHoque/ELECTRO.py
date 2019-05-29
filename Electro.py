@@ -712,7 +712,7 @@ async def embed(ctx, *, msg: str):
       
 @bot.command(pass_context = True)
 @commands.has_permissions(kick_members=True) 
-async def lockdown(ctx, channelname: discord.Channel=None):
+async def lockdown(ctx, channelname: discord.channel=None):
     overwrite = discord.PermissionOverwrite(send_messages=False, read_messages=True)
     if not channelname:
         role = discord.utils.get(ctx.message.server.roles, name='@everyone')
