@@ -116,9 +116,9 @@ async def kick(ctx, user:discord.Member, *, reason:str):
       await bot.say("<:ElectroFail:527118399453528103>**He is a Mod/Admin, I can't do that!**")
       return
     else:
-      await bot.send_message(user, 'You were kicked out from **{ctx.message.server.name}**, {reason}!')
+      await bot.send_message(user, 'You were kicked out from **{}**, {}!'.format(ctx.message.server.name, reason))
       await bot.kick(user)
-      await bot.say('<:ElectroSucess:527118398753079317>{user} was kicked, {reason}!')
+      await bot.say('<:ElectroSucess:527118398753079317>{} was kicked, {}!'.format(user, reason))
       await bot.delete_message(ctx.message)
       for channel in user.server.channels:
         if channel.name == '📡electro-logs':
@@ -136,9 +136,9 @@ async def ban(ctx, user:discord.Member, *, reason:str):
       await bot.say("<:ElectroFail:527118399453528103>**He is a Mod/Admin, I can't do that!**")
       return
     else:
-      await bot.send_message(user, 'You were banned from **{ctx.message.server.name}**, {reason}!')
+      await bot.send_message(user, 'You were banned from **{ctx.message.server.name}**, {reason}!'.format(ctx.message.server.name, reason))
       await bot.kick(user)
-      await bot.say('<:ElectroSucess:527118398753079317>{user} was banned, {reason}!')
+      await bot.say('<:ElectroSucess:527118398753079317>{} was banned, {}!'.format(user, reason))
       await bot.delete_message(ctx.message)
       for channel in user.server.channels:
         if channel.name == '📡electro-logs':
