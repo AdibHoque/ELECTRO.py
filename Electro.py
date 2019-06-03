@@ -790,7 +790,7 @@ async def on_reaction_remove(reaction, user):
 @bot.event
 async def on_message(message):
     if not message.author.bot:
-    await bot.process_commands(message)
+        await bot.process_commands(message)
     if '<@488353416599306270>' in message.content:
     	emoji = '🏓'
     	await bot.add_reaction(message, emoji) 
