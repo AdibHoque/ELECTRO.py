@@ -110,7 +110,7 @@ async def support():
 @bot.command(pass_context=True)  
 @commands.has_permissions(kick_members=True)     
 async def kick(ctx, user:discord.Member, *, reason:str):
-    if user or reason is None:
+    if reason is None:
       await bot.say('<:ElectroFail:527118399453528103>**Please mention a user to kick & specify a reason for kicking out!**\nEXAMPLE:`e!kick <@user or id> <reason>`')
     if user.server_permissions.kick_members:
       await bot.say("<:ElectroFail:527118399453528103>**He is a Mod/Admin, I can't do that!**")
@@ -130,7 +130,7 @@ async def kick(ctx, user:discord.Member, *, reason:str):
 @bot.command(pass_context=True)  
 @commands.has_permissions(ban_members=True)     
 async def ban(ctx, user:discord.Member, *, reason:str):
-    if user or reason is None:
+    if reason is None:
       await bot.say('<:ElectroFail:527118399453528103>**Please mention a user to ban & specify a reason for banning!\nExample:`e!ban <@user or id> <reason>**')
     if user.server_permissions.kick_members:
       await bot.say("<:ElectroFail:527118399453528103>**He is a Mod/Admin, I can't do that!**")
