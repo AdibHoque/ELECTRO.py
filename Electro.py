@@ -676,7 +676,7 @@ async def help4(ctx):
     embed.add_field(name = 'Skip',value ='Skips the current playing music!\n**USAGE:**`e!skip`',inline = False)
     embed.add_field(name = 'Stop',value ='Stops playing music and leaves the vc!\n**USAGE:**`e!stop` ',inline = False)
     embed.add_field(name = 'NP',value ='Shows the now playing music!\n**USAGE:**`e!np`',inline = False)
-    embed.add_field(name = 'Queue',value ='Shows the music queue!\n**USAGE:**`e!queue',inline = False)
+    embed.add_field(name = 'Queue',value ='Shows the music queue!\n**USAGE:**`e!queue`',inline = False)
     embed.add_field(name = 'Pause',value ='Pauses the current playing song!\n**USAGE:**`e!pause`',inline = False)
     embed.add_field(name = 'Resume',value ='Resumes the current paused song!\n**USAGE:**`e!resume`',inline = False)
     embed.add_field(name = 'Volume',value ='Change volume of the song!\n**USAGE:**`e!volume <1-200>`',inline = False)
