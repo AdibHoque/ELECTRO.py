@@ -1162,8 +1162,9 @@ async def mute(ctx, member: discord.Member=None):
 		await bot.say('<:ElectroFail:527118399453528103> **PLEASE SPECIFY A USER TO MUTE!**')
 	if member.server_permissions.kick_members:
 		await bot.say("<:ElectroFail:527118399453528103> **THAT USER IS A MOD/ADMIN, I CAN'T DO THAT!**")
-	if discord.utils.get(member.server.roles, name='Muted') is None:
+        if discord.utils.get(member.server.roles, name='Muted') is None:
 		await bot.say('<:ElectroFail:527118399453528103> **NO MUTED ROLE FOUND**')
+        else:
 		role = discord.utils.get(member.server.roles, name='Muted')
 		await bot.add_roles(member, role)
 		await bot.say("<:ElectroSucess:527118398753079317> **{} WAS MUTED!**".format(member.name))
