@@ -44,11 +44,11 @@ bot.remove_command("help")
 async def status_task():
     while True:
         await bot.change_presence(game=discord.Game(name='For e!help', url='https://twitch.tv/myname', type=1))
-        await asyncio.sleep(5)
+        await asyncio.sleep(12)
         await bot.change_presence(game=discord.Game(name='With '+str(len(set(bot.get_all_members())))+' Users', url='https://twitch.tv/myname', type=1))
-        await asyncio.sleep(5)
+        await asyncio.sleep(12)
         await bot.change_presence(game=discord.Game(name='in '+str(len(bot.servers))+' Guilds', url='https://twitch.tv/myname', type=1))
-        await asyncio.sleep(5)
+        await asyncio.sleep(12)
 
 @bot.event
 async def on_ready():
@@ -789,6 +789,7 @@ async def on_reaction_remove(reaction, user):
         
 @bot.event
 async def on_message(message):
+    if not message.author.bot:
     await bot.process_commands(message)
     if '<@488353416599306270>' in message.content:
     	emoji = '🏓'
