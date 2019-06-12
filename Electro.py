@@ -640,7 +640,7 @@ async def help2(ctx):
 async def help3(ctx):
     author = ctx.message.author
     r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
-    embed = discord.Embed(title = 'FUN COMMANDS', 0x429CFF)
+    embed = discord.Embed(title = 'FUN COMMANDS', color = 0x429CFF)
     embed.set_image(url = 'https://cdn.discordapp.com/attachments/565933128452145153/571281132298174466/ehelp3.png')
     embed.add_field(name = 'Joke',value ='Sends a random joke!\n**USAGE:**``e!joke``',inline = False)
     embed.add_field(name = 'Love',value ='Detect love percentage between two users!\n**USAGE:**``e!love @user @user``',inline = False) 
