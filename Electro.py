@@ -122,7 +122,7 @@ async def kick(ctx, user:discord.Member, *, reason:str):
       await bot.delete_message(ctx.message)
       for channel in user.server.channels:
         if channel.name == '📡electro-logs':
-            embed=discord.Embed(title="KICK COMMAND USED", description="**User:** {0}\n**Moderator:** {1}".format(user, ctx.message.author), color=0xFDE112)
+            embed=discord.Embed(title="KICK COMMAND USED", description="**User:** {0}\n**Moderator:** {1}".format(user, ctx.message.author), color=0x429CFF)
             embed.timestamp = datetime.datetime.utcnow()
             embed.set_footer(text ='USER KICKED')
             await bot.send_message(channel, embed=embed)
@@ -283,7 +283,7 @@ async def masstype(ctx, *, message=None):
 @bot.command(pass_context = True)
 async def meme(ctx):
     r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
-    embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
+    embed = discord.Embed(color = 0x429CFF) 
     async with aiohttp.ClientSession() as session:
         async with session.get("https://api.reddit.com/r/me_irl/random") as r:
             data = await r.json()
@@ -362,13 +362,13 @@ async def serverinfo(ctx):
     channelz = len(server.channels);
     time = str(server.created_at); time = time.split(' '); time= time[0];
     r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
-    join = discord.Embed(description= '%s '%(str(server)),title = 'Server Name', color = discord.Color((r << 16) + (g << 8) + b));
+    join = discord.Embed(description= '%s '%(str(server)),title = 'Server Name', color = 0x429CFF);
     join.set_thumbnail(url = server.icon_url);
-    join.add_field(name = '__Owner__', value = str(server.owner) + '\n' + server.owner.id);
-    join.add_field(name = '__ID__', value = str(server.id))
-    join.add_field(name = '__Member Count__', value = str(server.member_count));
-    join.add_field(name = '__Text/Voice Channels__', value = str(channelz));
-    join.add_field(name = '__Roles (%s)__'%str(role_length), value = roles);
+    join.add_field(name = 'Owner', value = str(server.owner) + '\n' + server.owner.id);
+    join.add_field(name = 'ID', value = str(server.id))
+    join.add_field(name = 'Member Count', value = str(server.member_count));
+    join.add_field(name = 'Text/Voice Channels__', value = str(channelz));
+    join.add_field(name = 'Roles (%s)'%str(role_length), value = roles);
     join.set_footer(text ='Created: %s'%time);
 
     return await bot.say(embed = join);
@@ -380,7 +380,7 @@ async def tweet(ctx, usernamename:str, *, txt:str):
     	async with cs.get(url) as r:
             res = await r.json()
             r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
-            embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
+            embed = discord.Embed(color = 0x429CFF) 
             embed.set_image(url=res['message'])
             embed.title = "{} tweeted: {}".format(usernamename, txt)
             embed.set_footer(text ='Made with ❤ by @ADIB HOQUE#6969')
@@ -408,22 +408,21 @@ async def love(ctx, user: discord.Member = None, *, user2: discord.Member = None
         async with cs.get(url) as r:
             res = await r.json()
             r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
-            embed = discord.Embed(title=f"{shipuser1} ❤ {shipuser2} Love each others", description=f"Love\n`{counter_}` Score:**{score}% **\nLoveName:**{finalName}**", color = discord.Color((r << 16) + (g << 8) + b))
+            embed = discord.Embed(title=f"{shipuser1} ❤ {shipuser2} Love each others", description=f"Love\n`{counter_}` Score:**{score}% **\nLoveName:**{finalName}**", color = 0x429CFF) 
             embed.set_image(url=res['message'])
             await bot.say(embed=embed)   		   	   	   	 		   	  		   
  
 @bot.command(pass_context = True)
 async def rolldice(ctx):
     choices = ['1', '2', '3', '4', '5', '6']
-    color = discord.Color(value=0x00ff00)
-    em = discord.Embed(color=color, title='Rolled! (1 6-sided die)', description=random.choice(choices))
+    em = discord.Embed(color=0x429CFF, title='Rolled! (1 6-sided die)', description=random.choice(choices))
     await bot.send_typing(ctx.message.channel)
     await bot.say(embed=em)
     
 @bot.command(pass_context = True)
 async def flipcoin(ctx):
     choices = ['Heads', 'Tails']
-    color = discord.Color(value=0x00ff00)
+    color = discord.Color(value=0x429CFF)
     em=discord.Embed(color=color, title='Flipped a coin!')
     em.description = random.choice(choices)
     await bot.send_typing(ctx.message.channel)
@@ -436,7 +435,7 @@ async def kiss(ctx, user: discord.Member):
     if user.id == ctx.message.author.id:
         await bot.say("Goodluck kissing yourself {}".format(ctx.message.author.mention))
     else:
-        embed = discord.Embed(title=f"{user.name} You just got a kiss from {ctx.message.author.name}", color = discord.Color((r << 16) + (g << 8) + b))
+        embed = discord.Embed(title=f"{user.name} You just got a kiss from {ctx.message.author.name}", color = 0x429CFF)
         embed.set_image(url=random.choice(randomurl))
         await bot.say(embed=embed)
 
@@ -580,7 +579,7 @@ async def plsboi(ctx):
 async def help(ctx):
     author = ctx.message.author
     r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
-    embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
+    embed = discord.Embed(color = 0x429CFF) 
     embed.set_author(name='ELECTRO COMMANDS')
     embed.set_image(url = 'https://cdn.discordapp.com/attachments/571274963529498634/571275153800167425/ELECTRO_COMMANDS.png')
     embed.add_field(name = '``USAGE:`` ',value ='To see a page, just add the page number after the `e!help` command.Like this `e!help1`, `e!help2` Etc.',inline = False)
@@ -596,7 +595,7 @@ async def help(ctx):
 async def help1(ctx):
     author = ctx.message.author
     r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
-    embed = discord.Embed(title = 'GENERAL COMMANDS', color = discord.Color((r << 16) + (g << 8) + b))
+    embed = discord.Embed(title = 'GENERAL COMMANDS', color = 0x429CFF)
     embed.set_image(url = 'https://cdn.discordapp.com/attachments/565933128452145153/571281132298174465/ehelp1.png')
     embed.add_field(name = 'Ping',value ='Returns ping lantency!\n**USAGE:**``e!ping``',inline = False)
     embed.add_field(name = 'Userinfo',value ='Shows info about mentioned user!\n**USAGE:**``e!userinfo @user``',inline = False)
@@ -614,7 +613,7 @@ async def help1(ctx):
 async def help2(ctx):
     author = ctx.message.author
     r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
-    embed = discord.Embed(title = 'MODERATION COMMANDS', color = discord.Color((r << 16) + (g << 8) + b))
+    embed = discord.Embed(title = 'MODERATION COMMANDS', color = 0x429CFF)
     embed.set_image(url = 'https://cdn.discordapp.com/attachments/565933128452145153/571281132922994689/ehelp2.png')
     embed.add_field(name = 'Kick',value ='Kicks out mentioned user from the server!\n**USAGE:**``e!kick @user``',inline = False)
     embed.add_field(name = 'Ban',value ='Bans mentioned user from the server!\n**USAGE:**``e!ban @user``',inline = False) 
@@ -641,7 +640,7 @@ async def help2(ctx):
 async def help3(ctx):
     author = ctx.message.author
     r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
-    embed = discord.Embed(title = 'FUN COMMANDS', color = discord.Color((r << 16) + (g << 8) + b))
+    embed = discord.Embed(title = 'FUN COMMANDS', 0x429CFF)
     embed.set_image(url = 'https://cdn.discordapp.com/attachments/565933128452145153/571281132298174466/ehelp3.png')
     embed.add_field(name = 'Joke',value ='Sends a random joke!\n**USAGE:**``e!joke``',inline = False)
     embed.add_field(name = 'Love',value ='Detect love percentage between two users!\n**USAGE:**``e!love @user @user``',inline = False) 
@@ -670,10 +669,10 @@ async def help3(ctx):
 async def help4(ctx):
     author = ctx.message.author
     r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
-    embed = discord.Embed(title = 'MUSIC COMMANDS', color = discord.Color((r << 16) + (g << 8) + b))
+    embed = discord.Embed(title = 'MUSIC COMMANDS', color = 0x429CFF) 
     embed.set_image(url = 'https://cdn.discordapp.com/attachments/565933128452145153/571281133463928834/ehelp4.png')
     embed.add_field(name = 'Play',value ='Plays music from YouTube!\n**USAGE:**`e!play <music name> or <url>`',inline = False)
-    embed.add_field(name = 'Skip',value ='Skips the current playing music!\n**USAGE:**`e!skip`',inline = False)
+    embed.add_field(name = 'Skip',value ='Skips the current playing music!\n**USAGE:**`e!skip',inline = False)
     embed.add_field(name = 'Stop',value ='Stops playing music and leaves the vc!\n**USAGE:**`e!stop` ',inline = False)
     embed.add_field(name = 'NP',value ='Shows the now playing music!\n**USAGE:**`e!np`',inline = False)
     embed.add_field(name = 'Queue',value ='Shows the music queue!\n**USAGE:**`e!queue`',inline = False)
@@ -688,12 +687,12 @@ async def howgay(ctx, user: discord.Member = None):
 	if user is None:
 		score = random.randint(0, 100)
 		r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
-		embed = discord.Embed(title=f"Gayrate machine", description=f"{ctx.message.author} is **{score}%** gay :rainbow:", color = discord.Color((r << 16) + (g << 8) + b))
+		embed = discord.Embed(title=f"Gayrate machine", description=f"{ctx.message.author} is **{score}%** gay :rainbow:", color = 0x429CFF) 
 		await bot.say(embed=embed)
 	else:
 		score = random.randint(0, 100)
 		r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
-		embed = discord.Embed(title=f"Gayrate machine", description=f"{user} is **{score}%** gay :rainbow:", color = discord.Color((r << 16) + (g << 8) + b))
+		embed = discord.Embed(title=f"Gayrate machine", description=f"{user} is **{score}%** gay :rainbow:", color = 0x429CFF)
 		await bot.say(embed=embed)
   
 @bot.command(pass_context=True)
@@ -701,12 +700,12 @@ async def gayrate(ctx, user: discord.Member = None):
 	if user is None:
 		score = random.randint(0, 100)
 		r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
-		embed = discord.Embed(title=f"Gayrate machine", description=f"{ctx.message.author} is **{score}%** gay :rainbow:", color = discord.Color((r << 16) + (g << 8) + b))
+		embed = discord.Embed(title=f"Gayrate machine", description=f"{ctx.message.author} is **{score}%** gay :rainbow:", color = 0x429CFF)
 		await bot.say(embed=embed)
 	else:
 		score = random.randint(0, 100)
 		r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
-		embed = discord.Embed(title=f"Gayrate machine", description=f"{user} is **{score}%** gay :rainbow:", color = discord.Color((r << 16) + (g << 8) + b))
+		embed = discord.Embed(title=f"Gayrate machine", description=f"{user} is **{score}%** gay :rainbow:", color = 0x429CFF)
 		await bot.say(embed=embed)
 		
 @bot.command(pass_context = True)
@@ -732,7 +731,7 @@ async def rolecolor(ctx, role:discord.Role=None, value:str=None):
         colo = '0x' + value
         user = ctx.message.author
         await bot.edit_role(ctx.message.server, role, color = discord.Color(int(colour, base=16)))
-        embed=discord.Embed(description="<:ElectroSucess:527118398753079317> {} ROLE COLOR HAS BEEN CHANGED!".format(role.mention), color=0x00FFFF)
+        embed=discord.Embed(description="<:ElectroSucess:527118398753079317> {} ROLE COLOR HAS BEEN CHANGED!".format(role.mention), color=0x429CFF)
         await bot.say(embed=embed) 
         
 @bot.command(pass_context = True)
@@ -752,7 +751,7 @@ async def rolecolour(ctx, role:discord.Role=None, value:str=None):
         colour = '0x' + new_val
         user = ctx.message.author
         await bot.edit_role(ctx.message.server, role, color = discord.Color(int(colour, base=16)))
-        embed=discord.Embed(description="<:ElectroSucess:527118398753079317> {} ROLE COLOR HAN BEEN CHANGED!".format(role.mention), color=0x00FFFF)
+        embed=discord.Embed(description="<:ElectroSucess:527118398753079317> {} ROLE COLOR HAN BEEN CHANGED!".format(role.mention), color=0x429CFF)
         await bot.say(embed=embed) 
     			
 @bot.command(pass_context=True)
@@ -772,14 +771,14 @@ async def unbanall(ctx):
 @bot.command(pass_context = True)
 @commands.has_permissions(administrator=True) 
 async def embed(ctx, channel: discord.Channel=None, *, msg: str):
-	embed=discord.Embed(description="{}".format(msg), color=0x43464B)
+	embed=discord.Embed(description="{}".format(msg), color=0x429CFF)
 	await bot.send_message(channel, embed=embed)
 	await bot.delete_message(ctx.message)
     
 @bot.command(pass_context = True)
 @commands.has_permissions(administrator=True) 
 async def announce(ctx, channel: discord.Channel=None, *, msg: str):
-	embed=discord.Embed(description="{}".format(msg), color=0x43464B)
+	embed=discord.Embed(description="{}".format(msg), color=0x429CFF)
 	embed.set_author(name="{}".format(ctx.message.author), icon_url=ctx.message.author.avatar_url)
 	embed.timestamp = datetime.datetime.utcnow()
 	await bot.send_message(channel, embed=embed)
