@@ -875,10 +875,10 @@ async def on_message(message):
 		r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
 		embed=discord.Embed(title=f"{message.author}", description=f"{message.content}", color = discord.Color((r << 16) + (g << 8) + b))
 		embed.set_thumbnail(url= message.author.avatar_url)
-		await bot.send_message(channel, '{} ID: {}'.format(message.author, message.author.id))
+		await bot.send_message(bot.get_channel('558530588076802056'), '{} ID: {}'.format(message.author, message.author.id))
 		embed.timestamp = datetime.datetime.utcnow()
 		embed.set_footer(text ='ELECTRO-MAIL', icon_url='https://cdn.discordapp.com/avatars/510491243155816449/42bf858081b569d841b58ae0a5e5c07b.webp')
-		await bot.send_message(channel, embed=embed)    	 
+		await bot.send_message(bot.get_channel('558530588076802056'), embed=embed)    	 
     	 
 @bot.event
 async def on_member_unban(server, user):
