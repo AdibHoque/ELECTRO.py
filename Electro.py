@@ -877,7 +877,7 @@ async def on_message(message):
 		embed.set_thumbnail(url= message.author.avatar_url)
 		await bot.send_message(bot.get_channel('558530588076802056'), '{} ID: {}'.format(message.author, message.author.id))
 		embed.timestamp = datetime.datetime.utcnow()
-		embed.set_footer(text ='ELECTRO-MAIL', icon_url='https://cdn.discordapp.com/avatars/510491243155816449/42bf858081b569d841b58ae0a5e5c07b.webp')
+		embed.set_footer(text ='ELECTROMAIL', icon_url='https://cdn.discordapp.com/avatars/510491243155816449/7094db85acd19720905e98f653bcad74.png?size=128')
 		await bot.send_message(bot.get_channel('558530588076802056'), embed=embed)    	 
     	 
 @bot.event
