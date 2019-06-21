@@ -78,7 +78,7 @@ async def servers(ctx):
   print('nothing')
  																
 @bot.command(pass_context = True)
-@commands.cooldown(rate=5,per=5,type=BucketType.user)
+@commands.cooldown(1, 5, commands.BucketType.user)
 async def ping(ctx):
     channel = ctx.message.channel
     t1 = time.perf_counter()
