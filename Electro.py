@@ -836,7 +836,7 @@ async def on_message_edit(before, after):
             embed.add_field(name = 'Message Author:',value ='{}'.format(user),inline = False)
             embed.add_field(name = 'Before:',value ='{}'.format(before.content),inline = False)
             embed.add_field(name = 'After:',value ='{}'.format(after.content),inline = False)
-            embed.add_field(name = 'Channel:',value ='{before.channel.mention}\n[Jump To Message](https://discordapp.com/channels/{before.server.id}/{before.channel.id}/{before.id})',inline = False)
+            embed.add_field(name = 'Channel:',value ='{0}\n[Jump To Message](https://discordapp.com/channels/{1}/{2}/{3})'.format(before.channel.mention, before.server.id, before.channel.id, before.id),inline = False)
             embed.timestamp = datetime.datetime.utcnow()
             embed.set_footer(text ='MESSAGE EDITED')
             await bot.send_message(channel, embed=embed)
