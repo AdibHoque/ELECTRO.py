@@ -836,7 +836,7 @@ async def on_message_edit(before, after):
             embed.add_field(name = 'Message Author:',value ='{}'.format(user),inline = False)
             embed.add_field(name = 'Before:',value ='{}'.format(before.content),inline = False)
             embed.add_field(name = 'After:',value ='{}'.format(after.content),inline = False)
-            embed.add_field(name = 'Channel:',value ='{}\n[Jump To Message](https://discordapp.com/channels/{before.server.id}/{before.channel.id}/{before.id})'.format(before.channel.mention),inline = False)
+            embed.add_field(name = 'Channel:',value ='{before.channel.mention}\n[Jump To Message](https://discordapp.com/channels/{before.server.id}/{before.channel.id}/{before.id})',inline = False)
             embed.timestamp = datetime.datetime.utcnow()
             embed.set_footer(text ='MESSAGE EDITED')
             await bot.send_message(channel, embed=embed)
@@ -1257,8 +1257,8 @@ async def membership(ctx, user: discord.Member, *,price: str):
 @bot.command(pass_context=True)
 @commands.check(is_owner)
 async def searchforgays(ctx):
-	msg = await bot.say('🔍Searching for gays please wait.....')
-	asyncio.sleep(3)
+	msg = await bot.say('🔍Searching for gays please wait<a:loading:587590269617176576>')
+	await asyncio.sleep(3)
 	await bot.edit_message(msg, ':gay_pride_flag:3 Matches found:\nGlue, Glade, An Ant')
 	        	        
 bot.run(os.getenv('Token'))
