@@ -895,9 +895,9 @@ async def on_reaction_remove(reaction, user):
 async def on_message(message):
 	if not message.author.bot:
 		await bot.process_commands(message)
-	if 'gaylord' or 'gaygod' in message.content:
+	if '<@488353416599306270>' in message.content:
 		emoji = 'a:AdibReeeeee:558181398670737408'
-		await bot.delete_message(message) 
+		await bot.add_reaction(message, emoji) 
 		channel = bot.get_channel('558530588076802056')
 	if message.server is None and message.author != bot.user:
 		electrosucess = ':ElectroSucess:527118398753079317'
