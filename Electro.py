@@ -1297,12 +1297,12 @@ async def flipcoin(ctx):
     choices = ['Heads', 'Tails']
     pick=choices[random.randint(0, 1)]
     if pick == 'Heads':
-    	heads=discord.Embed(color=color, description='{ctx.message.author.name} flipped Heads!')
+    	heads=discord.Embed(color = 0x429CFF, description='{ctx.message.author.name} flipped Heads!')
     heads.set_image(url='https://cdn.discordapp.com/attachments/603252260792959016/603254206765334556/ELECTRO_heads.png')
     await bot.send_typing(ctx.message.channel)
     await bot.say(embed=heads)
     if pick == 'Tails':
-    	tails=discord.Embed(color=color, description='{ctx.message.author.name} flipped Heads!')
+    	tails=discord.Embed(color = 0x429CFF, description='{ctx.message.author.name} flipped Heads!')
     tails.set_image(url='https://cdn.discordapp.com/attachments/603252260792959016/603254226101076016/ELECTRO_tails.png')
     await bot.send_typing(ctx.message.channel)
     await bot.say(embed=tails)
