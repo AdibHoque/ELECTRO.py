@@ -1295,7 +1295,7 @@ async def shinypokemon(ctx, *, pokemon: str):
 @bot.command(pass_context = True)
 async def flipcoin(ctx):
     choices = ['Heads', 'Tails']
-    pick=choices[random.randint(0, 1)]
+    pick=choices[random.randint(0, 2)]
     if pick == 'Heads':
     	heads=discord.Embed(color = 0x429CFF, description='{} flipped Heads!'.format(ctx.message.author))
     heads.set_image(url='https://cdn.discordapp.com/attachments/603252260792959016/603254206765334556/ELECTRO_heads.png')
