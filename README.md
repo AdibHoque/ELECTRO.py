@@ -20,7 +20,7 @@
 
 ## WHAT DOES ELECTRO DO? 
 
-<img src="https://discordbots.org/api/widget/510491243155816449.svg" alt="ELECTRO" align="right" height="350">
+<img src="https://cdn.discordapp.com/attachments/603252260792959016/603252301750337557/ELECTRO_bot_info.png" alt="ELECTRO" align="right" height="350">
 
 ELECTRO is a moderation bot as well as a fun bot. ELECTRO has all the moderation commands and many fun commands. To see the list of commands scroll dowm or type `e!help` or `@ELECTRO help`in a server which have ELECTRO. Join our discord [server](https://github.com/kyb3r/modmail/wiki) to contract the bot creator `@ADIB HOQUE#6969`.
 
