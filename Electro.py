@@ -543,7 +543,7 @@ async def membercount(ctx, *args):
     await bot.delete_message(ctx.message)
     
 @bot.group(pass_context=True, invoke_without_command=True)
-@commands.check(is_owner)  
+@commands.has_permissions(manage_roles=True)  
 async def role(ctx, user:discord.Member=None,*, role:discord.Role=None):
     if user is None or role is None:
         await bot.say('There was a error executing this command!**PROPER USAGE:**`e!role @user @role`')
