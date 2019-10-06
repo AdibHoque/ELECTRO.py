@@ -64,7 +64,7 @@ async def prefix(ctx):
 	await bot.say('The prefix for the bot is **e!**') 
 
 def is_owner(ctx):
-    return ctx.message.author.id == "488353416599306270"
+    return ctx.message.author.id == "496978159724396545"
     
 def is_masstyper(ctx):
     return ctx.message.author.id == "488353416599306270", "517729298355060736"      
@@ -218,13 +218,13 @@ async def avatar(ctx, user: discord.Member=None):
 
 @bot.command(pass_context=True)
 async def ownerinfo():
-    embed = discord.Embed(description = '**Created by:**\nADIB HOQUE#6969', color = 0x429CFF)
+    embed = discord.Embed(description = '**Created by:**\nADIB HOQUE#3235', color = 0x429CFF)
     embed.set_thumbnail(url = 'https://cdn.discordapp.com/avatars/488353416599306270/a_0b47a1d90683e169ff274abac5043cc7.gif?size=256&f=.gif')
     await bot.say(embed=embed)
     
 @bot.command(pass_context=True)
 async def owner():
-    embed = discord.Embed(description = '**Created by:**\nADIB HOQUE#6969', color = 0x429CFF)
+    embed = discord.Embed(description = '**Created by:**\nADIB HOQUE#3235', color = 0x429CFF)
     embed.set_thumbnail(url = 'https://cdn.discordapp.com/avatars/488353416599306270/a_0b47a1d90683e169ff274abac5043cc7.gif?size=256&f=.gif')
     await bot.say(embed=embed)    
     
@@ -413,7 +413,7 @@ async def tweet(ctx, usernamename:str, *, txt:str):
             embed = discord.Embed(color = 0x429CFF) 
             embed.set_image(url=res['message'])
             embed.title = "{} tweeted: {}".format(usernamename, txt)
-            embed.set_footer(text ='Made with ❤ by @ADIB HOQUE#6969')
+            embed.set_footer(text ='Made with ❤ by @ADIB HOQUE#3235')
             await bot.say(embed=embed)
 		   	   	 
  
@@ -699,7 +699,7 @@ async def help4(ctx):
     embed.add_field(name = 'Queue',value ='Shows the music queue!\n**USAGE:**`e!queue`',inline = False)
     embed.add_field(name = 'Pause',value ='Pauses the current playing song!\n**USAGE:**`e!pause`',inline = False)
     embed.add_field(name = 'Resume',value ='Resumes the current paused song!\n**USAGE:**`e!resume`',inline = False)
-    embed.add_field(name = 'Volume',value ='Change volume of the song!\n**USAGE:**`e!volume <1-200>`',inline = False)
+    embed.add_field(name = 'Volume',value ='Change volume of the song!\n**USAGE:**`e!volume <1-200>`\*Music commands are currently unavailable!*',inline = False)
     await bot.send_message(author ,embed=embed)
     await bot.say('📨 Check Your DMs For Music Commands!')    
 
