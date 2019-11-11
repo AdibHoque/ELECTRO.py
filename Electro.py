@@ -219,13 +219,13 @@ async def avatar(ctx, user: discord.Member=None):
 @bot.command(pass_context=True)
 async def ownerinfo():
     embed = discord.Embed(description = '**Created by:**\nADIB HOQUE#3235', color = 0x429CFF)
-    embed.set_thumbnail(url = 'https://cdn.discordapp.com/avatars/488353416599306270/a_0b47a1d90683e169ff274abac5043cc7.gif?size=256&f=.gif')
+    embed.set_thumbnail(url = 'https://cdn.dis1d90683e169ff274abac5043cc7.gif?size=256&f=.gif')
     await bot.say(embed=embed)
     
 @bot.command(pass_context=True)
 async def owner():
-    embed = discord.Embed(description = '**Created by:**\nADIB HOQUE#3235', color = 0x429CFF)
-    embed.set_thumbnail(url = 'https://cdn.discordapp.com/avatars/488353416599306270/a_0b47a1d90683e169ff274abac5043cc7.gif?size=256&f=.gif')
+    embed = discord.Embed(description = '**Created by:**\n<a:adib:643372389224153089>ADIB HOQUE#3235', color = 0x429CFF)
+    embed.set_thumbnail(url = 'https://cdn.discordapp.com/attachments/643421220108501002/643421321266462731/20191111_143116.gif')
     await bot.say(embed=embed)    
     
 @bot.command()
