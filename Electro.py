@@ -178,7 +178,7 @@ async def unban(ctx, identification:str):
         await bot.say(f'<:ElectroSucess:527118398753079317>**{user} was unbanned!**')
         for channel in ctx.message.server.channels:
           if channel.name == '📡electro-logs':
-              embed=discord.Embed(title="UNBAN COMMAND USED", description="**User:** {0}\n**Moderator:**{1}**".format(user, ctx.message.author), color=0x38761D)
+              embed=discord.Embed(title="UNBAN COMMAND USED", description="**User:** {0}\n**Moderator:**{1}**".format(user, ctx.message.author), color=0xFFBF00)
               embed.timestamp = datetime.datetime.utcnow()
               embed.set_footer(text ='USER BANNED')
               await bot.send_message(channel, embed=embed)
@@ -218,13 +218,13 @@ async def avatar(ctx, user: discord.Member=None):
 
 @bot.command(pass_context=True)
 async def ownerinfo():
-    embed = discord.Embed(description = '**Created by:**\n<a:adib:643372389224153089>ADIB HOQUE#3235', color = 0x429CFF)
+    embed = discord.Embed(description = '**Created by:**\n<a:adib:643372389224153089>ADIB HOQUE#3235', color = 0xFFBF00)
     embed.set_thumbnail(url = 'https://cdn.discordapp.com/attachments/643421220108501002/643421321266462731/20191111_143116.gif')
     await bot.say(embed=embed)
     
 @bot.command(pass_context=True)
 async def owner():
-    embed = discord.Embed(description = '**Created by:**\n<a:adib:643372389224153089>ADIB HOQUE#3235', color = 0x429CFF)
+    embed = discord.Embed(description = '**Created by:**\n<a:adib:643372389224153089>ADIB HOQUE#3235', color = 0xFFBF00)
     embed.set_thumbnail(url = 'https://cdn.discordapp.com/attachments/643421220108501002/643421321266462731/20191111_143116.gif')
     await bot.say(embed=embed)    
     
