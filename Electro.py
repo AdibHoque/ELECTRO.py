@@ -94,7 +94,7 @@ async def setnick(ctx, user: discord.Member, *, nickname):
 async def invite():
 	embed=discord.Embed(description="Here are some useful links! If you have any questions about the bot, feel free to join the support guild and ask!.\nThanks you for using the bot! 💙 from the bot developer `ADIB HOQUE#6969`", color=0xFFBF00)
 	embed.set_author(name="ELECTRO's Invite URL", icon_url='https://cdn.discordapp.com/avatars/510491243155816449/7094db85acd19720905e98f653bcad74.png?size=128')
-	embed.add_field(name = 'Invite URL',value ='[https://invite.electro.xyz](https://discordapp.com/api/oauth2/authorize?client_id=510491243155816449&permissions=8&scope=bot)',inline = False)
+	embed.add_field(name = 'Invite URL',value ='[https://invite.electro.xyz](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot)',inline = False)
 	embed.add_field(name = 'Support Server',value ='[https://support.electro.xyz](https://discord.gg/WpFAGyx)',inline = False)
 	embed.set_footer(text='We hope you have fun with the bot!', icon_url='https://cdn.discordapp.com/avatars/510491243155816449/7094db85acd19720905e98f653bcad74.png?size=128')
 	await bot.say('https://discord.gg/WpFAGyx', embed=embed)
@@ -103,7 +103,7 @@ async def invite():
 async def link():
 	embed=discord.Embed(description="Here are some useful links! If you have any questions about the bot, feel free to join the support guild and ask!.\nThanks you for using the bot! 💙 from the bot developer `ADIB HOQUE#6969`", color=0xFFBF00)
 	embed.set_author(name="ELECTRO's Invite URL", icon_url='https://cdn.discordapp.com/avatars/510491243155816449/7094db85acd19720905e98f653bcad74.png?size=128')
-	embed.add_field(name = 'Invite URL',value ='[https://invite.electro.xyz](https://discordapp.com/api/oauth2/authorize?client_id=510491243155816449&permissions=8&scope=bot)',inline = False)
+	embed.add_field(name = 'Invite URL',value ='[https://invite.electro.xyz](https://discordapp.com/api/oauth2/authorent_id=510491243155816449&permissions=8&scope=bot)',inline = False)
 	embed.add_field(name = 'Support Server',value ='[https://support.electro.xyz](https://discord.gg/WpFAGyx)',inline = False)
 	embed.set_footer(text='We hope you have fun with the bot!', icon_url='https://cdn.discordapp.com/avatars/510491243155816449/7094db85acd19720905e98f653bcad74.png?size=128')
 	await bot.say('https://discord.gg/WpFAGyx', embed=embed)
