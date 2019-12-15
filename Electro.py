@@ -41,7 +41,6 @@ def setup(bot):
 
 bot = commands.Bot(command_prefix=commands.when_mentioned_or('e!'))
 bot.remove_command("help")
-0x429CFF = 0xFFBF00
 
 async def status_task():
     while True:
@@ -67,8 +66,8 @@ async def prefix(ctx):
 def is_owner(ctx):
     return ctx.message.author.id == "496978159724396545"
     
-def is_masstyper(ctx):
-    return ctx.message.author.id == "488353416599306270", "517729298355060736"      
+def 0x429CFF(ctx):
+    return == "0xFFBF00"      
    
 @bot.command(pass_context = True)
 @commands.check(is_owner)
