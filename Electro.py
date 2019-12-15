@@ -64,10 +64,7 @@ async def prefix(ctx):
 	await bot.say('The prefix for the bot is **e!**') 
 
 def is_owner(ctx):
-    return ctx.message.author.id == "496978159724396545"
-    
-def 0x429CFF(ctx):
-    return == "0xFFBF00"      
+    return ctx.message.author.id == "496978159724396545"     
    
 @bot.command(pass_context = True)
 @commands.check(is_owner)
@@ -95,7 +92,7 @@ async def setnick(ctx, user: discord.Member, *, nickname):
 
 @bot.command(pass_context=True)
 async def invite():
-	embed=discord.Embed(description="Here are some useful links! If you have any questions about the bot, feel free to join the support guild and ask!.\nThanks you for using the bot! 💙 from the bot developer `ADIB HOQUE#6969`", color=0x428CFF)
+	embed=discord.Embed(description="Here are some useful links! If you have any questions about the bot, feel free to join the support guild and ask!.\nThanks you for using the bot! 💙 from the bot developer `ADIB HOQUE#6969`", color=0xFFBF00)
 	embed.set_author(name="ELECTRO's Invite URL", icon_url='https://cdn.discordapp.com/avatars/510491243155816449/7094db85acd19720905e98f653bcad74.png?size=128')
 	embed.add_field(name = 'Invite URL',value ='[https://invite.electro.xyz](https://discordapp.com/api/oauth2/authorize?client_id=510491243155816449&permissions=8&scope=bot)',inline = False)
 	embed.add_field(name = 'Support Server',value ='[https://support.electro.xyz](https://discord.gg/WpFAGyx)',inline = False)
@@ -104,7 +101,7 @@ async def invite():
 	
 @bot.command(pass_context=True)
 async def link():
-	embed=discord.Embed(description="Here are some useful links! If you have any questions about the bot, feel free to join the support guild and ask!.\nThanks you for using the bot! 💙 from the bot developer `ADIB HOQUE#6969`", color=0x428CFF)
+	embed=discord.Embed(description="Here are some useful links! If you have any questions about the bot, feel free to join the support guild and ask!.\nThanks you for using the bot! 💙 from the bot developer `ADIB HOQUE#6969`", color=0xFFBF00)
 	embed.set_author(name="ELECTRO's Invite URL", icon_url='https://cdn.discordapp.com/avatars/510491243155816449/7094db85acd19720905e98f653bcad74.png?size=128')
 	embed.add_field(name = 'Invite URL',value ='[https://invite.electro.xyz](https://discordapp.com/api/oauth2/authorize?client_id=510491243155816449&permissions=8&scope=bot)',inline = False)
 	embed.add_field(name = 'Support Server',value ='[https://support.electro.xyz](https://discord.gg/WpFAGyx)',inline = False)
@@ -144,7 +141,7 @@ async def kick(ctx, user:discord.Member, *, reason:str):
       await bot.delete_message(ctx.message)
       for channel in user.server.channels:
         if channel.name == '📡electro-logs':
-            embed=discord.Embed(title="KICK COMMAND USED", description="**User:** {0}\n**Moderator:** {1}".format(user, ctx.message.author), color=0x429CFF)
+            embed=discord.Embed(title="KICK COMMAND USED", description="**User:** {0}\n**Moderator:** {1}".format(user, ctx.message.author), color=0xFFBF00)
             embed.timestamp = datetime.datetime.utcnow()
             embed.set_footer(text ='USER KICKED')
             await bot.send_message(channel, embed=embed)
@@ -164,7 +161,7 @@ async def ban(ctx, user:discord.Member, *, reason:str):
       await bot.delete_message(ctx.message)
       for channel in user.server.channels:
         if channel.name == '📡electro-logs':
-            embed=discord.Embed(title="BAN COMMAND USED", description="**User:** {0}\n**Moderator:** {1}".format(user, ctx.message.author), color=0xFDE112)
+            embed=discord.Embed(title="BAN COMMAND USED", description="**User:** {0}\n**Moderator:** {1}".format(user, ctx.message.author), color=0xFFBF00)
             embed.timestamp = datetime.datetime.utcnow()
             embed.set_footer(text ='USER BANNED')
             await bot.send_message(channel, embed=embed)        
