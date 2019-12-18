@@ -590,7 +590,7 @@ async def help(ctx):
     r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
     embed = discord.Embed(color = 0xFFBF00) 
     embed.set_author(name='ELECTRO COMMANDS')
-    embed.set_image(url = 'https://cdn.discordapp.com/attachments/571274963529498634/571275153800167425/ELECTRO_COMMANDS.png')
+    embed.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/656760631474520074/ELECTRO_ELECTRIFY_YOUR_SERVER.gif')
     embed.add_field(name = '``USAGE:`` ',value ='To see a page, just add the page number after the `e!help` command.Like this `e!help1`, `e!help2` Etc.',inline = False)
     embed.add_field(name = 'PAGE 1 | General Commands ',value ='General commands which everyone can use!.',inline = False)
     embed.add_field(name = 'PAGE 2 | Moderation Commands',value ='Commands that are used for moderation and can only be used by server moderators.',inline = False)
@@ -605,7 +605,7 @@ async def help1(ctx):
     author = ctx.message.author
     r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
     embed = discord.Embed(title = 'GENERAL COMMANDS', color = 0xFFBF00)
-    embed.set_image(url = 'https://cdn.discordapp.com/attachments/565933128452145153/571281132298174465/ehelp1.png')
+    embed.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/656760777973432330/ELECTRO_HELP1.gif')
     embed.add_field(name = 'Ping',value ='Returns ping lantency!\n**USAGE:**``e!ping``',inline = False)
     embed.add_field(name = 'Userinfo',value ='Shows info about mentioned user!\n**USAGE:**``e!userinfo @user``',inline = False)
     embed.add_field(name = 'Serverinfo',value ='Shows info about the server!\n**USAGE:**``e!serverinfo``',inline = False)
@@ -623,7 +623,7 @@ async def help2(ctx):
     author = ctx.message.author
     r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
     embed = discord.Embed(title = 'MODERATION COMMANDS', color = 0xFFBF00)
-    embed.set_image(url = 'https://cdn.discordapp.com/attachments/565933128452145153/571281132922994689/ehelp2.png')
+    embed.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/656760817852874752/ELECTRO_HELP2.gif')
     embed.add_field(name = 'Kick',value ='Kicks out mentioned user from the server!\n**USAGE:**``e!kick @user``',inline = False)
     embed.add_field(name = 'Ban',value ='Bans mentioned user from the server!\n**USAGE:**``e!ban @user``',inline = False) 
     embed.add_field(name = 'Unban',value ='Unbans user from the server!\n**USAGE:**``e!unban <User ID>``',inline = False) 
@@ -650,7 +650,7 @@ async def help3(ctx):
     author = ctx.message.author
     r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
     embed = discord.Embed(title = 'FUN COMMANDS', color = 0xFFBF00)
-    embed.set_image(url = 'https://cdn.discordapp.com/attachments/565933128452145153/571281132298174466/ehelp3.png')
+    embed.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/656760847917514775/ELECTRO_HELP3.gif')
     embed.add_field(name = 'Joke',value ='Sends a random joke!\n**USAGE:**``e!joke``',inline = False)
     embed.add_field(name = 'Love',value ='Detect love percentage between two users!\n**USAGE:**``e!love @user @user``',inline = False) 
     embed.add_field(name = 'Slap',value ='Slaps mentioned user!\n**USAGE:**``e!slap @user``',inline = False)
@@ -679,7 +679,7 @@ async def help4(ctx):
     author = ctx.message.author
     r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
     embed = discord.Embed(title = 'MUSIC COMMANDS', color = 0xFFBF00) 
-    embed.set_image(url = 'https://cdn.discordapp.com/attachments/565933128452145153/571281133463928834/ehelp4.png')
+    embed.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/656760860085321748/ELECTRO_HELP4.gif')
     embed.add_field(name = 'Play',value ='Plays music from YouTube!\n**USAGE:**`e!play <music name> or <url>`',inline = False)
     embed.add_field(name = 'Skip',value ='Skips the current playing music!\n**USAGE:**`e!skip',inline = False)
     embed.add_field(name = 'Stop',value ='Stops playing music and leaves the vc!\n**USAGE:**`e!stop` ',inline = False)
@@ -877,17 +877,17 @@ async def on_message(message):
 	if '<@488353416599306270>' in message.content:
 		emoji = 'a:AdibReeeeee:558181398670737408'
 		await bot.add_reaction(message, emoji) 
-		channel = bot.get_channel('558530588076802056')
+		channel = bot.get_channel('646262196975960074')
 	if message.server is None and message.author != bot.user:
-		electrosucess = ':ElectroSucess:527118398753079317'
+		electrosucess = '<a:ElectroSuccess:656772759812046851>'
 		await bot.add_reaction(message, electrosucess)
 		r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
-		embed=discord.Embed(title=f"{message.author}", description=f"{message.content}", color = discord.Color((r << 16) + (g << 8) + b))
+		embed=discord.Embed(title=f"{message.author}", description=f"{message.content}", color = 0xFFBF00)
 		embed.set_thumbnail(url= message.author.avatar_url)
-		await bot.send_message(bot.get_channel('558530588076802056'), '{} ID: {}'.format(message.author, message.author.id))
+		await bot.send_message(bot.get_channel('646262196975960074'), '{} ID: {}'.format(message.author, message.author.id))
 		embed.timestamp = datetime.datetime.utcnow()
 		embed.set_footer(text ='ELECTRO MAIL', icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
-		await bot.send_message(bot.get_channel('558530588076802056'), embed=embed)    	 
+		await bot.send_message(bot.get_channel('646262196975960074'), embed=embed)    	 
     	 
 @bot.event
 async def on_member_unban(server, user):
