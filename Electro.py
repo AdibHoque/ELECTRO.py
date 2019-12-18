@@ -879,16 +879,16 @@ async def on_message(message):
 	if '<@488353416599306270>' in message.content:
 		emoji = 'a:AdibReeeeee:558181398670737408'
 		await bot.add_reaction(message, emoji) 
-		channel = bot.get_channel('646262196975960074')
+		channel = bot.get_channel('656535174548553730')
 	if message.server is None and message.author != bot.user:
 		electrosucess = 'a:ElectroSuccess:656772759812046851'
 		await bot.add_reaction(message, electrosucess)
 		embed=discord.Embed(title="{message.author}", description="{message.content}", color = 0xFFBF00)
 		embed.set_thumbnail(url= message.author.avatar_url)
-		await bot.send_message(bot.get_channel('646262196975960074'), '{} ID: {}'.format(message.author, message.author.id))
+		await bot.send_message(bot.get_channel('656535174548553730'), '{} ID: {}'.format(message.author, message.author.id))
 		embed.timestamp = datetime.datetime.utcnow()
 		embed.set_footer(text ='ELECTRO MAIL', icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
-		await bot.send_message(bot.get_channel('646262196975960074'), embed=embed)    	 
+		await bot.send_message(bot.get_channel('656535174548553730'), embed=embed)    	 
     	 
 @bot.event
 async def on_member_unban(server, user):
