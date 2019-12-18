@@ -879,7 +879,7 @@ async def on_message(message):
 		await bot.add_reaction(message, emoji) 
 		channel = bot.get_channel('646262196975960074')
 	if message.server is None and message.author != bot.user:
-		electrosucess = '<a:ElectroSuccess:656772759812046851>'
+		electrosucess = 'a:ElectroSuccess:656772759812046851'
 		await bot.add_reaction(message, electrosucess)
 		r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
 		embed=discord.Embed(title=f"{message.author}", description=f"{message.content}", color = 0xFFBF00)
