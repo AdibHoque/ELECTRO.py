@@ -120,7 +120,7 @@ async def server():
 @bot.command(pass_context=True)  
 @commands.has_permissions(kick_members=True)     
 async def kick(ctx, user:discord.Member, *, reason:str):
-    if user or reason is None:
+    if user is None or reason is None:
       await bot.say('<a:ElectroFail:656772856184832025>**Please mention a user to kick & specify a reason for kicking out!**\nEXAMPLE:`e!kick <@user or id> <reason>`')
     if user.server_permissions.kick_members:
       await bot.say("<a:ElectroFail:656772856184832025>**He is a Mod/Admin, I can't do that!**")
@@ -140,7 +140,7 @@ async def kick(ctx, user:discord.Member, *, reason:str):
 @bot.command(pass_context=True)  
 @commands.has_permissions(ban_members=True)     
 async def ban(ctx, user:discord.Member, *, reason:str):
-    if user or reason is None:
+    if user is None or reason is None:
       await bot.say('<a:ElectroFail:656772856184832025>**Please mention a user to ban & specify a reason for banning!\nExample:`e!ban <@user or id> <reason>**')
     if user.server_permissions.kick_members:
       await bot.say("<a:ElectroFail:656772856184832025>**He is a Mod/Admin, I can't do that!**")
@@ -315,7 +315,7 @@ async def giverole(ctx, user: discord.Member, *, role: discord.Role = None):
 		return await bot.say("Please specify a role to give! ")
 	if role not in user.roles:
 		await bot.add_roles(user, role)
-		return await bot.say("<:ElectroSucess:527118398753079317> **{}** role has been added to **{}**.".format(role, user))
+		return await bot.say("<a:ElectroSuccess:656772759812046851> **{}** role has been added to **{}**.".format(role, user))
 
 @bot.command(pass_context = True)
 @commands.has_permissions(manage_roles=True)
@@ -534,7 +534,7 @@ async def membercount(ctx, *args):
 @commands.has_permissions(manage_roles=True)  
 async def role(ctx, user:discord.Member=None,*, role:discord.Role=None):
     if user is None or role is None:
-        await bot.say('There was a error executing this command!/n**PROPER USAGE:** `e!role @user @role`')
+        await bot.say('There was a error executing this command!\n**PROPER USAGE:** `e!role @user @role`')
         return
     if role in user.roles:
         await bot.remove_roles(user, role)
@@ -932,9 +932,9 @@ async def on_message_delete(message):
 			
 @bot.event
 async def on_server_join(server):
-	channel = bot.get_channel('529937996024119297')
+	channel = bot.get_channel('656536432500015186')
 	r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
-	embed = discord.Embed(title="IM IN A NEW SERVER", color = discord.Color((r << 16) + (g << 8) + b))
+	embed = discord.Embed(title="IM IN A NEW SERVER", color = 0xFFBF00)
 	embed.add_field(name = 'Server Name:',value ='{}'.format(server.name),inline = False)
 	embed.add_field(name = 'Membercount:',value ='{}'.format(str(server.member_count)),inline = False)
 	embed.set_thumbnail(url = server.icon_url)
@@ -943,9 +943,9 @@ async def on_server_join(server):
 			
 @bot.event
 async def on_server_remove(server):
-		channel = bot.get_channel('529937996741476353')
+		channel = bot.get_channel('656536492977553438')
 		r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
-		embed = discord.Embed(title="I WAS REMOVED FROM A SERVER", color = discord.Color((r << 16) + (g << 8) + b))
+		embed = discord.Embed(title="I WAS REMOVED FROM A SERVER", color = 0xFFBF00)
 		embed.add_field(name = 'Server Name:',value ='{}'.format(server.name),inline = False)
 		embed.add_field(name = 'Membercount:',value ='{}'.format(str(server.member_count)),inline = False)
 		embed.set_thumbnail(url = server.icon_url)
@@ -994,7 +994,7 @@ async def setuplog(ctx):
     if ctx.message.author.bot:
       return
     if ctx.message.author.server_permissions.administrator == False:
-      await bot.say('**You do not have permission to use this command**')
+      await bot.say('<a:ElectroFail:656772856184832025> **You do not have permission to use this command**')
       return
     else:
       author = ctx.message.author
@@ -1002,7 +1002,7 @@ async def setuplog(ctx):
       everyone_perms = discord.PermissionOverwrite(send_messages=False, read_messages=True)
       everyone = discord.ChannelPermissions(target=server.default_role, overwrite=everyone_perms)
       await bot.create_channel(server, '📡electro-logs', everyone)
-      await bot.say("<:ElectroSucess:527118398753079317> **LOG CHANNEL CREATED!**\nDon't rename it or it won't work!'")
+      await bot.say("<a:ElectroSuccess:656772759812046851> **LOG CHANNEL CREATED!**\nDon't rename it or it won't work!'")
 								 
 @bot.command(pass_context=True)
 async def magik(ctx, user:discord.Member):
@@ -1166,28 +1166,28 @@ async def clyde(ctx, *, msg:str):
 @commands.has_permissions(kick_members=True) 
 async def mute(ctx, member: discord.Member=None):
 	if member is None:
-		await bot.say('<:ElectroFail:527118399453528103> **PLEASE SPECIFY A USER TO MUTE!**')
+		await bot.say('<a:ElectroFail:656772856184832025> **PLEASE SPECIFY A USER TO MUTE!**')
 	if member.server_permissions.kick_members:
-		await bot.say("<:ElectroFail:527118399453528103> **THAT USER IS A MOD/ADMIN, I CAN'T DO THAT!**")
+		await bot.say("<a:ElectroFail:656772856184832025> **THAT USER IS A MOD/ADMIN, I CAN'T DO THAT!**")
 	if discord.utils.get(member.server.roles, name='Muted') is None:
-		await bot.say('<:ElectroFail:527118399453528103> **NO MUTED ROLE FOUND**')
+		await bot.say('<a:ElectroFail:656772856184832025> **NO MUTED ROLE FOUND**')
 	else:
 		role = discord.utils.get(member.server.roles, name='Muted')
 		await bot.add_roles(member, role)
-		await bot.say("<:ElectroSucess:527118398753079317> **{} WAS MUTED!**".format(member.name))
+		await bot.say("<a:ElectroSuccess:656772759812046851> **{} WAS MUTED!**".format(member.name))
 		await bot.send_message(member, "You were muted by **{0}** from **{1}**!".format(ctx.message.author, ctx.message.server.name))
  
 @bot.command(pass_context = True)
 @commands.has_permissions(kick_members=True) 
 async def unmute(ctx, member: discord.Member=None):
     if member is None:
-      await bot.say('<:ElectroFail:527118399453528103> **PLEASE SPECIFY A USER TO UNMUTE!**')
+      await bot.say('<a:ElectroSuccess:656772759812046851> **PLEASE SPECIFY A USER TO UNMUTE!**')
     if ctx.message.author.bot:
       return
     else:
       role = discord.utils.get(member.server.roles, name='Muted')
       await bot.remove_roles(member, role)
-      await bot.say("<:ElectroSucess:527118398753079317> **{} WAS UNMUTED!**".format(member))
+      await bot.say("<a:ElectroSuccess:656772759812046851> **{} WAS UNMUTED!**".format(member))
       
 @commands.group(invoke_without_command=True)
 async def invoice(ctx):
