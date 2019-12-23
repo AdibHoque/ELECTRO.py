@@ -595,8 +595,7 @@ async def help(ctx):
     embed.add_field(name = 'PAGE 1 | General Commands ',value ='General commands which everyone can use!.',inline = False)
     embed.add_field(name = 'PAGE 2 | Moderation Commands',value ='Commands that are used for moderation and can only be used by server moderators.',inline = False)
     embed.add_field(name = 'PAGE 3 | Fun Commands ',value ='Fun commands are used for fun and can be used by everyone.',inline = False)
-    embed.add_field(name = 'PAGE 4 | Music Commands ',value ='Music commands for playing music.',inline = False)
-    embed.add_field(name = 'Support Server:',value ='https://discord.gg/WpFAGyx',inline = False)
+    embed.add_field(name = 'PAGE 4 | Music Commands ',value ='Music commands for playing music.\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
     await bot.send_message(author ,embed=embed)
     await bot.say('📨 Check Your DMs For Bot Commands!')
     			
@@ -614,7 +613,7 @@ async def help1(ctx):
     embed.add_field(name = 'Membercount',value ='Shows member count of the server!\n**USAGE:**``e!membercount``',inline = False)
     embed.add_field(name = 'Invite',value ='Sends bot invite link!\n**USAGE:**``e!invite``',inline = False)
     embed.add_field(name = 'Upvote',value ='Sends bot upvote link!\n**USAGE:**``e!upvote``',inline = False)
-    embed.add_field(name = 'Emoji',value ='Sends url of the emoji!\n**USAGE:**``e!emoji :emoji: ``',inline = False)
+    embed.add_field(name = 'Emoji',value ='Sends url of the emoji!\n**USAGE:**``e!emoji :emoji: ``\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
     await bot.send_message(author ,embed=embed)
     await bot.say('📨 Check Your DMs For General Commands!')
     
@@ -641,7 +640,7 @@ async def help2(ctx):
     embed.add_field(name = 'Unbanall',value ='Unbans all the banned users!\n**USAGE:**``e!unbanall``',inline = False)
     embed.add_field(name = 'Menro',value ='Mentions the role!\n**USAGE:**``e!menro [role name]``',inline = False)
     embed.add_field(name = 'Mute',value ='Mutes mentioned user from chatting in the server!\n**USAGE:**``e!mute <@user>``',inline = False)
-    embed.add_field(name = 'Unmute',value ='Unmutes mentioned user!\n**USAGE:**``e!unmute <@user>``',inline = False)  
+    embed.add_field(name = 'Unmute',value ='Unmutes mentioned user!\n**USAGE:**``e!unmute <@user>``\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)  
     await bot.send_message(author ,embed=embed)
     await bot.say('📨 Check Your DMs For Moderation Commands!') 
     
@@ -670,7 +669,7 @@ async def help3(ctx):
     embed.add_field(name = 'Threats',value ='Does a threats meme with users avatar!\n**USAGE:**``e!threats @user or e!threats``',inline = False)
     embed.add_field(name = 'Clyde',value ='Make clyde say things in a image!\n**USAGE:**``e!clyde [text]``',inline = False)
     embed.add_field(name = 'Trash',value ='Make fun of users by trashing their avatar!\n**USAGE:**``e!trash @user or e!trash``',inline = False)
-    embed.add_field(name = 'Meme',value ='Sends a random meme from Reddit!\n**USAGE:**``e!meme``',inline = False)
+    embed.add_field(name = 'Meme',value ='Sends a random meme from Reddit!\n**USAGE:**``e!meme``\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)' ,inline = False)
     await bot.send_message(author ,embed=embed)
     await bot.say('📨 Check Your DMs For Fun Commands!')   
     
@@ -687,7 +686,7 @@ async def help4(ctx):
     embed.add_field(name = 'Queue',value ='Shows the music queue!\n**USAGE:**`e!queue`',inline = False)
     embed.add_field(name = 'Pause',value ='Pauses the current playing song!\n**USAGE:**`e!pause`',inline = False)
     embed.add_field(name = 'Resume',value ='Resumes the current paused song!\n**USAGE:**`e!resume`',inline = False)
-    embed.add_field(name = 'Volume',value ='Change volume of the song!\n**USAGE:**`e!volume <1-200>`\*Music commands are currently unavailable!*',inline = False)
+    embed.add_field(name = 'Volume',value ='Change volume of the song!\n**USAGE:**`e!volume <1-200>`\*Music commands are currently unavailable!*\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
     await bot.send_message(author ,embed=embed)
     await bot.say('📨 Check Your DMs For Music Commands!')    
 
