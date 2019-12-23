@@ -1200,7 +1200,7 @@ async def sponsor(ctx, user: discord.Member, *,price: str):
         embed.add_field(name="Purchased by:", value="{}".format(user))
         embed.add_field(name="Item:", value="Sponsored Giveaway")
         embed.add_field(name="Price:", value="{}".format(price))
-	embed.set_thumbnail(url = server.icon_url)
+	embed.set_thumbnail(url=server.icon_url)
         embed.timestamp = datetime.datetime.utcnow()
         embed.set_footer(text='Sold by: {}'.format(ctx.message.author))
         await bot.say(embed=embed)
