@@ -880,7 +880,7 @@ async def on_message(message):
 	if message.server is None and message.author != bot.user:
 		electrosucess = 'a:ElectroSuccess:656772759812046851'
 		await bot.add_reaction(message, electrosucess)
-		embed=discord.Embed(title="{message.author}", description="{message.content}", color = 0xFFBF00)
+		embed=discord.Embed(title="{}".format(message.author), description="{}".format(message.content), color = 0xFFBF00)
 		embed.set_thumbnail(url= message.author.avatar_url)
 		await bot.send_message(bot.get_channel('656535174548553730'), '{} ID: {}'.format(message.author, message.author.id))
 		embed.timestamp = datetime.datetime.utcnow()
