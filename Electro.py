@@ -41,7 +41,6 @@ def setup(bot):
 
 bot = commands.Bot(command_prefix=commands.when_mentioned_or('e!'))
 bot.remove_command("help")
-Botdiscord = discord.Bot()
 
 async def status_task():
     while True:
