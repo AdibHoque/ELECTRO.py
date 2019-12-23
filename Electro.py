@@ -94,7 +94,7 @@ async def setnick(ctx, user: discord.Member, *, nickname):
 
 @bot.command(pass_context=True)
 async def invite():
-	embed=discord.Embed(description="Here are some useful links! If you have any questions about the bot, feel free to join the support guild and ask!.\nThanks you for using the bot! 💛 from the bot developer `ADIB HOQUE#6969`", color=0xFFBF00)
+	embed=discord.Embed(description="Here are some useful links! If you have any questions about the bot, feel free to join the support guild and ask!.\nThank you for using the bot! 💛 from the bot developer `ADIB HOQUE#6969`", color=0xFFBF00)
 	embed.set_author(name="ELECTRO's Invite URL", icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
 	embed.add_field(name = 'Invite URL',value ='[https://invite.electro.xyz](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot)',inline = False)
 	embed.add_field(name = 'Support Server',value ='[https://support.electro.xyz](https://discord.gg/kuWVFpR)',inline = False)
@@ -103,7 +103,7 @@ async def invite():
 	
 @bot.command(pass_context=True)
 async def link():
-	embed=discord.Embed(description="Here are some useful links! If you have any questions about the bot, feel free to join the support guild and ask!.\nThanks you for using the bot! 💛 from the bot developer `ADIB HOQUE#6969`", color=0xFFBF00)
+	embed=discord.Embed(description="Here are some useful links! If you have any questions about the bot, feel free to join the support guild and ask!.\nThank you for using the bot! 💛 from the bot developer `ADIB HOQUE#6969`", color=0xFFBF00)
 	embed.set_author(name="ELECTRO's Invite URL", icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
 	embed.add_field(name = 'Invite URL',value ='[https://invite.electro.xyz](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot)',inline = False)
 	embed.add_field(name = 'Support Server',value ='[https://support.electro.xyz](https://discord.gg/kuWVFpR)',inline = False)
@@ -112,7 +112,7 @@ async def link():
 	
 @bot.command(pass_context=True)
 async def server():
-	embed=discord.Embed(description="Here are some useful links! If you have any questions about the bot, feel free to join the support guild and ask!.\nThanks you for using the bot! 💛 from the bot developer `ADIB HOQUE#6969`", color=0xFFBF00)
+	embed=discord.Embed(description="Here are some useful links! If you have any questions about the bot, feel free to join the support guild and ask!.\nThank you for using the bot! 💛 from the bot developer `ADIB HOQUE#6969`", color=0xFFBF00)
 	embed.set_author(name="ELECTRO's Support Server", icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
 	embed.add_field(name = 'Invite URL',value ='[https://invite.electro.xyz](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot)',inline = False)
 	embed.add_field(name = 'Support Server',value ='[https://support.electro.xyz](https://discord.gg/kuWVFpR)',inline = False)
@@ -122,15 +122,15 @@ async def server():
 @bot.command(pass_context=True)  
 @commands.has_permissions(kick_members=True)     
 async def kick(ctx, user:discord.Member, *, reason:str):
-    if reason is None:
-      await bot.say('<:ElectroFail:527118399453528103>**Please mention a user to kick & specify a reason for kicking out!**\nEXAMPLE:`e!kick <@user or id> <reason>`')
+    if user or reason is None:
+      await bot.say('<a:ElectroFail:656772856184832025>**Please mention a user to kick & specify a reason for kicking out!**\nEXAMPLE:`e!kick <@user or id> <reason>`')
     if user.server_permissions.kick_members:
-      await bot.say("<:ElectroFail:527118399453528103>**He is a Mod/Admin, I can't do that!**")
+      await bot.say("<a:ElectroFail:656772856184832025>**He is a Mod/Admin, I can't do that!**")
       return
     else:
       await bot.send_message(user, 'You were kicked out from **{}**, {}!'.format(ctx.message.server.name, reason))
       await bot.kick(user)
-      await bot.say('<:ElectroSucess:527118398753079317>{} was kicked, {}!'.format(user, reason))
+      await bot.say('<a:ElectroSuccess:656772759812046851>{} was kicked, {}!'.format(user, reason))
       await bot.delete_message(ctx.message)
       for channel in user.server.channels:
         if channel.name == '📡electro-logs':
@@ -142,15 +142,15 @@ async def kick(ctx, user:discord.Member, *, reason:str):
 @bot.command(pass_context=True)  
 @commands.has_permissions(ban_members=True)     
 async def ban(ctx, user:discord.Member, *, reason:str):
-    if reason is None:
-      await bot.say('<:ElectroFail:527118399453528103>**Please mention a user to ban & specify a reason for banning!\nExample:`e!ban <@user or id> <reason>**')
+    if user or reason is None:
+      await bot.say('<a:ElectroFail:656772856184832025>**Please mention a user to ban & specify a reason for banning!\nExample:`e!ban <@user or id> <reason>**')
     if user.server_permissions.kick_members:
-      await bot.say("<:ElectroFail:527118399453528103>**He is a Mod/Admin, I can't do that!**")
+      await bot.say("<a:ElectroFail:656772856184832025>**He is a Mod/Admin, I can't do that!**")
       return
     else:
       await bot.send_message(user, 'You were banned from **{ctx.message.server.name}**, {reason}!'.format(ctx.message.server.name, reason))
       await bot.kick(user)
-      await bot.say('<:ElectroSucess:527118398753079317>{} was banned, {}!'.format(user, reason))
+      await bot.say('<a:ElectroSuccess:656772759812046851>{} was banned, {}!'.format(user, reason))
       await bot.delete_message(ctx.message)
       for channel in user.server.channels:
         if channel.name == '📡electro-logs':
@@ -165,7 +165,7 @@ async def unban(ctx, identification:str):
     user = await bot.get_user_info(identification)
     await bot.unban(ctx.message.server, user)
     try:
-        await bot.say(f'<:ElectroSucess:527118398753079317>**{user} was unbanned!**')
+        await bot.say(f'<a:ElectroSuccess:656772759812046851>**{user} was unbanned!**')
         for channel in ctx.message.server.channels:
           if channel.name == '📡electro-logs':
               embed=discord.Embed(title="UNBAN COMMAND USED", description="**User:** {0}\n**Moderator:**{1}**".format(user, ctx.message.author), color=0xFFBF00)
@@ -173,13 +173,13 @@ async def unban(ctx, identification:str):
               embed.set_footer(text ='USER BANNED')
               await bot.send_message(channel, embed=embed)
     except:
-        await client.say(f'I am unable to unban `{user}`, Please check my role permissions!')
+        await bot.say(f'I am unable to unban `{user}`, Please check my role permissions!')
         pass					
 
 @bot.command(pass_context = True)  
 async def userinfo(ctx, user: discord.Member):
     r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
-    embed = discord.Embed(title="{}'s info".format(user.name), description="HERE WHAT I FOUND!", color = discord.Color((r << 16) + (g << 8) + b))
+    embed = discord.Embed(title="{}'s info".format(user.name), description="HERE WHAT I FOUND!", color = 0xFFBF00)
     embed.add_field(name="Name", value=user.name, inline=True)
     embed.add_field(name="ID", value=user.id, inline=True)
     embed.add_field(name="Status", value=user.status, inline=True)
@@ -208,13 +208,13 @@ async def avatar(ctx, user: discord.Member=None):
 
 @bot.command(pass_context=True)
 async def ownerinfo():
-    embed = discord.Embed(description = '**Created by:**\n<a:adib:643372389224153089>ADIB HOQUE#3235', color = 0xFFBF00)
+    embed = discord.Embed(description = '**Created by:**\n<a:adib:643372389224153089>ADIB HOQUE#2212', color = 0xFFBF00)
     embed.set_thumbnail(url = 'https://cdn.discordapp.com/attachments/643421220108501002/643421321266462731/20191111_143116.gif')
     await bot.say(embed=embed)
     
 @bot.command(pass_context=True)
 async def owner():
-    embed = discord.Embed(description = '**Created by:**\n<a:adib:643372389224153089>ADIB HOQUE#3235', color = 0xFFBF00)
+    embed = discord.Embed(description = '**Created by:**\n<a:adib:643372389224153089>ADIB HOQUE#2212', color = 0xFFBF00)
     embed.set_thumbnail(url = 'https://cdn.discordapp.com/attachments/643421220108501002/643421321266462731/20191111_143116.gif')
     await bot.say(embed=embed)    
     
@@ -227,7 +227,7 @@ async def emoji(emoji: discord.Emoji):
 async def dm(ctx, user: discord.User, *, message=None):
     message = message or "This Message is sent via DM"
     await bot.send_message(user, message)
-    await bot.say('<:ElectroSucess:527118398753079317>YOUR DM WAS SENT!')
+    await bot.say('<a:ElectroSuccess:656772759812046851>YOUR DM WAS SENT!')
     await bot.delete_message(ctx.message)
     
 @bot.command(pass_context = True)
@@ -257,7 +257,7 @@ async def purge(ctx, number):
     async for x in bot.logs_from(ctx.message.channel, limit = number):
         mgs.append(x)
     await bot.delete_messages(mgs)
-    await bot.say('<:ElectroSucess:527118398753079317> {} MESSAGES WERE DELETED!'.format(number))
+    await bot.say('<a:ElectroSuccess:656772759812046851>{} MESSAGES WERE DELETED!'.format(number))
 
 @bot.command(pass_context=True)
 @commands.has_permissions(kick_members=True)
@@ -315,9 +315,9 @@ async def meme(ctx):
 async def giverole(ctx, user: discord.Member, *, role: discord.Role = None):
 	if role is None:
 		return await bot.say("Please specify a role to give! ")
-		if role not in user.roles:
-			await bot.add_roles(user, role)
-			return await bot.say("<:ElectroSucess:527118398753079317> **{}** role has been added to **{}**.".format(role, user))
+	if role not in user.roles:
+		await bot.add_roles(user, role)
+		return await bot.say("<:ElectroSucess:527118398753079317> **{}** role has been added to **{}**.".format(role, user))
 
 @bot.command(pass_context = True)
 @commands.has_permissions(manage_roles=True)
@@ -345,28 +345,28 @@ async def mentionrole(ctx, *, role: discord.Role):
 @commands.has_permissions(manage_roles=True)
 async def mentionable(ctx, *, role: discord.Role):
 	if role.mentionable==True:
-		await bot.say('<:ElectroFail:527118399453528103> **That role is already mentionable!**')
+		await bot.say('<a:ElectroFail:656772856184832025>**That role is already mentionable!**')
 	else:
 		await bot.edit_role(server=ctx.message.server, role=role, mentionable=True)
-		await bot.say('<:ElectroSucess:527118398753079317> **Made the role mentionable!**')
+		await bot.say('<a:ElectroSuccess:656772759812046851>**Made the role mentionable!**')
 		
 @bot.command(pass_context = True)
 @commands.has_permissions(manage_roles=True)
 async def unmentionable(ctx, *, role: discord.Role):
 	if role.mentionable==False:
-		await bot.say('<:ElectroFail:527118399453528103> **That role is already unmentionable!**')
+		await bot.say('<a:ElectroFail:656772856184832025>**That role is already unmentionable!**')
 	else:
 		await bot.edit_role(server=ctx.message.server, role=role, mentionable=True)
-		await bot.say('<:ElectroSucess:527118398753079317> **Made the role unmentionable!**')		
+		await bot.say('<a:ElectroSuccess:656772759812046851>**Made the role unmentionable!**')		
 		
 @bot.command(pass_context = True) 
 @commands.has_permissions(manage_roles=True)
 async def removerole(ctx, user: discord.Member, *, role: discord.Role = None):
 	if role is None:
 		return await bot.say('Please specify a role to remove!')
-		if role in user.roles:
-			return await bot.remove_roles(user, role)
-			return await bot.say("<:ElectroSucess:527118398753079317> **{}** role has been removed from **{}**.".format(role, user))
+	if role in user.roles:
+		return await bot.remove_roles(user, role)
+		return await bot.say("<:ElectroSucess:527118398753079317> **{}** role has been removed from **{}**.".format(role, user))
 
 @bot.command(pass_context=True)
 async def serverinfo(ctx):
@@ -382,7 +382,7 @@ async def serverinfo(ctx):
     channelz = len(server.channels);
     time = str(server.created_at); time = time.split(' '); time= time[0];
     r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
-    join = discord.Embed(description= '%s '%(str(server)),title = 'Server Name', color = 0x429CFF);
+    join = discord.Embed(description= '%s '%(str(server)),title = 'Server Name', color = 0xFFBF00);
     join.set_thumbnail(url = server.icon_url);
     join.add_field(name = 'Owner', value = str(server.owner) + '\n' + server.owner.id);
     join.add_field(name = 'ID', value = str(server.id))
@@ -403,7 +403,7 @@ async def tweet(ctx, usernamename:str, *, txt:str):
             embed = discord.Embed(color = 0xFFBF00) 
             embed.set_image(url=res['message'])
             embed.title = "{} tweeted: {}".format(usernamename, txt)
-            embed.set_footer(text ='Made with ❤ by @ADIB HOQUE#3235')
+            embed.set_footer(text ='Add the bot to your server by e!invite')
             await bot.say(embed=embed)
 		   	   	 
  
@@ -523,10 +523,10 @@ async def membercount(ctx, *args):
     
     em = Embed(title="Membercount", color = 0xFFBF00)
     em.description =    "\n" \
-                        "Total Members:%s (%s)\n" \
-                        "User Count:   %s (%s)\n" \
-                        "Bot Count:    %s (%s)\n" \
-                        "Created at:   %s\n" \
+                        "**Total Members:** %s (%s online)\n" \
+                        "**User Count:** %s (%s online)\n" \
+                        "**Bot Count:** %s (%s online)\n" \
+                        "**Created at:** %s\n" \
                         "" % (membs, membs_on, users, users_on, bots, bots_on, created)
 
     await bot.send_message(ctx.message.channel, embed=em)
@@ -536,18 +536,18 @@ async def membercount(ctx, *args):
 @commands.has_permissions(manage_roles=True)  
 async def role(ctx, user:discord.Member=None,*, role:discord.Role=None):
     if user is None or role is None:
-        await bot.say('There was a error executing this command!**PROPER USAGE:**`e!role @user @role`')
+        await bot.say('There was a error executing this command!/n**PROPER USAGE:** `e!role @user @role`')
         return
     if role in user.roles:
         await bot.remove_roles(user, role)
-        await bot.say("<:ElectroSucess:527118398753079317> Changed roles for {}, -{}".format(user, role))
+        await bot.say("<a:ElectroSuccess:656772759812046851> Changed roles for {}, -{}".format(user, role))
         return
     if role not in ctx.message.server.roles:
         await bot.say(f"There isn't any role named {role}.Please specify a valid role!")
         return
     else:
         await bot.add_roles(user, role)
-        await bot.say("<:ElectroSucess:527118398753079317> Changed roles for {}, +{}".format(user, role))
+        await bot.say("<a:ElectroSuccess:656772759812046851> Changed roles for {}, +{}".format(user, role))
         return
         
 @bot.command(pass_context=True)
@@ -774,7 +774,7 @@ async def unbanall(ctx):
       server=ctx.message.server
       ban_list=await bot.get_bans(server)
       channel = ctx.message.channel
-      embed=discord.Embed(description="Unbanning {} Users!".format(len(ban_list)), color=0xFFBF00)
+      embed=discord.Embed(description="<a:ElectroSuccess:656772759812046851> Unbanning {} Users!".format(len(ban_list)), color=0xFFBF00)
       await bot.send_message(channel, embed=embed)
       for member in ban_list:
       	await bot.unban(server,member)
@@ -790,7 +790,7 @@ async def embed(ctx, channel: discord.Channel=None, *, msg: str):
 @commands.has_permissions(administrator=True) 
 async def announce(ctx, channel: discord.Channel=None, *, msg: str):
 	embed=discord.Embed(description="{}".format(msg), color=0xFFBF00)
-	embed.set_author(name="{}".format(ctx.message.author), icon_url=ctx.message.author.avatar_url)
+	embed.set_author(name="{}".format(ctx.message.author))
 	embed.timestamp = datetime.datetime.utcnow()
 	await bot.send_message(channel, embed=embed)
 	await bot.delete_message(ctx.message)
@@ -802,11 +802,11 @@ async def lockdown(ctx, channelname: discord.Channel=None):
     if not channelname:
         role = discord.utils.get(ctx.message.server.roles, name='@everyone')
         await bot.edit_channel_permissions(ctx.message.channel, role, overwrite)
-        await bot.say("<:ElectroLock:561925611703238657>**Channel Locked**\nUse `e!unlock` to unlock it!")
+        await bot.say("<a:ElectroSuccess:656772759812046851>**Channel Locked**\nUse `e!unlock` to unlock it!")
     else:
         role = discord.utils.get(ctx.message.server.roles, name='@everyone')
         await bot.edit_channel_permissions(channelname, role, overwrite)
-        await bot.say("<:ElectroLock:561925611703238657>**Channel Locked**\nUse `e!unlock` to unlock it!")
+        await bot.say("<a:ElectroSuccess:656772759812046851>**Channel Locked**\nUse `e!unlock` to unlock it!")
 	
 @bot.command(pass_context = True)
 @commands.has_permissions(kick_members=True) 
@@ -815,11 +815,11 @@ async def unlock(ctx, channelname: discord.Channel=None):
     if not channelname:
         role = discord.utils.get(ctx.message.server.roles, name='@everyone')
         await bot.edit_channel_permissions(ctx.message.channel, role, overwrite)
-        await bot.say("<:ElectroUnlock:561925605717704706>**Channel Unlocked**\nUse `e!lockdown` to lock it!")
+        await bot.say("<a:ElectroSuccess:656772759812046851>**Channel Unlocked**\nUse `e!lockdown` to lock it!")
     else:
         role = discord.utils.get(ctx.message.server.roles, name='@everyone')
         await bot.edit_channel_permissions(channelname, role, overwrite)
-        await bot.say("<:ElectroUnlock:561925605717704706>**Channel Unlocked**\nUse `e!lockdown` to lock it!")
+        await bot.say("<a:ElectroSuccess:656772759812046851>**Channel Unlocked**\nUse `e!lockdown` to lock it!")
        	
 @bot.event
 async def on_message_edit(before, after):
@@ -879,7 +879,7 @@ async def on_message(message):
 	if '<@488353416599306270>' in message.content:
 		emoji = 'a:AdibReeeeee:558181398670737408'
 		await bot.add_reaction(message, emoji) 
-		channel = bot.get_channel('656535174548553730')
+		channe = bot.get_channel('656535174548553730')
 	if message.server is None and message.author != bot.user:
 		electrosucess = 'a:ElectroSuccess:656772759812046851'
 		await bot.add_reaction(message, electrosucess)
