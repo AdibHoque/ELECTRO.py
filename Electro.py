@@ -426,7 +426,7 @@ async def love(ctx, user: discord.Member = None, *, user2: discord.Member = None
         async with cs.get(url) as r:
             res = await r.json()
             r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
-            embed = discord.Embed(title=f"{shipuser1} ❤ {shipuser2} Love each others", description=f"Love\n`{counter_}` Score:**{score}% **\nLoveName:**{finalName}**", color = 0x429CFF) 
+            embed = discord.Embed(title=f"{shipuser1} ❤ {shipuser2} Love each others", description=f"Love\n`[{counter_}](https://discord.gg/kuWVFpR)` Score:**{score}% **\nLoveName:**{finalName}**", color = 0x429CFF) 
             embed.set_image(url=res['message'])
             await bot.say(embed=embed)   		   	   	   	 		   	  		   
  
