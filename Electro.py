@@ -401,7 +401,7 @@ async def tweet(ctx, usernamename:str, *, txt:str):
             embed = discord.Embed(color = 0xFFBF00) 
             embed.set_image(url=res['message'])
             embed.title = "{} tweeted: {}".format(usernamename, txt)
-            embed.set_footer(text ='Add the bot to your server by e!invite')
+            embed.set_footer(text ='You can add the bot to your server by e!invite')
             await bot.say(embed=embed)
 		   	   	 
  
@@ -426,7 +426,7 @@ async def love(ctx, user: discord.Member = None, *, user2: discord.Member = None
         async with cs.get(url) as r:
             res = await r.json()
             r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
-            embed = discord.Embed(title=f"{shipuser1} ❤ {shipuser2} Love each others", description=f"Love\n`[{counter_}](https://discord.gg/kuWVFpR)` Score:**{score}% **\nLoveName:**{finalName}**", color = 0x429CFF) 
+            embed = discord.Embed(title=f"{shipuser1} ❤ {shipuser2} Love each others", description=f"Love\n[{counter_}](https://discord.gg/kuWVFpR) Score:**{score}% **\nLoveName:**{finalName}**", color = 0x429CFF) 
             embed.set_image(url=res['message'])
             await bot.say(embed=embed)   		   	   	   	 		   	  		   
  
