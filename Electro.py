@@ -81,7 +81,7 @@ async def ping(ctx):
     t1 = time.perf_counter()
     await bot.send_typing(channel)
     t2 = time.perf_counter()
-    await bot.say("Pong! {}ms".format(round((t2-t1)*1000)))
+    await bot.say(embed=discord.Embed(description="Pong! {}ms".format(round((t2-t1)*1000))), color=0xFFBF00)
 
 @bot.command(pass_context = True)
 @commands.has_permissions(manage_nicknames=True)     
