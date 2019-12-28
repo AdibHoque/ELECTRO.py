@@ -990,6 +990,7 @@ async def on_server_channel_create(channel, server):
 			await bot.send_message(logchannel,  embed=embed)								
 								 
 @bot.command(pass_context = True)
+@command.has_permissions(administrator=True) 
 async def setuplog(ctx):
     if ctx.message.author.bot:
       return
@@ -1305,14 +1306,14 @@ async def define(ctx, *, msg:str):
 		word = ' '.join(msg)
 		api = "http://api.urbandictionary.com/v0/define"
 		response = requests.get(api, params=[("term", word)]).json()
-		if len(response["list"]) == 0:
-			return await bot.say("No defination found!")
-		else:
-			embed = discord.Embed(description = 'Defination of {word}', color = 0x429CFF)
-			embed.add_field(name = "Top definition:", value = response['list'][0]['definition'])
-			embed.add_field(name = "Examples:", value = response['list'][0]["example"])
-			embed.set_footer(text = "Tags: " + ', '.join(response['tags']))
-			await bot.say(embed=embed)
+	if len(response["list"]) == 0:
+		return await bot.say("No defination found!")
+	else:
+		embed = discord.Embed(description = 'Defination of {word}', color = 0x429CFF)
+		embed.add_field(name = "Top definition:", value = response['list'][0]['definition'])
+		embed.add_field(name = "Examples:", value = response['list'][0]["example"])
+		embed.set_footer(text = "Tags: " + ', '.join(response['tags']))
+		await bot.say(embed=embed)
 		
 @bot.command(pass_context=True)
 async def rps(ctx, *, message=None):
