@@ -1201,7 +1201,7 @@ async def sponsor(ctx, user: discord.Member, *,price: str):
         embed.add_field(name="Purchased by:", value="{}".format(user))
         embed.add_field(name="Item:", value="Sponsored Giveaway")
         embed.add_field(name="Price:", value="{}".format(price))
-        embed.set_thumbnail(url=server.icon_url)
+        embed.set_thumbnail(url=ctx.message.server.icon_url)
         embed.timestamp = datetime.datetime.utcnow()
         embed.set_footer(text='Sold by: {}'.format(ctx.message.author))
         await bot.say(embed=embed)
@@ -1349,7 +1349,7 @@ async def rps(ctx, *, message=None):
 @commands.check(is_owner) 
 async def update(ctx, channel: discord.Channel=None, *, msg: str):
 	embed=discord.Embed(description="{}".format(msg), color=0xFFBF00)
-	embed.set_author(name="{}".format(ctx.message.author), icon_url=user.avatar_url)
+	embed.set_author(name="{}".format(ctx.message.author), icon_url=ctx.message.author.avatar_url)
 	embed.timestamp = datetime.datetime.utcnow()
 	await bot.send_message(channel,"@UPDATES",embed=embed)
 	await bot.delete_message(ctx.message) 
