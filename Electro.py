@@ -95,7 +95,7 @@ async def setnick(ctx, user: discord.Member, *, nickname):
 async def invite():
 	embed=discord.Embed(description="Here are some useful links! If you have any questions about the bot, feel free to join the support guild and ask!.\nThank you for using the bot! 💛 from the bot developer `ADIB HOQUE#6969`", color=0xFFBF00)
 	embed.set_author(name="ELECTRO's Invite URL", icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
-	embed.add_field(name = 'Invite URL',value ='[https://invite.electro.xyz](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot)',inline = False)
+	embed.add_field(name = 'Invite URL',value ='[https://invite.electro.xyz](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=2146827775&scope=bot)',inline = False)
 	embed.add_field(name = 'Support Server',value ='[https://support.electro.xyz](https://discord.gg/kuWVFpR)',inline = False)
 	embed.set_footer(text='We hope you have fun with the bot!', icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
 	await bot.say('https://discord.gg/kuWVFpR', embed=embed)
@@ -104,7 +104,7 @@ async def invite():
 async def link():
 	embed=discord.Embed(description="Here are some useful links! If you have any questions about the bot, feel free to join the support guild and ask!.\nThank you for using the bot! 💛 from the bot developer `ADIB HOQUE#6969`", color=0xFFBF00)
 	embed.set_author(name="ELECTRO's Invite URL", icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
-	embed.add_field(name = 'Invite URL',value ='[https://invite.electro.xyz](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot)',inline = False)
+	embed.add_field(name = 'Invite URL',value ='[https://invite.electro.xyz](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=2146827775&scope=bot)',inline = False)
 	embed.add_field(name = 'Support Server',value ='[https://support.electro.xyz](https://discord.gg/kuWVFpR)',inline = False)
 	embed.set_footer(text='We hope you have fun with the bot!', icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
 	await bot.say('https://discord.gg/kuWVFpR', embed=embed)
@@ -113,7 +113,7 @@ async def link():
 async def server():
 	embed=discord.Embed(description="Here are some useful links! If you have any questions about the bot, feel free to join the support guild and ask!.\nThank you for using the bot! 💛 from the bot developer `ADIB HOQUE#6969`", color=0xFFBF00)
 	embed.set_author(name="ELECTRO's Support Server", icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
-	embed.add_field(name = 'Invite URL',value ='[https://invite.electro.xyz](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot)',inline = False)
+	embed.add_field(name = 'Invite URL',value ='[https://invite.electro.xyz](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=2146827775&scope=bot)',inline = False)
 	embed.add_field(name = 'Support Server',value ='[https://support.electro.xyz](https://discord.gg/kuWVFpR)',inline = False)
 	embed.set_footer(text='We hope you have fun with the bot!', icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
 	await bot.say('https://discord.gg/kuWVFpR', embed=embed)
@@ -687,7 +687,7 @@ async def help4(ctx):
     embed.add_field(name = 'Queue',value ='Shows the music queue!\n**USAGE:**`e!queue`',inline = False)
     embed.add_field(name = 'Pause',value ='Pauses the current playing song!\n**USAGE:**`e!pause`',inline = False)
     embed.add_field(name = 'Resume',value ='Resumes the current paused song!\n**USAGE:**`e!resume`',inline = False)
-    embed.add_field(name = 'Volume',value ='Change volume of the song!\n**USAGE:**`e!volume <1-200>`\*Music commands are currently unavailable!*\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
+    embed.add_field(name = 'Volume',value ='Change volume of the song!\n**USAGE:**`e!volume <1-200>`\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
     await bot.send_message(author ,embed=embed)
     await bot.say('📨 Check Your DMs For Music Commands!')    
 
@@ -1351,7 +1351,7 @@ async def update(ctx, channel: discord.Channel=None, *, msg: str):
 	embed=discord.Embed(description="{}".format(msg), color=0xFFBF00)
 	embed.set_author(name="{}".format(ctx.message.author), icon_url=user.avatar_url)
 	embed.timestamp = datetime.datetime.utcnow()
-	await bot.send_message(channel, "@UPDATES",embed=embed)
+	await bot.send_message(channel,"@UPDATES",embed=embed)
 	await bot.delete_message(ctx.message) 
             
 bot.run(os.getenv('Token'))
