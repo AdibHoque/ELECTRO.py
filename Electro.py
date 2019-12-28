@@ -990,7 +990,7 @@ async def on_server_channel_create(channel, server):
 			await bot.send_message(logchannel,  embed=embed)								
 								 
 @bot.command(pass_context = True)
-@command.has_permissions(administrator=True) 
+@commands.has_permissions(administrator=True) 
 async def setuplog(ctx):
     if ctx.message.author.bot:
       return
