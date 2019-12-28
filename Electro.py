@@ -1344,5 +1344,14 @@ async def rps(ctx, *, message=None):
         elif message.lower()  == "scissors" and pick == "rock":
             embed.add_field(name = "ELECTRO vs {}".format(ctx.message.author.name), value = "**ELECTRO Picked:** <:ElectroRock:603975251612663828>{}\n**{} Picked:** <:ElectroScissor:603975202581381141>{}\n\n**Result:** ELECTRO Wins!".format(pick, ctx.message.author.name, message))
             await bot.say(embed=embed)
+
+@bot.command(pass_context = True)
+@commands.check(is_owner) 
+async def update(ctx, channel: discord.Channel=None, *, msg: str):
+	embed=discord.Embed(description="{}".format(msg), color=0xFFBF00)
+	embed.set_author(name="{}".format(ctx.message.author), icon_url=user.avatar_url)
+	embed.timestamp = datetime.datetime.utcnow()
+	await bot.send_message(channel, "@UPDATES",embed=embed)
+	await bot.delete_message(ctx.message) 
             
 bot.run(os.getenv('Token'))
