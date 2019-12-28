@@ -1351,7 +1351,7 @@ async def update(ctx, channel: discord.Channel=None, *, msg: str):
 	embed=discord.Embed(description="{}".format(msg), color=0xFFBF00)
 	embed.set_author(name="{}".format(ctx.message.author), icon_url=ctx.message.author.avatar_url)
 	embed.timestamp = datetime.datetime.utcnow()
-	await bot.send_message(channel,"@UPDATES",embed=embed)
+	await bot.send_message(channel,"<@&660499979177164821>",embed=embed)
 	await bot.delete_message(ctx.message) 
             
 bot.run(os.getenv('Token'))
