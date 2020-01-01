@@ -4,17 +4,17 @@
   <strong><b>SIMPLE MODERATION, FUN, GIVEAWAY AND MUSIC BOT FOR DISCORD</b></strong>
   <br>
   <br>
-    
+  </div> 
+  
   <a href="https://discord.gg/Pp9KudS">
-    <img src="https://cdn.discordapp.com/attachments/519145981917265921/543764882059689997/JoinOurDiscordg.png">
+    <img src="https://cdn.discordapp.com/attachments/656517276832366595/661984837434998792/ADD_ELECTRO.png">
   </a>
   
   <a href="https://www.YouTube.com/AdibHoque">
-    <img src="https://cdn.discordapp.com/attachments/519145981917265921/543764882059690000/SubOurYTg.png">
+    <img src="https://cdn.discordapp.com/attachments/656517276832366595/661984838269796352/JOIN_ELECTRO.png">
   </a>
   <background src="https://cdn.discordapp.com/attachments/529939494007341067/565928893043834895/bg.png">
 
-</div>
 
 ---
 
