@@ -7,11 +7,11 @@
   </div> 
   
   <a href="https://discord.gg/Pp9KudS">
-    <img src="https://cdn.discordapp.com/attachments/656517276832366595/661984837434998792/ADD_ELECTRO.png">
+    <img src="https://cdn.discordapp.com/attachments/656517276832366595/661988891028488195/ADD_BOT.png" align="center">
   </a>
   
   <a href="https://www.YouTube.com/AdibHoque">
-    <img src="https://cdn.discordapp.com/attachments/656517276832366595/661984838269796352/JOIN_ELECTRO.png">
+    <img src="https://cdn.discordapp.com/attachments/656517276832366595/661984838269796352/JOIN_ELECTRO.png" align="right">
   </a>
   <background src="https://cdn.discordapp.com/attachments/529939494007341067/565928893043834895/bg.png">
 
