@@ -1,7 +1,7 @@
 <div align="center">
-  <img src="https://cdn.discordapp.com/attachments/519145981917265921/543001500079882260/ELECTROHEADER.png" align="center">
+  <img src="https://cdn.discordapp.com/attachments/656517276832366595/661972761698369536/ELECTRO_WEB_HEADER.png" align="center">
   <br>
-  <strong><b>SIMPLE MODERATION AND FUN ASWELL AS A GIVEAWAY BOT FOR DISCORD</b></strong>
+  <strong><b>SIMPLE MODERATION, FUN ASWELL AS A GIVEAWAY BOT FOR DISCORD</b></strong>
   <br>
   <br>
     
