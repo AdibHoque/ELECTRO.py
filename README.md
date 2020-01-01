@@ -1,7 +1,7 @@
 <div align="center">
   <img src="https://cdn.discordapp.com/attachments/656517276832366595/661972761698369536/ELECTRO_WEB_HEADER.png" align="center">
   <br>
-  <strong><b>SIMPLE MODERATION, FUN ASWELL AS A GIVEAWAY BOT FOR DISCORD</b></strong>
+  <strong><b>SIMPLE MODERATION, FUN, GIVEAWAY AND MUSIC BOT FOR DISCORD</b></strong>
   <br>
   <br>
     
@@ -20,13 +20,13 @@
 
 ## WHAT DOES ELECTRO DO? 
 
-<img src="https://cdn.discordapp.com/attachments/603252260792959016/603252301750337557/ELECTRO_bot_info.png" alt="ELECTRO" align="right" height="350">
+<img src="https://cdn.discordapp.com/attachments/656517276832366595/656760631474520074/ELECTRO_ELECTRIFY_YOUR_SERVER.gif" alt="ELECTRO" align="right" height="350">
 
-ELECTRO is a moderation bot as well as a fun bot. ELECTRO has all the moderation commands and many fun commands. To see the list of commands scroll dowm or type `e!help` or `@ELECTRO help`in a server which have ELECTRO. Join our discord [server](https://github.com/kyb3r/modmail/wiki) to contract the bot creator `@ADIB HOQUE#6969`.
+ELECTRO is a moderation, fun and giveaway bot. ELECTRO has all the moderation commands, many fun commands and giveaway commands. To see the list of commands scroll dowm or type `e!help` or `@ELECTRO help`in a server which have ELECTRO. Join our discord [server](https://github.com/kyb3r/modmail/wiki) to contract the bot creator `@ADIB HOQUE#6969`.
 
 ## PREFIX OF ELECTRO
 
-ELECTRO commands can be used by the prefix `e!` or by mentioning `@ELECTRO`. If you want to use commands by mentioning you must put a space after the mention or the command won't work. 
+**ELECTRO** commands can be used by the prefix `e!` or by mentioning `@ELECTRO`. If you want to use commands by mentioning you must put a space after the mention or the command won't work. 
 
 ---
 
@@ -45,7 +45,7 @@ ELECTRO commands can be used by the prefix `e!` or by mentioning `@ELECTRO`. If 
 
 `joke`,`love`,`slap`, `kiss`, `hug`, `virgin`, `gender`, `tweet`, `rolldice`, `flipcoin`, `howgay`, `whowouldwin`, `captcha`,`magik`,`deepfry`
 
-## PAGE 4 | EMOJI COMMANDS
+## PAGE 4 | MUSIC COMMANDS
 
 `fortnite`, `hundred`, `party`, `dogdance`, `hype`, `plsboi` 
 
