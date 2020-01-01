@@ -61,7 +61,8 @@ async def on_ready():
     
 @bot.command(pass_context = True)
 async def prefix(ctx):
-	await bot.say('The prefix for the bot is **e!**') 
+        embed=discord.Embed(description="The prefix for the bot is **e!** or mention.", color=0xFFBF00) 
+	await bot.say(embed=embed) 
 
 def is_owner(ctx):
     return ctx.message.author.id == "496978159724396545"     
