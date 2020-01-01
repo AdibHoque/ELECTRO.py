@@ -57,26 +57,3 @@ This project is licenced under MIT. If you have any new ideas, create an issue o
 
 If you are using ELECTRO and love it, consider joining our **[Discord Server](https://discord.gg/Pp9KudS)** :heart:
 
-<!DOCTYPE html>
-<html>
-   <head>
-      <title>Title of the document</title>
-      <style>
-         .button {
-         background-color: black;
-         border: none;
-         color: orange;
-         padding: 20px 34px;
-         text-align: center;
-         text-decoration: none;
-         display: inline-block;
-         font-size: 20px;
-         margin: 4px 2px;
-         cursor: pointer;
-         }
-      </style>
-   </head>
-   <body>
-      <a href="https://www.idk.com/" class="button">ADD ELECTRO</a>
-   </body>
-</html> 
