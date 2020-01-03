@@ -993,10 +993,10 @@ async def on_server_channel_create(channel, server):
 @bot.command(pass_context = True)
 @commands.has_permissions(administrator=True) 
 async def setuplog(ctx):
-    server = ctx.message.server
+    server = ctx.message.guild
     everyone_perms = discord.PermissionOverwrite(send_messages=False, read_messages=True)
     everyone = discord.ChannelPermissions(target=server.default_role, overwrite=everyone_perms)
-    await bot.create_channel(server, '⚡electro-logs', type=discord.ChannelType.text)
+    await bot.create_channel(server, '⚡electro-logs', everyone)
     await bot.say("<a:ElectroSuccess:656772759812046851> **LOG CHANNEL CREATED!**\nDon't rename it or it won't work!'")
 								 
 @bot.command(pass_context=True)
