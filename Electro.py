@@ -790,7 +790,7 @@ async def embed(ctx, channel: discord.Channel=None, *, msg: str):
 async def announce(ctx, channel: discord.Channel=None, *, msg: str):
 	embed=discord.Embed(title="ANNOUNCEMENT", description="{}".format(msg), color=0xFFBF00)
 	embed.set_author(name="{}".format(ctx.message.author))
-        embed.set_thumbnail(url=ctx.message.server.icon_url)
+	embed.set_thumbnail(url=ctx.message.server.icon_url)
 	embed.timestamp = datetime.datetime.utcnow()
 	await bot.send_message(channel, embed=embed)
 	await bot.delete_message(ctx.message)
