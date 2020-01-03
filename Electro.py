@@ -993,18 +993,11 @@ async def on_server_channel_create(channel, server):
 @bot.command(pass_context = True)
 @commands.has_permissions(administrator=True) 
 async def setuplog(ctx):
-    if ctx.message.author.bot:
-      return
-    if ctx.message.author.server_permissions.administrator == False:
-      await bot.say('<a:ElectroFail:656772856184832025> **You do not have permission to use this command**')
-      return
-    else:
-      author = ctx.message.author
-      server = ctx.message.server
-      everyone_perms = discord.PermissionOverwrite(send_messages=False, read_messages=True)
-      everyone = discord.ChannelPermissions(target=server.default_role, overwrite=everyone_perms)
-      await bot.create_channel(server, '📡electro-logs', everyone)
-      await bot.say("<a:ElectroSuccess:656772759812046851> **LOG CHANNEL CREATED!**\nDon't rename it or it won't work!'")
+    server = ctx.message.server
+    everyone_perms = discord.PermissionOverwrite(send_messages=False, read_messages=True)
+    everyone = discord.ChannelPermissions(target=server.default_role, overwrite=everyone_perms)
+    await bot.create_channel(server, '⚡electro-logs', everyone)
+    await bot.say("<a:ElectroSuccess:656772759812046851> **LOG CHANNEL CREATED!**\nDon't rename it or it won't work!'")
 								 
 @bot.command(pass_context=True)
 async def magik(ctx, user:discord.Member):
