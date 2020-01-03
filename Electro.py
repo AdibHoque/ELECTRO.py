@@ -788,8 +788,9 @@ async def embed(ctx, channel: discord.Channel=None, *, msg: str):
 @bot.command(pass_context = True)
 @commands.has_permissions(administrator=True) 
 async def announce(ctx, channel: discord.Channel=None, *, msg: str):
-	embed=discord.Embed(description="{}".format(msg), color=0xFFBF00)
+	embed=discord.Embed(title="ANNOUNCEMENT", description="{}".format(msg), color=0xFFBF00)
 	embed.set_author(name="{}".format(ctx.message.author))
+        embed.set_thumbnail(url=ctx.message.server.icon_url)
 	embed.timestamp = datetime.datetime.utcnow()
 	await bot.send_message(channel, embed=embed)
 	await bot.delete_message(ctx.message)
@@ -837,6 +838,7 @@ async def on_message_edit(before, after):
             embed.add_field(name = 'Before:',value ='{}'.format(before.content),inline = False)
             embed.add_field(name = 'After:',value ='{}'.format(after.content),inline = False)
             embed.add_field(name = 'Channel:',value ='{0}\n[Jump To Message](https://discordapp.com/channels/{1}/{2}/{3})'.format(before.channel.mention, before.server.id, before.channel.id, before.id),inline = False)
+            embed.set_thumbnail(url=user.server.icon_url) 
             embed.timestamp = datetime.datetime.utcnow()
             embed.set_footer(text ='MESSAGE EDITED')
             await bot.send_message(channel, embed=embed)
@@ -852,6 +854,7 @@ async def on_reaction_add(reaction, user):
         embed.add_field(name = 'Message:',value ='{}'.format(reaction.message.content),inline = False)
         embed.add_field(name = 'Channel:',value ='{}'.format(reaction.message.channel.mention),inline = False)
         embed.add_field(name = 'Emoji:',value ='{}'.format(reaction.emoji),inline = False)
+        embed.set_thumbnail(url=reaction.server.icon_url) 
         embed.timestamp = datetime.datetime.utcnow()
         embed.set_footer(text ='REACTION ADDED')
         await bot.send_message(logchannel, embed=embed)
@@ -867,6 +870,7 @@ async def on_reaction_remove(reaction, user):
         embed.add_field(name = 'Message:',value ='{}'.format(reaction.message.content),inline = False)
         embed.add_field(name = 'Channel:',value ='{}'.format(reaction.message.channel.mention),inline = False)
         embed.add_field(name = 'Emoji:',value ='{}'.format(reaction.emoji),inline = False)
+        embed.set_thumbnail(url=reaction.server.icon_url) 
         embed.timestamp = datetime.datetime.utcnow()
         embed.set_footer(text ='REACTION REMOVED')
         await bot.send_message(logchannel, embed=embed)   
@@ -891,7 +895,7 @@ async def on_message(message):
     	 
 @bot.event
 async def on_member_unban(server, user):
-	for channel in user.server.channels:
+	for channel in user.guild.channels:
 		if channel.name == '⚡electro-logs':
 			logchannel = channel
 			r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
@@ -902,7 +906,7 @@ async def on_member_unban(server, user):
 			
 @bot.event
 async def on_member_ban(guild, user):
-	for channel in user.server.channels:
+	for channel in user.guild.channels:
 		if channel.name == '⚡electro-logs':
 			logchannel = channel
 			r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
@@ -927,6 +931,7 @@ async def on_message_delete(message):
           embed.add_field(name = 'User: **{0}**'.format(user),value ='User ID: **{}**'.format(user.id),inline = False)
           embed.add_field(name = 'Message:',value ='{}'.format(message.content),inline = False)
           embed.add_field(name = 'Channel:',value ='{}'.format(message.channel.mention),inline = False)
+          embed.set_thumbnail(url=message.server.icon_url)
           embed.timestamp = datetime.datetime.utcnow()
           embed.set_footer(text ='MESSAGE DELETED')
           await bot.send_message(logchannel,  embed=embed)
@@ -1208,6 +1213,7 @@ async def customrole(ctx, user: discord.Member, *,price: str):
         embed.add_field(name="Purchased by:", value="{}".format(user))
         embed.add_field(name="Item:", value="Custom Role")
         embed.add_field(name="Price:", value="{}".format(price))
+	embed.set_thumbnail(url=ctx.message.server.icon_url) 
         embed.timestamp = datetime.datetime.utcnow()
         embed.set_footer(text="Sold by: {}".format(ctx.message.author))
         await bot.say(embed=embed)
@@ -1220,6 +1226,7 @@ async def channel(ctx, user: discord.Member, *,price: str):
         embed.add_field(name="Purchased by:", value="{}".format(user))
         embed.add_field(name="Item:", value="Custom Channel")
         embed.add_field(name="Price:", value="{}".format(price))
+        embed.set_thumbnail(url=ctx.message.server.icon_url)
         embed.timestamp = datetime.datetime.utcnow()
         embed.set_footer(text="Sold by: {}".format(ctx.message.author))
         await bot.say(embed=embed)        
@@ -1232,6 +1239,7 @@ async def cc(ctx, user: discord.Member, *,price: str):
         embed.add_field(name="Purchased by:", value="{}".format(user))
         embed.add_field(name="Item:", value="Custom Dyno Command")
         embed.add_field(name="Price:", value="{}".format(price))
+        embed.set_thumbnail(url=ctx.message.server.icon_url) 
         embed.timestamp = datetime.datetime.utcnow()
         embed.set_footer(text="Sold by: {}".format(ctx.message.author))
         await bot.say(embed=embed)
@@ -1244,6 +1252,7 @@ async def membership(ctx, user: discord.Member, *,price: str):
         embed.add_field(name="Purchased by:", value="{}".format(user))
         embed.add_field(name="Item:", value="Membership")
         embed.add_field(name="Price:", value="{}".format(price))
+        embed.set_thumbnail(url=ctx.message.server.icon_url) 
         embed.timestamp = datetime.datetime.utcnow()
         embed.set_footer(text="Sold by: {}".format(ctx.message.author))
         await bot.say(embed=embed)
