@@ -830,7 +830,7 @@ async def on_message_edit(before, after):
       user = before.author
       member = after.author
       for channel in user.server.channels:
-        if channel.name == '📡electro-logs':
+        if channel.name == '⚡electro-logs':
             r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
             embed = discord.Embed(title = "MESSAGE EDITED", color = 0xFFBF00)
             embed.add_field(name = 'Message Author:',value ='{}'.format(user),inline = False)
@@ -844,7 +844,7 @@ async def on_message_edit(before, after):
 @bot.event
 async def on_reaction_add(reaction, user):
   for channel in user.server.channels:
-    if channel.name == '📡electro-logs':
+    if channel.name == '⚡electro-logs':
         logchannel = channel
         r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
         embed = discord.Embed(title = "REACTION ADDED", color = 0xFFBF00)
@@ -859,7 +859,7 @@ async def on_reaction_add(reaction, user):
 @bot.event
 async def on_reaction_remove(reaction, user):
   for channel in user.server.channels:
-    if channel.name == '📡electro-logs':
+    if channel.name == '⚡electro-logs':
         logchannel = channel
         r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
         embed = discord.Embed(title = "REACTION REMOVED", color = 0xFFBF00)
@@ -892,7 +892,7 @@ async def on_message(message):
 @bot.event
 async def on_member_unban(server, user):
 	for channel in user.server.channels:
-		if channel.name == '📡electro-logs':
+		if channel.name == '⚡electro-logs':
 			logchannel = channel
 			r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
 			embed = discord.Embed(title = "USER UNBANNED", color = 0xFFBF00)
@@ -903,7 +903,7 @@ async def on_member_unban(server, user):
 @bot.event
 async def on_member_ban(guild, user):
 	for channel in user.server.channels:
-		if channel.name == '📡electro-logs':
+		if channel.name == '⚡electro-logs':
 			logchannel = channel
 			r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
 			embed = discord.Embed(title = "USER BANNED", color = 0xFFBF00)
@@ -914,13 +914,13 @@ async def on_member_ban(guild, user):
 @bot.event
 async def on_message_delete(message):
     if not message.author.bot:
-      channelname = '📡electro-logs'
+      channelname = '⚡electro-logs'
       logchannel=None
       for channel in message.server.channels:
         if channel.name == channelname:
           user = message.author
       for channel in message.author.server.channels:
-        if channel.name == '📡electro-logs':
+        if channel.name == '⚡electro-logs':
           logchannel = channel
           r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
           embed = discord.Embed(title = "MESSAGE DELETED", color = 0xFFBF00)
@@ -956,7 +956,7 @@ async def on_server_remove(server):
 @bot.event
 async def on_server_role_create(role, server):
 	for channel in role.server.channels:
-		if channel.name == '📡electro-logs':
+		if channel.name == '⚡electro-logs':
 			logchannel = channel
 			r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
 			embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
@@ -968,7 +968,7 @@ async def on_server_role_create(role, server):
 @bot.event
 async def on_server_role_delete(role, server):
 	for channel in role.server.channels:
-		if channel.name == '📡electro-logs':
+		if channel.name == '⚡electro-logs':
 			logchannel = channel
 			r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
 			embed = discord.Embed(title = 'ROLE CREATED', color = discord.Color((r << 16) + (g << 8) + b))
@@ -980,7 +980,7 @@ async def on_server_role_delete(role, server):
 @bot.event
 async def on_server_channel_create(channel, server):
 	for channel in channel.server.channels:
-		if channel.name == '📡electro-logs':
+		if channel.name == '⚡electro-logs':
 			logchannel = channel
 			r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
 			embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
