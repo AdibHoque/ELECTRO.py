@@ -1314,7 +1314,7 @@ async def define(ctx, *, msg:str):
 		embed = discord.Embed(description = 'Defination of {word}', color = 0x429CFF)
 		embed.add_field(name = "Top definition:", value = response['list'][0]['definition'])
 		embed.add_field(name = "Examples:", value = response['list'][0]["example"])
-		embed.set_footer(text = "Tags: " + ', '.join(response['tags']))
+		embed.set_footer(text = "Tag: " + ', '.join(response['tags']))
 		await bot.say(embed=embed)
 		
 @bot.command(pass_context=True)
