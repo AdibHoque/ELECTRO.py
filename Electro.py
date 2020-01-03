@@ -1213,8 +1213,8 @@ async def customrole(ctx, user: discord.Member, *,price: str):
         embed.add_field(name="Purchased by:", value="{}".format(user))
         embed.add_field(name="Item:", value="Custom Role")
         embed.add_field(name="Price:", value="{}".format(price))
-	embed.set_thumbnail(url=ctx.message.server.icon_url) 
-        embed.timestamp = datetime.datetime.utcnow()
+	embed.set_thumbnail(url=ctx.message.server.icon_url)
+	embed.timestamp = datetime.datetime.utcnow()
         embed.set_footer(text="Sold by: {}".format(ctx.message.author))
         await bot.say(embed=embed)
         
