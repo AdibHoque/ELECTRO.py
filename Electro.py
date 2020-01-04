@@ -1222,9 +1222,9 @@ async def channel(ctx, user: discord.Member, *,price: str):
         embed = discord.Embed(title="ITEM PURCHASED", color=0xFFBF00)
         embed.add_field(name="Purchased by:", value="{}".format(user))
         embed.add_field(name="Item:", value="Custom Channel")
-        embed.add_field(name="Price:", value="{}".format(price))
+        embed.add_field(name="Price:", value="{}".format(price)
 	embed.set_thumbnail(url=ctx.message.server.icon_url)
-        embed.timestamp = datetime.datetime.utcnow()
+	embed.timestamp = datetime.datetime.utcnow()
         embed.set_footer(text="Sold by: {}".format(ctx.message.author))
         await bot.say(embed=embed)        
 
