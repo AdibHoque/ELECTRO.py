@@ -598,7 +598,8 @@ async def help(ctx):
     embed.add_field(name = '<:ElectroModeration:666920202818027531> Moderation Commands - (13)',value ='`kick`,`ban`,`setnick`,`role`,`say`,`DM`,`english`,`rolecolor`,`lockdown`,`unlock`,`menro`,`mute`,`unmute`',inline = False)
     embed.add_field(name = '<:ElectroFun:666203658467147776> Fun Commands - (16)',value ='`meme`,`joke`,`love`,`slap`, `kiss`, `hug`, `virgin`, `gender`, `tweet`, `rolldice`, `flipcoin`, `howgay`, `whowouldwin`, `captcha`,`magik`,`deepfry`',inline = False)
     embed.add_field(name = '<:ElectroMusic:666203904186515467> Music Commands - (8)',value ='`play`,`skip`,`stop`,`NP`,`queue`,`pause`,`resume`,`volume`\n\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
-    await bot.send_message(author ,embed=embed)
+    msg = await bot.send_message(author ,embed=embed)
+    await bot.add_reaction(msg,':ElectroGeneral:666202936929681418')
     await bot.say('📨 Check Your DMs For Bot Commands!')
     			
 @bot.command(pass_context = True)
