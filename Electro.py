@@ -850,19 +850,19 @@ async def on_message_edit(before, after):
 @bot.event
 async def on_reaction_add(reaction, user):
   if reaction.message.server is None:
-    if reaction.emoji == ':ElectroGeneral:666202936929681418':
-	embed = discord.Embed(title = 'GENERAL COMMANDS', color = 0xFFBF00)
-	embed.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/656760777973432330/ELECTRO_HELP1.gif')
-        embed.add_field(name = 'Ping',value ='Returns ping lantency!\n**USAGE:**``e!ping``',inline = False)
-        embed.add_field(name = 'Userinfo',value ='Shows info about mentioned user!\n**USAGE:**``e!userinfo @user``',inline = False)
-        embed.add_field(name = 'Serverinfo',value ='Shows info about the server!\n**USAGE:**``e!serverinfo``',inline = False)
-        embed.add_field(name = 'Ownerinfo',value ='Shows info about the bot owner!\n**USAGE:**``e!ownerinfo``',inline = False)
-        embed.add_field(name = 'Avatar',value ='Shows avatar of the mentioned user!\n**USAGE:**``e!avatar @user``',inline = False)
-        embed.add_field(name = 'Membercount',value ='Shows member count of the server!\n**USAGE:**``e!membercount``',inline = False)
-        embed.add_field(name = 'Invite',value ='Sends bot invite link!\n**USAGE:**``e!invite``',inline = False)
-        embed.add_field(name = 'Upvote',value ='Sends bot upvote link!\n**USAGE:**``e!upvote``',inline = False)
-        embed.add_field(name = 'Emoji',value ='Sends url of the emoji!\n**USAGE:**``e!emoji :emoji: ``\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
-        await bot.send_message(user ,embed=embed)
+	if reaction.emoji == ':ElectroGeneral:666202936929681418':
+		embed = discord.Embed(title = 'GENERAL COMMANDS', color = 0xFFBF00)
+		embed.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/656760777973432330/ELECTRO_HELP1.gif')
+		embed.add_field(name = 'Ping',value ='Returns ping lantency!\n**USAGE:**``e!ping``',inline = False)
+		embed.add_field(name = 'Userinfo',value ='Shows info about mentioned user!\n**USAGE:**``e!userinfo @user``',inline = False)
+                embed.add_field(name = 'Serverinfo',value ='Shows info about the server!\n**USAGE:**``e!serverinfo``',inline = False)
+                embed.add_field(name = 'Ownerinfo',value ='Shows info about the bot owner!\n**USAGE:**``e!ownerinfo``',inline = False)
+                embed.add_field(name = 'Avatar',value ='Shows avatar of the mentioned user!\n**USAGE:**``e!avatar @user``',inline = False)
+                embed.add_field(name = 'Membercount',value ='Shows member count of the server!\n**USAGE:**``e!membercount``',inline = False)
+                embed.add_field(name = 'Invite',value ='Sends bot invite link!\n**USAGE:**``e!invite``',inline = False)
+                embed.add_field(name = 'Upvote',value ='Sends bot upvote link!\n**USAGE:**``e!upvote``',inline = False)
+                embed.add_field(name = 'Emoji',value ='Sends url of the emoji!\n**USAGE:**``e!emoji :emoji: ``\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
+                await bot.send_message(user ,embed=embed)
   else:
   for channel in user.server.channels:
     if channel.name == '⚡electro-logs':
