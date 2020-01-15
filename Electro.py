@@ -850,7 +850,7 @@ async def on_message_edit(before, after):
 @bot.event
 async def on_reaction_add(reaction, user):
 	if reaction.message.server is None:
-		if reaction.emoji == ':ElectroGeneral:666202936929681418':
+		if reaction.emoji == '😂':
 			embed = discord.Embed(title = 'GENERAL COMMANDS', color = 0xFFBF00)
 			embed.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/656760777973432330/ELECTRO_HELP1.gif')
 			embed.add_field(name = 'Ping',value ='Returns ping lantency!\n**USAGE:**``e!ping``',inline = False)
