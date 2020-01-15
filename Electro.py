@@ -594,7 +594,7 @@ async def help(ctx):
     embed.set_author(name='ELECTRO COMMANDS')
     embed.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/656760631474520074/ELECTRO_ELECTRIFY_YOUR_SERVER.gif')
     embed.add_field(name = '``USAGE:`` ',value ='To see a page, just add the page number after the `e!help` command. Like this `e!help1`, `e!help2` Etc.',inline = False)
-    embed.add_field(name = '<:ElectroGeneral:666203415218487296> General Commands',value ='`ping`,`userinfo`,`serverinfo`,`ownerinfo`,`avatar`,`membercount`,`invite`,`upvote`',inline = False)
+    embed.add_field(name = '<:ElectroGeneral:666202936929681418> General Commands',value ='`ping`,`userinfo`,`serverinfo`,`ownerinfo`,`avatar`,`membercount`,`invite`,`upvote`',inline = False)
     embed.add_field(name = '<:ElectroModeration:666196387645489162> Moderation Commands',value ='`kick`,`ban`,`setnick`,`role`,`say`,`DM`,`english`,`rolecolor`,`lockdown`,`unlock`,`menro`',inline = False)
     embed.add_field(name = '<:ElectroFun:666203658467147776> Fun Commands',value ='`meme`,`joke`,`love`,`slap`, `kiss`, `hug`, `virgin`, `gender`, `tweet`, `rolldice`, `flipcoin`, `howgay`, `whowouldwin`, `captcha`,`magik`,`deepfry`',inline = False)
     embed.add_field(name = '<:ElectroMusic:666203904186515467> Music Commands',value ='`play`,`skip`,`stop`,`NP`,`queue`,`pause`,`resume`,`volume`\n\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
