@@ -600,6 +600,9 @@ async def help(ctx):
     embed.add_field(name = '<:ElectroMusic:666203904186515467> Music Commands - (8)',value ='`play`,`skip`,`stop`,`NP`,`queue`,`pause`,`resume`,`volume`\n\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
     msg = await bot.send_message(author ,embed=embed)
     await bot.add_reaction(msg,':ElectroGeneral:666202936929681418')
+    await bot.add_reaction(msg,':ElectroModeration:666920202818027531')
+    await bot.add_reaction(msg,':ElectroFun:666203658467147776')
+    await bot.add_reaction(msg,':ElectroMusic:666203904186515467')
     await bot.say('📨 Check Your DMs For Bot Commands!')
     			
 @bot.command(pass_context = True)
