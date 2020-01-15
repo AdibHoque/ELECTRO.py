@@ -852,7 +852,7 @@ async def on_reaction_add(reaction, user):
   if reaction.message.server is None:
     if reaction.emoji == ':ElectroGeneral:666202936929681418':
 	embed = discord.Embed(title = 'GENERAL COMMANDS', color = 0xFFBF00)
-        embed.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/656760777973432330/ELECTRO_HELP1.gif')
+	embed.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/656760777973432330/ELECTRO_HELP1.gif')
         embed.add_field(name = 'Ping',value ='Returns ping lantency!\n**USAGE:**``e!ping``',inline = False)
         embed.add_field(name = 'Userinfo',value ='Shows info about mentioned user!\n**USAGE:**``e!userinfo @user``',inline = False)
         embed.add_field(name = 'Serverinfo',value ='Shows info about the server!\n**USAGE:**``e!serverinfo``',inline = False)
