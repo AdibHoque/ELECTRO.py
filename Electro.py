@@ -597,7 +597,7 @@ async def plsboi(ctx):
 async def help(ctx):
     author = ctx.message.author
     r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
-    embed = discord.Embed(despcription='To see a detailed page, just react with their respective emojis or a add the page number after the `e!help` command. Like this `e!help1`, `e!help2` Etc.', color = 0xFFBF00) 
+    embed = discord.Embed(description='To see a detailed page, just react with their respective emojis or a add the page number after the `e!help` command. Like this `e!help1`, `e!help2` Etc.', color = 0xFFBF00) 
     embed.set_author(name='ELECTRO HELP MENU', icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
     embed.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/656760631474520074/ELECTRO_ELECTRIFY_YOUR_SERVER.gif')
     embed.add_field(name = '<:ElectroGeneral:666202936929681418> General Commands - (8)',value ='`ping`,`userinfo`,`serverinfo`,`ownerinfo`,`avatar`,`membercount`,`invite`,`upvote`',inline = False)
@@ -856,7 +856,7 @@ async def on_message_edit(before, after):
 @bot.event
 async def on_reaction_add(reaction, user):
 	if reaction.message.server is None:
-		if reaction.emoji == ':ElectroGeneral:666202936929681418':
+		if reaction.emoji == '<:ElectroGeneral:666202936929681418>':
 			embed = discord.Embed(title = 'GENERAL COMMANDS', color = 0xFFBF00)
 			embed.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/656760777973432330/ELECTRO_HELP1.gif')
 			embed.add_field(name = 'Ping',value ='Returns ping lantency!\n**USAGE:**``e!ping``',inline = False)
@@ -869,7 +869,7 @@ async def on_reaction_add(reaction, user):
 			embed.add_field(name = 'Upvote',value ='Sends bot upvote link!\n**USAGE:**``e!upvote``',inline = False)
 			embed.add_field(name = 'Emoji',value ='Sends url of the emoji!\n**USAGE:**``e!emoji :emoji: ``\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
 			await bot.send_message(reaction.message.channel, embed=embed)
-		if reaction.emoji == ':ElectroModeration:666920202818027531':
+		if reaction.emoji == '<:ElectroModeration:666920202818027531>':
 			embed = discord.Embed(title = 'MODERATION COMMANDS', color = 0xFFBF00)
 			embed.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/656760817852874752/ELECTRO_HELP2.gif')
 			embed.add_field(name = 'Kick',value ='Kicks out mentioned user from the server!\n**USAGE:**``e!kick @user``',inline = False)
