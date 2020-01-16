@@ -70,6 +70,8 @@ def is_owner(ctx):
 def predicate(message, l, r):
     def check(reaction, user):
         if reaction.message.id != message.id or user == client.user:
+        return False
+
     return check
   
 @bot.command(pass_context = True)
