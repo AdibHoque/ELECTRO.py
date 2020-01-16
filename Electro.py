@@ -597,8 +597,8 @@ async def plsboi(ctx):
 async def help(ctx):
     author = ctx.message.author
     r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
-    embed = discord.Embed(description='To see a detailed page, just react with their numeral emojis or add the page number after the `e!help` command. E.G.`e!help1`, `e!help2` Etc.', color = 0xFFBF00) 
-    embed.set_author(name='[ELECTRO HELP MENU](https://discord.gg/kuWVFpR)', icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
+    embed = discord.Embed(title='[HELP MENU](https://discord.gg/kuWVFpR)',description='To see a detailed page, just react with their numeral emojis or add the page number after the `e!help` command. E.G.`e!help1`, `e!help2` Etc.', color = 0xFFBF00) 
+    embed.set_author(name='ELECTRO', icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
     embed.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/656760631474520074/ELECTRO_ELECTRIFY_YOUR_SERVER.gif')
     embed.add_field(name = '<:ElectroGeneral:666202936929681418> General Commands - (8)',value ='`ping`,`userinfo`,`serverinfo`,`ownerinfo`,`avatar`,`membercount`,`invite`,`upvote`',inline = False)
     embed.add_field(name = '<:ElectroModeration:666920202818027531> Moderation Commands - (13)',value ='`kick`,`ban`,`setnick`,`role`,`say`,`DM`,`english`,`rolecolor`,`lockdown`,`unlock`,`menro`,`mute`,`unmute`',inline = False)
@@ -868,7 +868,7 @@ async def on_reaction_add(reaction, user):
 			embed.add_field(name = 'Invite',value ='Sends bot invite link!\n**USAGE:**``e!invite``',inline = False)
 			embed.add_field(name = 'Upvote',value ='Sends bot upvote link!\n**USAGE:**``e!upvote``',inline = False)
 			embed.add_field(name = 'Emoji',value ='Sends url of the emoji!\n**USAGE:**``e!emoji :emoji: ``\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
-			await bot.send_message(reaction.message.channel, embed=embed)
+			await bot.send_message(user, embed=embed)
 		if reaction.emoji == '2⃣':
 			embed = discord.Embed(title = 'MODERATION COMMANDS', color = 0xFFBF00)
 			embed.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/656760817852874752/ELECTRO_HELP2.gif')
@@ -890,7 +890,7 @@ async def on_reaction_add(reaction, user):
 			embed.add_field(name = 'Menro',value ='Mentions the role!\n**USAGE:**``e!menro [role name]``',inline = False)
 			embed.add_field(name = 'Mute',value ='Mutes mentioned user from chatting in the server!\n**USAGE:**``e!mute <@user>``',inline = False)
 			embed.add_field(name = 'Unmute',value ='Unmutes mentioned user!\n**USAGE:**``e!unmute <@user>``\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
-			await bot.send_message(reaction.message.channel, embed=embed)
+			await bot.send_message(user, embed=embed)
 		else:
 			for channel in user.server.channels:
 				if channel.name == '⚡electro-logs':
