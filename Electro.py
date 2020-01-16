@@ -66,7 +66,12 @@ async def prefix(ctx):
 
 def is_owner(ctx):
     return ctx.message.author.id == "496978159724396545"     
-   
+
+def predicate(message, l, r):
+    def check(reaction, user):
+        if reaction.message.id != message.id or user == client.user:
+    return check
+  
 @bot.command(pass_context = True)
 @commands.check(is_owner)
 async def servers(ctx):
