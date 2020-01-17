@@ -7,20 +7,19 @@
   </div> 
   
   <a href="https://discord.gg/Pp9KudS">
-    <img src="https://cdn.discordapp.com/attachments/656517276832366595/661988891028488195/ADD_BOT.png" align="center size="30">
+    <img src="https://img.shields.io/badge/ADD-BOT-orange.svg" align="left">
   </a>
   
   <a href="https://www.YouTube.com/AdibHoque">
-    <img src="https://cdn.discordapp.com/attachments/656517276832366595/661984838269796352/JOIN_ELECTRO.png" align="right">
+    <img src="https://img.shields.io/badge/ADD-BOT-orange.svg" align="right">
   </a>
-  <background src="https://cdn.discordapp.com/attachments/529939494007341067/565928893043834895/bg.png">
 
 
 ---
 
 ## WHAT DOES ELECTRO DO? 
 
-<img src="https://cdn.discordapp.com/attachments/656517276832366595/656760631474520074/ELECTRO_ELECTRIFY_YOUR_SERVER.gif" alt="ELECTRO" align="right">
+<img src="https://cdn.discordapp.com/attachments/656517276832366595/656760631474520074/ELECTRO_ELECTRIFY_YOUR_SERVER.gif" alt="ELECTRO" align="left">
 
 ELECTRO is a moderation, fun and giveaway bot. ELECTRO has all the moderation commands, many fun commands and giveaway commands. To see the list of commands scroll dowm or type `e!help` or `@ELECTRO help`in a server which have ELECTRO. Join our discord [server](https://github.com/kyb3r/modmail/wiki) to contract the bot creator `@ADIB HOQUE#6969`.
 
