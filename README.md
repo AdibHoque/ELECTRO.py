@@ -1,7 +1,7 @@
 <div align="center">
   <img src="https://cdn.discordapp.com/attachments/656517276832366595/661972761698369536/ELECTRO_WEB_HEADER.png" align="center">
   <br>
-  <strong><b>SIMPLE MODERATION, FUN, GIVEAWAY AND MUSIC BOT FOR DISCORD</b></strong>
+  <strong><b>ELECTRIFY AND BOOST UP YOUR DISCORD SERVER</b></strong>
   <br>
   <br>
   </div> 
@@ -55,4 +55,4 @@ ELECTRO is a moderation, fun and giveaway bot. ELECTRO has all the moderation co
 This project is licenced under MIT. If you have any new ideas, create an issue or a pull request. Contributions to ELECTRO are always welcome, whether it be improvements to the documentation or new functionality, please feel free contract us.
 
 If you are using ELECTRO and love it, consider joining our **[Discord Server](https://discord.gg/Pp9KudS)** :heart:
-
+© 2020 ELECTRO, Inc.
