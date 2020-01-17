@@ -32,20 +32,20 @@ ELECTRO is a moderation, fun and giveaway bot. ELECTRO has all the moderation co
 
 # LIST OF COMMANDS
 
-## PAGE 1 | GENERAL COMMANDS
+## * 📃GENERAL COMMANDS
 
 `ping`,`userinfo`,`serverinfo`,`ownerinfo`,`avatar`,`membercount`,`invite`,`upvote` 
 
-## PAGE 2 | MODERATION COMMANDS
+## * 🔨MODERATION COMMANDS
 
 
 `kick`,`ban`,`setnick`,`role`,`say`,`DM`,`english`,`rolecolor`,`lockdown`,`unlock`,`menro`
 
-## PAGE 3 | FUN COMMANDS
+## * 🎉FUN COMMANDS
 
 `joke`,`love`,`slap`, `kiss`, `hug`, `virgin`, `gender`, `tweet`, `rolldice`, `flipcoin`, `howgay`, `whowouldwin`, `captcha`,`magik`,`deepfry`
 
-## PAGE 4 | MUSIC COMMANDS
+## * 🎵MUSIC COMMANDS
 
 `fortnite`, `hunred`, `party`, `dogdance`, `hype`, `plsboi` 
 
