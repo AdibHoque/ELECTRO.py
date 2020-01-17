@@ -56,4 +56,4 @@ This project is licenced under MIT. If you have any new ideas, create an issue o
 
 If you are using ELECTRO and love it, consider joining our **[Discord Server](https://discord.gg/Pp9KudS)** :heart:
 
-## © 2020 ELECTRO, Inc.
+**© 2020 ELECTRO, Inc.**
