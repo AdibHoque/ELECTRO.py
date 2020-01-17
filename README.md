@@ -21,7 +21,7 @@
 
 <img src="https://cdn.discordapp.com/attachments/656517276832366595/656760631474520074/ELECTRO_ELECTRIFY_YOUR_SERVER.gif" alt="ELECTRO" align="center">
 
-**ELECTRO**)) is a moderation, fun and giveaway bot. ELECTRO has all the moderation commands, many fun commands and giveaway commands. To see the list of commands scroll down or type `e!help` or `@ELECTRO help`in a server which have ELECTRO. Join our discord [server](https://github.com/kyb3r/modmail/wiki) to contract the bot creator `@ADIB HOQUE#6969`.
+**ELECTRO** is a moderation, fun and giveaway bot. ELECTRO has all the moderation commands, many fun commands and giveaway commands. To see the list of commands scroll down or type `e!help` or `@ELECTRO help`in a server which have ELECTRO. Join our discord [server](https://github.com/kyb3r/modmail/wiki) to contract the bot creator `@ADIB HOQUE#6969`.
 
 ## PREFIX OF ELECTRO
 
