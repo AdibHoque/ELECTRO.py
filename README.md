@@ -7,7 +7,7 @@
   </div> 
   
   <a href="https://discord.gg/Pp9KudS">
-    <img src="https://cdn.discordapp.com/attachments/656517276832366595/661988891028488195/ADD_BOT.png" align="center">
+    <img src="https://cdn.discordapp.com/attachments/656517276832366595/661988891028488195/ADD_BOT.png" align="center size="30">
   </a>
   
   <a href="https://www.YouTube.com/AdibHoque">
@@ -32,20 +32,20 @@ ELECTRO is a moderation, fun and giveaway bot. ELECTRO has all the moderation co
 
 # LIST OF COMMANDS
 
-## * 📃GENERAL COMMANDS
+## 📃 GENERAL COMMANDS
 
 `ping`,`userinfo`,`serverinfo`,`ownerinfo`,`avatar`,`membercount`,`invite`,`upvote` 
 
-## * 🔨MODERATION COMMANDS
+## 🔨 MODERATION COMMANDS
 
 
 `kick`,`ban`,`setnick`,`role`,`say`,`DM`,`english`,`rolecolor`,`lockdown`,`unlock`,`menro`
 
-## * 🎉FUN COMMANDS
+## 🎉 FUN COMMANDS
 
 `joke`,`love`,`slap`, `kiss`, `hug`, `virgin`, `gender`, `tweet`, `rolldice`, `flipcoin`, `howgay`, `whowouldwin`, `captcha`,`magik`,`deepfry`
 
-## * 🎵MUSIC COMMANDS
+## 🎵 MUSIC COMMANDS
 
 `fortnite`, `hunred`, `party`, `dogdance`, `hype`, `plsboi` 
 
