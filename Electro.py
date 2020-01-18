@@ -597,14 +597,13 @@ async def plsboi(ctx):
 async def help(ctx):
     author = ctx.message.author
     r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
-    embed = discord.Embed(description='**[HELP MENU](https://discord.gg/kuWVFpR)**\nTo see a detailed page, just react with their numeral emojis or add the page number after the `e!help` command. E.G.`e!help1`, `e!help2` Etc.', color = 0xFFBF00) 
+    embed = discord.Embed(description='[**HELP MENU**](https://discord.gg/kuWVFpR)\nTo see a detailed page, just react with their numeral emojis or add the page number after the `e!help` command. E.G. `e!help1`, `e!help2` Etc.', color = 0xFFBF00) 
     embed.set_author(name='ELECTRO', icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
     embed.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/656760631474520074/ELECTRO_ELECTRIFY_YOUR_SERVER.gif')
-    embed.add_field(name='[HELP MENU](https://discord.gg/kuWVFpR)',value='To see a detailed page, just react with their numeral emojis or add the page number after the `e!help` command. E.G.`e!help1`, `e!help2` Etc.',inline = False)
     embed.add_field(name = '<:ElectroGeneral:666202936929681418> General Commands - (8)',value ='`ping`,`userinfo`,`serverinfo`,`ownerinfo`,`avatar`,`membercount`,`invite`,`upvote`',inline = False)
     embed.add_field(name = '<:ElectroModeration:666920202818027531> Moderation Commands - (13)',value ='`kick`,`ban`,`setnick`,`role`,`say`,`DM`,`english`,`rolecolor`,`lockdown`,`unlock`,`menro`,`mute`,`unmute`',inline = False)
     embed.add_field(name = '<:ElectroFun:666203658467147776> Fun Commands - (16)',value ='`meme`,`joke`,`love`,`slap`, `kiss`, `hug`, `virgin`, `gender`, `tweet`, `rolldice`, `flipcoin`, `howgay`, `whowouldwin`, `captcha`,`magik`,`deepfry`',inline = False)
-    embed.add_field(name = '<:ElectroMusic:666203904186515467> Music Commands - (8)',value ='`play`,`skip`,`stop`,`NP`,`queue`,`pause`,`resume`,`volume`\n<:ElectroBookmark:668018207549816833> **Additional Links:**\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
+    embed.add_field(name = '<:ElectroMusic:666203904186515467> Music Commands - (8)',value ='`play`,`skip`,`stop`,`NP`,`queue`,`pause`,`resume`,`volume`\n\n<:ElectroBookmark:668018207549816833> **Additional Links:**\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
     msg = await bot.send_message(author ,embed=embed)
     await bot.add_reaction(msg,'1⃣')
     await bot.add_reaction(msg,'2⃣')
