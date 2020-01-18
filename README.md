@@ -7,11 +7,11 @@
   </div> 
   
   <a href="https://discord.gg/Pp9KudS">
-    <img src="https://img.shields.io/badge/ADD-BOT-orange.svg?style=for-the-badge&logo=discord" align="left">
+    <img src="https://img.shields.io/badge/ADD-BOT-orange.svg?style=for-the-badge" align="left">
   </a>
   
   <a href="https://www.YouTube.com/AdibHoque">
-    <img src="https://img.shields.io/badge/JOIN-SERVER-orange.svg?style=for-the-badge&logo=discord" align="right">
+    <img src="https://img.shields.io/badge/JOIN-SERVER-orange.svg?style=for-the-badge" align="right">
   </a>
 
 
@@ -57,4 +57,3 @@ This project is licenced under MIT. If you have any new ideas, create an issue o
 If you are using **ELECTRO** and love it, consider joining our **[Discord Server](https://discord.gg/Pp9KudS)** :heart:
 
 **© 2020 ELECTRO, Inc.**
-<iframe src="https://discordapp.com/widget?id=646262196975960074&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
