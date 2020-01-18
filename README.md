@@ -1,19 +1,17 @@
 <div align="center">
   <img src="https://cdn.discordapp.com/attachments/656517276832366595/661972761698369536/ELECTRO_WEB_HEADER.png" align="center">
+<a href="https://discord.gg/Pp9KudS">
+    <img src="https://img.shields.io/badge/ADD-BOT-orange.svg?style=for-the-badge">
+  </a>
+  <a href="https://www.YouTube.com/AdibHoque">
+    <img src="https://img.shields.io/badge/JOIN-GUILD-orange.svg?style=for-the-badge">
+  </a>
   <br>
   <strong><b>ELECTRIFY AND BOOST UP YOUR DISCORD SERVER</b></strong>
   <br>
   <br>
   </div> 
   
-<div align="center">
-  <a href="https://discord.gg/Pp9KudS">
-    <img src="https://img.shields.io/badge/ADD-BOT-orange.svg?style=for-the-badge">
-  </a>
-  <a href="https://www.YouTube.com/AdibHoque">
-    <img src="https://img.shields.io/badge/JOIN-GUILD-orange.svg?style=for-the-badge">
-  </a>
-  </div>
 
 ---
 
