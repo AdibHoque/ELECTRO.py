@@ -15,7 +15,7 @@
 
 ---
 
-## WHAT DOES ELECTRO DO? 
+## INTRODUCTION
 
 <img src="https://cdn.discordapp.com/attachments/656517276832366595/656760631474520074/ELECTRO_ELECTRIFY_YOUR_SERVER.gif" alt="ELECTRO" align="center">
 
