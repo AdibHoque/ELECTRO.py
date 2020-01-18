@@ -8,9 +8,7 @@
   
   <a href="https://discord.gg/Pp9KudS">
     <img src="https://img.shields.io/badge/ADD-BOT-orange.svg?style=for-the-badge" align="left">
-  </a>
-  
-  <a href="https://www.YouTube.com/AdibHoque">
+     href="https://www.YouTube.com/AdibHoque">
     <img src="https://img.shields.io/badge/JOIN-GUILD-orange.svg?style=for-the-badge" align="right">
   </a>
 
