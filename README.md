@@ -11,7 +11,7 @@
   </a>
   
   <a href="https://www.YouTube.com/AdibHoque">
-    <img src="https://img.shields.io/badge/JOIN-SERVER-orange.svg?style=for-the-badge" align="right">
+    <img src="https://img.shields.io/badge/JOIN-GUILD-orange.svg?style=for-the-badge" align="right">
   </a>
 
 
