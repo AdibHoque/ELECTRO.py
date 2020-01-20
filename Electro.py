@@ -403,7 +403,7 @@ async def love(ctx, user: discord.Member = None, *, user2: discord.Member = None
     finalName = first_half + second_half
     score = random.randint(0, 100)
     filled_progbar = round(score / 100 * 10)
-    counter_ = '█' * filled_progbar + '‍ ‍' * (10 - filled_progbar)
+    counter_ = '■' * filled_progbar + '□' * (10 - filled_progbar)
     url = f"https://nekobot.xyz/api/imagegen?type=ship&user1={useravatar1}&user2={useravatar2s}"
     async with aiohttp.ClientSession() as cs:
         async with cs.get(url) as r:
