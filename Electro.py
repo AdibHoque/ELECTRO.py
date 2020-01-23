@@ -63,7 +63,7 @@ async def ping(ctx):
     t1 = time.perf_counter()
     await bot.send_typing(channel)
     t2 = time.perf_counter()
-    embed=discord.Embed(description="Pong! {}ms".format(round((t2-t1)*1000)), color=0xFFBF00) 
+    embed=discord.Embed(description="Pong! **{}ms**".format(round((t2-t1)*1000)), color=0xFFBF00) 
     await bot.say(embed=embed)
 
 @bot.command(pass_context = True)
@@ -579,7 +579,7 @@ async def help(ctx):
     embed.add_field(name = '<:ElectroFun:666203658467147776> Fun Commands - (16)',value ='`meme`,`joke`,`love`,`slap`, `kiss`, `hug`, `virgin`, `gender`, `tweet`, `rolldice`, `flipcoin`, `howgay`, `whowouldwin`, `captcha`,`magik`,`deepfry`',inline = False)
     embed.add_field(name = '<:ElectroMusic:666203904186515467> Music Commands - (8)',value ='`play`,`skip`,`stop`,`NP`,`queue`,`pause`,`resume`,`volume`\n\n<:ElectroBookmark:668018207549816833> **Additional Links:**\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
     msg = await bot.send_message(author ,embed=embed)
-    await bot.add_reaction(msg,'1⃣')
+    await bot.add_reaction(msg,':ElectroGeneral:666202936929681418')
     await bot.add_reaction(msg,'2⃣')
     await bot.add_reaction(msg,'3⃣')
     await bot.add_reaction(msg,'4⃣')
@@ -830,7 +830,7 @@ async def on_message_edit(before, after):
 @bot.event
 async def on_reaction_add(reaction, user):
 	if reaction.message.server is None:
-		if reaction.emoji == '1⃣':
+		if reaction.emoji.id == '666202936929681418':
 			embed = discord.Embed(title = 'GENERAL COMMANDS', color = 0xFFBF00)
 			embed.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/656760777973432330/ELECTRO_HELP1.gif')
 			embed.add_field(name = 'Ping',value ='Returns ping lantency!\n**USAGE:**``e!ping``',inline = False)
