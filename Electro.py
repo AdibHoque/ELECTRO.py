@@ -70,7 +70,7 @@ async def ping(ctx):
 @commands.has_permissions(manage_nicknames=True)     
 async def setnick(ctx, user: discord.Member, *, nickname):
     await bot.change_nickname(user, nickname)
-    await bot.say("<:ElectroSucess:527118398753079317> {}'s nickname was changed to {}!".format(user, nickname))
+    await bot.say("<a:ElectroSuccess:656772759812046851> {}'s nickname was changed to {}!".format(user, nickname))
     await bot.delete_message(ctx.message)
 
 @bot.command(pass_context=True)
