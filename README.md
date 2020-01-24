@@ -27,7 +27,7 @@
 
 ---
 
-# LIST OF COMMANDS
+# <h2 align="center">LIST OF COMMANDS</h2>
 
 <h2 align="center">📃 GENERAL COMMANDS 📃</h2>
 
