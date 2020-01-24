@@ -13,8 +13,6 @@
   </div> 
   
 
----
-
 <h2 align="center">INTRODUCTION</h2>
 
 <img src="https://cdn.discordapp.com/attachments/656517276832366595/656760631474520074/ELECTRO_ELECTRIFY_YOUR_SERVER.gif" alt="ELECTRO" align="center">
@@ -24,8 +22,6 @@
 <h2 align="center">PREFIX OF ELECTRO</h2> 
 
 **ELECTRO** commands can be used by the prefix `e!` or by mentioning `@ELECTRO`. If you want to use commands by mentioning you must put a space after the mention or the command won't work. 
-
----
 
 # <h2 align="center">ELECTRO COMMANDS</h2>
 
