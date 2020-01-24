@@ -1,7 +1,6 @@
 <div align="center">
-  <img src="https://cdn.discordapp.com/attachments/656517276832366595/670205214502027264/ELECTROGithub.png" align="center">
-  <img src="https://cdn.discordapp.com/attachments/656517276832366595/670205213897916436/ELECTROLogoHead.png"align="center">
-<a href="https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=2146827775&scope=bot">
+  <img src="https://cdn.discordapp.com/attachments/656517276832366595/661972761698369536/ELECTRO_WEB_HEADER.png" align="center">
+  <a href="https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=2146827775&scope=bot">
     <img src="https://img.shields.io/badge/ADD-BOT-orange.svg?style=for-the-badge">
   </a>
   <a href="https://discord.gg/kuWVFpR">
