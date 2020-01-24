@@ -29,7 +29,9 @@
 
 # <h2 align="center">ELECTRO COMMANDS</h2>
 
-**ELECTRO** has a total of 4 Commands category which are `General`, `Moderation`, `Fun` & `Music`
+**ELECTRO** has a total of 4 Commands category which are `General`, `Moderation`, `Fun` & `Music` with over 50 useful commands! 
+
+--- 
 
 <h2 align="center">GENERAL COMMANDS</h2>
 
