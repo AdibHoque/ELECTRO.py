@@ -1,6 +1,6 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/AdibHoque/ELECTRO/master/Assets/ELECTROGithub.png?token=AK7T5MNU75ZLG7O7WLRCPCC6FK6ZI" align="center">
-  <img src="https://raw.githubusercontent.com/AdibHoque/ELECTRO/master/Assets/ELECTROLogoHead.png?token=AK7T5MKXRYVWTBTWM4VMZX26FK7BC"><br>
+  <img src="https://cdn.discordapp.com/attachments/656517276832366595/670205214502027264/ELECTROGithub.png" align="center">
+  <img src="https://cdn.discordapp.com/attachments/656517276832366595/670205213897916436/ELECTROLogoHead.png"><br>
 <a href="https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=2146827775&scope=bot">
     <img src="https://img.shields.io/badge/ADD-BOT-orange.svg?style=for-the-badge">
   </a>
