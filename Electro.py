@@ -220,7 +220,7 @@ async def customembed(ctx, msg:str, *, msg2:str):
     else:
     	r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
     	embed=discord.Embed(title="{}".format(msg), description="{}".format(msg2), color = discord.Color((r << 16) + (g << 8) + b))
-    	embed.set_footer(text ='Made with ❤ by @ADIB HOQUE#6969')
+    	embed.set_footer(text ='© 2020 ELECTRO, Inc.')
     	await bot.send_message(channel, embed=embed)
 
 @bot.command(pass_context=True)
@@ -384,7 +384,7 @@ async def tweet(ctx, usernamename:str, *, txt:str):
             embed = discord.Embed(color = 0xFFBF00) 
             embed.set_image(url=res['message'])
             embed.title = "{} tweeted: {}".format(usernamename, txt)
-            embed.set_footer(text ='You can add the bot to your server by e!invite')
+            embed.set_footer(text ='© 2020 ELECTRO, Inc.')
             await bot.say(embed=embed)
 		   	   	 
  
@@ -578,6 +578,7 @@ async def help(ctx):
     embed.add_field(name = '<:ElectroModeration:666920202818027531> Moderation Commands - (13)',value ='`kick`,`ban`,`setnick`,`role`,`say`,`DM`,`english`,`rolecolor`,`lockdown`,`unlock`,`menro`,`mute`,`unmute`',inline = False)
     embed.add_field(name = '<:ElectroFun:666203658467147776> Fun Commands - (16)',value ='`meme`,`joke`,`love`,`slap`, `kiss`, `hug`, `virgin`, `gender`, `tweet`, `rolldice`, `flipcoin`, `howgay`, `whowouldwin`, `captcha`,`magik`,`deepfry`',inline = False)
     embed.add_field(name = '<:ElectroMusic:666203904186515467> Music Commands - (8)',value ='`play`,`skip`,`stop`,`NP`,`queue`,`pause`,`resume`,`volume`\n\n<:ElectroBookmark:668018207549816833> **Additional Links:**\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
+    embed.set_footer(text ='© 2020 ELECTRO, Inc.')
     msg = await bot.send_message(author ,embed=embed)
     await bot.add_reaction(msg,':ElectroGeneral:666202936929681418')
     await bot.add_reaction(msg,':ElectroModeration:666920202818027531')
@@ -600,7 +601,8 @@ async def help1(ctx):
     embed.add_field(name = 'Membercount',value ='Shows member count of the server!\n**USAGE:**``e!membercount``',inline = False)
     embed.add_field(name = 'Invite',value ='Sends bot invite link!\n**USAGE:**``e!invite``',inline = False)
     embed.add_field(name = 'Upvote',value ='Sends bot upvote link!\n**USAGE:**``e!upvote``',inline = False)
-    embed.add_field(name = 'Emoji',value ='Sends url of the emoji!\n**USAGE:**``e!emoji :emoji: ``\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
+    embed.add_field(name = 'Emoji',value ='Sends url of the emoji!\n**USAGE:**``e!emoji :emoji: ``\n<:ElectroBookmark:668018207549816833> **Additional Links:**\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
+    embed.set_footer(text ='© 2020 ELECTRO, Inc.')
     await bot.send_message(author ,embed=embed)
     await bot.say('📨 Check Your DMs For General Commands!')
     
@@ -628,7 +630,8 @@ async def help2(ctx):
     embed.add_field(name = 'Unbanall',value ='Unbans all the banned users!\n**USAGE:**``e!unbanall``',inline = False)
     embed.add_field(name = 'Menro',value ='Mentions the role!\n**USAGE:**``e!menro [role name]``',inline = False)
     embed.add_field(name = 'Mute',value ='Mutes mentioned user from chatting in the server!\n**USAGE:**``e!mute <@user>``',inline = False)
-    embed.add_field(name = 'Unmute',value ='Unmutes mentioned user!\n**USAGE:**``e!unmute <@user>``\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)  
+    embed.add_field(name = 'Unmute',value ='Unmutes mentioned user!\n**USAGE:**``e!unmute <@user>``\n<:ElectroBookmark:668018207549816833> **Additional Links:**\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
+    embed.set_footer(text ='© 2020 ELECTRO, Inc.')
     await bot.send_message(author ,embed=embed)
     await bot.say('📨 Check Your DMs For Moderation Commands!') 
     
