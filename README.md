@@ -1,5 +1,6 @@
 <div align="center">
-  <img src="https://cdn.discordapp.com/attachments/656517276832366595/661972761698369536/ELECTRO_WEB_HEADER.png" align="center">
+  <img src="https://raw.githubusercontent.com/AdibHoque/ELECTRO/master/Assets/ELECTROGithub.png?token=AK7T5MNU75ZLG7O7WLRCPCC6FK6ZI" align="center">
+  <img src="https://raw.githubusercontent.com/AdibHoque/ELECTRO/master/Assets/ELECTROLogoHead.png?token=AK7T5MKXRYVWTBTWM4VMZX26FK7BC"><br>
 <a href="https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=2146827775&scope=bot">
     <img src="https://img.shields.io/badge/ADD-BOT-orange.svg?style=for-the-badge">
   </a>
@@ -15,13 +16,13 @@
 
 ---
 
-## INTRODUCTION
+<h2 align="center">INTRODUCTION</h2>
 
 <img src="https://cdn.discordapp.com/attachments/656517276832366595/656760631474520074/ELECTRO_ELECTRIFY_YOUR_SERVER.gif" alt="ELECTRO" align="center">
 
 **ELECTRO** is a moderation, fun and giveaway bot. **ELECTRO** has all the moderation commands, many fun commands and giveaway commands. To see the list of commands scroll down or type `e!help` or `@ELECTRO help`in a server which have **ELECTRO**. Join our discord [server](https://github.com/kyb3r/modmail/wiki) to contract the bot creator `@ADIB HOQUE#6969`.
 
-## PREFIX OF ELECTRO
+<h2 align="center">PREFIX OF ELECTRO</h2> 
 
 **ELECTRO** commands can be used by the prefix `e!` or by mentioning `@ELECTRO`. If you want to use commands by mentioning you must put a space after the mention or the command won't work. 
 
@@ -29,7 +30,7 @@
 
 # LIST OF COMMANDS
 
-## 📃 GENERAL COMMANDS
+<h2 align="center">📃 GENERAL COMMANDS 📃</h2>
 
 `ping`,`userinfo`,`serverinfo`,`ownerinfo`,`avatar`,`membercount`,`invite`,`upvote` 
 
