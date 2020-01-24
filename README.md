@@ -27,31 +27,32 @@
 
 ---
 
-# <h2 align="center">LIST OF COMMANDS</h2>
+# <h2 align="center">ELECTRO COMMANDS</h2>
 
-<h2 align="center">📃 GENERAL COMMANDS 📃</h2>
+**ELECTRO** has a total of 4 Commands category which are `General`, `Moderation`, `Fun` & `Music`
+
+<h2 align="center">GENERAL COMMANDS</h2>
 
 `ping`,`userinfo`,`serverinfo`,`ownerinfo`,`avatar`,`membercount`,`invite`,`upvote` 
 
-## 🔨 MODERATION COMMANDS
-
+<h2 align="center">MODERATION COMMANDS</h2> 
 
 `kick`,`ban`,`setnick`,`role`,`say`,`DM`,`english`,`rolecolor`,`lockdown`,`unlock`,`menro`
 
-## 🎉 FUN COMMANDS
+<h2 align="center">FUN COMMANDS </h2> 
 
 `joke`,`love`,`slap`, `kiss`, `hug`, `virgin`, `gender`, `tweet`, `rolldice`, `flipcoin`, `howgay`, `whowouldwin`, `captcha`,`magik`,`deepfry`
 
-## 🎵 MUSIC COMMANDS
+<h2 align="center">MUSIC COMMANDS</h2> 
 
 `fortnite`, `hunred`, `party`, `dogdance`, `hype`, `plsboi` 
 
 ---
 
-# CONTRIBUTE
+<h2 align="center">CONTRIBUTE</h2> 
 
 This project is licenced under MIT. If you have any new ideas, create an issue or a pull request. Contributions to **ELECTRO** are always welcome, whether it be improvements to the documentation or new functionality, please feel free contract us.
 
-If you are using **ELECTRO** and love it, consider joining our **[Discord Server](https://discord.gg/Pp9KudS)** :heart:
+If you are using **ELECTRO** and love it, consider joining our **[Discord Server](https://discord.gg/kuWVFpR)** :heart:
 
 **© 2020 ELECTRO, Inc.**
