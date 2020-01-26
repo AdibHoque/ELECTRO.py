@@ -1,13 +1,13 @@
 <div align="center">
   <img src="https://cdn.discordapp.com/attachments/656517276832366595/661972761698369536/ELECTRO_WEB_HEADER.png" align="center">
   <strong><b>ELECTRIFY AND BOOST UP YOUR DISCORD SERVER</b></strong>
+  <br>
   <a href="https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=2146827775&scope=bot">
     <img src="https://img.shields.io/badge/ADD-BOT-orange.svg?style=for-the-badge">
   </a>
   <a href="https://discord.gg/kuWVFpR">
     <img src="https://img.shields.io/badge/JOIN-GUILD-orange.svg?style=for-the-badge">
   </a>
-  <br>
   <br>
   <br>
   </div> 
