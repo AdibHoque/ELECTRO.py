@@ -859,7 +859,7 @@ async def on_reaction_add(reaction, user):
 			embed.add_field(name = 'Invite',value ='Sends bot invite link!\n**USAGE:**``e!invite``',inline = False)
 			embed.add_field(name = 'Upvote',value ='Sends bot upvote link!\n**USAGE:**``e!upvote``',inline = False)
 			embed.add_field(name = 'Emoji',value ='Sends url of the emoji!\n**USAGE:**``e!emoji :emoji: ``\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
-			await bot.send_message(user, embed=embed)
+			await bot.edit_message(reaction.message, embed=embed)
 		if reaction.emoji.id == '666920202818027531':
 			embed = discord.Embed(description='**[MODERATION COMMANDS](https://discord.gg/kuWVFpR)**', color = 0xFFBF00)
 			embed.set_author(name='ELECTRO',url='https://discord.gg/kuWVFpR', icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
