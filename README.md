@@ -8,8 +8,6 @@
   <a href="https://discord.gg/kuWVFpR">
     <img src="https://img.shields.io/badge/JOIN-GUILD-orange.svg?style=for-the-badge">
   </a>
-  <br>
-  <br>
   </div> 
   
 
