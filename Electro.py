@@ -885,19 +885,19 @@ async def on_reaction_add(reaction, user):
                                 embed.add_field(name = 'Unmute',value ='Unmutes mentioned user!\n**USAGE:**``e!unmute <@user>``\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
                                 await bot.edit_message(reaction.message, embed=embed)
                         else:
-				for channel in user.server.channels:
-				if channel.name == '⚡electro-logs':
+                                for channel in user.server.channels:
+                                if channel.name == '⚡electro-logs':
 					logchannel = channel
-					r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
-					embed = discord.Embed(title = "REACTION ADDED", color = 0xFFBF00)
-					embed.add_field(name = 'Reaction by:',value ='{}'.format(user),inline = False)
-					embed.add_field(name = 'Message:',value ='{}'.format(reaction.message.content),inline = False)
-					embed.add_field(name = 'Channel:',value ='{}'.format(reaction.message.channel.mention),inline = False)
-					embed.add_field(name = 'Emoji:',value ='{}'.format(reaction.emoji),inline = False)
-					embed.set_thumbnail(url=reaction.server.icon_url)
-					embed.timestamp = datetime.datetime.utcnow()
-					embed.set_footer(text ='REACTION ADDED')
-					await bot.send_message(logchannel, embed=embed)
+                                        r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
+                                        embed = discord.Embed(title = "REACTION ADDED", color = 0xFFBF00)
+                                        embed.add_field(name = 'Reaction by:',value ='{}'.format(user),inline = False)
+                                        embed.add_field(name = 'Message:',value ='{}'.format(reaction.message.content),inline = False)
+                                        embed.add_field(name = 'Channel:',value ='{}'.format(reaction.message.channel.mention),inline = False)
+                                        embed.add_field(name = 'Emoji:',value ='{}'.format(reaction.emoji),inline = False)
+                                        embed.set_thumbnail(url=reaction.server.icon_url)
+                                        embed.timestamp = datetime.datetime.utcnow()
+                                        embed.set_footer(text ='REACTION ADDED')
+                                        await bot.send_message(logchannel, embed=embed)
         
 @bot.event
 async def on_reaction_remove(reaction, user):
