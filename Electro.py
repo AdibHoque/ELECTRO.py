@@ -886,7 +886,7 @@ async def on_reaction_add(reaction, user):
                                 await bot.edit_message(reaction.message, embed=embed)
                         else:
                                 for channel in user.server.channels:
-					if channel.name == '⚡electro-logs':
+                                        if channel.name == '⚡electro-logs':
 						logchannel = channel
 						r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
                                                 embed = discord.Embed(title = "REACTION ADDED", color = 0xFFBF00)
