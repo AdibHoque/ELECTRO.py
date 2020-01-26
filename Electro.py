@@ -887,8 +887,8 @@ async def on_reaction_add(reaction, user):
                         else:
                                 for channel in user.server.channels:
                                         if channel.name == '⚡electro-logs':
-						logchannel = channel
-						r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
+                                                logchannel = channel
+                                                r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
                                                 embed = discord.Embed(title = "REACTION ADDED", color = 0xFFBF00)
                                                 embed.add_field(name = 'Reaction by:',value ='{}'.format(user),inline = False)
                                                 embed.add_field(name = 'Message:',value ='{}'.format(reaction.message.content),inline = False)
