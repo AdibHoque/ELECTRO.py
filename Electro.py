@@ -64,7 +64,7 @@ async def testlol(ctx):
     await bot.send_message(ctx.message.channel, "description")
     a2 = await bot.wait_for_message(timeout= 30, author=ctx.message.author, channel=ctx.message.channel)
     await bot.say('{a1} {a2}')
-    await bot.say('{} {}'.format(a1, a2))
+    await bot.say('{} {}'.format(a1.content, a2.content))
  																
 @bot.command(pass_context = True)
 @commands.cooldown(1, 5, commands.BucketType.user)
