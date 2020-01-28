@@ -845,7 +845,7 @@ async def on_message_edit(before, after):
          
 @bot.event
 async def on_reaction_add(reaction, user):
-	if reaction.message.server is None:
+	if user !== client.user:
                 if reaction.emoji.id == '666202936929681418':
                                 embed = discord.Embed(description='**[GENERAL COMMANDS](https://discord.gg/kuWVFpR)**', color = 0xFFBF00)
                                 embed.set_author(name='ELECTRO',url='https://discord.gg/kuWVFpR', icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
