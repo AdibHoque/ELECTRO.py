@@ -15,7 +15,7 @@
 
 <img src="https://cdn.discordapp.com/attachments/656517276832366595/656760631474520074/ELECTRO_ELECTRIFY_YOUR_SERVER.gif" alt="ELECTRO" align="center">
 
-**ELECTRO** is a general purpose moderation & fun bot. **ELECTRO** has all the moderation commands, many fun commands and giveaway commands. To see the list of commands scroll down or type `e!help` or `@ELECTRO help`in a server which have **ELECTRO**. Join our discord [server](https://github.com/kyb3r/modmail/wiki) to contract the bot creator `@ADIB HOQUE#6969`.
+**ELECTRO** is a general purpose `moderation`, `fun ` & `music` bot. **ELECTRO** has all the `moderation` commands, many `fun` commands and `music` commands. To see the list of commands scroll down or type `e!help` or `@ELECTRO help`in a server which have **ELECTRO**. Join our discord [server](https://github.com/kyb3r/modmail/wiki) to contract the bot creator `@ADIB HOQUE#6969`.
 
 <h2 align="center">PREFIX OF ELECTRO</h2> 
 
@@ -25,7 +25,7 @@
 
 # <h2 align="center">ELECTRO COMMAND CATEGORY</h2>
 
-**ELECTRO** has a total of 4 Commands category which are `General`, `Moderation`, `Fun` & `Music` with over 50 useful commands! The commands might seem genial but they're whimsical!
+**ELECTRO** has a total of 4 Commands category which are `General`, `Moderation`, `Fun` & `Music` with over 40 useful commands! The commands might seem genial but they're whimsical!
 
 <h2 align="center">GENERAL COMMANDS</h2>
 
