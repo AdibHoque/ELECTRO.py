@@ -21,11 +21,11 @@
 
 **ELECTRO** commands can be used by the prefix `e!` or by mentioning `@ELECTRO`. If you want to use commands by mentioning you must put a space after the mention or the command won't work. 
 
-# <h2 align="center">ELECTRO COMMANDS</h2>
+---  
 
-**ELECTRO** has a total of 4 Commands category which are `General`, `Moderation`, `Fun` & `Music` with over 50 useful commands! 
+# <h2 align="center">ELECTRO COMMAND CATEGORY</h2>
 
---- 
+**ELECTRO** has a total of 4 Commands category which are `General`, `Moderation`, `Fun` & `Music` with over 50 useful commands! The commands might seem genial but they're whimsical!
 
 <h2 align="center">GENERAL COMMANDS</h2>
 
