@@ -58,7 +58,7 @@ async def servers(ctx):
   try:
        await bot.say('**{}** - {} users'.format(servername, servername))
        await bot.say('\n'.join(server.members for server in servers))
-  
+
 @bot.command(pass_context=True)
 async def testlol(ctx):
     await bot.send_message(ctx.message.channel, "title")
