@@ -37,11 +37,11 @@
 
 <h2 align="center">FUN COMMANDS </h2> 
 
-`joke`,`love`,`slap`, `kiss`, `hug`, `virgin`, `gender`, `tweet`, `rolldice`, `flipcoin`, `howgay`, `whowouldwin`, `captcha`,`magik`,`deepfry`
+`joke`,`love`,`slap`, `kiss`, `hug`, `virgin`, `gender`, `tweet`, `rolldice`, `flipcoin`, `howgay`, `whowouldwin`, `captcha`,`magik`,`deepfry`,`iphonex`,`threats`,`clyde`,`trash`
 
 <h2 align="center">MUSIC COMMANDS</h2> 
 
-`fortnite`, `hunred`, `party`, `dogdance`, `hype`, `plsboi` 
+`play`,`skip`,`stop`,`pause`,`resume`,`volume`,`np`
 
 ---
 
