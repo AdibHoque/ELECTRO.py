@@ -52,8 +52,8 @@ def predicate(message, l, r):
 @commands.check(is_owner)
 async def servers(ctx):
   servers = list(bot.servers)
-  servername = server.name for server in servers
-  membercount = server.member_count for server in servers
+  servername = [server.name for server in servers]
+  membercount = [server.member_count for server in servers]
   await bot.say(f"Connected on {str(len(servers))} servers:")
   try:
        await bot.say('**{}** - {} users'.format(servername, servername))
