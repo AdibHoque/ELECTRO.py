@@ -1273,15 +1273,15 @@ async def channel(ctx, user: discord.Member, *,price: str):
 
 @bot.command(pass_context=True)
 @commands.has_permissions(administrator=True)
-async def cc(ctx, user: discord.Member, *,price: str):
+async def inviteclaim(ctx, user: discord.Member, invites: str, *,price: str):
         await bot.delete_message(ctx.message)
-        embed = discord.Embed(title="ITEM PURCHASED", color=0x429CFF)
-        embed.add_field(name="Purchased by:", value="{}".format(user))
-        embed.add_field(name="Item:", value="Custom Dyno Command")
-        embed.add_field(name="Price:", value="{}".format(price))
+        embed = discord.Embed(title="INVITES REDEEMED", color=0xffbf00)
+        embed.add_field(name="Claimed by:", value="{}".format(user))
+        embed.add_field(name="For:", value="{} Invites".format(invites))
+        embed.add_field(name="Prize:", value="{}".format(price))
         embed.set_thumbnail(url=ctx.message.server.icon_url)
         embed.timestamp = datetime.datetime.utcnow()
-        embed.set_footer(text="Sold by: {}".format(ctx.message.author))
+        embed.set_footer(text="Distibuted by: {}".format(ctx.message.author))
         await bot.say(embed=embed)
         
 @bot.command(pass_context=True)
