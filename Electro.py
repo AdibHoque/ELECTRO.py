@@ -56,8 +56,8 @@ async def servers(ctx):
   await bot.say('\n'.join(server.name for server in servers))
   for server in bot.servers:
         try:
-                await bot.say("{} - {}".format(server.name,server.member_count))
-  
+                await bot.say("{} - {}".format(server.name,server.member_count)) 
+
 @bot.command(pass_context=True)
 async def richembed(ctx):
     await bot.send_message(ctx.message.channel, "What should be the embed Title?")
