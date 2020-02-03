@@ -54,6 +54,9 @@ async def servers(ctx):
   servers = list(bot.servers)
   await bot.say(f"Connected on {str(len(servers))} servers:")
   await bot.say('\n'.join(server.name for server in servers))
+  for server in bot.servers:
+        try:
+                await bot.say("{} - {}".format(server.name,server.member_count))
   
 @bot.command(pass_context=True)
 async def richembed(ctx):
