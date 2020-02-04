@@ -37,19 +37,19 @@ async def on_ready():
 @bot.event
 async def on_command_error(error, ctx):
     if isinstance(error, commands.CommandOnCooldown):
-        embed=discord.Embed(description="This command is on a cooldown.\nPlease try again in **%.2fs**!"% error.retry_after, color=0xFFBF00)
+        embed=discord.Embed(description="<a:ElectroError:646994154152525845>**Command On Cooldown.**\nPlease try again in **%.2fs**!"% error.retry_after, color=0xFFBF00)
         await bot.send_message(ctx.message.channel, embed=embed)
     elif isinstance(error, commands.CommandNotFound):
-        embed=discord.Embed(description="This command does not exists.\nPlease type `e!help` to know the existing commands!", color=0xFFBF00)
+        embed=discord.Embed(description="<a:ElectroError:646994154152525845>**Command Not Found.**\nPlease type `e!help` or join [Support Server](https://discord.gg/kuWVFpR) to know the existing commands!", color=0xFFBF00)
         await bot.send_message(ctx.message.channel, embed=embed)
     elif isinstance(error, commands.MissingRequiredArgument):
-        embed=discord.Embed(description="Missing Required Argument.\nPlease type `e!help` or join [Support Server](https://discord.gg/kuWVFpR) to know how to use this command properly!", color=0xFFBF00)
+        embed=discord.Embed(description="<a:ElectroError:646994154152525845>**Missing Required Argument.**\nPlease type `e!help` or join [Support Server](https://discord.gg/kuWVFpR) to know how to use this command properly!", color=0xFFBF00)
         await bot.send_message(ctx.message.channel, embed=embed)
     elif isinstance(error, commands.MissingPermissions):
-        embed=discord.Embed(description="You need the `{}` permission use this command!".format(error.missing_perms), color=0xFFBF00)
+        embed=discord.Embed(description="<a:ElectroError:646994154152525845>You need the `{}` permission use this command!".format(error.missing_perms), color=0xFFBF00)
         await bot.send_message(ctx.message.channel, embed=embed)
     elif isinstance(error, commands.BotMissingPermissions):
-        embed=discord.Embed(description="I need the `{}` permission use this command!".format(error.missing_perms), color=0xFFBF00)
+        embed=discord.Embed(description="<a:ElectroError:646994154152525845>I need the `{}` permission use this command!".format(error.missing_perms), color=0xFFBF00)
         await bot.send_message(ctx.message.channel, embed=embed)
     raise error
     
