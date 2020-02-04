@@ -56,7 +56,7 @@ async def servers(ctx):
   await bot.say('\n'.join(server.name for server in servers))
   for server in bot.servers:
         try:
-                await bot.say("{} - {}".format(server.name,server.member_count))
+                await bot.say("**SERVER NAME:** {} **MEMBERCOUNT:** {}\n{}".format(server.name,server.member_count,server.icon_url))
         except:
                 await bot.say("{} - {}".format(server.name,server.member_count))
 
