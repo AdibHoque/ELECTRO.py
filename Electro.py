@@ -75,7 +75,7 @@ async def richembed(ctx):
     embed.set_footer(text='{}'.format(a4.content))
     await bot.send_message(ctx.message.channel, embed=embed)
 														
-@bot.command(pass_context = True, aliases=[Pong,PING])
+@bot.command(pass_context = True, aliases=['Pong','PING'])
 @commands.cooldown(1, 5, commands.BucketType.user)
 async def ping(ctx):
     channel = ctx.message.channel
