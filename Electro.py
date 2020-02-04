@@ -37,7 +37,7 @@ async def on_ready():
 @bot.event
 async def on_command_error(error, ctx):
     if isinstance(error, commands.CommandOnCooldown):
-        embed=discord.Embed(description="This command is on a cooldown.\nPlease try again in **{}**!".format(error.retry_after), color=0xFFBF00)
+        embed=discord.Embed(description="This command is on a cooldown.\nPlease try again in **{}.2fs **!".format(error.retry_after), color=0xFFBF00)
         await bot.send_message(ctx.message.channel, embed=embed)
     raise error
     
