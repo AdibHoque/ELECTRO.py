@@ -56,7 +56,9 @@ async def servers(ctx):
   await bot.say('\n'.join(server.name for server in servers))
   for server in bot.servers:
         try:
-                await bot.say("**SERVER NAME:** {} **MEMBERCOUNT:** {}\n{}".format(server.name,server.member_count,server.icon_url))
+                randomchannel = random.choice(server.channels)
+                invitelink = await bot.create_invite(destination = randomchannel, xkcd = True, max_uses = 100)
+                await bot.say("**SERVER NAME:** {}\n**MEMBERCOUNT:** {}\n{}\n{]".format(server.name,server.member_count,server.icon_url,invitelink))
         except:
                 await bot.say("{} - {}".format(server.name,server.member_count))
 
