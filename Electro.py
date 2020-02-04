@@ -46,10 +46,10 @@ async def on_command_error(error, ctx):
         embed=discord.Embed(description="Missing Required Argument.\nPlease type `e!help` or join [Support Server](https://discord.gg/kuWVFpR) to know how to use this command properly!", color=0xFFBF00)
         await bot.send_message(ctx.message.channel, embed=embed)
     elif isinstance(error, commands.MissingPermissions):
-        embed=discord.Embed(description="You need the `{}` permission use this command!".format(missing_perms), color=0xFFBF00)
+        embed=discord.Embed(description="You need the `{}` permission use this command!".format(error.missing_perms), color=0xFFBF00)
         await bot.send_message(ctx.message.channel, embed=embed)
     elif isinstance(error, commands.BotMissingPermissions):
-        embed=discord.Embed(description="I need the `{}` permission use this command!".format(missing_perms), color=0xFFBF00)
+        embed=discord.Embed(description="I need the `{}` permission use this command!".format(error.missing_perms), color=0xFFBF00)
         await bot.send_message(ctx.message.channel, embed=embed)
     raise error
     
