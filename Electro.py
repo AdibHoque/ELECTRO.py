@@ -607,7 +607,7 @@ async def help(ctx):
     await bot.add_reaction(msg,':ElectroMusic:666203904186515467')
     await bot.say('📨 Check Your DMs For Bot Commands!')
     			
-@bot.command(pass_context = True)
+@bot.command(pass_context = True, aliases=['help 1','help_1'] )
 async def help1(ctx):
     author = ctx.message.author
     r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
