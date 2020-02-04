@@ -40,7 +40,7 @@ async def on_command_error(error, ctx):
         embed=discord.Embed(description="This command is on a cooldown.\nPlease try again in **%.2fs**!"% error.retry_after, color=0xFFBF00)
         await bot.send_message(ctx.message.channel, embed=embed)
     elif isinstance(error, commands.CommandNotFound):
-        embed=discord.Embed(description="This command does not exists.\nPlease type e!help to know the existing commands!", color=0xFFBF00)
+        embed=discord.Embed(description="This command does not exists.\nPlease type `e!help` to know the existing commands!", color=0xFFBF00)
         await bot.send_message(ctx.message.channel, embed=embed)
     raise error
     
