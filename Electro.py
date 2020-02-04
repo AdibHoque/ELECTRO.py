@@ -32,6 +32,13 @@ async def on_ready():
     print(bot.user.id)
     print('ONLINE')
     bot.loop.create_task(status_task())
+
+
+@bot.event
+async def on_command_error(error, ctx):
+    if isinstance(error, commands.CommandOnCooldown):
+        await bot.send_message(ctx.message.channel, content='This command is on a %.2fs cooldown' % error.retry_after)
+    raise error
     
 @bot.command(pass_context = True)
 async def prefix(ctx):
