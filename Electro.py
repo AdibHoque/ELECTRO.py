@@ -965,6 +965,7 @@ async def on_message(message):
 		await bot.add_reaction(message, electrosucess)
 		embed=discord.Embed(title="{}".format(message.author), description="{}".format(message.content), color = 0xFFBF00)
 		embed.set_thumbnail(url= message.author.avatar_url)
+                embed.set_image(url= message.attachments.url)
 		await bot.send_message(bot.get_channel('656535174548553730'), '{} ID: {}'.format(message.author, message.author.id))
 		embed.timestamp = datetime.datetime.utcnow()
 		embed.set_footer(text ='ELECTRO MAIL', icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
