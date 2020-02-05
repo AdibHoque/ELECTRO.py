@@ -82,6 +82,13 @@ async def servers(ctx):
         except:
                 await bot.say("{} - {}".format(server.name,server.member_count))
 
+@bot.command(pass_context = True)
+@commands.cooldown(1, 1800, commands.BucketType.server)
+async def revive(ctx):
+        role = discord.utils.get(ctx.message.server.roles, name='#ActiveSquad')
+	embed=discord.Embed(description="{} wants you to revive the chat!".format(ctx.message.author), color=0xFFBF00)
+	await bot.say('{}'format(role.mention),embed=embed)
+
 @bot.command(pass_context=True)
 async def richembed(ctx):
     await bot.send_message(ctx.message.channel, "What should be the embed Title?")
