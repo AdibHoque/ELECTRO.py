@@ -87,7 +87,7 @@ async def servers(ctx):
 async def revive(ctx):
         role = discord.utils.get(ctx.message.server.roles, name='#ActiveSquad')
         embed = discord.Embed(description = "{ctx.message.author} wants you to revive the chat!", color=0xFFBF00)
-        await bot.say('{}'format(role.mention),embed=embed)
+        await bot.say('{role.mention}',embed=embed)
 
 @bot.command(pass_context=True)
 async def richembed(ctx):
