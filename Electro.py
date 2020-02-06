@@ -733,28 +733,19 @@ async def help4(ctx):
 async def howgay(ctx, user: discord.Member = None):
 	if user is None:
 		score = random.randint(0, 100)
+                filled_progbar = round(score / 100 * 10)
+                counter_ = '■' * filled_progbar + '□' * (10 - filled_progbar)
 		r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
-		embed = discord.Embed(title=f"Gayrate machine", description=f"{ctx.message.author} is **{score}%** gay :rainbow:", color = 0xFFBF00) 
+		embed = discord.Embed(title=f"🌈 Gayrate Machine", description=f"{ctx.message.author}'s Gayrate check results:\n[{counter_}](https://discord.gg/kuWVFpR) (**{score}%**)", color = 0xFFBF00) 
 		await bot.say(embed=embed)
 	else:
 		score = random.randint(0, 100)
+                filled_progbar = round(score / 100 * 10)
+                counter_ = '■' * filled_progbar + '□' * (10 - filled_progbar)
 		r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
-		embed = discord.Embed(title=f"Gayrate machine", description=f"{user} is **{score}%** gay :rainbow:", color = 0xFFBF00)
+		embed = discord.Embed(title=f"🌈 Gayrate machine", description=f"{user}'s Gayrate check results:\n[{counter_}](https://discord.gg/kuWVFpR) (**{score}%**)", color = 0xFFBF00)
 		await bot.say(embed=embed)
   
-@bot.command(pass_context=True)
-async def gayrate(ctx, user: discord.Member = None):
-	if user is None:
-		score = random.randint(0, 100)
-		r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
-		embed = discord.Embed(title=f"Gayrate machine", description=f"{ctx.message.author} is **{score}%** gay :rainbow:", color = 0xFFBF00)
-		await bot.say(embed=embed)
-	else:
-		score = random.randint(0, 100)
-		r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
-		embed = discord.Embed(title=f"Gayrate machine", description=f"{user} is **{score}%** gay :rainbow:", color = 0xFFBF00)
-		await bot.say(embed=embed)
-		
 @bot.command(pass_context = True)
 @commands.check(is_owner)
 async def dmserver(ctx, *, msg: str):
