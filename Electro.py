@@ -609,10 +609,9 @@ async def hype(ctx):
 	await bot.say('<a:DiscordHype:527116695253286933>')
 	await bot.delete_message(ctx.message)
 	
-@bot.command(pass_context=True)
-async def plsboi(ctx):
-	await asyncio.sleep(1)
-	await bot.say('<a:plsboi:527116722218467328>')
+@bot.command(pass_context=True, aliases=["Adib","ADib","ADIb","ADIB","adibhoque"])
+async def adib(ctx):
+	await bot.say('<a:NeonAdib:674927898100236308>')
 	await bot.delete_message(ctx.message)
 	
 @bot.command(pass_context = True)
@@ -956,8 +955,8 @@ async def on_reaction_remove(reaction, user):
 async def on_message(message):
 	if not message.author.bot:
 		await bot.process_commands(message)
-	if '<@488353416599306270>' in message.content:
-		emoji = 'a:AdibReeeeee:558181398670737408'
+	if '<@496978159724396545>' in message.content:
+		emoji = 'a:NeonAdib:674927898100236308'
 		await bot.add_reaction(message, emoji) 
 		channe = bot.get_channel('656535174548553730')
 	if message.server is None and message.author != bot.user:
