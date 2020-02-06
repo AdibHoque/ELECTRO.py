@@ -729,7 +729,7 @@ async def help4(ctx):
     await bot.send_message(author ,embed=embed)
     await bot.say('📨 Check Your DMs For Music Commands!')    
 
-@bot.command(pass_context=True)
+@bot.command(pass_context=True, aliases=[gayrate","g8","gay"])
 async def howgay(ctx, user: discord.Member = None):
 	if user is None:
 		score = random.randint(0, 100)
