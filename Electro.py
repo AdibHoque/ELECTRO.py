@@ -118,7 +118,7 @@ async def ping(ctx):
 @commands.has_permissions(manage_nicknames=True)     
 async def setnick(ctx, user: discord.Member, *, nickname):
     await bot.change_nickname(user, nickname)
-    await bot.say("<a:ElectroSuccess:656772759812046851> {}'s nickname was changed to {}!".format(user, nickname))
+    await bot.say("<a:ElectroSuccess:656772759812046851> | {}'s nickname was changed to {}!".format(user, nickname))
     await bot.delete_message(ctx.message)
 
 @bot.command(pass_context=True)
@@ -152,17 +152,17 @@ async def server():
 @commands.has_permissions(kick_members=True)     
 async def kick(ctx, user:discord.Member, *, reason:str):
     if user is None or reason is None:
-      await bot.say('<a:ElectroFail:656772856184832025>**Please mention a user to kick & specify a reason for kicking out!**\nEXAMPLE:`e!kick <@user or id> <reason>`')
+      await bot.say('<a:ElectroFail:656772856184832025> | **Please mention a user to kick & specify a reason for kicking out!**\nEXAMPLE:`e!kick <@user or id> <reason>`')
     if user.server_permissions.kick_members:
-      await bot.say("<a:ElectroFail:656772856184832025>**He is a Mod/Admin, I can't do that!**")
+      await bot.say("<a:ElectroFail:656772856184832025> | **He is a Mod/Admin, I can't do that!**")
       return
     else:
       await bot.send_message(user, 'You were kicked out from **{}**, {}!'.format(ctx.message.server.name, reason))
       await bot.kick(user)
-      await bot.say('<a:ElectroSuccess:656772759812046851>{} was kicked, {}!'.format(user, reason))
+      await bot.say('<a:ElectroSuccess:656772759812046851> | {} was kicked, {}!'.format(user, reason))
       await bot.delete_message(ctx.message)
-      for channel in user.server.channels:
-        if channel.name == '📡electro-logs':
+      for channel in ctx.message.author.server.channels:
+        if channel.name == '⚡electro-logs':
             embed=discord.Embed(title="KICK COMMAND USED", description="**User:** {0}\n**Moderator:** {1}".format(user, ctx.message.author), color=0xFFBF00)
             embed.timestamp = datetime.datetime.utcnow()
             embed.set_footer(text ='USER KICKED')
@@ -172,17 +172,17 @@ async def kick(ctx, user:discord.Member, *, reason:str):
 @commands.has_permissions(ban_members=True)     
 async def ban(ctx, user:discord.Member, *, reason:str):
     if user is None or reason is None:
-      await bot.say('<a:ElectroFail:656772856184832025>**Please mention a user to ban & specify a reason for banning!\nExample:`e!ban <@user or id> <reason>**')
+      await bot.say('<a:ElectroFail:656772856184832025> | **Please mention a user to ban & specify a reason for banning!\nExample:`e!ban <@user or id> <reason>**')
     if user.server_permissions.kick_members:
-      await bot.say("<a:ElectroFail:656772856184832025>**He is a Mod/Admin, I can't do that!**")
+      await bot.say("<a:ElectroFail:656772856184832025> | **He is a Mod/Admin, I can't do that!**")
       return
     else:
       await bot.send_message(user, 'You were banned from **{ctx.message.server.name}**, {reason}!'.format(ctx.message.server.name, reason))
       await bot.kick(user)
-      await bot.say('<a:ElectroSuccess:656772759812046851>{} was banned, {}!'.format(user, reason))
+      await bot.say('<a:ElectroSuccess:656772759812046851> | {} was banned, {}!'.format(user, reason))
       await bot.delete_message(ctx.message)
-      for channel in user.server.channels:
-        if channel.name == '📡electro-logs':
+      for channel in ctx.message.author.server.channels:
+        if channel.name == '⚡electro-logs':
             embed=discord.Embed(title="BAN COMMAND USED", description="**User:** {0}\n**Moderator:** {1}".format(user, ctx.message.author), color=0xFFBF00)
             embed.timestamp = datetime.datetime.utcnow()
             embed.set_footer(text ='USER BANNED')
@@ -194,9 +194,9 @@ async def unban(ctx, identification:str):
     user = await bot.get_user_info(identification)
     await bot.unban(ctx.message.server, user)
     try:
-        await bot.say(f'<a:ElectroSuccess:656772759812046851>**{user} was unbanned!**')
+        await bot.say(f'<a:ElectroSuccess:656772759812046851> | **{user} was unbanned!**')
         for channel in ctx.message.server.channels:
-          if channel.name == '📡electro-logs':
+          if channel.name == '⚡electro-logs':
               embed=discord.Embed(title="UNBAN COMMAND USED", description="**User:** {0}\n**Moderator:**{1}**".format(user, ctx.message.author), color=0xFFBF00)
               embed.timestamp = datetime.datetime.utcnow()
               embed.set_footer(text ='USER BANNED')
@@ -286,7 +286,7 @@ async def purge(ctx, number):
     async for x in bot.logs_from(ctx.message.channel, limit = number):
         mgs.append(x)
     await bot.delete_messages(mgs)
-    await bot.say('<a:ElectroSuccess:656772759812046851>{} MESSAGES WERE DELETED!'.format(number))
+    await bot.say('<a:ElectroSuccess:656772759812046851> | {} MESSAGES WERE DELETED!'.format(number))
 
 @bot.command(pass_context=True)
 @commands.has_permissions(kick_members=True)
@@ -729,7 +729,7 @@ async def help4(ctx):
     await bot.send_message(author ,embed=embed)
     await bot.say('📨 Check Your DMs For Music Commands!')    
 
-@bot.command(pass_context=True, aliases=[gayrate","g8","gay"])
+@bot.command(pass_context=True, aliases=["gayrate","g8","gay"])
 async def howgay(ctx, user: discord.Member = None):
 	if user is None:
 		score = random.randint(0, 100)
