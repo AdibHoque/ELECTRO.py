@@ -1455,7 +1455,7 @@ async def save():
      
 @bot.command()
 async def whosthatpokemon():
-    num = random.randint(1, 926)
+    num = random.randint(1, 807)
     async with aiohttp.ClientSession().get(f'https://pokeapi.co/api/v2/pokemon-form/{num}/') as resp:
         data = await resp.json()
         embed = discord.Embed(title="Who's that pokemon?", color=0xFFBF00)
