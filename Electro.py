@@ -27,12 +27,15 @@ async def status_task():
 
 @bot.event
 async def on_ready():
-    print('SUCCESS')
-    print(bot.user.name)
-    print(bot.user.id)
     print('ONLINE')
     bot.loop.create_task(status_task())
-
+    global amounts
+    try:
+        with open('amounts.json') as f:             
+            amounts = json.load(f)
+    except FileNotFoundError:
+        print("Could not load amounts.json")
+        amounts = {}
 
 @bot.event
 async def on_command_error(error, ctx):
@@ -1405,5 +1408,47 @@ async def update(ctx, channel: discord.Channel=None, *, msg: str):
 	embed.timestamp = datetime.datetime.utcnow()
 	await bot.send_message(channel,"<@&660499979177164821>",embed=embed)
 	await bot.delete_message(ctx.message) 
+
+@bot.command(pass_context=True)
+async def balance(ctx):
+    id = ctx.message.author.id
+    if id in amounts:
+        await bot.say("You have {} in the bank".format(amounts[id]))
+    else:
+        await bot.say("You do not have an account")
+
+@bot.command(pass_context=True)
+async def register(ctx):
+    id = ctx.message.author.id
+    if id not in amounts:
+        amounts[id] = 100
+        await bot.say("You are now registered")
+        _save()
+    else:
+        await bot.say("You already have an account")
+
+@bot.command(pass_context=True)
+async def transfer(ctx, amount: int, other: discord.Member):
+    primary_id = ctx.message.author.id
+    other_id = other.id
+    if primary_id not in amounts:
+        await bot.say("You do not have an account")
+    elif other_id not in amounts:
+        await bot.say("The other party does not have an account")
+    elif amounts[primary_id] < amount:
+        await bot.say("You cannot afford this transaction")
+    else:
+        amounts[primary_id] -= amount
+        amounts[other_id] += amount
+        await bot.say("Transaction complete")
+    _save()
+
+def _save():
+    with open('amounts.json', 'w+') as f:
+        json.dump(amounts, f)
+
+@bot.command()
+async def save():
+    _save()
             
 bot.run(os.getenv('Token'))
