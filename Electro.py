@@ -16,6 +16,8 @@ import logging
 bot = commands.Bot(command_prefix=commands.when_mentioned_or('e!','E!'),case_insensitive=True)
 bot.remove_command("help")
 
+amounts = {}
+
 async def status_task():
     while True:
         await bot.change_presence(game=discord.Game(name='For e!help', url='https://twitch.tv/myname', type=1))
