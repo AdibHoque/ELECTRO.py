@@ -1456,15 +1456,17 @@ async def save():
 @bot.command()
 async def whosthatpokemon():
         num = random.randint(1, 807)
-        async with aiohttp.ClientSession().get(f'https://pokeapi.co/api/v2/pokemon-form/{num}/') as resp:
-                data = await resp.json()
-                embed = discord.Embed(title="Who's that pokemon?", color=0xFFBF00)
-                embed.set_image(url=data['sprites']['front_default'])
-                await bot.send_message(ctx.message.channel, embed=embed)
-                guess = await bot.wait_for_message(timeout= 30, author=ctx.message.author, channel=ctx.message.channel)
-                if guess.content == data['name']:
-                        await bot.say(f'Correct! That pokemon is {data["name"]}')
-                else:
-                        await bot.say(f'Incorrect! That pokemon is {data["name"]}') 
+        url = f"https://pokeapi.co/api/v2/pokemon-form/{num}/"
+	async with aiohttp.ClientSession() as cs:
+		async with cs.get(url) as r:
+			data = await r.json()
+                        embed = discord.Embed(title="Who's that pokemon?", color=0xFFBF00)
+                        embed.set_image(url=data['sprites']['front_default'])
+                        await bot.send_message(ctx.message.channel, embed=embed)
+                        guess = await bot.wait_for_message(timeout= 30, author=ctx.message.author, channel=ctx.message.channel)
+                        if guess.content == data['name']:
+				await bot.say(f'Correct! That pokemon is {data["name"]}')
+                        else:
+                                await bot.say(f'Incorrect! That pokemon is {data["name"]}') 
        
 bot.run(os.getenv('Token'))
