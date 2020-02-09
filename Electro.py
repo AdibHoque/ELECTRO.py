@@ -463,8 +463,8 @@ async def love(ctx, user: discord.Member = None, *, user2: discord.Member = None
             embed.set_image(url=res['message'])
             await bot.say(embed=embed)
  
-@bot.command(pass_context=True)
-async def howgay(ctx, user: discord.Member):
+@bot.command(pass_context=True, aliases=['gay','gayrate','howmuchgay','g8','lesbian'])
+async def howgay(ctx, user: discord.Member=None):
         if user is None:
                 score = random.randint(0, 100)
                 filled_progbar = round(score / 100 * 10)
