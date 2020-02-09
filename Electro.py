@@ -461,8 +461,23 @@ async def love(ctx, user: discord.Member = None, *, user2: discord.Member = None
             r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
             embed = discord.Embed(title=f"💛Love Meter💛", description=f"**💖{shipuser1}**\n**💖{shipuser2}**\n{score}% [{counter_}](https://discord.gg/kuWVFpR)", color = 0x429CFF) 
             embed.set_image(url=res['message'])
-            await bot.say(embed=embed)   		   	   	   	 		   	  		   
+            await bot.say(embed=embed)
  
+@bot.command(pass_context=True)
+async def howgay(ctx, user: discord.Member):
+        if user is None:
+		score = random.randint(0, 100)
+		filled_progbar = round(score / 100 * 10)
+		counter_ = '■' * filled_progbar + '□' * (10 - filled_progbar)
+                embed = discord.Embed(title='Gayrate Machine',description=f'Gayrate of {ctx.message.author}\n[{counter_}](https://discord.gg/kuWVFpR) (**{score}%**)',color=0xFFBF00)
+                await bot.say(embed=embed)
+        else:
+                score = random.randint(0, 100)
+                filled_progbar = round(score / 100 * 10)
+                counter_ = '■' * filled_progbar + '□' * (10 - filled_progbar)
+                embed = discord.Embed(title='Gayrate Machine',description=f'Gayrate of {ctx.message.author}\n[{counter_}](https://discord.gg/kuWVFpR) (**{score}%**)',color=0xFFBF00)
+                await bot.say(embed=embed)
+
 @bot.command(pass_context = True)
 async def rolldice(ctx):
     choices = ['1', '2', '3', '4', '5', '6']
