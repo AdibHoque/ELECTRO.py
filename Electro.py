@@ -1450,8 +1450,8 @@ def _save():
 async def save():
     _save()
      
-@bot.command()
-async def whosthatpokemon():
+@bot.command(pass_context=True)
+async def whosthatpokemon(ctx):
         num = random.randint(1, 807)
         url = f"https://pokeapi.co/api/v2/pokemon-form/{num}/"
         async with aiohttp.ClientSession() as cs:
