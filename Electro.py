@@ -1460,7 +1460,7 @@ async def whosthatpokemon():
 		data = await resp.json()
                 embed = discord.Embed(title="Who's that pokemon?", color=0xFFBF00)
                 embed.set_image(url=data['sprites']['front_default'])
-                await bot.send(embed=embed)
+                await bot.send_message(ctx.message.channel, embed=embed)
                 guess = await bot.wait_for_message(timeout= 30, author=ctx.message.author, channel=ctx.message.channel)
                 if guess.content == data['name']:
 			await bot.say(f'Correct! That pokemon is {data["name"]}')
