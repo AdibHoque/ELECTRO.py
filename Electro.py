@@ -1459,7 +1459,7 @@ async def whosthatpokemon(ctx):
                         data = await r.json()
                         pname = data['name']
                         embed = discord.Embed(title="Who's that pokemon?", color=0xFFBF00)
-                        embed.set_image(url="https://play.pokemonshowdown.com/sprites/xyani/{pname}.gif")
+                        embed.set_image(url="https://play.pokemonshowdown.com/sprites/xyani/"+pname+".gif")
                         await bot.send_message(ctx.message.channel, embed=embed)
                         guess = await bot.wait_for_message(timeout= 30, author=ctx.message.author, channel=ctx.message.channel)
                         if guess.content == data['name']:
