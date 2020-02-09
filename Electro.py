@@ -467,8 +467,8 @@ async def love(ctx, user: discord.Member = None, *, user2: discord.Member = None
 async def howgay(ctx, user: discord.Member):
         if user is None:
                 score = random.randint(0, 100)
-		filled_progbar = round(score / 100 * 10)
-		counter_ = '■' * filled_progbar + '□' * (10 - filled_progbar)
+                filled_progbar = round(score / 100 * 10)
+                counter_ = '■' * filled_progbar + '□' * (10 - filled_progbar)
                 embed = discord.Embed(title='Gayrate Machine',description=f'Gayrate of {ctx.message.author}\n[{counter_}](https://discord.gg/kuWVFpR) (**{score}%**)',color=0xFFBF00)
                 await bot.say(embed=embed)
         else:
