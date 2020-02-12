@@ -469,13 +469,13 @@ async def howgay(ctx, user: discord.Member=None):
                 score = random.randint(0, 100)
                 filled_progbar = round(score / 100 * 10)
                 counter_ = '■' * filled_progbar + '□' * (10 - filled_progbar)
-                embed = discord.Embed(title='Gayrate Machine',description=f'Gayrate of {ctx.message.author}\n[{counter_}](https://discord.gg/kuWVFpR) (**{score}%**)',color=0xFFBF00)
+                embed = discord.Embed(title=f'Gayrate of {ctx.message.author}',description=f':couple:[{counter_}](https://discord.gg/kuWVFpR):couple_mm: (**{score}%**)',color=0xFFBF00)
                 await bot.say(embed=embed)
         else:
                 score = random.randint(0, 100)
                 filled_progbar = round(score / 100 * 10)
                 counter_ = '■' * filled_progbar + '□' * (10 - filled_progbar)
-                embed = discord.Embed(title='Gayrate Machine',description=f'Gayrate of {user}\n[{counter_}](https://discord.gg/kuWVFpR) (**{score}%**)',color=0xFFBF00)
+                embed = discord.Embed(title=f'Gayrate of {ctx.message.author}',description=f' :couple:[{counter_}](https://discord.gg/kuWVFpR):couple_mm: (**{score}%**)',color=0xFFBF00)
                 await bot.say(embed=embed)
 
 @bot.command(pass_context = True)
@@ -1115,7 +1115,7 @@ async def captcha(ctx, user:discord.Member):
 				await bot.say(embed=embed)
 				
 @bot.command(pass_context=True)
-async def deepfry(ctx, user:discord.Member):
+async def deepfry(ctx, user: discord.Member=None):
 	if user is None:
 		url = f"https://nekobot.xyz/api/imagegen?type=deepfry&image={ctx.message.author.avatar_url}"
 		async with aiohttp.ClientSession() as cs:
@@ -1136,7 +1136,7 @@ async def deepfry(ctx, user:discord.Member):
 				await bot.say(embed=embed)
 				
 @bot.command(pass_context=True)
-async def whowouldwin(ctx, user1:discord.Member, *, user2:discord.Member):
+async def whowouldwin(ctx, user1: discord.Member, *, user2:discord.Member):
 	if user2 is None:
 		url = f"https://nekobot.xyz/api/imagegen?type=whowouldwin&user1={user1.avatar_url}&user2={user1.avatar_url}"
 		async with aiohttp.ClientSession() as cs:
@@ -1157,7 +1157,7 @@ async def whowouldwin(ctx, user1:discord.Member, *, user2:discord.Member):
 				await bot.say(embed=embed)
 
 @bot.command(pass_context=True)
-async def iphonex(ctx, user:discord.Member):
+async def iphonex(ctx, user: discord.Member=None):
 	if user is None:
 		url = f"https://nekobot.xyz/api/imagegen?type=iphonex&url={ctx.message.author.avatar_url}"
 		async with aiohttp.ClientSession() as cs:
@@ -1178,7 +1178,7 @@ async def iphonex(ctx, user:discord.Member):
 				await bot.say(embed=embed)  	
 
 @bot.command(pass_context=True)
-async def trash(ctx, user:discord.Member):
+async def trash(ctx, user: discord.Member=None):
 	if user is None:
 		url = f"https://nekobot.xyz/api/imagegen?type=trash&url={ctx.message.author.avatar_url}"
 		async with aiohttp.ClientSession() as cs:
@@ -1199,7 +1199,7 @@ async def trash(ctx, user:discord.Member):
 				await bot.say(embed=embed)
 				
 @bot.command(pass_context=True)
-async def threats(ctx, user:discord.Member):
+async def threats(ctx, user: discord.Member=None):
 	if user is None:
 		url = f"https://nekobot.xyz/api/imagegen?type=threats&image={ctx.message.author.avatar_url}"
 		async with aiohttp.ClientSession() as cs:
