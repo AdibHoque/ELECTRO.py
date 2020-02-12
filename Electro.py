@@ -16,6 +16,15 @@ import logging
 bot = commands.Bot(command_prefix=commands.when_mentioned_or('e!','E!'),case_insensitive=True)
 bot.remove_command("help")
 
+help = discord.Embed(description='**[HELP MENU](https://discord.gg/kuWVFpR)**\n● To get detailed help on an category, react with their emotes or type `e!help1`,`e!help2` Etc. accordingly!', color = 0xFFBF00) 
+help.set_author(name='ELECTRO',url='https://discord.gg/kuWVFpR', icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
+help.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/656760631474520074/ELECTRO_ELECTRIFY_YOUR_SERVER.gif')
+help.add_field(name = '<:ElectroGeneral:666202936929681418> General Commands - (10)',value ='`ping`,`userinfo`,`serverinfo`,`ownerinfo`,`avatar`,`membercount`,`invite`,`upvote`,`pokemon`,`shinypokemon`',inline = False)
+help.add_field(name = '<:ElectroModeration:666920202818027531> Moderation Commands - (13)',value ='`kick`,`ban`,`setnick`,`role`,`say`,`DM`,`english`,`rolecolor`,`lockdown`,`unlock`,`menro`,`mute`,`unmute`',inline = False)
+help.add_field(name = '<:ElectroFun:666203658467147776> Fun Commands - (20)',value ='`meme`,`joke`,`love`,`slap`, `kiss`, `hug`, `virgin`, `gender`, `tweet`, `rolldice`, `flipcoin`, `howgay`, `whowouldwin`, `captcha`,`magik`,`deepfry`,`iphonex`,`threats`,`clyde`,`trash`',inline = False)
+help.add_field(name = '<:ElectroMusic:666203904186515467> Music Commands - (8)',value ='`play`,`skip`,`stop`,`NP`,`queue`,`pause`,`resume`,`volume`\n\n<:ElectroBookmark:668018207549816833> **Additional Links:**\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
+help.set_footer(text ='© 2020 ELECTRO, Inc.')
+
 help1 = discord.Embed(description='**[GENERAL COMMANDS](https://discord.gg/kuWVFpR)**', color = 0xFFBF00)
 help1.set_author(name='ELECTRO',url='https://discord.gg/kuWVFpR', icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
 help1.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/656760777973432330/ELECTRO_HELP1.gif')
