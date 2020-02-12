@@ -713,24 +713,30 @@ async def adib(ctx):
 	await bot.delete_message(ctx.message)
 	
 @bot.command(pass_context = True)
-async def help(ctx):
-    author = ctx.message.author
-    r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
-    embed = discord.Embed(description='**[HELP MENU](https://discord.gg/kuWVFpR)**\n● To get detailed help on an category, react with their emotes or type `e!help1`,`e!help2` Etc. accordingly!', color = 0xFFBF00) 
-    embed.set_author(name='ELECTRO',url='https://discord.gg/kuWVFpR', icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
-    embed.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/656760631474520074/ELECTRO_ELECTRIFY_YOUR_SERVER.gif')
-    embed.add_field(name = '<:ElectroGeneral:666202936929681418> General Commands - (10)',value ='`ping`,`userinfo`,`serverinfo`,`ownerinfo`,`avatar`,`membercount`,`invite`,`upvote`,`pokemon`,`shinypokemon`',inline = False)
-    embed.add_field(name = '<:ElectroModeration:666920202818027531> Moderation Commands - (13)',value ='`kick`,`ban`,`setnick`,`role`,`say`,`DM`,`english`,`rolecolor`,`lockdown`,`unlock`,`menro`,`mute`,`unmute`',inline = False)
-    embed.add_field(name = '<:ElectroFun:666203658467147776> Fun Commands - (20)',value ='`meme`,`joke`,`love`,`slap`, `kiss`, `hug`, `virgin`, `gender`, `tweet`, `rolldice`, `flipcoin`, `howgay`, `whowouldwin`, `captcha`,`magik`,`deepfry`,`iphonex`,`threats`,`clyde`,`trash`',inline = False)
-    embed.add_field(name = '<:ElectroMusic:666203904186515467> Music Commands - (8)',value ='`play`,`skip`,`stop`,`NP`,`queue`,`pause`,`resume`,`volume`\n\n<:ElectroBookmark:668018207549816833> **Additional Links:**\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
-    embed.set_footer(text ='© 2020 ELECTRO, Inc.')
-    msg = await bot.send_message(author ,embed=embed)
-    await bot.add_reaction(msg,':ElectroGeneral:666202936929681418')
-    await bot.add_reaction(msg,':ElectroModeration:666920202818027531')
-    await bot.add_reaction(msg,':ElectroFun:666203658467147776')
-    await bot.add_reaction(msg,':ElectroMusic:666203904186515467')
-    await bot.say('📨 Check Your DMs For Bot Commands!')
-    			
+async def help(ctx, page: str=None):
+    if page is None:    
+      author = ctx.message.author
+      msg = await bot.send_message(author ,embed=help)
+      await bot.add_reaction(msg,':ElectroGeneral:666202936929681418')
+      await bot.add_reaction(msg,':ElectroModeration:666920202818027531')
+      await bot.add_reaction(msg,':ElectroFun:666203658467147776')
+      await bot.add_reaction(msg,':ElectroMusic:666203904186515467')
+      await bot.say('📨 Check Your DMs For Bot Commands!')
+    if page == '1':
+      await bot.send_message(ctx.message.author ,embed=help1)
+      await bot.say('📨 Check Your DMs For General Commands!')
+    if page == '2':
+      await bot.send_message(ctx.message.author ,embed=help2)
+      await bot.say('📨 Check Your DMs For Moderation Commands!')
+    if page == '3':
+      await bot.send_message(ctx.message.author ,embed=help3)
+      await bot.say('📨 Check Your DMs For Fun Commands!')
+    if page == '4':
+      await bot.send_message(ctx.message.author ,embed=help4)
+      await bot.say('📨 Check Your DMs For Music Commands!')
+    else:
+      Return 
+		
 @bot.command(pass_context = True, aliases=['help 1','help_1'] )
 async def help1(ctx):
     author = ctx.message.author
