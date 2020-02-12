@@ -51,7 +51,13 @@ async def on_command_error(error, ctx):
         embed=discord.Embed(description="<a:ElectroError:646994154152525845> **Missing Required Argument.**\nPlease type `e!help` or join [Support Server](https://discord.gg/kuWVFpR) to know how to use this command properly!", color=0xFFBF00)
         await bot.send_message(ctx.message.channel, embed=embed)
     elif isinstance(error, commands.BotMissingPermissions):
-        embed=discord.Embed(description="<a:ElectroError:646994154152525845> I need the `','.join{}` permission use this command!".format(error.missing_perms), color=0xFFBF00)
+        embed=discord.Embed(description="<a:ElectroError:646994154152525845> **Missing Permissions.**\nI need the `','.join{}` permission use this command!".format(error.missing_perms), color=0xFFBF00)
+        await bot.send_message(ctx.message.channel, embed=embed)
+    elif isinstance(exception, commands.MissingPermissions):
+        embed=discord.Embed(description="<a:ElectroError:646994154152525845> **Missing Permissions.**\nYou need the `','.join{}` permission use this command!".format(exception.missing_perms), color=0xFFBF00)
+        await bot.send_message(ctx.message.channel, embed=embed)
+    elif isinstance(error, commands.CheckFailure):
+        embed=discord.Embed(description="<a:ElectroError:646994154152525845> **Check Failure.**\nThis is a premium or developer only command!", color=0xFFBF00)
         await bot.send_message(ctx.message.channel, embed=embed)
     raise error
     
@@ -61,7 +67,7 @@ async def prefix(ctx):
 	await bot.say(embed=embed) 
 
 def is_owner(ctx):
-    return ctx.message.author.id == "496978159724396545"     
+    return ctx.message.author.id == "49697815972439654"     
 
 def predicate(message, l, r):
     def check(reaction, user):
