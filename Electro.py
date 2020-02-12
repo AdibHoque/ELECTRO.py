@@ -70,7 +70,7 @@ def predicate(message, l, r):
 
     return check
 
-def _help(ctx):
+async def _help(ctx):
     embed = discord.Embed(description='**[GENERAL COMMANDS](https://discord.gg/kuWVFpR)**', color = 0xFFBF00)
     embed.set_author(name='ELECTRO',url='https://discord.gg/kuWVFpR', icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
     embed.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/656760777973432330/ELECTRO_HELP1.gif')
@@ -84,7 +84,7 @@ def _help(ctx):
     embed.add_field(name = 'Upvote',value ='Sends bot upvote link!\n**USAGE:**``e!upvote``',inline = False)
     embed.add_field(name = 'Emoji',value ='Sends url of the emoji!\n**USAGE:**``e!emoji :emoji: ``\n<:ElectroBookmark:668018207549816833> **Additional Links:**\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
     embed.set_footer(text ='© 2020 ELECTRO, Inc.')
-    await bot.say(embed=embed)
+    await bot.say(ctx.message.channel,embed=embed)
   
 @bot.command(pass_context = True)
 @commands.check(is_owner)
@@ -1479,8 +1479,8 @@ def _save():
     with open('amounts.json', 'w+') as f:
         json.dump(amounts, f)
 
-@bot.command()
-async def testa():
+@bot.command(pass_context = True)
+async def testa(ctx):
     _help()
      
 @bot.command(pass_context=True)
