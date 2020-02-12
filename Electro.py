@@ -860,6 +860,7 @@ async def on_message_edit(before, after):
       member = after.author
       for channel in user.server.channels:
         if channel.name == '⚡electro-logs':
+            logchannel = channel 
             r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
             embed = discord.Embed(title = "MESSAGE EDITED", color = 0xFFBF00)
             embed.add_field(name = 'Message Author:',value ='{}'.format(user),inline = False)
@@ -869,7 +870,7 @@ async def on_message_edit(before, after):
             embed.set_thumbnail(url=user.server.icon_url) 
             embed.timestamp = datetime.datetime.utcnow()
             embed.set_footer(text ='MESSAGE EDITED')
-            await bot.send_message(channel, embed=embed)
+            await bot.send_message(logchannel, embed=embed)
          
 @bot.event
 async def on_reaction_add(reaction, user):
@@ -946,7 +947,7 @@ async def on_reaction_remove(reaction, user):
 async def on_message(message):
 	if not message.author.bot:
 		await bot.process_commands(message)
-	if '<@496978159724396545>' in message.content:
+	if '<@496978159724396545>'  or 'adib' in message.content:
 		emoji = 'a:NeonAdib:674927898100236308'
 		await bot.add_reaction(message, emoji) 
 		channe = bot.get_channel('656535174548553730')
@@ -1073,7 +1074,7 @@ async def setuplog(ctx):
     await bot.say("<a:ElectroSuccess:656772759812046851> **LOG CHANNEL CREATED!**\nDon't rename it or it won't work!'")
 								 
 @bot.command(pass_context=True)
-async def magik(ctx, user:discord.Member):
+async def magik(ctx, user: discord.Member=None):
 	if user is None:
 		url = f"https://nekobot.xyz/api/imagegen?type=magik&image={ctx.message.author.avatar_url}"
 		async with aiohttp.ClientSession() as cs:
@@ -1094,7 +1095,7 @@ async def magik(ctx, user:discord.Member):
 				await bot.say(embed=embed)
 				
 @bot.command(pass_context=True)
-async def captcha(ctx, user:discord.Member):
+async def captcha(ctx, user: discord.Member=None):
 	if user is None:
 		url = f"https://nekobot.xyz/api/imagegen?type=captcha&url={ctx.message.author.avatar_url}&username={ctx.message.author.name}"
 		async with aiohttp.ClientSession() as cs:
