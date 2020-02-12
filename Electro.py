@@ -1420,6 +1420,7 @@ async def rps(ctx, *, message=None):
 async def update(ctx, channel: discord.Channel=None, *, msg: str):
 	embed=discord.Embed(description="{}".format(msg), color=0xFFBF00)
 	embed.set_author(name="{}".format(ctx.message.author), icon_url=ctx.message.author.avatar_url)
+        embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/656517276832366595/677146179439427585/002-brands-and-logotypes.png")
 	embed.timestamp = datetime.datetime.utcnow()
 	await bot.send_message(channel,"<@&660499979177164821>",embed=embed)
 	await bot.delete_message(ctx.message) 
