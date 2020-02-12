@@ -75,8 +75,20 @@ help3.add_field(name = 'IPhoneX',value ='Fits your avatar image in Iphone X!\n**
 help3.add_field(name = 'Threats',value ='Does a threats meme with users avatar!\n**USAGE:**``e!threats @user or e!threats``',inline = False)
 help3.add_field(name = 'Clyde',value ='Make clyde say things in a image!\n**USAGE:**``e!clyde [text]``',inline = False)
 help3.add_field(name = 'Trash',value ='Make fun of users by trashing their avatar!\n**USAGE:**``e!trash @user or e!trash``',inline = False)
-help3.add_field(name = 'Meme',value ='Sends a random meme from Reddit!\n**USAGE:**``e!meme``\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)' ,inline = False)
+help3.add_field(name = 'Meme',value ='Sends a random meme from Reddit!\n**USAGE:**``e!meme``\n<:ElectroBookmark:668018207549816833> **Additional Links:**\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)' ,inline = False)
 help3.set_footer(text ='© 2020 ELECTRO, Inc.')
+
+help4 = discord.Embed(description='**[MUSIC COMMANDS](https://discord.gg/kuWVFpR)**', color = 0xFFBF00) 
+help4.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/656760860085321748/ELECTRO_HELP4.gif')
+help4.add_field(name = 'Play',value ='Plays music from YouTube!\n**USAGE:**`e!play <music name> or <url>`',inline = False)
+help4.add_field(name = 'Skip',value ='Skips the current playing music!\n**USAGE:**`e!skip',inline = False)
+help4.add_field(name = 'Stop',value ='Stops playing music and leaves the vc!\n**USAGE:**`e!stop` ',inline = False)
+help4.add_field(name = 'NP',value ='Shows the now playing music!\n**USAGE:**`e!np`',inline = False)
+help4.add_field(name = 'Queue',value ='Shows the music queue!\n**USAGE:**`e!queue`',inline = False)
+help4.add_field(name = 'Pause',value ='Pauses the current playing song!\n**USAGE:**`e!pause`',inline = False)
+help4.add_field(name = 'Resume',value ='Resumes the current paused song!\n**USAGE:**`e!resume`',inline = False)
+help4.add_field(name = 'Volume',value ='Change volume of the song!\n**USAGE:**`e!volume <1-200>`\n<:ElectroBookmark:668018207549816833> **Additional Links:**\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
+help4.set_footer(text ='© 2020 ELECTRO, Inc.')
 
 async def status_task():
     while True:
