@@ -61,7 +61,7 @@ async def prefix(ctx):
 	await bot.say(embed=embed) 
 
 def is_owner(ctx):
-    return ctx.message.author.id == "49697815972439654"     
+    return ctx.message.author.id == "496978159724396545"     
 
 def predicate(message, l, r):
     def check(reaction, user):
