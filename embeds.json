@@ -10,5 +10,4 @@ help1.add_field(name = 'Membercount',value ='Shows member count of the server!\n
 help1.add_field(name = 'Invite',value ='Sends bot invite link!\n**USAGE:**``e!invite``',inline = False)
 help1.add_field(name = 'Upvote',value ='Sends bot upvote link!\n**USAGE:**``e!upvote``',inline = False)
 help1.add_field(name = 'Emoji',value ='Sends url of the emoji!\n**USAGE:**``e!emoji :emoji: ``\n<:ElectroBookmark:668018207549816833> **Additional Links:**\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
-help1.set_footer(text ='© 2020 ELECTRO, Inc.')"
-}
+help1.set_footer(text ='© 2020 ELECTRO, Inc.')"}
