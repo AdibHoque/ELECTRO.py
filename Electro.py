@@ -16,14 +16,16 @@ import logging
 bot = commands.Bot(command_prefix=commands.when_mentioned_or('e!','E!'),case_insensitive=True)
 bot.remove_command("help")
 
-help = discord.Embed(description='**[HELP MENU](https://discord.gg/kuWVFpR)**\n● To get detailed help on an category, react with their emotes or type `e!help1`,`e!help2` Etc. accordingly!', color = 0xFFBF00) 
-help.set_author(name='ELECTRO',url='https://discord.gg/kuWVFpR', icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
-help.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/656760631474520074/ELECTRO_ELECTRIFY_YOUR_SERVER.gif')
-help.add_field(name = '<:ElectroGeneral:666202936929681418> General Commands - (10)',value ='`ping`,`userinfo`,`serverinfo`,`ownerinfo`,`avatar`,`membercount`,`invite`,`upvote`,`pokemon`,`shinypokemon`',inline = False)
-help.add_field(name = '<:ElectroModeration:666920202818027531> Moderation Commands - (13)',value ='`kick`,`ban`,`setnick`,`role`,`say`,`DM`,`english`,`rolecolor`,`lockdown`,`unlock`,`menro`,`mute`,`unmute`',inline = False)
-help.add_field(name = '<:ElectroFun:666203658467147776> Fun Commands - (20)',value ='`meme`,`joke`,`love`,`slap`, `kiss`, `hug`, `virgin`, `gender`, `tweet`, `rolldice`, `flipcoin`, `howgay`, `whowouldwin`, `captcha`,`magik`,`deepfry`,`iphonex`,`threats`,`clyde`,`trash`',inline = False)
-help.add_field(name = '<:ElectroMusic:666203904186515467> Music Commands - (8)',value ='`play`,`skip`,`stop`,`NP`,`queue`,`pause`,`resume`,`volume`\n\n<:ElectroBookmark:668018207549816833> **Additional Links:**\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
-help.set_footer(text ='© 2020 ELECTRO, Inc.')
+helpm = discord.Embed(description='**[HELP MENU](https://discord.gg/kuWVFpR)**\n● To get detailed help on an category, react with their emotes or type `e!help1`,`e!help2` Etc. accordingly!', color = 0xFFBF00) 
+helpm.set_author(name='ELECTRO',url='https://discord.gg/kuWVFpR', icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
+helpm.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/656760631474520074/ELECTRO_ELECTRIFY_YOUR_SERVER.gif')
+helpm.add_field(name = '<:ElectroGeneral:666202936929681418> General Commands - (10)',value ='`ping`,`userinfo`,`serverinfo`,`ownerinfo`,`avatar`,`membercount`,`invite`,`upvote`,`pokemon`,`shinypokemon`',inline = False)
+helpm.add_field(name = '<:ElectroModeration:666920202818027531> Moderation Commands - (13)',value ='`kick`,`ban`,`setnick`,`role`,`say`,`DM`,`english`,`rolecolor`,`lockdown`,`unlock`,`menro`,`mute`,`unmute`',inline = False)
+helpm.add_field(name = '<:ElectroFun:666203658467147776> Fun Commands - (20)',value ='`meme`,`joke`,`love`,`slap`, `kiss`, `hug`, `virgin`, `gender`, `tweet`, `rolldice`, `flipcoin`, `howgay`, `whowouldwin`, `captcha`,`magik`,`deepfry`,`iphonex`,`threats`,`clyde`,`trash`',inline = False)
+helpm.add_field(name = '<:ElectroMusic:666203904186515467> Music Commands - (8)',value ='`play`,`skip`,`stop`,`NP`,`queue`,`pause`,`resume`,`volume`\n\n<:ElectroBookmark:668018207549816833> **Additional Links:**\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
+helpm.set_footer(text ='© 2020 ELECTRO, Inc.')
+
+# gen
 
 help1 = discord.Embed(description='**[GENERAL COMMANDS](https://discord.gg/kuWVFpR)**', color = 0xFFBF00)
 help1.set_author(name='ELECTRO',url='https://discord.gg/kuWVFpR', icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
@@ -38,6 +40,8 @@ help1.add_field(name = 'Invite',value ='Sends bot invite link!\n**USAGE:**``e!in
 help1.add_field(name = 'Upvote',value ='Sends bot upvote link!\n**USAGE:**``e!upvote``',inline = False)
 help1.add_field(name = 'Emoji',value ='Sends url of the emoji!\n**USAGE:**``e!emoji :emoji: ``\n<:ElectroBookmark:668018207549816833> **Additional Links:**\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
 help1.set_footer(text ='© 2020 ELECTRO, Inc.')
+
+# mod
 
 help2 = discord.Embed(description='**[MODERATION COMMANDS](https://discord.gg/kuWVFpR)**', color = 0xFFBF00)
 help2.set_author(name='ELECTRO',url='https://discord.gg/kuWVFpR', icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
@@ -61,6 +65,8 @@ help2.add_field(name = 'Menro',value ='Mentions the role!\n**USAGE:**``e!menro [
 help2.add_field(name = 'Mute',value ='Mutes mentioned user from chatting in the server!\n**USAGE:**``e!mute <@user>``',inline = False)
 help2.add_field(name = 'Unmute',value ='Unmutes mentioned user!\n**USAGE:**``e!unmute <@user>``\n<:ElectroBookmark:668018207549816833> **Additional Links:**\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
 help2.set_footer(text ='© 2020 ELECTRO, Inc.')
+
+# fun
 
 help3 = discord.Embed(description='**[FUN COMMANDS](https://discord.gg/kuWVFpR)**', color = 0xFFBF00)
 help3.set_author(name='ELECTRO',url='https://discord.gg/kuWVFpR', icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
@@ -86,6 +92,8 @@ help3.add_field(name = 'Clyde',value ='Make clyde say things in a image!\n**USAG
 help3.add_field(name = 'Trash',value ='Make fun of users by trashing their avatar!\n**USAGE:**``e!trash @user or e!trash``',inline = False)
 help3.add_field(name = 'Meme',value ='Sends a random meme from Reddit!\n**USAGE:**``e!meme``\n<:ElectroBookmark:668018207549816833> **Additional Links:**\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)' ,inline = False)
 help3.set_footer(text ='© 2020 ELECTRO, Inc.')
+
+# music 
 
 help4 = discord.Embed(description='**[MUSIC COMMANDS](https://discord.gg/kuWVFpR)**', color = 0xFFBF00) 
 help4.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/656760860085321748/ELECTRO_HELP4.gif')
