@@ -713,29 +713,29 @@ async def adib(ctx):
 	await bot.delete_message(ctx.message)
 	
 @bot.command(pass_context = True)
-async def help(ctx, page=None):
-    if page is None:    
-      author = ctx.message.author
-      msg = await bot.send_message(author ,embed=help)
-      await bot.add_reaction(msg,':ElectroGeneral:666202936929681418')
-      await bot.add_reaction(msg,':ElectroModeration:666920202818027531')
-      await bot.add_reaction(msg,':ElectroFun:666203658467147776')
-      await bot.add_reaction(msg,':ElectroMusic:666203904186515467')
-      await bot.say('📨 Check Your DMs For Bot Commands!')
-    if page == '1':
-      await bot.send_message(ctx.message.author ,embed=help1)
-      await bot.say('📨 Check Your DMs For General Commands!')
-    if page == '2':
-      await bot.send_message(ctx.message.author ,embed=help2)
-      await bot.say('📨 Check Your DMs For Moderation Commands!')
-    if page == '3':
-      await bot.send_message(ctx.message.author ,embed=help3)
-      await bot.say('📨 Check Your DMs For Fun Commands!')
-    if page == '4':
-      await bot.send_message(ctx.message.author ,embed=help4)
-      await bot.say('📨 Check Your DMs For Music Commands!')
-    else:
-      Return 
+async def help(ctx, page:str):
+        if page is None:
+            author = ctx.message.author
+            msg = await bot.send_message(author ,embed=help)
+            await bot.add_reaction(msg,':ElectroGeneral:666202936929681418')
+            await bot.add_reaction(msg,':ElectroModeration:666920202818027531')
+            await bot.add_reaction(msg,':ElectroFun:666203658467147776')
+            await bot.add_reaction(msg,':ElectroMusic:666203904186515467')
+            await bot.say('📨 Check Your DMs For Bot Commands!')
+        elif page == '1':
+            await bot.send_message(ctx.message.author ,embed=help1)
+            await bot.say('📨 Check Your DMs For General Commands!')
+        elif page == '2':
+            await bot.send_message(ctx.message.author ,embed=help2)
+            await bot.say('📨 Check Your DMs For Moderation Commands!')
+        elif page == '3':
+            await bot.send_message(ctx.message.author ,embed=help3)
+            await bot.say('📨 Check Your DMs For Fun Commands!')
+        elif page == '4':
+            await bot.send_message(ctx.message.author ,embed=help4)
+            await bot.say('📨 Check Your DMs For Music Commands!')
+        else:
+            Return 
 		
 @bot.command(pass_context = True, aliases=['help 1','help_1'] )
 async def help1(ctx):
@@ -1552,7 +1552,7 @@ def _save():
 
 @bot.command(pass_context = True)
 async def testa(ctx):
-    await bot.send_message(ctx.message.channel, embed=embed1)
+    await bot.send_message(ctx.message.channel, embed=help)
      
 @bot.command(pass_context=True)
 async def whosthatpokemon(ctx):
