@@ -28,7 +28,7 @@ helpm.set_footer(text ='© 2020 ELECTRO, Inc.')
 def is_developer(ctx):
         return ctx.message.author.id == "496978159724396545"     
 
-help1 = discord.Embed(description='**[GENERAL COMMANDS](https://discord.gg/kuWVFpR)**', color = 0xFFBF00)
+help1 = {discord.Embed(description='**[GENERAL COMMANDS](https://discord.gg/kuWVFpR)**', color = 0xFFBF00)
 help1.set_author(name='ELECTRO',url='https://discord.gg/kuWVFpR', icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
 help1.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/656760777973432330/ELECTRO_HELP1.gif')
 help1.add_field(name = 'Ping',value ='Returns ping lantency!\n**USAGE:**``e!ping``',inline = False)
@@ -40,7 +40,7 @@ help1.add_field(name = 'Membercount',value ='Shows member count of the server!\n
 help1.add_field(name = 'Invite',value ='Sends bot invite link!\n**USAGE:**``e!invite``',inline = False)
 help1.add_field(name = 'Upvote',value ='Sends bot upvote link!\n**USAGE:**``e!upvote``',inline = False)
 help1.add_field(name = 'Emoji',value ='Sends url of the emoji!\n**USAGE:**``e!emoji :emoji: ``\n<:ElectroBookmark:668018207549816833> **Additional Links:**\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
-help1.set_footer(text ='© 2020 ELECTRO, Inc.')
+help1.set_footer(text ='© 2020 ELECTRO, Inc.')}
 
 # mod
 
@@ -722,10 +722,10 @@ async def adib(ctx):
 	await bot.delete_message(ctx.message)
 	
 @bot.command(pass_context = True)
-async def help(ctx, page:str):
+async def help(ctx, page: str=None):
         if page is None:
             author = ctx.message.author
-            msg = await bot.send_message(author ,embed=help)
+            msg = await bot.send_message(author ,embed=helpm)
             await bot.add_reaction(msg,':ElectroGeneral:666202936929681418')
             await bot.add_reaction(msg,':ElectroModeration:666920202818027531')
             await bot.add_reaction(msg,':ElectroFun:666203658467147776')
