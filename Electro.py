@@ -123,7 +123,7 @@ async def on_ready():
     bot.loop.create_task(status_task())
     global amounts
     try:
-        with open('amounts.json') as f:             
+        with open('embeds.json') as f:             
             amounts = json.load(f)
     except FileNotFoundError:
         print("Could not load amounts.json")
@@ -1523,11 +1523,7 @@ async def update(ctx, channel: discord.Channel=None, *, msg: str):
 
 @bot.command(pass_context=True)
 async def balance(ctx):
-    id = ctx.message.author.id
-    if id in amounts:
-        await bot.say("You have {} in the bank".format(amounts[id]))
-    else:
-        await bot.say("You do not have an account")
+    await bot.say("You have {} in the bank".format(amounts[help1]))
 
 @bot.command(pass_context=True)
 async def register(ctx):
