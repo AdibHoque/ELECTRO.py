@@ -1560,7 +1560,7 @@ def _save():
 
 @bot.command(pass_context = True)
 async def testa(ctx):
-    await bot.send_message(ctx.message.channel, embed=helpm)
+    await bot.send_message(ctx.message.channel, embed=help1)
      
 @bot.command(pass_context=True)
 async def whosthatpokemon(ctx):
