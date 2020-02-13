@@ -713,7 +713,7 @@ async def adib(ctx):
 	await bot.delete_message(ctx.message)
 	
 @bot.command(pass_context = True)
-async def help(ctx, page: str=None):
+async def help(ctx, page=None):
     if page is None:    
       author = ctx.message.author
       msg = await bot.send_message(author ,embed=help)
