@@ -814,7 +814,7 @@ async def help(ctx, page: str=None):
             await bot.send_message(ctx.message.author ,embed=help4)
             await bot.say('📨 Check Your DMs For Music Commands!')
         else:
-            Return await bot.say('Please type `e!help` or `e!help 1/2/3/4` for the help menus!')
+            Return
 		
 @bot.command(pass_context = True, aliases=['help 1','help_1'] )
 async def help1(ctx):
