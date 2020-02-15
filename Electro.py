@@ -19,10 +19,10 @@ bot.remove_command("help")
 helpm = discord.Embed(description='**[HELP MENU](https://discord.gg/kuWVFpR)**\n● To get detailed help on an category, react with their emotes or type `e!help1`,`e!help2` Etc. accordingly!', color = 0xFFBF00) 
 helpm.set_author(name='ELECTRO',url='https://discord.gg/kuWVFpR', icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
 helpm.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/656760631474520074/ELECTRO_ELECTRIFY_YOUR_SERVER.gif')
-helpm.add_field(name = '<:ElectroGeneral:666202936929681418> General Commands - (10)',value ='`ping`,`userinfo`,`serverinfo`,`ownerinfo`,`avatar`,`membercount`,`invite`,`upvote`,`pokemon`,`shinypokemon`',inline = False)
-helpm.add_field(name = '<:ElectroModeration:666920202818027531> Moderation Commands - (13)',value ='`kick`,`ban`,`setnick`,`role`,`say`,`DM`,`english`,`rolecolor`,`lockdown`,`unlock`,`menro`,`mute`,`unmute`',inline = False)
-helpm.add_field(name = '<:ElectroFun:666203658467147776> Fun Commands - (20)',value ='`meme`,`joke`,`love`,`slap`, `kiss`, `hug`, `virgin`, `gender`, `tweet`, `rolldice`, `flipcoin`, `howgay`, `whowouldwin`, `captcha`,`magik`,`deepfry`,`iphonex`,`threats`,`clyde`,`trash`',inline = False)
-helpm.add_field(name = '<:ElectroMusic:666203904186515467> Music Commands - (8)',value ='`play`,`skip`,`stop`,`NP`,`queue`,`pause`,`resume`,`volume`\n\n<:ElectroBookmark:668018207549816833> **Additional Links:**\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
+helpm.add_field(name = '<:ElectroGeneral:677931921451253760> General Commands - (10)',value ='`ping`,`userinfo`,`serverinfo`,`ownerinfo`,`avatar`,`membercount`,`invite`,`upvote`,`pokemon`,`shinypokemon`',inline = False)
+helpm.add_field(name = '<:ElectroModeration:677932051290390561> Moderation Commands - (13)',value ='`kick`,`ban`,`setnick`,`role`,`say`,`DM`,`english`,`rolecolor`,`lockdown`,`unlock`,`menro`,`mute`,`unmute`',inline = False)
+helpm.add_field(name = '<:ElectroFun:677931545838747685> Fun Commands - (20)',value ='`meme`,`joke`,`love`,`slap`, `kiss`, `hug`, `virgin`, `gender`, `tweet`, `rolldice`, `flipcoin`, `howgay`, `whowouldwin`, `captcha`,`magik`,`deepfry`,`iphonex`,`threats`,`clyde`,`trash`',inline = False)
+helpm.add_field(name = '<:ElectroMusic:677932237844381719> Music Commands - (8)',value ='`play`,`skip`,`stop`,`NP`,`queue`,`pause`,`resume`,`volume`\n\n<:ElectroBookmark:668018207549816833> **Additional Links:**\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
 helpm.set_footer(text ='© 2020 ELECTRO, Inc.')
 
 def is_developer(ctx):
@@ -726,10 +726,10 @@ async def help(ctx, page: str=None):
         if page is None:
             author = ctx.message.author
             msg = await bot.send_message(author ,embed=helpm)
-            await bot.add_reaction(msg,':ElectroGeneral:666202936929681418')
-            await bot.add_reaction(msg,':ElectroModeration:666920202818027531')
-            await bot.add_reaction(msg,':ElectroFun:666203658467147776')
-            await bot.add_reaction(msg,':ElectroMusic:666203904186515467')
+            await bot.add_reaction(msg,':ElectroGeneral:677931921451253760')
+            await bot.add_reaction(msg,':ElectroModeration:677932051290390561')
+            await bot.add_reaction(msg,':ElectroFun:677931545838747685')
+            await bot.add_reaction(msg,':ElectroMusic:677932237844381719')
             await bot.say('📨 Check Your DMs For Bot Commands!')
         elif page == '1':
             help1 = discord.Embed(description='**[GENERAL COMMANDS](https://discord.gg/kuWVFpR)**', color = 0xFFBF00)
