@@ -183,13 +183,14 @@ async def revive(ctx):
 
 @bot.command(pass_context=True)
 async def richembed(ctx):
-    await bot.send_message(ctx.message.channel, "What should be the embed Title?")
+    q1 await bot.send_message(ctx.message.channel, "What should be the embed Title?")
     a1 = await bot.wait_for_message(timeout= 30, author=ctx.message.author, channel=ctx.message.channel)
-    await bot.send_message(ctx.message.channel, "What should be the embed Description?")
+    await bot.delete_message(a1,q1)
+    q2 await bot.send_message(ctx.message.channel, "What should be the embed Description?")
     a2 = await bot.wait_for_message(timeout= 30, author=ctx.message.author, channel=ctx.message.channel)
-    await bot.send_message(ctx.message.channel, "What should be the embed Thumbnail url?")
+    q3 await bot.send_message(ctx.message.channel, "What should be the embed Thumbnail url?")
     a3 = await bot.wait_for_message(timeout= 30, author=ctx.message.author, channel=ctx.message.channel)
-    await bot.send_message(ctx.message.channel, "What should be the embed Footer?")
+    q4 await bot.send_message(ctx.message.channel, "What should be the embed Footer?")
     a4 = await bot.wait_for_message(timeout= 30, author=ctx.message.author, channel=ctx.message.channel)
     embed = discord.Embed(title='{}'.format(a1.content), description='{}'.format(a2.content),color=0xFFBF00)
     embed.set_thumbnail(url = '{}'.format(a3.content))
