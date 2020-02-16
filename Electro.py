@@ -185,7 +185,6 @@ async def revive(ctx):
 async def richembed(ctx):
     q1 = await bot.send_message(ctx.message.channel, "What should be the embed Title?")
     a1 = await bot.wait_for_message(timeout= 30, author=ctx.message.author, channel=ctx.message.channel)
-    await bot.delete_message(a1,q1)
     q2 = await bot.send_message(ctx.message.channel, "What should be the embed Description?")
     a2 = await bot.wait_for_message(timeout= 30, author=ctx.message.author, channel=ctx.message.channel)
     q3 = await bot.send_message(ctx.message.channel, "What should be the embed Thumbnail url?")
@@ -196,6 +195,14 @@ async def richembed(ctx):
     embed.set_thumbnail(url = '{}'.format(a3.content))
     embed.set_footer(text='{}'.format(a4.content))
     await bot.send_message(ctx.message.channel, embed=embed)
+    await bot.delete_message(a1)
+    await bot.delete_message(q1)
+    await bot.delete_message(a2)
+    await bot.delete_message(q2)
+    await bot.delete_message(a3)
+    await bot.delete_message(q3)
+    await bot.delete_message(a4) 
+    await bot.delete_message(q4)
 														
 @bot.command(pass_context = True, aliases=['pong','PING'])
 @commands.cooldown(1, 5, commands.BucketType.user)
