@@ -123,7 +123,7 @@ async def on_ready():
     bot.loop.create_task(status_task())
     global amounts
     try:
-        with open(test.json') as f:             
+        with open('test.json') as f:             
             amounts = json.load(f)
     except FileNotFoundError:
         print("Could not load amounts.json")
