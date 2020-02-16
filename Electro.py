@@ -271,7 +271,7 @@ async def kick(ctx, user:discord.Member, *, reason:str):
     
 @bot.command(pass_context=True)  
 @commands.has_permissions(ban_members=True)     
-async def ban(ctx, user:discord.Member, *, reason:str):
+async def ban(ctx, user:discord.Member, *, reason:str=None):
     if user is None or reason is None:
       await bot.say('<a:ElectroFail:656772856184832025> | **Please mention a user to ban & specify a reason for banning!\nExample:`e!ban <@user or id> <reason>**')
     if user.server_permissions.kick_members:
@@ -318,12 +318,12 @@ async def userinfo(ctx, user: discord.Member):
     embed.set_thumbnail(url=user.avatar_url)
     await bot.say(embed=embed)	
 
-@bot.command(pass_context = True)  
-async def avatarurl(ctx, user: discord.Member):
-	url = user.avatar_url
+@bot.command(pass_context = True ,aliases=['serverav','avserver'])  
+async def serveravatar(ctx):
+	url = ctx.message.server.icon_url
 	await bot.say(url)
 
-@bot.command(pass_context = True)
+@bot.command(pass_context = True, aliases=['av','Av','Avatar'])
 async def avatar(ctx, user: discord.Member=None):
     if user is None:
         r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
@@ -537,7 +537,7 @@ async def tweet(ctx, usernamename:str, *, txt:str):
             await bot.say(embed=embed)
 		   	   	 
  
-@bot.command(pass_context=True)
+@bot.command(pass_context=True, aliases=['ship','shipuser'])
 async def love(ctx, user: discord.Member = None, *, user2: discord.Member = None):
     shipuser1 = user.name
     shipuser2 = user2.name
