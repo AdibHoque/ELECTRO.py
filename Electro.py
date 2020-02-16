@@ -195,6 +195,7 @@ async def richembed(ctx):
     embed.set_thumbnail(url = '{}'.format(a3.content))
     embed.set_footer(text='{}'.format(a4.content))
     await bot.send_message(ctx.message.channel, embed=embed)
+    await bot.delete_message(ctx.message) 
     await bot.delete_message(a1)
     await bot.delete_message(q1)
     await bot.delete_message(a2)
