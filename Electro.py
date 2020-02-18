@@ -143,6 +143,9 @@ async def on_command_error(error, ctx):
     elif isinstance(error, commands.CheckFailure):
         embed=discord.Embed(description="<a:ElectroError:646994154152525845> **Check Failure.**\nThis is a premium or developer only command. Join our [Support Server](https://discord.gg/kuWVFpR) for more info!", color=0xFFBF00)
         await bot.send_message(ctx.message.channel, embed=embed)
+    elif isinstance(error, commands.NSFWChannelRequired):
+        embed=discord.Embed(description="<a:ElectroError:646994154152525845> **NSFW Channel Required.**\nThis is a premium or developer only command. Join our [Support Server](https://discord.gg/kuWVFpR) for more info!", color=0xFFBF00)
+        await bot.send_message(ctx.message.channel, embed=embed)
     raise error
     
 @bot.command(pass_context = True)
@@ -525,7 +528,7 @@ async def serverinfo(ctx):
 		   	   	     
 @bot.command(pass_context=True)
 async def tweet(ctx, usernamename:str, *, txt:str):
-    url = f"https://nekobot.xyz/api/imagegen?type=tweet&username={usernamename}&text={txt}"
+    url = f"  nekobot.xyz/api/imagegen?type=clickforhentai&image=https://cdn.discordapp.com/avatars/455322915471097857/d61b75a2318e59076dbd245981e5f0be.webp?size=1024&fontsize=7"
     async with aiohttp.ClientSession() as cs:
     	async with cs.get(url) as r:
             res = await r.json()
@@ -1643,8 +1646,9 @@ def _save():
         json.dump(amounts, f)
 
 @bot.command(pass_context = True)
-async def testa(ctx):
-    await bot.send_message(ctx.message.channel, embed=help1)
+@commands.check(is_nsfw)
+async def nsfwtest(ctx):
+    await bot.send_message(ctx.message.channel, 'k')
      
 @bot.command(pass_context=True)
 async def whosthatpokemon(ctx):
