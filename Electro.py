@@ -1648,7 +1648,9 @@ def _save():
 @bot.command(pass_context = True)
 async def nsfwtest(ctx):
     if ctx.message.channel.is_nsfw():
-    await bot.send_message(ctx.message.channel, 'k')
+      await bot.say('k')
+    else:
+      Return
      
 @bot.command(pass_context=True)
 async def whosthatpokemon(ctx):
