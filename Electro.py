@@ -564,11 +564,6 @@ async def love(ctx, user: discord.Member = None, *, user2: discord.Member = None
  
 @bot.command(pass_context=True, aliases=['gay','gayrate','howmuchgay','g8','lesbian'])
 async def howgay(ctx, user: discord.Member=None):
-        if user.id == '496978159724396545':
-                embed = discord.Embed(title="Gayrate of ADIB HOQUE#2212",description="[□□□□□□□□□□ ](https://discord.gg/kuWVFpR)(**0%**)", color=0xFFBF00)
-                embed.set_footer(text="Im straighter than the pole that your mom 💃dances on - ADIB", icon_url=ctx.message.author.avatar_url)
-                await bot.say(embed=embed)
-        Return
         if user is None:
                 score = random.randint(0, 100)
                 filled_progbar = round(score / 100 * 10)
@@ -579,14 +574,13 @@ async def howgay(ctx, user: discord.Member=None):
                 score = random.randint(0, 100)
                 filled_progbar = round(score / 100 * 10)
                 counter_ = '■' * filled_progbar + '□' * (10 - filled_progbar)
-                embed = discord.Embed(title=f'Gayrate of {used}',description=f' :couple:[{counter_}](https://discord.gg/kuWVFpR):couple_mm: (**{score}%**)',color=0xFFBF00)
+                embed = discord.Embed(title=f'Gayrate of {user}',description=f' :couple:[{counter_}](https://discord.gg/kuWVFpR):couple_mm: (**{score}%**)',color=0xFFBF00)
                 await bot.say(embed=embed)
 
 @bot.command(pass_context = True)
 async def rolldice(ctx):
     choices = ['1', '2', '3', '4', '5', '6']
-    em = discord.Embed(color=0xFFBF00, title='Rolled! (1 6-sided die)', description=random.choice(choices))
-    await bot.send_typing(ctx.message.channel)
+    em = discord.Embed(title='Rolled! (1 6-sided dice)', description='{}'.format(random.choice(choices)),color=0xFFBF00)
     await bot.say(embed=em)
     
 @bot.command(pass_context=True)
@@ -594,7 +588,7 @@ async def kiss(ctx, user: discord.Member):
     r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
     randomurl = ["https://media3.giphy.com/media/G3va31oEEnIkM/giphy.gif", "https://i.imgur.com/eisk88U.gif", "https://media1.tenor.com/images/e4fcb11bc3f6585ecc70276cc325aa1c/tenor.gif?itemid=7386341", "http://25.media.tumblr.com/6a0377e5cab1c8695f8f115b756187a8/tumblr_msbc5kC6uD1s9g6xgo1_500.gif"]
     if user.id == ctx.message.author.id:
-        await bot.say("Goodluck kissing yourself {}".format(ctx.message.author.mention))
+        await bot.say(f"Goodluck kissing yourself {}".format(ctx.message.author.mention))
     else:
         embed = discord.Embed(title=f"{user.name} You just got a kiss from {ctx.message.author.name}", color = 0xFFBF00)
         embed.set_image(url=random.choice(randomurl))
