@@ -588,7 +588,7 @@ async def kiss(ctx, user: discord.Member):
     r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
     randomurl = ["https://media3.giphy.com/media/G3va31oEEnIkM/giphy.gif", "https://i.imgur.com/eisk88U.gif", "https://media1.tenor.com/images/e4fcb11bc3f6585ecc70276cc325aa1c/tenor.gif?itemid=7386341", "http://25.media.tumblr.com/6a0377e5cab1c8695f8f115b756187a8/tumblr_msbc5kC6uD1s9g6xgo1_500.gif"]
     if user.id == ctx.message.author.id:
-        await bot.say(f"Goodluck kissing yourself {}".format(ctx.message.author.mention))
+        await bot.say("Goodluck kissing yourself {}".format(ctx.message.author.mention))
     else:
         embed = discord.Embed(title=f"{user.name} You just got a kiss from {ctx.message.author.name}", color = 0xFFBF00)
         embed.set_image(url=random.choice(randomurl))
