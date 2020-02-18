@@ -1646,7 +1646,7 @@ def _save():
 
 @bot.command(pass_context = True)
 async def nsfwtest(ctx):
-    if ctx.message.channel.is_nsfw():
+    if ctx.message.channel.is_nsfw == True:
       await bot.say('k')
     else:
       Return
