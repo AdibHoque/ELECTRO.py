@@ -144,7 +144,7 @@ async def on_command_error(error, ctx):
         embed=discord.Embed(description="<a:ElectroError:646994154152525845> **Check Failure.**\nThis is a premium or developer only command. Join our [Support Server](https://discord.gg/kuWVFpR) for more info!", color=0xFFBF00)
         await bot.send_message(ctx.message.channel, embed=embed)
     elif isinstance(error, commands.NSFWChannelRequired):
-        embed=discord.Embed(description="<a:ElectroError:646994154152525845> **NSFW Channel Required.**\nThis is a premium or developer only command. Join our [Support Server](https://discord.gg/kuWVFpR) for more info!", color=0xFFBF00)
+        embed=discord.Embed(description="<a:ElectroError:646994154152525845> **NSFW Channel Required.**\nThis is a NSFW command which requires a NSFW marked channel. Join our [Support Server](https://discord.gg/kuWVFpR) for more info!", color=0xFFBF00)
         await bot.send_message(ctx.message.channel, embed=embed)
     raise error
     
@@ -1646,8 +1646,8 @@ def _save():
         json.dump(amounts, f)
 
 @bot.command(pass_context = True)
-@commands.check(is_nsfw)
 async def nsfwtest(ctx):
+    if ctx.message.channel.is_nsfw():
     await bot.send_message(ctx.message.channel, 'k')
      
 @bot.command(pass_context=True)
