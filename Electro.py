@@ -563,13 +563,13 @@ async def love(ctx, user: discord.Member = None, *, user2: discord.Member = None
             await bot.say(embed=embed)
  
 @bot.command(pass_context=True, aliases=['gay','gayrate','howmuchgay','g8','lesbian'])
-async def howgay(ctx, user: discord.Member=None):
+async def howgay(ctx, user: discord.Member):
         if user.id == '496978159724396545':
                 embed = discord.Embed(title="Gayrate of ADIB HOQUE#2212",description="[□□□□□□□□□□ ](https://discord.gg/kuWVFpR)(**0%**)", color=0xFFBF00)
-                embed.set_footer(text="He's straighter than the pole that your mom 💃dances on!", icon_url=ctx.message.author.avatar_url)
+                embed.set_footer(text="Im straighter than the pole that your mom 💃dances on - ADIB", icon_url=ctx.message.author.avatar_url)
                 await bot.say(embed=embed)
                 Return
-        if user is None:
+        if user == None:
                 score = random.randint(0, 100)
                 filled_progbar = round(score / 100 * 10)
                 counter_ = '■' * filled_progbar + '□' * (10 - filled_progbar)
@@ -579,7 +579,7 @@ async def howgay(ctx, user: discord.Member=None):
                 score = random.randint(0, 100)
                 filled_progbar = round(score / 100 * 10)
                 counter_ = '■' * filled_progbar + '□' * (10 - filled_progbar)
-                embed = discord.Embed(title=f'Gayrate of {ctx.message.author}',description=f' :couple:[{counter_}](https://discord.gg/kuWVFpR):couple_mm: (**{score}%**)',color=0xFFBF00)
+                embed = discord.Embed(title=f'Gayrate of {used}',description=f' :couple:[{counter_}](https://discord.gg/kuWVFpR):couple_mm: (**{score}%**)',color=0xFFBF00)
                 await bot.say(embed=embed)
 
 @bot.command(pass_context = True)
