@@ -348,8 +348,8 @@ async def owner():
     embed.set_thumbnail(url = 'https://cdn.discordapp.com/attachments/643421220108501002/643421321266462731/20191111_143116.gif')
     await bot.say(embed=embed)    
     
-@bot.command()
-async def emoji(emoji: discord.Emoji):
+@bot.command(pass_connext=True,aliases=['se'])
+async def emoji(ctx, emoji: discord.Emoji):
     await bot.say(emoji.url)    		
 	  		   	   	
 @bot.command(pass_context=True)
@@ -498,7 +498,7 @@ async def removerole(ctx, user: discord.Member, *, role: discord.Role = None):
 		return await bot.remove_roles(user, role)
 		return await bot.say("<:ElectroSucess:527118398753079317> **{}** role has been removed from **{}**.".format(role, user))
 
-@bot.command(pass_context=True)
+@bot.command(pass_context=True, aliases=['server'])
 async def serverinfo(ctx):
     server = ctx.message.server
     roles = [x.name for x in server.role_hierarchy]
@@ -564,6 +564,9 @@ async def love(ctx, user: discord.Member = None, *, user2: discord.Member = None
  
 @bot.command(pass_context=True, aliases=['gay','gayrate','howmuchgay','g8','lesbian'])
 async def howgay(ctx, user: discord.Member=None):
+        if user.id == '496978159724396545':
+                embed = discord.Embed(description="[□□□□□□□□□□ ](https://discord.gg/kuWVFpR) (**0%**)\nHe's straighter than the pole that your mom 💃dances on!", color=0xFFBF00)
+                await bot.say(embed=embed)
         if user is None:
                 score = random.randint(0, 100)
                 filled_progbar = round(score / 100 * 10)
