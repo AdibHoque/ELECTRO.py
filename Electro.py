@@ -498,7 +498,7 @@ async def removerole(ctx, user: discord.Member, *, role: discord.Role = None):
 		return await bot.remove_roles(user, role)
 		return await bot.say("<:ElectroSucess:527118398753079317> **{}** role has been removed from **{}**.".format(role, user))
 
-@bot.command(pass_context=True, aliases=['server'])
+@bot.command(pass_context=True, aliases=['serveri'])
 async def serverinfo(ctx):
     server = ctx.message.server
     roles = [x.name for x in server.role_hierarchy]
