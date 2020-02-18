@@ -18,7 +18,7 @@ bot.remove_command("help")
 
 helpm = discord.Embed(description='**[HELP MENU](https://discord.gg/kuWVFpR)**\n● To get detailed help on an category, react with their emotes or type `e!help1`,`e!help2` Etc. accordingly!', color = 0xFFBF00) 
 helpm.set_author(name='ELECTRO',url='https://discord.gg/kuWVFpR', icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
-helpm.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/656760631474520074/ELECTRO_ELECTRIFY_YOUR_SERVER.gif')
+helpm.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/679356318787829780/ElectroCommandsCategory.gif')
 helpm.add_field(name = '<:ElectroGeneral:677931921451253760> General Commands - (10)',value ='`ping`,`userinfo`,`serverinfo`,`ownerinfo`,`avatar`,`membercount`,`invite`,`upvote`,`pokemon`,`shinypokemon`',inline = False)
 helpm.add_field(name = '<:ElectroModeration:677932051290390561> Moderation Commands - (13)',value ='`kick`,`ban`,`setnick`,`role`,`say`,`DM`,`english`,`rolecolor`,`lockdown`,`unlock`,`menro`,`mute`,`unmute`',inline = False)
 helpm.add_field(name = '<:ElectroFun:677931545838747685> Fun Commands - (20)',value ='`meme`,`joke`,`love`,`slap`, `kiss`, `hug`, `virgin`, `gender`, `tweet`, `rolldice`, `flipcoin`, `howgay`, `whowouldwin`, `captcha`,`magik`,`deepfry`,`iphonex`,`threats`,`clyde`,`trash`',inline = False)
