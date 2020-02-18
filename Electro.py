@@ -566,7 +566,7 @@ async def love(ctx, user: discord.Member = None, *, user2: discord.Member = None
 async def howgay(ctx, user: discord.Member=None):
         if user.id == '496978159724396545':
                 embed = discord.Embed(title="Gayrate of ADIB HOQUE#2212",description="[□□□□□□□□□□ ](https://discord.gg/kuWVFpR)(**0%**)", color=0xFFBF00)
-                embed.set_footer(text='He's straighter than the pole that your mom 💃dances on!',icon_url=ctx.message.author.avatar_url)
+                embed.set_footer(text="He's straighter than the pole that your mom 💃dances on!", icon_url=ctx.message.author.avatar_url)
                 await bot.say(embed=embed)
         if user is None:
                 score = random.randint(0, 100)
