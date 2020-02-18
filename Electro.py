@@ -146,7 +146,6 @@ async def on_command_error(error, ctx):
     elif isinstance(error, commands.NSFWChannelRequired):
         embed=discord.Embed(description="<a:ElectroError:646994154152525845> **NSFW Channel Required.**\nThis is a NSFW command which requires a NSFW marked channel. Join our [Support Server](https://discord.gg/kuWVFpR) for more info!", color=0xFFBF00)
         await bot.send_message(ctx.message.channel, embed=embed)
-    raise error
     
 @bot.command(pass_context = True)
 async def prefix(ctx):
