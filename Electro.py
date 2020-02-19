@@ -1655,7 +1655,8 @@ def _save():
 @bot.command(pass_context = True)
 async def nsfw(ctx):
         await bot.say('.') 
-        if ctx.message.channel.nsfw==True:
+        channel_nsfw = await bot.is_nsfw(ctx.message.channel)
+        if channel_nsfw: 
             await bot.say('k')
         else:
             await bot.say("This isn't a NSFW channel!")
