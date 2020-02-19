@@ -1642,11 +1642,12 @@ def _save():
         json.dump(amounts, f)
 
 @bot.command(pass_context = True)
-async def nsfwtest(ctx):
-    if ctx.message.channel.nsfw == True:
-      await bot.say('k')
-    else:
-      await bot.say("This isn't a NSFW channel!")
+async def nsfw(ctx):
+        await bot.say('.') 
+        if ctx.message.channel.nsfw==True:
+            await bot.say('k')
+        else:
+            await bot.say("This isn't a NSFW channel!")
      
 @bot.command(pass_context=True)
 async def whosthatpokemon(ctx):
