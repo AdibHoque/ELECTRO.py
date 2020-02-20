@@ -1653,9 +1653,9 @@ def _save():
     with open('amounts.json', 'w+') as f:
         json.dump(amounts, f)
 
-@bot.command(pass_context = True)
+@bot.command(pass_context = True, aliases=['pussy','ass','thigh','anal','4k','porngif','gonewild','hentai','hentaimidriff','hentaiass','hentaianal','hentaithigh','hentaineko','hentaikitsune'])
 async def nsfw(ctx):
-        await bot.say('.') 
+        print('{ctx.message.author} used {ctx.message.content}') 
         channel = ctx.message.channel
         if channel.NSFW==True: 
             await bot.say('k')
