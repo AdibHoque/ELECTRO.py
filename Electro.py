@@ -1656,11 +1656,6 @@ def _save():
 @bot.command(pass_context = True, aliases=['pussy','ass','thigh','anal','4k','porngif','gonewild','hentai','hentaimidriff','hentaiass','hentaianal','hentaithigh','hentaineko','hentaikitsune'])
 async def nsfw(ctx):
         print('{ctx.message.author} used {ctx.message.content}') 
-        channel = ctx.message.channel
-        if channel.NSFW==True: 
-            await bot.say('k')
-        else:
-            await bot.say("This isn't a NSFW channel!")
      
 @bot.command(pass_context=True)
 async def whosthatpokemon(ctx):
