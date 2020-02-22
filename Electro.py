@@ -18,12 +18,13 @@ bot.remove_command("help")
 
 helpm = discord.Embed(description='**[HELP MENU](https://discord.gg/kuWVFpR)**\n● To get detailed help on an category, react with their emotes or type `e!help1`,`e!help2` Etc. accordingly!', color = 0xFFBF00) 
 helpm.set_author(name='ELECTRO',url='https://discord.gg/kuWVFpR', icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
-helpm.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/679356318787829780/ElectroCommandsCategory.gif')
-helpm.add_field(name = '<:ElectroGeneral:677931921451253760> General Commands - (10)',value ='`ping`,`userinfo`,`serverinfo`,`ownerinfo`,`avatar`,`membercount`,`invite`,`upvote`,`pokemon`,`shinypokemon`',inline = False)
-helpm.add_field(name = '<:ElectroModeration:677932051290390561> Moderation Commands - (13)',value ='`kick`,`ban`,`setnick`,`role`,`say`,`DM`,`english`,`rolecolor`,`lockdown`,`unlock`,`menro`,`mute`,`unmute`',inline = False)
-helpm.add_field(name = '<:ElectroFun:677931545838747685> Fun Commands - (20)',value ='`meme`,`joke`,`love`,`slap`, `kiss`, `hug`, `virgin`, `gender`, `tweet`, `rolldice`, `flipcoin`, `howgay`, `whowouldwin`, `captcha`,`magik`,`deepfry`,`iphonex`,`threats`,`clyde`,`trash`',inline = False)
-helpm.add_field(name = '<:ElectroMusic:677932237844381719> Music Commands - (8)',value ='`play`,`skip`,`stop`,`NP`,`queue`,`pause`,`resume`,`volume`\n\n<:ElectroBookmark:668018207549816833> **Additional Links:**\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
-helpm.set_footer(text ='© 2020 ELECTRO, Inc.')
+helpm.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/679975327698649109/ElectroCommandsCategories.gif')
+helpm.add_field(name = '<:ElectroGeneralBadge:680783367247364097> General Commands - (10)',value ='`ping`,`userinfo`,`serverinfo`,`ownerinfo`,`avatar`,`membercount`,`invite`,`upvote`,`pokemon`,`shinypokemon`',inline = False)
+helpm.add_field(name = '<:ElectroModerationBadge:680783390999314466> Moderation Commands - (13)',value ='`kick`,`ban`,`setnick`,`role`,`say`,`DM`,`english`,`rolecolor`,`lockdown`,`unlock`,`menro`,`mute`,`unmute`',inline = False)
+helpm.add_field(name = '<:ElectroFunBadge:680783413065941002> Fun Commands - (20)',value ='`meme`,`joke`,`love`,`slap`, `kiss`, `hug`, `virgin`, `gender`, `tweet`, `rolldice`, `flipcoin`, `howgay`, `whowouldwin`, `captcha`,`magik`,`deepfry`,`iphonex`,`threats`,`clyde`,`trash`',inline = False)
+helpm.add_field(name = '<:ElectroNSFWBadge:680783452563439774> Music Commands - (8)',value ='`play`,`skip`,`stop`,`NP`,`queue`,`pause`,`resume`,`volume`',inline = False)
+helpm.add_field(name = '<:ElectroNSFWBadge:680783452563439774> NSFW Commands - (11)',value ='`pussy`,`ass`,`thigh`,`porngif`,`4k`,`anal`,`hentai`,`hentaianal`,`hentaithigh`,`hentaineko`,`hentaikitsune`\n\n<:ElectroBookmark:668018207549816833> **Additional Links:**\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
+helpm.set_footer(text ='© 2020 ELECTRO, Inc. | ADIB HOQUE#2212')
 
 def is_developer(ctx):
         return ctx.message.author.id == "496978159724396545"     
@@ -832,9 +833,27 @@ async def help(ctx, page: str=None):
             help4.add_field(name = 'Resume',value ='Resumes the current paused song!\n**USAGE:**`e!resume`',inline = False)
             help4.add_field(name = 'Volume',value ='Change volume of the song!\n**USAGE:**`e!volume <1-200>`\n\n<:ElectroBookmark:668018207549816833> **Additional Links:**\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
             help4.set_thumbnail(url = 'https://cdn.discordapp.com/attachments/656517276832366595/677936454869188608/ElectroMusicBadge.png')
-            help4.set_footer(text ='© 2020 ELECTRO, Inc.')
+            help4.set_footer(text ='© 2020 ELECTRO, Inc. | ADIB HOQUE#2212')
             await bot.send_message(ctx.message.author ,embed=help4)
             await bot.say('📨 Check Your DMs For Music Commands!')
+        elif page == '5':
+            help4 = discord.Embed(description='**[NSFW COMMANDS](https://discord.gg/kuWVFpR)**\n**NOTE:** The channel must be a NSFW marked channel to use these commands.', color = 0xFFBF00) 
+            help4.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/679975327698649109/ElectroCommandsCategories.gif')
+            help4.add_field(name = '🐱 Pussy',value ='Image of women vagina!\nUSAGE: > `e!pussy`',inline = False)
+            help4.add_field(name = '🍑 Ass',value ='Image of women ass!\nUSAGE: > `e!ass',inline = False)
+            help4.add_field(name = '👄 Thigh',value ='Image of women thighs!\nUSAGE: > `e!thigh` ',inline = False)
+            help4.add_field(name = '📹 Porngif',value ='A porn gif!\nUSAGE: > `e!porngif`',inline = False)
+            help4.add_field(name = '🎦 4k',value ='Ultra HD(4k) porn image!\nUSAGE: > `e!4k`',inline = False)
+            help4.add_field(name = '🍑 Anal',value ='Image/gif of anal sex!\nUSAGE: > `e!anal`',inline = False)
+            help4.add_field(name = '💋 Hentai',value ='Everyones favorite Hentai gifs & images!\nUSAGE: > `e!hentai`',inline = False)
+            help4.add_field(name = '🍑 Hentaianal',value ='Hentai image/gif of anal sex!\nUSAGE: > `e!hentaianal`',inline = False)
+            help4.add_field(name = '👙 Hentaithigh',value ='Hentai women thighs!\nUSAGE: > `e!hentaithigh`',inline = False)
+            help4.add_field(name = '💄 Hentaineko',value ='Hentai character neko(catgirl) images!\nUSAGE: > `e!hentaineko`',inline = False)
+            help4.add_field(name = '👠 Hentaikitsune',value ='Hentai character kitsune images!\nUSAGE: > `e!hentaikitsune`\n\n<:ElectroBookmark:668018207549816833> **Additional Links:**\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
+            help4.set_thumbnail(url = 'https://cdn.discordapp.com/attachments/656517276832366595/677936454869188608/ElectroMusicBadge.png')
+            help4.set_footer(text ='© 2020 ELECTRO, Inc. | ADIB HOQUE#2212')
+            await bot.send_message(ctx.message.author ,embed=help4)
+            await bot.say('📨 Check Your DMs For NSFW Commands!')
         else:
             Return
 		
