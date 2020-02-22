@@ -1687,9 +1687,9 @@ async def urban(ctx, *, msg:str):
                         async with cs.get(url) as r:
                                 res = await r.json()
                                 embed = discord.Embed(title = 'Urban Dictionary',color = 0xFFBF00)
-                                embed.add_field(name = 'Top definition', value='res['list'][0]['definition']')
-                                embed.add_field(name = 'Example', value='res['list'][0]["example"]')
-                                embed.set_footer(text = '👍res['list'][0]["thumbs_up"] 👎res['list'][0]["thumbs_up"]')
+                                embed.add_field(name = 'Top definition', value="res['list'][0]['definition']")
+                                embed.add_field(name = 'Example', value="res['list'][0]["example"]")
+                                embed.set_footer(text = "👍res['list'][0]["thumbs_up"] 👎res['list'][0]["thumbs_up"]")
                                 await bot.say(embed=embed)
 
     
