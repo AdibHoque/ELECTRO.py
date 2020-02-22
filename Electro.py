@@ -22,7 +22,7 @@ helpm.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595
 helpm.add_field(name = '<:ElectroGeneralBadge:680783367247364097> General Commands - (10)',value ='`ping`,`userinfo`,`serverinfo`,`ownerinfo`,`avatar`,`membercount`,`invite`,`upvote`,`pokemon`,`shinypokemon`',inline = False)
 helpm.add_field(name = '<:ElectroModerationBadge:680783390999314466> Moderation Commands - (13)',value ='`kick`,`ban`,`setnick`,`role`,`say`,`DM`,`english`,`rolecolor`,`lockdown`,`unlock`,`menro`,`mute`,`unmute`',inline = False)
 helpm.add_field(name = '<:ElectroFunBadge:680783413065941002> Fun Commands - (20)',value ='`meme`,`joke`,`love`,`slap`, `kiss`, `hug`, `virgin`, `gender`, `tweet`, `rolldice`, `flipcoin`, `howgay`, `whowouldwin`, `captcha`,`magik`,`deepfry`,`iphonex`,`threats`,`clyde`,`trash`',inline = False)
-helpm.add_field(name = '<:ElectroNSFWBadge:680783452563439774> Music Commands - (8)',value ='`play`,`skip`,`stop`,`NP`,`queue`,`pause`,`resume`,`volume`',inline = False)
+helpm.add_field(name = '<:ElectroMusicBadge:680783435123654657> Music Commands - (8)',value ='`play`,`skip`,`stop`,`NP`,`queue`,`pause`,`resume`,`volume`',inline = False)
 helpm.add_field(name = '<:ElectroNSFWBadge:680783452563439774> NSFW Commands - (11)',value ='`pussy`,`ass`,`thigh`,`porngif`,`4k`,`anal`,`hentai`,`hentaianal`,`hentaithigh`,`hentaineko`,`hentaikitsune`\n\n<:ElectroBookmark:668018207549816833> **Additional Links:**\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
 helpm.set_footer(text ='© 2020 ELECTRO, Inc. | ADIB HOQUE#2212')
 
@@ -839,17 +839,17 @@ async def help(ctx, page: str=None):
         elif page == '5':
             help4 = discord.Embed(description='**[NSFW COMMANDS](https://discord.gg/kuWVFpR)**\n**NOTE:** The channel must be a NSFW marked channel to use these commands.', color = 0xFFBF00) 
             help4.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/679975327698649109/ElectroCommandsCategories.gif')
-            help4.add_field(name = '🐱 Pussy',value ='Image of women vagina!\Usage:\n> `e!pussy`',inline = False)
-            help4.add_field(name = '🍑 Ass',value ='Image of women ass!\nUsage:\n> `e!ass',inline = False)
-            help4.add_field(name = '👄 Thigh',value ='Image of women thighs!\nUsage:\n> `e!thigh` ',inline = False)
-            help4.add_field(name = '📹 Porngif',value ='A porn gif!\nUsage:\n> `e!porngif`',inline = False)
-            help4.add_field(name = '🎦 4k',value ='Ultra HD(4k) porn image!\nUsage:\n> `e!4k`',inline = False)
-            help4.add_field(name = '🍑 Anal',value ='Image/gif of anal sex!\nUsage:\n> `e!anal`',inline = False)
-            help4.add_field(name = '💋 Hentai',value ='Everyones favorite Hentai gifs & images!\nUsage:\n> `e!hentai`',inline = False)
-            help4.add_field(name = '🍑 Hentaianal',value ='Hentai image/gif of anal sex!\nUsage:\n> `e!hentaianal`',inline = False)
-            help4.add_field(name = '👙 Hentaithigh',value ='Hentai women thighs!\nUsage:\n> `e!hentaithigh`',inline = False)
-            help4.add_field(name = '💄 Hentaineko',value ='Hentai character neko(catgirl) images!\nUsage:\n> `e!hentaineko`',inline = False)
-            help4.add_field(name = '👠 Hentaikitsune',value ='Hentai character kitsune images!\nUsage:\n> `e!hentaikitsune`\n\n<:ElectroBookmark:668018207549816833> **Additional Links:**\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
+            help4.add_field(name = '🐱 Pussy',value ='Image of women vagina!\n> Usage: `e!pussy`',inline = False)
+            help4.add_field(name = '🍑 Ass',value ='Image of women ass!\n> Usage: `e!ass',inline = False)
+            help4.add_field(name = '👄 Thigh',value ='Image of women thighs!\n> Usage: `e!thigh` ',inline = False)
+            help4.add_field(name = '📹 Porngif',value ='A porn gif!\n> Usage: `e!porngif`',inline = False)
+            help4.add_field(name = '🎦 4k',value ='Ultra HD(4k) porn image!\n> Usage: `e!4k`',inline = False)
+            help4.add_field(name = '🍑 Anal',value ='Image/gif of anal sex!\n> Usage: `e!anal`',inline = False)
+            help4.add_field(name = '💋 Hentai',value ='Everyones favorite Hentai gifs & images!\n> Usage: `e!hentai`',inline = False)
+            help4.add_field(name = '🍑 Hentaianal',value ='Hentai image/gif of anal sex!\n> Usage:`e!hentaianal`',inline = False)
+            help4.add_field(name = '👙 Hentaithigh',value ='Hentai women thighs!\n> Usage: `e!hentaithigh`',inline = False)
+            help4.add_field(name = '💄 Hentaineko',value ='Hentai character neko(catgirl) images!\n> Usage: `e!hentaineko`',inline = False)
+            help4.add_field(name = '👠 Hentaikitsune',value ='Hentai character kitsune images!\n> Usage: `e!hentaikitsune`\n\n<:ElectroBookmark:668018207549816833> **Additional Links:**\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
             help4.set_thumbnail(url = 'https://cdn.discordapp.com/attachments/656517276832366595/677936454869188608/ElectroMusicBadge.png')
             help4.set_footer(text ='© 2020 ELECTRO, Inc. | ADIB HOQUE#2212')
             await bot.send_message(ctx.message.author ,embed=help4)
@@ -1678,8 +1678,8 @@ async def nsfw(ctx):
  
 @bot.command(pass_context=True)
 async def urban(ctx, *, msg:str):
-	if msg is None:
-                await bot.say('Please mention some word to define!')
+        if msg is None:
+                Return await bot.say('Please mention some word to define!')
         else:
                 word = '%20'.join(msg)
 		url = f"http://api.urbandictionary.com/v0/define?term={msg}"
