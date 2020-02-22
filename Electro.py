@@ -1679,18 +1679,18 @@ async def nsfw(ctx):
 @bot.command(pass_context=True)
 async def urban(ctx, *, msg:str):
         if msg is None:
-                Return await bot.say('Please mention some word to define!')
+                await bot.say('Please mention some word to define!')
         else:
                 word = '%20'.join(msg)
-		url = f"http://api.urbandictionary.com/v0/define?term={msg}"
-		async with aiohttp.ClientSession() as cs:
-			async with cs.get(url) as r:
-				res = await r.json()
-				embed = discord.Embed(title = 'Urban Dictionary',color = 0xFFBF00)
-				embed.add_field(name = 'Top definition', value='res['list'][0]['definition']')
+                url = f"http://api.urbandictionary.com/v0/define?term={msg}"
+                async with aiohttp.ClientSession() as cs:
+                        async with cs.get(url) as r:
+                                res = await r.json()
+                                embed = discord.Embed(title = 'Urban Dictionary',color = 0xFFBF00)
+                                embed.add_field(name = 'Top definition', value='res['list'][0]['definition']')
                                 embed.add_field(name = 'Example', value='res['list'][0]["example"]')
                                 embed.set_footer(text = '👍res['list'][0]["thumbs_up"] 👎res['list'][0]["thumbs_up"]')
-				await bot.say(embed=embed)
+                                await bot.say(embed=embed)
 
     
 @bot.command(pass_context=True)
