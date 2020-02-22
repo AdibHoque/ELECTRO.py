@@ -12,6 +12,8 @@ import datetime
 from discord import Game, Embed, Color, Status, ChannelType
 import dbl
 import logging
+import requests
+import urllib.request
 
 bot = commands.Bot(command_prefix=commands.when_mentioned_or('e!','E!'),case_insensitive=True)
 bot.remove_command("help")
