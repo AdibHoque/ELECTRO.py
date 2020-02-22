@@ -1692,7 +1692,7 @@ async def urban(ctx, *, msg:str):
                                 d = ['list'][0]['thumbs_down'] 
                                 embed = discord.Embed(title = 'Urban Dictionary',color = 0xFFBF00)
                                 embed.add_field(name = 'Top definition', value=a)
-                                embed.add_field(name = 'Example', value="e)
+                                embed.add_field(name = 'Example', value=e)
                                 embed.set_footer(text = "👍{u} 👎{d}")
                                 await bot.say(embed=embed)
 
