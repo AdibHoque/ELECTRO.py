@@ -10,7 +10,6 @@ import json
 import aiohttp
 import datetime
 from discord import Game, Embed, Color, Status, ChannelType
-import dbl
 import logging
 import requests
 import urllib.request
