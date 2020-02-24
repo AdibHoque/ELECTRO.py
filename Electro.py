@@ -1675,7 +1675,7 @@ def _save():
     with open('amounts.json', 'w+') as f:
         json.dump(amounts, f)
 
-@bot.command(pass_context = True, aliases=['pussy','ass','thigh','anal','4k','porngif','gonewild','hentai','hentaimidriff','hentaiass','hentaianal','hentaithigh','hentaineko','hentaikitsune'])
+@bot.command(pass_context = True, aliases=['boobs','pussy','ass','thigh','anal','4k','porngif','gonewild','hentai','hentaimidriff','hentaiass','hentaianal','hentaithigh','hentaineko','hentaikitsune','blowjob','play','stop','pause','resume','queue','np'])
 async def nsfw(ctx):
         print('{ctx.message.author} used {ctx.message.content}') 
  
@@ -1699,7 +1699,20 @@ async def urban(ctx, *, msg:str):
                                 embed.set_footer(text = "👍{u} 👎{d}")
                                 await bot.say(embed=embed)
 
-    
+@bot.command(pass_context=True)
+async def nekosapi(ctx, user: discord.Member):
+	if user.id == ctx.message.author.id:
+                await bot.say('Go infront of a mirror and  yourself!')
+        else:
+		url = f"https://nekos.life/api/v2/"
+		async with aiohttp.ClientSession() as cs:
+			async with cs.get(url) as r:
+				res = await r.json()
+				embed = discord.Embed(title = '{} Just got a  from {}'.format(user, ctx.message.author),color = 0xFFBF00)
+				embed.set_image(url=res['message'])
+				await bot.say(embed=embed)
+
+   
 @bot.command(pass_context=True)
 async def whosthatpokemon(ctx):
         num = random.randint(1, 807)
