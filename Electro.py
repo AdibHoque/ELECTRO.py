@@ -1701,7 +1701,7 @@ async def urban(ctx, *, msg:str):
 
 @bot.command(pass_context=True)
 async def nekosapi(ctx, user: discord.Member):
-	if user.id == ctx.message.author.id:
+        if user.id == ctx.message.author.id:
                 await bot.say('Go infront of a mirror and  yourself!')
         else:
                 url = f"https://nekos.life/api/v2/"
