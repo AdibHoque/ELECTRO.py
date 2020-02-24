@@ -755,6 +755,7 @@ async def help(ctx, page: str=None):
             await bot.say('📨 Check Your DMs For Bot Commands!')
         elif page == '1':
             help1 = discord.Embed(description='**[GENERAL COMMANDS](https://discord.gg/kuWVFpR)**', color = 0xFFBF00)
+            help1.set_image(url = '')
             help1.set_author(name='ELECTRO',url='https://discord.gg/kuWVFpR', icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
             help1.add_field(name = ':robot: Ping',value ='Returns ping lantency!\n> Usage: ``e!ping``\n> Aliases: `pong`,`lantency`',inline = False)
             help1.add_field(name = ':spy: Userinfo',value ='Shows info about user!\n> Usage: ``e!info @user``',inline = False)
@@ -772,7 +773,7 @@ async def help(ctx, page: str=None):
         elif page == '2':
             help2 = discord.Embed(description='**[MODERATION COMMANDS](https://discord.gg/kuWVFpR)**', color = 0xFFBF00)
             help2.set_author(name='ELECTRO',url='https://discord.gg/kuWVFpR', icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
-            help2.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/656760817852874752/ELECTRO_HELP2.gif')
+            help2.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/681510041471156226/ElectroHelp2.png')
             help2.add_field(name = 'Kick',value ='Kicks out mentioned user from the server!\n**USAGE:**``e!kick @user``',inline = False)
             help2.add_field(name = 'Ban',value ='Bans mentioned user from the server!\n**USAGE:**``e!ban @user``',inline = False) 
             help2.add_field(name = 'Unban',value ='Unbans user from the server!\n**USAGE:**``e!unban <User ID>``',inline = False) 
@@ -798,7 +799,7 @@ async def help(ctx, page: str=None):
         elif page == '3':
             help3 = discord.Embed(description='**[FUN COMMANDS](https://discord.gg/kuWVFpR)**', color = 0xFFBF00)
             help3.set_author(name='ELECTRO',url='https://discord.gg/kuWVFpR', icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
-            help3.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/656760847917514775/ELECTRO_HELP3.gif')
+            help3.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/681510041228279813/ElectroHelp3.png')
             help3.add_field(name = 'Joke',value ='Sends a random joke!\n**USAGE:**``e!joke``',inline = False)
             help3.add_field(name = 'Love',value ='Detect love percentage between two users!\n**USAGE:**``e!love @user @user``',inline = False) 
             help3.add_field(name = 'Slap',value ='Slaps mentioned user!\n**USAGE:**``e!slap @user``',inline = False)
@@ -825,7 +826,7 @@ async def help(ctx, page: str=None):
             await bot.say('📨 Check Your DMs For Fun Commands!')
         elif page == '4':
             help4 = discord.Embed(description='**[MUSIC COMMANDS](https://discord.gg/kuWVFpR)**', color = 0xFFBF00) 
-            help4.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/656760860085321748/ELECTRO_HELP4.gif')
+            help4.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/681510040644878396/ElectroHelp4.png')
             help4.add_field(name = 'Play',value ='Plays music from YouTube!\n**USAGE:**`e!play <music name> or <url>`',inline = False)
             help4.add_field(name = 'Skip',value ='Skips the current playing music!\n**USAGE:**`e!skip',inline = False)
             help4.add_field(name = 'Stop',value ='Stops playing music and leaves the vc!\n**USAGE:**`e!stop` ',inline = False)
@@ -839,8 +840,8 @@ async def help(ctx, page: str=None):
             await bot.send_message(ctx.message.author ,embed=help4)
             await bot.say('📨 Check Your DMs For Music Commands!')
         elif page == '5':
-            help4 = discord.Embed(description='**[NSFW COMMANDS](https://discord.gg/kuWVFpR)**\n**NOTE:** The channel must be a NSFW marked channel to use these commands.', color = 0xFFBF00) 
-            help4.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/679975327698649109/ElectroCommandsCategories.gif')
+            help4 = discord.Embed(description='**[NSFW COMMANDS](https://discord.gg/kuWVFpR)**\n**REQUIRED:** A NSFW marked channel.', color = 0xFFBF00) 
+            help4.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/681510040372379688/ElectroHelp5.png')
             help4.add_field(name = '🐽 Boobs',value ='Image of women boobs!\n> Usage: `e!boobs`',inline = False)
             help4.add_field(name = '😽 Pussy',value ='Image of women vagina!\n> Usage: `e!pussy`',inline = False)
             help4.add_field(name = '🍑 Ass',value ='Image of women ass!\n> Usage: `e!ass`',inline = False)
