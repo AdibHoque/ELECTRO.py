@@ -25,11 +25,13 @@
 ---  
 <img src="https://cdn.discordapp.com/attachments/656517276832366595/682143066689241094/ELECTRODiv.png" aling="center">
 <h2 align="center">ELECTRO CATEGORIES</h2>
-* General 
-* Moderation
-* Fun
-* Music
-* NSFW
+<ul>
+  <li>General</li>
+  <li>Moderation</li>
+  <li>Fun</li>
+  <li>Music</li>
+  <li>NSFW</li>
+</ul> 
 
 <h2 align="center">GENERAL COMMANDS</h2>
 
