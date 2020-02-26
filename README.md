@@ -18,14 +18,13 @@
 **ELECTRO** is a general purpose `moderation`, `fun ` & `music` bot. **ELECTRO** has all the `moderation` commands, many `fun` commands and `music` commands. To see the list of commands scroll down or type `e!help` or `@ELECTRO help` in a server which have **ELECTRO**. Join our discord [server](https://github.com/kyb3r/modmail/wiki) to contract the bot creator `@ADIB HOQUE#6969`.
 
 <img src="https://cdn.discordapp.com/attachments/656517276832366595/682143066689241094/ELECTRODiv.png" aling="center">
-
 <h2 align="center">PREFIX OF ELECTRO</h2> 
 
 **ELECTRO** commands can be used by the prefix `e!` or by mentioning `@ELECTRO`. If you want to use commands by mentioning you must put a space after the mention or the command won't work. 
 
 ---  
-
-# <h2 align="center">ELECTRO COMMAND CATEGORY</h2>
+<img src="https://cdn.discordapp.com/attachments/656517276832366595/682143066689241094/ELECTRODiv.png" aling="center">
+# <h2 align="center">ELECTRO CATEGORIES</h2>
 
 **ELECTRO** has a total of 4 Commands category which are `General`, `Moderation`, `Fun` & `Music` with over 40 useful commands! The commands might seem genial but they're whimsical!
 
@@ -44,7 +43,7 @@
 <h2 align="center">MUSIC COMMANDS</h2> 
 
 `play`,`skip`,`stop`,`pause`,`resume`,`volume`,`np`
-
+<img src="https://cdn.discordapp.com/attachments/656517276832366595/682143066689241094/ELECTRODiv.png" aling="center">
 ---
 
 <h2 align="center">CONTRIBUTE</h2> 
