@@ -26,12 +26,18 @@
 <img src="https://cdn.discordapp.com/attachments/656517276832366595/682143066689241094/ELECTRODiv.png" aling="center">
 <h2 align="center">ELECTRO CATEGORIES</h2>
 <ul>
-  <li>**General**</li>
+  <li>General</li>
   
 `ping`,`userinfo`,`serverinfo`,`ownerinfo`,`avatar`,`membercount`,`invite`,`upvote`
   <li>Moderation</li>
+  
+`kick`,`ban`,`setnick`,`role`,`say`,`DM`,`english`,`rolecolor`,`lockdown`,`unlock`,`menro` 
   <li>Fun</li>
+  
+`joke`,`love`,`slap`, `kiss`, `hug`, `virgin`, `gender`, `tweet`, `rolldice`, `flipcoin`, `howgay`, `whowouldwin`, `captcha`,`magik`,`deepfry`,`iphonex`,`threats`,`clyde`,`trash`
   <li>Music</li>
+  
+`play`,`skip`,`stop`,`pause`,`resume`,`volume`,`np` 
   <li>NSFW</li>
 </ul> 
 
