@@ -27,6 +27,7 @@
 <h2 align="center">ELECTRO CATEGORIES</h2>
 <ul>
   <li>**General**</li>
+  
 `ping`,`userinfo`,`serverinfo`,`ownerinfo`,`avatar`,`membercount`,`invite`,`upvote`
   <li>Moderation</li>
   <li>Fun</li>
