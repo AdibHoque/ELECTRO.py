@@ -24,7 +24,7 @@
 
 ---  
 <img src="https://cdn.discordapp.com/attachments/656517276832366595/682143066689241094/ELECTRODiv.png" aling="center">
-# <h2 align="center">ELECTRO CATEGORIES</h2>
+<h2 align="center">ELECTRO CATEGORIES</h2>
 
 **ELECTRO** has a total of 4 Commands category which are `General`, `Moderation`, `Fun` & `Music` with over 40 useful commands! The commands might seem genial but they're whimsical!
 
