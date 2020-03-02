@@ -195,6 +195,7 @@ async def revive(ctx):
         await bot.send_message(ctx.message.channel,role.mention,embed=embed)
 
 @bot.command(pass_context=True)
+@commands.has_permissions(manage_messages=True)
 async def richembed(ctx):
     q1 = await bot.send_message(ctx.message.channel, "What should be the embed Title?")
     a1 = await bot.wait_for_message(timeout= 30, author=ctx.message.author, channel=ctx.message.channel)
