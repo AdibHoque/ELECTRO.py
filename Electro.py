@@ -1714,6 +1714,21 @@ async def nekosapi(ctx, user: discord.Member):
                                 embed.set_image(url=res['message'])
                                 await bot.say(embed=embed)
 
+@bot.command(pass_context=True, aliases=['+'])
+async def add(ctx, a: int, b:int):
+    await bot.say(a+b)
+    
+@bot.command(pass_context=True, aliases=['-'] )
+async def subtract(ctx, a: int, b:int):
+    await bot.say(a-b)
+    
+@bot.command(pass_context=True, aliases=['*'] )
+async def multiply(ctx, a: int, b:int):
+    await bot.say(a*b)
+    
+@bot.command(pass_context=True, aliases=['/'])
+async def divide(ctx, a: int, b:int):
+    await bot.say(a/b)
    
 @bot.command(pass_context=True)
 async def whosthatpokemon(ctx):
