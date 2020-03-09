@@ -1386,7 +1386,7 @@ async def phcomment(ctx, *, msg:str):
                 async with cs.get(url) as r:
                         res = await r.json()
                         embed = discord.Embed(color=0xFFBF00)
-                        embed.set_image(url=res['message'])
+                        embed.set_image(url=res[0]['message'])
                         await bot.say(embed=embed)
 				 
 @bot.command(pass_context = True)
