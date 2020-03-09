@@ -1734,9 +1734,8 @@ async def divide(ctx, a: int, b:int):
 async def pokefuse(ctx):
         num = random.randint(1, 151)
         num2 = random.randint(1, 150)
-        u = 'http://images.alexonsager.net/pokemon/fused/'+{num}+'/'+{num}+'.'+{num2}+'.png' 
         embed = discord.Embed(title="pokefusion", color=0xFFBF00)
-        embed.set_image(url=u)
+        embed.set_image(url="http://images.alexonsager.net/pokemon/fused/{}/{}.{}.png".format(num, num, num2))
         await bot.send_message(ctx.message.channel, embed=embed)
        
    
