@@ -1645,6 +1645,58 @@ async def hug(ctx, user: discord.Member):
                                 embed.set_image(url=res['url'])
                                 await bot.say(embed=embed)
 
+@bot.command(pass_context=True)
+async def kiss(ctx, user: discord.Member):
+        if user.id == ctx.message.author.id:
+                await bot.say('Go infront of a mirror and kiss yourself!')
+        else:
+                url = f"https://nekos.life/api/v2/img/kiss"
+                async with aiohttp.ClientSession() as cs:
+                               async with cs.get(url) as r:
+                                res = await r.json()
+                                embed = discord.Embed(title = '{} Just kissed {}'.format(ctx.message.author, user),color = 0xFFBF00)
+                                embed.set_image(url=res['url'])
+                                await bot.say(embed=embed)
+ 
+@bot.command(pass_context=True)
+async def slap(ctx, user: discord.Member):
+        if user.id == ctx.message.author.id:
+                await bot.say('Go infront of a mirror and slap yourself!')
+        else:
+                url = f"https://nekos.life/api/v2/img/"
+                async with aiohttp.ClientSession() as cs:
+                               async with cs.get(url) as r:
+                                res = await r.json()
+                                embed = discord.Embed(title = '{} Just Slapped {}'.format(ctx.message.author, user),color = 0xFFBF00)
+                                embed.set_image(url=res['url'])
+                                await bot.say(embed=embed)
+ 
+@bot.command(pass_context=True)
+async def spank(ctx, user: discord.Member):
+        if user.id == ctx.message.author.id:
+                await bot.say('Go infront of a mirror and spank yourself!')
+        else:
+                url = f"https://nekos.life/api/v2/img/spank"
+                async with aiohttp.ClientSession() as cs:
+                               async with cs.get(url) as r:
+                                res = await r.json()
+                                embed = discord.Embed(title = '{} Just Spanked {}'.format(ctx.message.author, user),color = 0xFFBF00)
+                                embed.set_image(url=res['url'])
+                                await bot.say(embed=embed)
+ 
+@bot.command(pass_context=True)
+async def (ctx, user: discord.Member):
+        if user.id == ctx.message.author.id:
+                await bot.say('Go infront of a mirror and  yourself!')
+        else:
+                url = f"https://nekos.life/api/v2/img/"
+                async with aiohttp.ClientSession() as cs:
+                               async with cs.get(url) as r:
+                                res = await r.json()
+                                embed = discord.Embed(title = '{} Just  {}'.format(ctx.message.author, user),color = 0xFFBF00)
+                                embed.set_image(url=res['url'])
+                                await bot.say(embed=embed)
+ 
 @bot.command(pass_context=True, aliases=['+'])
 async def add(ctx, a: int, b:int):
     await bot.say(a+b)
