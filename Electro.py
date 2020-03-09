@@ -1706,11 +1706,11 @@ async def nekosapi(ctx, user: discord.Member):
         if user.id == ctx.message.author.id:
                 await bot.say('Go infront of a mirror and  yourself!')
         else:
-                url = f"https://nekos.life/api/v2/"
+                url = f"https://nekos.life/api/v2/img/hug"
                 async with aiohttp.ClientSession() as cs:
                                async with cs.get(url) as r:
                                 res = await r.json()
-                                embed = discord.Embed(title = '{} Just got a  from {}'.format(user, ctx.message.author),color = 0xFFBF00)
+                                embed = discord.Embed(title = '{} Just got a hug from {}'.format(user, ctx.message.author),color = 0xFFBF00)
                                 embed.set_image(url=res['message'])
                                 await bot.say(embed=embed)
 
