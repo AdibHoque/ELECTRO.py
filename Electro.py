@@ -1685,15 +1685,28 @@ async def spank(ctx, user: discord.Member):
                                 await bot.say(embed=embed)
  
 @bot.command(pass_context=True)
-async def (ctx, user: discord.Member):
+async def pat(ctx, user: discord.Member):
         if user.id == ctx.message.author.id:
-                await bot.say('Go infront of a mirror and  yourself!')
+                await bot.say('Go infront of a mirror and pat yourself!')
         else:
-                url = f"https://nekos.life/api/v2/img/"
+                url = f"https://nekos.life/api/v2/img/pat"
                 async with aiohttp.ClientSession() as cs:
                                async with cs.get(url) as r:
                                 res = await r.json()
-                                embed = discord.Embed(title = '{} Just  {}'.format(ctx.message.author, user),color = 0xFFBF00)
+                                embed = discord.Embed(title = '{} Just Pat {}'.format(ctx.message.author, user),color = 0xFFBF00)
+                                embed.set_image(url=res['url'])
+                                await bot.say(embed=embed)
+ 
+@bot.command(pass_context=True)
+async def cuddle(ctx, user: discord.Member):
+        if user.id == ctx.message.author.id:
+                await bot.say('Go infront of a mirror and cuddle yourself!')
+        else:
+                url = f"https://nekos.life/api/v2/img/cuddle"
+                async with aiohttp.ClientSession() as cs:
+                               async with cs.get(url) as r:
+                                res = await r.json()
+                                embed = discord.Embed(title = '{} Just cuddled {}'.format(ctx.message.author, user),color = 0xFFBF00)
                                 embed.set_image(url=res['url'])
                                 await bot.say(embed=embed)
  
