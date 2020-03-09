@@ -1709,7 +1709,8 @@ async def cuddle(ctx, user: discord.Member):
                                 embed = discord.Embed(title = '{} Just cuddled {}'.format(ctx.message.author, user),color = 0xFFBF00)
                                 embed.set_image(url=res['url'])
                                 await bot.say(embed=embed)
- @bot.command(pass_context=True)
+
+@bot.command(pass_context=True)
 async def 8ball(ctx, *, question:str):
         if question == None:
                 await bot.say('`e!8ball <question>')
