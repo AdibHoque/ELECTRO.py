@@ -1709,7 +1709,20 @@ async def cuddle(ctx, user: discord.Member):
                                 embed = discord.Embed(title = '{} Just cuddled {}'.format(ctx.message.author, user),color = 0xFFBF00)
                                 embed.set_image(url=res['url'])
                                 await bot.say(embed=embed)
+ @bot.command(pass_context=True)
+async def 8ball(ctx, *, question:str):
+        if question == None:
+                await bot.say('`e!8ball <question>')
+        else:
+                url = f"https://nekos.life/api/v2/img/8ball"
+                async with aiohttp.ClientSession() as cs:
+                               async with cs.get(url) as r:
+                                res = await r.json()
+                                embed = discord.Embed(title = '{}?'.format(question),color = 0xFFBF00)
+                                embed.set_image(url=res['url'])
+                                await bot.say(embed=embed)
  
+
 @bot.command(pass_context=True, aliases=['+'])
 async def add(ctx, a: int, b:int):
     await bot.say(a+b)
