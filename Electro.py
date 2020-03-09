@@ -1711,7 +1711,7 @@ async def nekosapi(ctx, user: discord.Member):
                                async with cs.get(url) as r:
                                 res = await r.json()
                                 embed = discord.Embed(title = '{} Just got a hug from {}'.format(user, ctx.message.author),color = 0xFFBF00)
-                                embed.set_image(url=res['message'])
+                                embed.set_image(url=res['url'])
                                 await bot.say(embed=embed)
 
 @bot.command(pass_context=True, aliases=['+'])
