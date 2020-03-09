@@ -1710,8 +1710,8 @@ async def cuddle(ctx, user: discord.Member):
                                 embed.set_image(url=res['url'])
                                 await bot.say(embed=embed)
 
-@bot.command(pass_context=True)
-async def 8ball(ctx, *, question:str):
+@bot.command(pass_context=True, aliases = ['8ball','question'])
+async def eightball(ctx, *, question:str):
         if question is None:
                 await bot.say('`e!8ball <question>')
         else:
