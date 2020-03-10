@@ -197,7 +197,7 @@ async def revive(ctx):
 @bot.command(pass_context=True)
 @commands.check(is_premium)
 @commands.has_permissions(manage_messages=True)
-async def richembed-adfT(ctx):
+async def richembedadfT(ctx):
     q1 = await bot.send_message(ctx.message.channel, "What should be the embed Author?")
     a1 = await bot.wait_for_message(timeout= 30, author=ctx.message.author, channel=ctx.message.channel)
     q2 = await bot.send_message(ctx.message.channel, "What should be the embed Description?")
@@ -223,7 +223,7 @@ async def richembed-adfT(ctx):
 @bot.command(pass_context=True)
 @commands.check(is_premium)
 @commands.has_permissions(manage_messages=True)
-async def richembed-adfi(ctx):
+async def richembedadfi(ctx):
     q1 = await bot.send_message(ctx.message.channel, "What should be the embed Author?")
     a1 = await bot.wait_for_message(timeout= 30, author=ctx.message.author, channel=ctx.message.channel)
     q2 = await bot.send_message(ctx.message.channel, "What should be the embed Description?")
@@ -249,7 +249,7 @@ async def richembed-adfi(ctx):
 @bot.command(pass_context=True)
 @commands.check(is_premium)
 @commands.has_permissions(manage_messages=True)
-async def richembed-tdfT(ctx):
+async def richembedtdfT(ctx):
     q1 = await bot.send_message(ctx.message.channel, "What should be the embed Title?")
     a1 = await bot.wait_for_message(timeout= 30, author=ctx.message.author, channel=ctx.message.channel)
     q2 = await bot.send_message(ctx.message.channel, "What should be the embed Description?")
@@ -275,7 +275,7 @@ async def richembed-tdfT(ctx):
 @bot.command(pass_context=True)
 @commands.check(is_premium)
 @commands.has_permissions(manage_messages=True)
-async def richembed-tdfi(ctx):
+async def richembedtdfi(ctx):
     q1 = await bot.send_message(ctx.message.channel, "What should be the embed Title?")
     a1 = await bot.wait_for_message(timeout= 30, author=ctx.message.author, channel=ctx.message.channel)
     q2 = await bot.send_message(ctx.message.channel, "What should be the embed Description?")
