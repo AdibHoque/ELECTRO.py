@@ -27,8 +27,8 @@ helpm.add_field(name = '<:ElectroMusicBadge:680783435123654657> MUSIC COMMANDS -
 helpm.add_field(name = '<:ElectroNSFWBadge:680783452563439774> NSFW COMMANDS - (14)',value ='`boobs`,`pussy`,`ass`,`thighs`,`porngif`,`4k`,`anal`,`classic`,`blowjob`,`hentai`,`hentaianal`,`hentaithigh`,`hentaineko`,`hentaikitsune`\n\n<:ElectroBookmark:668018207549816833> **ADDITIONAL LINKS:**\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
 helpm.set_footer(text ='© 2020 ELECTRO, Inc. | ADIB HOQUE#2212')
 
-def is_developer(ctx):
-        return ctx.message.author.id == "496978159724396545"     
+def is_premium(ctx):
+        return ctx.message.author.id == "49697815972439654"     
 
 help1 = discord.Embed(description='**[GENERAL COMMANDS](https://discord.gg/kuWVFpR)**', color = 0xFFBF00)
 help1.set_author(name='ELECTRO',url='https://discord.gg/kuWVFpR', icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
@@ -195,8 +195,61 @@ async def revive(ctx):
         await bot.send_message(ctx.message.channel,role.mention,embed=embed)
 
 @bot.command(pass_context=True)
+@commands.check(is_premium)
 @commands.has_permissions(manage_messages=True)
-async def richembed(ctx):
+async def richembed-adfT(ctx):
+    q1 = await bot.send_message(ctx.message.channel, "What should be the embed Author?")
+    a1 = await bot.wait_for_message(timeout= 30, author=ctx.message.author, channel=ctx.message.channel)
+    q2 = await bot.send_message(ctx.message.channel, "What should be the embed Description?")
+    a2 = await bot.wait_for_message(timeout= 30, author=ctx.message.author, channel=ctx.message.channel)
+    q3 = await bot.send_message(ctx.message.channel, "What should be the embed Thumbnail url?")
+    a3 = await bot.wait_for_message(timeout= 30, author=ctx.message.author, channel=ctx.message.channel)
+    q4 = await bot.send_message(ctx.message.channel, "What should be the embed Footer?")
+    a4 = await bot.wait_for_message(timeout= 30, author=ctx.message.author, channel=ctx.message.channel)
+    embed = discord.Embed(author='{}'.format(a1.content), description='{}'.format(a2.content),color=0xFFBF00)
+    embed.set_thumbnail(url = '{}'.format(a3.content))
+    embed.set_footer(text='{}'.format(a4.content))
+    await bot.send_message(ctx.message.channel, embed=embed)
+    await bot.delete_message(ctx.message) 
+    await bot.delete_message(a1)
+    await bot.delete_message(q1)
+    await bot.delete_message(a2)
+    await bot.delete_message(q2)
+    await bot.delete_message(a3)
+    await bot.delete_message(q3)
+    await bot.delete_message(a4) 
+    await bot.delete_message(q4)
+	
+@bot.command(pass_context=True)
+@commands.check(is_premium)
+@commands.has_permissions(manage_messages=True)
+async def richembed-adfi(ctx):
+    q1 = await bot.send_message(ctx.message.channel, "What should be the embed Author?")
+    a1 = await bot.wait_for_message(timeout= 30, author=ctx.message.author, channel=ctx.message.channel)
+    q2 = await bot.send_message(ctx.message.channel, "What should be the embed Description?")
+    a2 = await bot.wait_for_message(timeout= 30, author=ctx.message.author, channel=ctx.message.channel)
+    q3 = await bot.send_message(ctx.message.channel, "What should be the embed Image url?")
+    a3 = await bot.wait_for_message(timeout= 30, author=ctx.message.author, channel=ctx.message.channel)
+    q4 = await bot.send_message(ctx.message.channel, "What should be the embed Footer?")
+    a4 = await bot.wait_for_message(timeout= 30, author=ctx.message.author, channel=ctx.message.channel)
+    embed = discord.Embed(title='{}'.format(a1.content), description='{}'.format(a2.content),color=0xFFBF00)
+    embed.set_image(url = '{}'.format(a3.content))
+    embed.set_footer(text='{}'.format(a4.content))
+    await bot.send_message(ctx.message.channel, embed=embed)
+    await bot.delete_message(ctx.message) 
+    await bot.delete_message(a1)
+    await bot.delete_message(q1)
+    await bot.delete_message(a2)
+    await bot.delete_message(q2)
+    await bot.delete_message(a3)
+    await bot.delete_message(q3)
+    await bot.delete_message(a4) 
+    await bot.delete_message(q4)
+
+@bot.command(pass_context=True)
+@commands.check(is_premium)
+@commands.has_permissions(manage_messages=True)
+async def richembed-tdfT(ctx):
     q1 = await bot.send_message(ctx.message.channel, "What should be the embed Title?")
     a1 = await bot.wait_for_message(timeout= 30, author=ctx.message.author, channel=ctx.message.channel)
     q2 = await bot.send_message(ctx.message.channel, "What should be the embed Description?")
@@ -218,7 +271,33 @@ async def richembed(ctx):
     await bot.delete_message(q3)
     await bot.delete_message(a4) 
     await bot.delete_message(q4)
-														
+	
+@bot.command(pass_context=True)
+@commands.check(is_premium)
+@commands.has_permissions(manage_messages=True)
+async def richembed-tdfi(ctx):
+    q1 = await bot.send_message(ctx.message.channel, "What should be the embed Title?")
+    a1 = await bot.wait_for_message(timeout= 30, author=ctx.message.author, channel=ctx.message.channel)
+    q2 = await bot.send_message(ctx.message.channel, "What should be the embed Description?")
+    a2 = await bot.wait_for_message(timeout= 30, author=ctx.message.author, channel=ctx.message.channel)
+    q3 = await bot.send_message(ctx.message.channel, "What should be the embed Image url?")
+    a3 = await bot.wait_for_message(timeout= 30, author=ctx.message.author, channel=ctx.message.channel)
+    q4 = await bot.send_message(ctx.message.channel, "What should be the embed Footer?")
+    a4 = await bot.wait_for_message(timeout= 30, author=ctx.message.author, channel=ctx.message.channel)
+    embed = discord.Embed(title='{}'.format(a1.content), description='{}'.format(a2.content),color=0xFFBF00)
+    embed.set_image(url = '{}'.format(a3.content))
+    embed.set_footer(text='{}'.format(a4.content))
+    await bot.send_message(ctx.message.channel, embed=embed)
+    await bot.delete_message(ctx.message) 
+    await bot.delete_message(a1)
+    await bot.delete_message(q1)
+    await bot.delete_message(a2)
+    await bot.delete_message(q2)
+    await bot.delete_message(a3)
+    await bot.delete_message(q3)
+    await bot.delete_message(a4) 
+    await bot.delete_message(q4)
+													
 @bot.command(pass_context = True, aliases=['pong','PING'])
 @commands.cooldown(1, 5, commands.BucketType.user)
 async def ping(ctx):
