@@ -1383,7 +1383,9 @@ async def clyde(ctx, *, msg:str):
 async def phcomment(ctx, *, msg:str):
         url = f"https://nekobot.xyz/api/imagegen?type=phcomment&image={ctx.message.author.avatar_url}&text={msg}&username={ctx.message.author.name}" 
         async with aiohttp.ClientSession() as cs:
-                async with cs.get(url) as r:
+                async with cs.get(f"https://nekobot.xyz/api/imagegen?type=phcomment"
+                              f"&image={ctx.message.author.avatar_url}"
+                              f"&text={msg}&username={ctx.message.author.name}") as r:
                         res = await r.json()
                         embed = discord.Embed(color=0xFFBF00)
                         embed.set_image(url=res[0]['message'])
