@@ -655,7 +655,7 @@ async def love(ctx, user: discord.Member = None, *, user2: discord.Member = None
             embed.set_image(url=res['message'])
             await bot.say(embed=embed)
  
-@bot.command(pass_context=True, aliases=['gay','gayrate','howmuchgay','g8','lesbian'])
+@bot.command(pass_context=True, aliases=['gayrate','howmuchgay','g8','lesborate'])
 async def howgay(ctx, user: discord.Member=None):
         if user is None:
                 score = random.randint(0, 100)
@@ -1698,7 +1698,7 @@ def _save():
     with open('amounts.json', 'w+') as f:
         json.dump(amounts, f)
 
-@bot.command(pass_context = True, aliases=['boobs','pussy','ass','thigh','anal','4k','porngif','gonewild','hentai','hentaimidriff','hentaiass','hentaianal','hentaithigh','hentaineko','hentaikitsune','blowjob','play','stop','pause','resume','queue','np'])
+@bot.command(pass_context = True, aliases=['boobs','pussy','ass','thigh','anal','4k','porngif','gonewild','hentai','hentaimidriff','hentaiass','hentaianal','hentaithigh','hentaineko','hentaikitsune','blowjob','play','stop','pause','resume','queue','np','triggered','brazzers','burn','brilliance','bravery','balance','gay','missionpassed','rip'])
 async def nsfw(ctx):
         print('{ctx.message.author} used {ctx.message.content}') 
  
