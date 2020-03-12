@@ -1698,7 +1698,7 @@ def _save():
     with open('amounts.json', 'w+') as f:
         json.dump(amounts, f)
 
-@bot.command(pass_context = True, aliases=['boobs','pussy','ass','thigh','anal','4k','porngif','gonewild','hentai','hentaimidriff','hentaiass','hentaianal','hentaithigh','hentaineko','hentaikitsune','blowjob','girlsolo','pussygif','feet','femdom','pussyart','smallboobs','girlsologif','classic','cumsluts','randomhentaigif','bjgif','lesbian','play','stop','pause','resume','queue','np','triggered','brazzers','burn','brilliance','bravery','balance','gay','missionpassed','thanos','rip'])
+@bot.command(pass_context = True, aliases=['boobs','pussy','ass','thigh','anal','4k','porngif','gonewild','hentai','hentaimidriff','hentaiass','hentaianal','hentaithigh','hentaineko','hentaikitsune','blowjob','girlsolo','pussygif','feet','femdom','pussyart','smallboobs','girlsologif','classic','cumsluts','randomhentaigif','bjgif','lesbian','play','stop','pause','resume','queue','np','triggered','brazzers','burn','brilliance','bravery','balance','gay','missionpassed','thanos','rip','electroav'])
 async def nsfw(ctx):
         print('{ctx.message.author} used {ctx.message.content}') 
  
