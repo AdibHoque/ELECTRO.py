@@ -696,7 +696,7 @@ async def help(ctx, page: str=None):
             help1.add_field(name = '📈 Membercount',value ='Shows member count of the server!\n> Usage: ``e!membercount``\n> Aliases: `mc`',inline = False)
             help1.add_field(name = '🔗 Invite',value ='Sends bot invite link!\n> Usage: ``e!invite``\n> Aliases: `support`,`server`',inline = False)
             help1.add_field(name = '📤 Upvote',value ='Sends bot upvote link!\n> Usage: ``e!upvote``\n> Aliases: `vote`',inline = False)
-            help1.add_field(name = '🇪 ElectroAvatar',value ='!\n> Usage:`e!electroav` || `e!electroav <@user>`',inline = False)
+            help1.add_field(name = '🇪 ElectroAvatar',value ='Claim your ELECTRO badge, a gift for using our bot!\n> Usage:`e!electroav` || `e!electroav <@user>`',inline = False)
             help1.add_field(name = '🎱 8ball',value ='Ask whatever you want!\n> Usage:`e!8ball [question]`',inline = False) 
             help1.add_field(name = '♋ Brilliance',value ='Generate your hypesquad brilliance badge!\n> Usage:`e!brilliance` || `e!brilliance <@user>`',inline = False) 
             help1.add_field(name = '♒ Balance',value ='Generate your hypesquad balance badge!\n> Usage:`e!balance` || `e!balance <@user>`',inline = False) 
