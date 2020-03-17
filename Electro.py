@@ -446,9 +446,9 @@ async def masstype(ctx, *, message=None):
 @bot.command(pass_context = True)
 async def meme(ctx):
     r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
-    embed = discord.Embed(color = 0xFFBF00) 
+    embed = discord.Embed(title = data[0]["data"]["children"][0]["data"]["title"], color = 0xFFBF00) 
     async with aiohttp.ClientSession() as session:
-        async with session.get("https://api.reddit.com/r/dankmemer/random") as r:
+        async with session.get("https://api.reddit.com/r/me_irl/random") as r:
             data = await r.json()
             embed.set_image(url=data[0]["data"]["children"][0]["data"]["url"])
             await bot.say(embed=embed)
