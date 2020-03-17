@@ -452,7 +452,7 @@ async def meme(ctx):
             data = await r.json()
             embed.set_image(url=data[0]["data"]["children"][0]["data"]["url"])
             await bot.say(embed=embed)
-            print(data[0]["data"]["children"][0]["data"]["body"]) 
+            print(data) 
 
 @bot.command(pass_context = True) 
 @commands.has_permissions(manage_roles=True)
