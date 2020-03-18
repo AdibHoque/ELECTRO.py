@@ -976,10 +976,12 @@ async def embed(ctx, channel: discord.Channel=None, *, msg: str):
 async def poll(ctx, *, msg: str):
 	embed=discord.Embed(title="<:ElectroPoll:689859743141068871> POLL",description="{}".format(msg), color=0xFFBF00)
 	m = await bot.send_message(ctx.message.channel, embed=embed)
-	await bot.delete_message(ctx.message)
-        await bot.add_reaction(m, ':ElectroThumbsUp:689855938320007226')
-        await bot.add_reaction(m, ':ElectroThumbsDown:689855969945321523')
-    
+        await bot.delete_message(ctx.message)
+        up = :ElectroThumbsUp:689855938320007226
+        down = :ElectroThumbsDown:689855969945321523
+        await bot.add_reaction(m, up)
+        await bot.add_reaction(m, down)
+
 @bot.command(pass_context = True)
 @commands.has_permissions(administrator=True) 
 async def announce(ctx, channel: discord.Channel=None, *, msg: str):
