@@ -975,8 +975,10 @@ async def embed(ctx, channel: discord.Channel=None, *, msg: str):
 @commands.has_permissions(manage_messages=True) 
 async def poll(ctx, *, msg: str):
 	embed=discord.Embed(title="POLL",description="{}".format(msg), color=0xFFBF00)
-	await bot.send_message(ctx.message.channel, embed=embed)
-	await bot.delete_message(ctx.message) 
+	m = await bot.send_message(ctx.message.channel, embed=embed)
+	await bot.delete_message(ctx.message)
+        await bot.add_reaction(msg, :ElectroThumbsUp:689855938320007226)
+        await bot.add_reaction(msg, :ElectroThumbsDown:689855969945321523)
     
 @bot.command(pass_context = True)
 @commands.has_permissions(administrator=True) 
