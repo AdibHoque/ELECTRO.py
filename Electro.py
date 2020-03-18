@@ -970,6 +970,13 @@ async def embed(ctx, channel: discord.Channel=None, *, msg: str):
 	embed=discord.Embed(description="{}".format(msg), color=0xFFBF00)
 	await bot.send_message(channel, embed=embed)
 	await bot.delete_message(ctx.message)
+
+@bot.command(pass_context = True)
+@commands.has_permissions(manage_messages=True) 
+async def poll(ctx, *, msg: str):
+	embed=discord.Embed(title="POLL",description="{}".format(msg), color=0xFFBF00)
+	await bot.send_message(ctx.message.channel, embed=embed)
+	await bot.delete_message(ctx.message) 
     
 @bot.command(pass_context = True)
 @commands.has_permissions(administrator=True) 
