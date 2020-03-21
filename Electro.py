@@ -1670,7 +1670,8 @@ async def hug(ctx, user: discord.Member):
                 async with aiohttp.ClientSession() as cs:
                                async with cs.get(url) as r:
                                 res = await r.json()
-                                embed = discord.Embed(title = '{} Just hugged {}'.format(ctx.message.author, user),color = 0xFFBF00)
+                                embed = discord.Embed(color = 0xFFBF00)
+                                embed.set_author(name="{} gives {} a big hug! ❤".format(ctx.message.author.name, user.name),url='https://discord.gg/kuWVFpR', icon_url=ctx.message.author.avatar_url)
                                 embed.set_image(url=res['url'])
                                 await bot.say(embed=embed)
 
@@ -1683,7 +1684,8 @@ async def kiss(ctx, user: discord.Member):
                 async with aiohttp.ClientSession() as cs:
                                async with cs.get(url) as r:
                                 res = await r.json()
-                                embed = discord.Embed(title = '{} Just kissed {}'.format(ctx.message.author, user),color = 0xFFBF00)
+                                embed = discord.Embed(color = 0xFFBF00)
+                                embed.set_author(name="{} kisses {}'s lips! ❤".format(ctx.message.author.name, user.name),url='https://discord.gg/kuWVFpR', icon_url=ctx.message.author.avatar_url)
                                 embed.set_image(url=res['url'])
                                 await bot.say(embed=embed)
  
@@ -1696,7 +1698,8 @@ async def slap(ctx, user: discord.Member):
                 async with aiohttp.ClientSession() as cs:
                                async with cs.get(url) as r:
                                 res = await r.json()
-                                embed = discord.Embed(title = '{} Just Slapped {}'.format(ctx.message.author, user),color = 0xFFBF00)
+                                embed = discord.Embed(color = 0xFFBF00)
+                                embed.set_author(name="{} gives {} a tight slap! 😡".format(ctx.message.author.name, user.name),url='https://discord.gg/kuWVFpR', icon_url=ctx.message.author.avatar_url)
                                 embed.set_image(url=res['url'])
                                 await bot.say(embed=embed)
  
@@ -1709,7 +1712,8 @@ async def spank(ctx, user: discord.Member):
                 async with aiohttp.ClientSession() as cs:
                                async with cs.get(url) as r:
                                 res = await r.json()
-                                embed = discord.Embed(title = '{} Just Spanked {}'.format(ctx.message.author, user),color = 0xFFBF00)
+                                embed = discord.Embed(color = 0xFFBF00)
+                                embed.set_author(name="{} spanks {}! 🍑".format(ctx.message.author.name, user.name),url='https://discord.gg/kuWVFpR', icon_url=ctx.message.author.avatar_url)
                                 embed.set_image(url=res['url'])
                                 await bot.say(embed=embed)
  
@@ -1722,7 +1726,8 @@ async def pat(ctx, user: discord.Member):
                 async with aiohttp.ClientSession() as cs:
                                async with cs.get(url) as r:
                                 res = await r.json()
-                                embed = discord.Embed(title = '{} Just Pat {}'.format(ctx.message.author, user),color = 0xFFBF00)
+                                embed = discord.Embed(color = 0xFFBF00)
+                                embed.set_author(name="{} pats {}! 🤗".format(ctx.message.author.name, user.name),url='https://discord.gg/kuWVFpR', icon_url=ctx.message.author.avatar_url)
                                 embed.set_image(url=res['url'])
                                 await bot.say(embed=embed)
  
@@ -1735,7 +1740,8 @@ async def cuddle(ctx, user: discord.Member):
                 async with aiohttp.ClientSession() as cs:
                                async with cs.get(url) as r:
                                 res = await r.json()
-                                embed = discord.Embed(title = '{} Just cuddled {}'.format(ctx.message.author, user),color = 0xFFBF00)
+                                embed = discord.Embed(color = 0xFFBF00)
+                                embed.set_author(name="{} cuddles {}! 😏".format(ctx.message.author.name, user.name),url='https://discord.gg/kuWVFpR', icon_url=ctx.message.author.avatar_url)
                                 embed.set_image(url=res['url'])
                                 await bot.say(embed=embed)
 
