@@ -1694,7 +1694,7 @@ async def slap(ctx, user: discord.Member):
         if user.id == ctx.message.author.id:
                 await bot.say('Go infront of a mirror and slap yourself!')
         else:
-                url = f"https://nekos.life/api/v2/img/"
+                url = f"https://nekos.life/api/v2/img/slap"
                 async with aiohttp.ClientSession() as cs:
                                async with cs.get(url) as r:
                                 res = await r.json()
