@@ -1699,7 +1699,7 @@ async def slap(ctx, user: discord.Member):
                                async with cs.get(url) as r:
                                 res = await r.json()
                                 embed = discord.Embed(color = 0xFFBF00)
-                                embed.set_author(name="{} gives {} a tight slap! 😡".format(ctx.message.author.name, user.name),url='https://discord.gg/kuWVFpR', icon_url=ctx.message.author.avatar_url)
+                                embed.set_author(name="{} slaps {}!! Deserves it! 😡".format(ctx.message.author.name, user.name),url='https://discord.gg/kuWVFpR', icon_url=ctx.message.author.avatar_url)
                                 embed.set_image(url=res['url'])
                                 await bot.say(embed=embed)
  
