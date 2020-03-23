@@ -20,7 +20,7 @@ bot.remove_command("help")
 helpm = discord.Embed(description='**[HELP MENU](https://discord.gg/kuWVFpR)**\n● To get detailed help on an category, react with their emotes or type `e!help 1`,`e!help 2` Etc. accordingly!', color = 0xFFBF00) 
 helpm.set_author(name='ELECTRO',url='https://discord.gg/kuWVFpR', icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
 helpm.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/679975327698649109/ElectroCommandsCategories.gif')
-helpm.add_field(name = '<:ElectroGeneralBadge:680783367247364097> GENERAL COMMANDS - (21)',value ='`ping`, `userinfo`, `serverinfo`, `ownerinfo`, `avatar`, `membercount`, `math`, `invite`, `upvote`, `pokemon`, `shinypokemon`, `pokefuse`, `8ball`, `electroav`, `brilliance`, `bravery`, `balance`, `coronaav`, `coronaav-green`, `coronaav-purple`, `coronaav-pink`',inline = False)
+helpm.add_field(name = '<:ElectroGeneralBadge:680783367247364097> GENERAL COMMANDS - (21)',value ='`ping`, `userinfo`, `serverinfo`, `ownerinfo`, `avatar`, `membercount`, `math`, `invite`, `upvote`, `pokemon`, `shinypokemon`, `pokefuse`, `8ball`, `electroav`, `brilliance`, `bravery`, `balance`, `coronaav`, `coronaav-green`, `coronaav-purple`, `coronaav-pink`, `corona`',inline = False)
 helpm.add_field(name = '<:ElectroModerationBadge:680783390999314466> MODERATION COMMANDS - (14)',value ='`kick`, `ban`, `setnick`, `role`, `say`, `embed`, `DM`, `english`, `rolecolor`, `lockdown`, `unlock`, `menro`, `mute`, `unmute`',inline = False)
 helpm.add_field(name = '<:ElectroFunBadge:680783413065941002> FUN COMMANDS - (26)',value ='`triggered`, `brazzers`, `burn`, `gay`, `missionpassed`, `thanos`, `rip`, `meme`, `pat`, `love`, `slap`, `kiss`, `hug`, `cuddle`, `spank`, `tweet`, `phubcomment`, `howgay`, `whowouldwin`, `captcha`, `magik`, `deepfry`,`iphonex`, `threats`, `clyde`, `trash`',inline = False)
 helpm.add_field(name = '<:ElectroMusicBadge:680783435123654657> MUSIC COMMANDS - (8)',value ='`play`, `skip`, `stop`, `NP`, `queue`, `pause`, `resume`, `volume`',inline = False)
@@ -1637,7 +1637,7 @@ def _save():
     with open('amounts.json', 'w+') as f:
         json.dump(amounts, f)
 
-@bot.command(pass_context = True, aliases=['boobs','pussy','ass','thigh','anal','4k','porngif','gonewild','hentai','hentaimidriff','hentaiass','hentaianal','hentaithigh','hentaineko','hentaikitsune','blowjob','girlsolo','pussygif','feet','femdom','pussyart','smallboobs','girlsologif','classic','cumsluts','randomhentaigif','bjgif','lesbian','play','stop','pause','resume','queue','np','triggered','brazzers','burn','brilliance','bravery','balance','gay','missionpassed','thanos','rip','electroav','math','coronaav','coronaav-green','coronaav-purple','coronaav-pink'])
+@bot.command(pass_context = True, aliases=['boobs','pussy','ass','thigh','anal','4k','porngif','gonewild','hentai','hentaimidriff','hentaiass','hentaianal','hentaithigh','hentaineko','hentaikitsune','blowjob','girlsolo','pussygif','feet','femdom','pussyart','smallboobs','girlsologif','classic','cumsluts','randomhentaigif','bjgif','lesbian','play','stop','pause','resume','queue','np','triggered','brazzers','burn','brilliance','bravery','balance','gay','missionpassed','thanos','rip','electroav','math','coronaav','coronaav-green','coronaav-purple','coronaav-pink','corona'])
 async def nsfw(ctx):
         print('{ctx.message.author} used {ctx.message.content}') 
  
