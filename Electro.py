@@ -17,7 +17,7 @@ import urllib.request
 bot = commands.Bot(command_prefix=commands.when_mentioned_or('e!','E!'),case_insensitive=True)
 bot.remove_command("help")
 
-helpm = discord.Embed(description='**[HELP MENU](https://discord.gg/kuWVFpR)**\n● To get detailed help on an category, react with their emotes or type `e!help 1`,`e!help 2` Etc. accordingly!', color = 0xFFBF00) 
+helpm = discord.Embed(description='**[HELP MENU](https://discord.gg/kuWVFpR)**\n● To get detailed help on an category, type `e!help 1`,`e!help 2` Etc. accordingly!', color = 0xFFBF00) 
 helpm.set_author(name='ELECTRO',url='https://discord.gg/kuWVFpR', icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
 helpm.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/679975327698649109/ElectroCommandsCategories.gif')
 helpm.add_field(name = '<:ElectroGeneralBadge:680783367247364097> GENERAL COMMANDS - (21)',value ='`ping`, `userinfo`, `serverinfo`, `ownerinfo`, `avatar`, `membercount`, `math`, `invite`, `upvote`, `pokemon`, `shinypokemon`, `pokefuse`, `8ball`, `electroav`, `brilliance`, `bravery`, `balance`, `coronaav`, `coronaav-green`, `coronaav-purple`, `coronaav-pink`, `corona`',inline = False)
@@ -674,13 +674,7 @@ async def adib(ctx):
 async def help(ctx, page: str=None):
         if page is None:
             author = ctx.message.author
-            msg = await bot.send_message(author ,embed=helpm)
-            await bot.add_reaction(msg,':ElectroGeneralBadge:680783367247364097')
-            await bot.add_reaction(msg,':ElectroModerationBadge:680783390999314466')
-            await bot.add_reaction(msg,':ElectroFunBadge:680783413065941002')
-            await bot.add_reaction(msg,':ElectroMusicBadge:680783435123654657')
-            await bot.add_reaction(msg,':ElectroNSFWBadge:680783452563439774')
-            await bot.say('📨 Check Your DMs For Bot Commands!')
+            await bot.send_message(ctx.message.channel, embed=helpm) 
         elif page == '1':
             help1 = discord.Embed(description='**[GENERAL COMMANDS](https://discord.gg/kuWVFpR)**', color = 0xFFBF00)
             help1.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/681510041790185561/ElectroHelp1.png')
