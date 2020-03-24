@@ -638,7 +638,7 @@ async def role(ctx, user:discord.Member=None,*, role:discord.Role=None):
 @bot.command(pass_context=True)
 async def fortnite(ctx):
 	await asyncio.sleep(1)
-	await bot.say('<a:fortnite1:527116722369593365> <a:fortnite2:527116726249193472> <a:fortnite1:527116722369593365>')
+	await bot.say('<a:fortnite1:57116722369593365> <a:fortnite2:527116726249193472> <a:fortnite1:527116722369593365>')
 	await bot.delete_message(ctx.message)
 	
 @bot.command(pass_context=True)
