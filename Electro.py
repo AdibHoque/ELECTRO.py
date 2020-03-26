@@ -28,7 +28,7 @@ helpm.add_field(name = '<:ElectroNSFWBadge:680783452563439774> NSFW COMMANDS - (
 helpm.set_footer(text ='© 2020 ELECTRO, Inc. | ADIB HOQUE')
 
 def is_premium(ctx):
-        return ctx.message.author.id == "49697815972439654"     
+        return ctx.message.author.id == "496978159724396545"     
 
 async def status_task():
     while True:
