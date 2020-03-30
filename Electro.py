@@ -453,9 +453,9 @@ async def meme(ctx):
 @bot.command(pass_context=True)
 async def motivation(ctx):
         number = random.randint(1, 106)
-        imgurl = 'https://raw.githubusercontent.com/AdibHoque/API/master/Motivation/%20'+number+'.jpg'
+        imgurl = "https://raw.githubusercontent.com/AdibHoque/API/master/Motivation/%20{number}.jpg"
         embed = discord.Embed(title = 'Motivation', color = 0xFFBF00)
-        embed.set_image(url = imgurl) 
+        embed.set_image(url=imgurl) 
         await bot.say(embed=embed)
 
 @bot.command(pass_context = True) 
