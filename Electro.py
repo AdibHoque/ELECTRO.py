@@ -450,6 +450,14 @@ async def meme(ctx):
             embed.set_image(url=data[0]["data"]["children"][0]["data"]["url"])
             await bot.say(embed=embed)
 
+@bot.command(pass_context=True)
+async def motivation(ctx):
+        number = random.radiant(1, 106)
+        imgurl = 'https://raw.githubusercontent.com/AdibHoque/API/master/Motivation/%20'+number+'.jpg'
+        embed = discord.Embed(title = 'Motivation', color = 0xFFBF00)
+        embed.set_image(url = imgurl) 
+        await bot.say(embed=embed)
+
 @bot.command(pass_context = True) 
 @commands.has_permissions(manage_roles=True)
 async def giverole(ctx, user: discord.Member, *, role: discord.Role = None):
