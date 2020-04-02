@@ -360,7 +360,7 @@ async def owner():
     await bot.say(embed=embed)    
     
 @bot.command(pass_connext=True,aliases=['se'])
-async def emoji(emoji: discord.Emoji=None):
+async def emoji(emoji: discord.Emoji):
     await bot.say("https://cdn.discordapp.com/emojis/{}.png".format(emoji.id))    		
 	  		   	   	
 @bot.command(pass_context=True)
