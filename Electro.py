@@ -361,7 +361,7 @@ async def owner():
     
 @bot.command(pass_connext=True,aliases=['se'])
 async def emoji(ctx, emoji: discord.Emoji):
-    await bot.say(emoji.url)    		
+    await bot.say("https://cdn.discordapp.com/emojis/{}.png".format(emoji.id))    		
 	  		   	   	
 @bot.command(pass_context=True)
 @commands.has_permissions(kick_members=True)
