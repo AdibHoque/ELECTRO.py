@@ -360,8 +360,13 @@ async def owner():
     await bot.say(embed=embed)    
     
 @bot.command(pass_connext=True,aliases=['se'])
-async def emoji(emoji: discord.Emoji):
-    await bot.say("https://cdn.discordapp.com/emojis/{}.png".format(emoji.id))    		
+async def emoji(ctx, emoji=None):
+    if emoji = discord.Emoji:
+      await bot.say("https://cdn.discordapp.com/emojis/{}.png".format(emoji.id))    
+    elif emoji = discord.Emoji.animated:
+      await bot.say("https://cdn.discordapp.com/emojis/{}.gif".format(emoji.id))
+    else:
+      Return		
 	  		   	   	
 @bot.command(pass_context=True)
 @commands.has_permissions(kick_members=True)
