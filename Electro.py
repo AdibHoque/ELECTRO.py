@@ -361,9 +361,9 @@ async def owner():
     
 @bot.command(pass_connext=True,aliases=['se'])
 async def emoji(ctx, emoji=None):
-    if emoji = discord.Emoji:
+    if emoji == discord.Emoji:
       await bot.say("https://cdn.discordapp.com/emojis/{}.png".format(emoji.id))    
-    elif emoji = discord.Emoji.animated:
+    elif emoji == discord.Emoji.animated:
       await bot.say("https://cdn.discordapp.com/emojis/{}.gif".format(emoji.id))
     else:
       Return		
