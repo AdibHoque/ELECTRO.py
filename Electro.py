@@ -1129,6 +1129,7 @@ async def on_message(message):
 		await bot.add_reaction(message, emoji) 
 		channe = bot.get_channel('656535174548553730')
 	if message.server is None and message.author != bot.user:
+                print(message.attachments)
                 electrosucess = 'a:ElectroSuccess:656772759812046851'
                 await bot.add_reaction(message, electrosucess)
                 embed=discord.Embed(title="{}".format(message.author), description="{}".format(message.content), color = 0xFFBF00)
