@@ -1127,6 +1127,7 @@ async def on_message(message):
 	if '<@496978159724396545>' in message.content:
 		emoji = 'a:NeonAdib:674927898100236308'
 		await bot.add_reaction(message, emoji)
+                eomji2 = 'a:NeonAdib:674927898100236309'
         if message.server is None and message.author != bot.user:
                 channe = bot.get_channel('656535174548553730')
                 electrosucess = 'a:ElectroSuccess:656772759812046851'
