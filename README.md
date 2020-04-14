@@ -40,7 +40,8 @@
 `play`,`skip`,`stop`,`pause`,`resume`,`volume`,`np` 
 </ul>
 <details>
-  <summary> Click here to see NSFW commands!<summary>
+  <summary> Click here to see NSFW command<summary>
+</details> 
 ● NSFW - (29) 
 Human: `boobs`, `pussy`, `ass`, `thighs`, `porngif`, `4k`, `anal`, `pornhub`, `pornstar`
 Anime: `classic`, `blowjob`, `hentai`, `hentaiass`, `hentaianal`, `hentaithighs`, `hentaineko`, `hentaikitsune`, `girlsolo`, `pussygif`, `feet`, `femdom`, `pussyart`, `smallboobs`, `girlsologif`, `classic`, `cumsluts`, `randomhentaigif`, `bjgif`, `lesbian` 
