@@ -40,9 +40,10 @@
 `play`,`skip`,`stop`,`pause`,`resume`,`volume`,`np` 
 </ul>
 <details>
-  <summary> • NSFW - (29) `Click here to see!`</summary> 
-**Human:** `boobs`, `pussy`, `ass`, `thighs`, `porngif`, `4k`, `anal`, `pornhub`, `pornstar`
-**Anime:** `classic`, `blowjob`, `hentai`, `hentaiass`, `hentaianal`, `hentaithighs`, `hentaineko`, `hentaikitsune`, `girlsolo`, `pussygif`, `feet`, `femdom`, `pussyart`, `smallboobs`, `girlsologif`, `classic`, `cumsluts`, `randomhentaigif`, `bjgif`, `lesbian` 
+  <summary> Click here to see NSFW commands!<summary>
+● NSFW - (29) 
+Human: `boobs`, `pussy`, `ass`, `thighs`, `porngif`, `4k`, `anal`, `pornhub`, `pornstar`
+Anime: `classic`, `blowjob`, `hentai`, `hentaiass`, `hentaianal`, `hentaithighs`, `hentaineko`, `hentaikitsune`, `girlsolo`, `pussygif`, `feet`, `femdom`, `pussyart`, `smallboobs`, `girlsologif`, `classic`, `cumsluts`, `randomhentaigif`, `bjgif`, `lesbian` 
 </details>
 <img src="https://cdn.discordapp.com/attachments/656517276832366595/682143066689241094/ELECTRODiv.png" aling="center">
 <h2 align="center">CONTRIBUTE</h2> 
