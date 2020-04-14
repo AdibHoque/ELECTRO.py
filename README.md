@@ -40,7 +40,7 @@
 `play`,`skip`,`stop`,`pause`,`resume`,`volume`,`np` 
 </ul>
 <details>
-  <summary> • NSFW - (29)</summary> 
+  <summary> • NSFW - (29) `Click here to see!`</summary> 
 Human: boobs, pussy, ass, thighs, porngif, 4k, anal, pornhub, pornstar
 Anime: classic, blowjob, hentai, hentaiass, hentaianal, hentaithighs, hentaineko, hentaikitsune, girlsolo, pussygif, feet, femdom, pussyart, smallboobs, girlsologif, classic, cumsluts, randomhentaigif, bjgif, lesbian 
 </details>
