@@ -42,12 +42,11 @@
 <details>
   <summary> Click here to see NSFW command<summary>
 ● NSFW - (29) 
-Human: `boobs`, `pussy`, `ass`, `thighs`, `porngif`, `4k`, `anal`, `pornhub`, `pornstar`
-Anime: `classic`, `blowjob`, `hentai`, `hentaiass`, `hentaianal`, `hentaithighs`, `hentaineko`, `hentaikitsune`, `girlsolo`, `pussygif`, `feet`, `femdom`, `pussyart`, `smallboobs`, `girlsologif`, `classic`, `cumsluts`, `randomhentaigif`, `bjgif`, `lesbian` 
+boobs, pussy, ass, thighs, porngif, 4k, anal, pornhub, pornstar, classic, blowjob, hentai, hentaiass, hentaianal, hentaithighs, hentaineko, hentaikitsune, girlsolo, pussygif, feet, femdom, pussyart, smallboobs, girlsologif, classic, cumsluts, randomhentaigif, bjgif, lesbian 
 </details>
+
 <img src="https://cdn.discordapp.com/attachments/656517276832366595/682143066689241094/ELECTRODiv.png" aling="center">
 <h2 align="center">CONTRIBUTE</h2> 
- 
 This project is licenced under MIT. If you have any new ideas, create an issue or a pull request. Contributions to **ELECTRO** are always welcome, whether it be improvements to the documentation or new functionality, please feel free contract us.
 <img src="https://cdn.discordapp.com/attachments/656517276832366595/682143066689241094/ELECTRODiv.png" aling="center">
  
