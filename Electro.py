@@ -1652,7 +1652,7 @@ async def nsfw(ctx):
         print('{ctx.message.author} used {ctx.message.content}') 
  
 @bot.command(pass_connext = True, aliases=['setnickname', 'setgender', 'setbirthday', 'setdescription', 'rep', 'marry', 'propose', 'wed', 'helpprofile'])
-async def helpprofil(ctx):
+async def helpprofil():
         print('.')
 
 @bot.command(pass_context=True)
