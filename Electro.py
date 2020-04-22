@@ -24,7 +24,7 @@ helpm.add_field(name = '<:ElectroGeneralBadge:680783367247364097> GENERAL COMMAN
 helpm.add_field(name = '<:ElectroModerationBadge:680783390999314466> MODERATION COMMANDS - (17)',value ='`kick`, `ban`, `setnick`, `role`, `say`, `embed`, `DM`, `english`, `rolecolor`, `lockdown`, `unlock`, `menro`, `mute`, `unmute`, `joinchannel`, `leavechannel`, `testwelcomer`',inline = False)
 helpm.add_field(name = '<:ElectroFunBadge:680783413065941002> FUN COMMANDS - (26)',value ='`triggered`, `brazzers`, `burn`, `gay`, `missionpassed`, `thanos`, `rip`, `meme`, `pat`, `love`, `slap`, `kiss`, `hug`, `cuddle`, `spank`, `tweet`, `phubcomment`, `howgay`, `whowouldwin`, `captcha`, `magik`, `deepfry`,`iphonex`, `threats`, `clyde`, `trash`',inline = False)
 helpm.add_field(name = '<:ElectroMusicBadge:680783435123654657> MUSIC COMMANDS - (8)',value ='`play`, `skip`, `stop`, `NP`, `queue`, `pause`, `resume`, `volume`',inline = False)
-helpm.add_field(name = '<:ElectroNSFWBadge:680783452563439774> NSFW COMMANDS - (29)',value ='Human:\n||boobs, pussy, ass, thighs, porngif, 4k, anal, pornhub, pornstar||\nAnime:\n||classic, blowjob, hentai, hentaiass, hentaianal, hentaithighs, hentaineko, hentaikitsune, girlsolo, pussygif, feet, femdom, pussyart, smallboobs, girlsologif, classic, cumsluts, randomhentaigif, bjgif, lesbian ||\n\n<:ElectroBookmark:668018207549816833> **USEFUL LINKS:**\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
+helpm.add_field(name = '<:ElectroNSFWBadge:680783452563439774> NSFW COMMANDS - (29)',value ='Human:\n||boobs, pussy, ass, thighs, porngif, 4k, anal, pornhub, pornstar||\nAnime:\n||classic, blowjob, hentai, hentaiass, hentaianal, hentaithighs, hentaineko, hentaikitsune, girlsolo, pussygif, feet, femdom, pussyart, smallboobs, girlsologif, classic, cumsluts, randomhentaigif, bjgif, lesbian ||\n\n<:ElectroBookmark:668018207549816833> **USEFUL LINKS:**\n[Add Bot](https://discordapp.com/oauth2/authorize?client_id=629323586930212884&permissions=2146827775&redirect_uri=https%3A%2F%2Fdiscord.gg%2FkuWVFpR&response_type=code&scope=guilds.join%20bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
 helpm.set_footer(text ='© 2020 ELECTRO, Inc. | ADIB HOQUE')
 
 def is_premium(ctx):
@@ -233,33 +233,15 @@ async def setnick(ctx, user: discord.Member, *, nickname):
     await bot.say("<a:ElectroSuccess:656772759812046851> | {}'s nickname was changed to {}!".format(user, nickname))
     await bot.delete_message(ctx.message)
 
-@bot.command(pass_context=True)
+@bot.command(pass_context=True, aliases=['link', 'links', 'addbot', 'server', 'auth'])
 async def invite():
 	embed=discord.Embed(description="Here are some useful links! If you have any questions about the bot, feel free to join the support guild and ask!.\nThank you for using the bot! 💛 from the bot developer `ADIB HOQUE#6969`", color=0xFFBF00)
 	embed.set_author(name="ELECTRO's Invite URL", icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
-	embed.add_field(name = 'Invite URL',value ='[https://invite.electro.xyz](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=2146827775&scope=bot)',inline = False)
+	embed.add_field(name = 'Invite URL',value ='[https://invite.electro.xyz](https://discordapp.com/oauth2/authorize?client_id=629323586930212884&permissions=2146827775&redirect_uri=https%3A%2F%2Fdiscord.gg%2FkuWVFpR&response_type=code&scope=guilds.join%20bot)',inline = False)
 	embed.add_field(name = 'Support Server',value ='[https://support.electro.xyz](https://discord.gg/kuWVFpR)',inline = False)
 	embed.set_footer(text='We hope you have fun with the bot!', icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
 	await bot.say('https://discord.gg/kuWVFpR', embed=embed)
-	
-@bot.command(pass_context=True)
-async def link():
-	embed=discord.Embed(description="Here are some useful links! If you have any questions about the bot, feel free to join the support guild and ask!.\nThank you for using the bot! 💛 from the bot developer `ADIB HOQUE#6969`", color=0xFFBF00)
-	embed.set_author(name="ELECTRO's Invite URL", icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
-	embed.add_field(name = 'Invite URL',value ='[https://invite.electro.xyz](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=2146827775&scope=bot)',inline = False)
-	embed.add_field(name = 'Support Server',value ='[https://support.electro.xyz](https://discord.gg/kuWVFpR)',inline = False)
-	embed.set_footer(text='We hope you have fun with the bot!', icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
-	await bot.say('https://discord.gg/kuWVFpR', embed=embed)
-	
-@bot.command(pass_context=True)
-async def server():
-	embed=discord.Embed(description="Here are some useful links! If you have any questions about the bot, feel free to join the support guild and ask!.\nThank you for using the bot! 💛 from the bot developer `ADIB HOQUE#6969`", color=0xFFBF00)
-	embed.set_author(name="ELECTRO's Support Server", icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
-	embed.add_field(name = 'Invite URL',value ='[https://invite.electro.xyz](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=2146827775&scope=bot)',inline = False)
-	embed.add_field(name = 'Support Server',value ='[https://support.electro.xyz](https://discord.gg/kuWVFpR)',inline = False)
-	embed.set_footer(text='We hope you have fun with the bot!', icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
-	await bot.say('https://discord.gg/kuWVFpR', embed=embed)
-	
+
 @bot.command(pass_context=True)  
 @commands.has_permissions(kick_members=True)     
 async def kick(ctx, user:discord.Member, *, reason:str):
