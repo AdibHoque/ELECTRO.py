@@ -226,6 +226,12 @@ async def ping(ctx):
     embed=discord.Embed(description="Pong! **{}ms**".format(round((t2-t1)*1000)), color=0xFFBF00) 
     await bot.say(embed=embed)
 
+@bot.command(pass_context=True)
+async def verify(ctx)
+    await bot.delete_message(ctx.message)
+    role = discord.utils.get(ctx.message.server.roles, name="ELECTROTIANS")
+    await bot.add_roles(ctx.message.author, role) 
+
 @bot.command(pass_context = True)
 @commands.has_permissions(manage_nicknames=True)     
 async def setnick(ctx, user: discord.Member, *, nickname):
