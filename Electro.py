@@ -227,7 +227,7 @@ async def ping(ctx):
     await bot.say(embed=embed)
 
 @bot.command(pass_context=True)
-async def verify(ctx)
+async def verify(ctx):
     await bot.delete_message(ctx.message)
     role = discord.utils.get(ctx.message.server.roles, name="ELECTROTIANS")
     await bot.add_roles(ctx.message.author, role) 
