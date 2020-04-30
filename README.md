@@ -26,18 +26,18 @@
   
 <h2 align="center">ELECTRO CATEGORIES</h2>
 <ul>
-  <li>General - (8)</li>
+  <li>General - (24)</li>
   
-`ping`,`userinfo`,`serverinfo`, `ownerinfo`,`avatar`,`membercount`,`invite`,`upvote`
-  <li>Moderation - (11)</li>
+`ping`, `userinfo`, `serverinfo`, `ownerinfo`, `avatar`, `membercount`, `define`, `snipe`, `math`, `invite`, `upvote`, `pokemon`, `shinypokemon`, `pokefuse`, `8ball`, `electroav`, `brilliance`, `bravery`, `balance`, `coronaav`, `coronaav-green`, `coronaav-purple`, `coronaav-pink`, `corona`
+  <li>Moderation - (17)</li>
   
-`kick`,`ban`,`setnick`,`role`,`say`,`DM`,`english`,`rolecolor`,`lockdown`,`unlock`,`menro` 
-  <li>Fun - (19)</li>
+`kick`, `ban`, `setnick`, `role`, `say`, `embed`, `DM`, `english`, `rolecolor`, `lockdown`, `unlock`, `menro`, `mute`, `unmute`, `joinchannel`, `leavechannel`, `testwelcomer`
+  <li>Fun - (26)</li>
   
-`joke`,`love`,`slap`, `kiss`, `hug`, `virgin`, `gender`, `tweet`, `rolldice`, `flipcoin`, `howgay`, `whowouldwin`, `captcha`,`magik`,`deepfry`,`iphonex`,`threats`,`clyde`,`trash`
+`triggered`, `brazzers`, `burn`, `gay`, `missionpassed`, `thanos`, `rip`, `meme`, `pat`, `love`, `slap`, `kiss`, `hug`, `cuddle`, `spank`, `tweet`, `phubcomment`, `howgay`, `whowouldwin`, `captcha`, `magik`, `deepfry`,`iphonex`, `threats`, `clyde`, `trash`
   <li>Music - (7)</li>
   
-`play`,`skip`,`stop`,`pause`,`resume`,`volume`,`np` 
+`play`,`skip`,`stop`,`pause`,`resume`,`volume`,`np`, `queue` 
 </ul>
 <details>
   <summary>● NSFW - (29) Click to show!</summary> 
