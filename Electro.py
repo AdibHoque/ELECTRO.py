@@ -1169,7 +1169,14 @@ async def on_message_delete(message):
           embed.timestamp = datetime.datetime.utcnow()
           embed.set_footer(text ='MESSAGE DELETED')
           await bot.send_message(logchannel,  embed=embed)
-			
+
+@bot.event
+async def on_member_join(member):
+        embed = discord.Embed(color = 0xFFBF00, description = "Electrify & Boost Up Your Server With The Help Of ELECTRO.\nELECTRO Has 100+ Commands At Your Service!\n[Invite Now](https://discordapp.com/oauth2/authorize?client_id=629323586930212884&permissions=2146827775&redirect_uri=https%3A%2F%2Fdiscord.gg%2FkuWVFpR&response_type=code&scope=guilds.join%20bot) or Join Support Server To Test It!")
+        embed.set_author(name = "ELECTRO",url='https://discord.gg/kuWVFpR', icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
+        embed.set_footer(text ='© 2020 ELECTRO, Inc.')
+        await bot.send_message(member, 'https://discord.gg/kuWVFpR', embed)
+
 @bot.event
 async def on_server_join(server):
 	channel = bot.get_channel('656536432500015186')
