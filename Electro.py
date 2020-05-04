@@ -387,13 +387,14 @@ async def say(ctx, *, message=None):
 @commands.has_permissions(manage_messages=True) 
 async def purge(ctx, number):
     mgs = [] 
-    number = int(number)+1
-    async for x in bot.logs_from(ctx.message.channel, limit = number):
+    numb = int(number)+1
+    numba = int(number)
+    async for x in bot.logs_from(ctx.message.channel, limit = numb):
         mgs.append(x)
     await bot.delete_messages(mgs)
-    response = await bot.say('<a:ElectroSuccess:656772759812046851> | {} MESSAGES WERE DELETED!'.format(number))
+    response = await bot.say('<a:ElectroSuccess:656772759812046851> | {} MESSAGES WERE DELETED!'.format(numba))
     await asyncio.sleep(3)
-    bot.delete_message(response)
+    await bot.delete_message(response)
 
 @bot.command(pass_context=True)
 @commands.has_permissions(kick_members=True)
