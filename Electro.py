@@ -72,7 +72,7 @@ async def on_command_error(error, ctx):
         embed=discord.Embed(description="<a:ElectroError:646994154152525845> **Missing Required Argument.**\nPlease type `e!help` or join [Support Server](https://discord.gg/kuWVFpR) to know how to use this command properly!", color=0xFFBF00)
         await bot.send_message(ctx.message.channel, embed=embed)
     elif isinstance(error, commands.CheckFailure):
-        embed=discord.Embed(description="<a:ElectroPremium:686469174528442379> **ELECTRO PREMIUM**\nThis is a premium or developer only command. Join our [Support Server](https://discord.gg/kuWVFpR) for more info!", color=0xFFBF00)
+        embed=discord.Embed(description="<a:ElectroError:646994154152525845> **CHECK FAILURE**\nYou're not authenticated to use this command. This might be a premium/developer only command or you don't meet the required permissions. Join our [Support Server](https://discord.gg/kuWVFpR) for more info!", color=0xFFBF00)
         await bot.send_message(ctx.message.channel, embed=embed)
     raise error
         
