@@ -1185,7 +1185,7 @@ async def on_server_join(server):
 	embed = discord.Embed(title="IM IN A NEW SERVER", color = 0xFFBF00)
 	embed.add_field(name = 'Server Name:',value ='{}'.format(server.name),inline = False)
         embed.add_field(name = 'Server Owner:',value ='{}'.format(server.owner),inline = True) 
-        embed.add_field(name = 'Server Created At:',value ='{}'.fomat(server.createdAt, inline = True) 
+        embed.add_field(name = 'Server Created At:',value ='{}'.fomat(server.created_at, inline = True) 
 	embed.add_field(name = 'Membercount:',value ='{}'.format(str(server.member_count)),inline = False)
 	embed.set_thumbnail(url = server.icon_url)
 	embed.set_footer(text ='Type e!invite for invite link!')
