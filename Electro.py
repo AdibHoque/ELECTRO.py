@@ -99,9 +99,7 @@ async def servers(ctx):
   await bot.say('\n'.join(server.name for server in servers))
   for server in bot.servers:
         try:
-                randomchannel = random.choice(server.channels)
-                invitelink = await bot.create_invite(destination = randomchannel, xkcd = True, max_uses = 100)
-                await bot.say("**SERVER NAME:** {}\n**MEMBERCOUNT:** {}\n{}\n{]".format(server.name,server.member_count,server.icon_url,invitelink))
+                await bot.say("**SERVER NAME:** {}\n**MEMBERCOUNT:** {}\n{}".format(server.name,server.member_count,server.icon_url))
         except:
                 await bot.say("{} - {}".format(server.name,server.member_count))
 
@@ -926,7 +924,7 @@ async def rolecolor(ctx, role:discord.Role=None, value:str=None):
         colo = '0x' + value
         user = ctx.message.author
         await bot.edit_role(ctx.message.server, role, color = discord.Color(int(colour, base=16)))
-        embed=discord.Embed(description="<:ElectroSucess:527118398753079317> {} ROLE COLOR HAS BEEN CHANGED!".format(role.mention), color=0x429CFF)
+        embed=discord.Embed(description="<a:ElectroSuccess:656772759812046851> {} ROLE COLOR HAS BEEN CHANGED!".format(role.mention), color=0xFFBF00)
         await bot.say(embed=embed) 
         
 @bot.command(pass_context = True)
@@ -946,7 +944,7 @@ async def rolecolour(ctx, role:discord.Role=None, value:str=None):
         colour = '0x' + new_val
         user = ctx.message.author
         await bot.edit_role(ctx.message.server, role, color = discord.Color(int(colour, base=16)))
-        embed=discord.Embed(description="<:ElectroSucess:527118398753079317> {} ROLE COLOR HAN BEEN CHANGED!".format(role.mention), color=0x429CFF)
+        embed=discord.Embed(description="<a:ElectroSuccess:656772759812046851> {} ROLE COLOR HAN BEEN CHANGED!".format(role.mention), color=0xFFBF00)
         await bot.say(embed=embed) 
     			
 @bot.command(pass_context=True)
@@ -1186,6 +1184,8 @@ async def on_server_join(server):
 	r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
 	embed = discord.Embed(title="IM IN A NEW SERVER", color = 0xFFBF00)
 	embed.add_field(name = 'Server Name:',value ='{}'.format(server.name),inline = False)
+        embed.add_field(name = 'Server Owner:',value ='{}'.format(server.owner),inline = True) 
+        embed.add_field(name = 'Server Created At:',value ='{}'.fomat(server.createdAt, inline = True) 
 	embed.add_field(name = 'Membercount:',value ='{}'.format(str(server.member_count)),inline = False)
 	embed.set_thumbnail(url = server.icon_url)
 	embed.set_footer(text ='Type e!invite for invite link!')
