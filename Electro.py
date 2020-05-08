@@ -1180,8 +1180,8 @@ async def on_member_join(member):
 
 @bot.event
 async def on_server_join(server):
-	channel = bot.get_channel('656536432500015186')
-	r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
+        channel = bot.get_channel('656536432500015186')
+        r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
         embed = discord.Embed(title="IM IN A NEW SERVER", color = 0xFFBF00)
         embed.add_field(name = 'Server Name:',value ='{}'.format(server.name),inline = False)
         embed.add_field(name = 'Membercount:',value ='{}'.format(str(server.member_count)),inline = False)
