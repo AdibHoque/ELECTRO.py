@@ -1714,6 +1714,7 @@ async def slap(ctx, user: discord.Member):
                                 await bot.say(embed=embed)
  
 @bot.command(pass_context=True)
+@commands.check(is_premium)
 async def spank(ctx, user: discord.Member):
         if user.id == ctx.message.author.id:
                 await bot.say('Go infront of a mirror and spank yourself!')
