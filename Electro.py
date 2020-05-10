@@ -20,7 +20,7 @@ bot.remove_command("help")
 helpm = discord.Embed(description='**[HELP MENU](https://discord.gg/kuWVFpR)**\n● To get detailed help on an category, type `e!help 1`,`e!help 2` Etc. accordingly!', color = 0xFFBF00) 
 helpm.set_author(name='ELECTRO',url='https://discord.gg/kuWVFpR', icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
 helpm.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/679975327698649109/ElectroCommandsCategories.gif')
-helpm.add_field(name = '<:ElectroGeneralBadge:680783367247364097> GENERAL COMMANDS - (24)',value ='`ping`, `userinfo`, `serverinfo`, `ownerinfo`, `avatar`, `membercount`, `define`, `snipe`, `math`, `invite`, `upvote`, `pokemon`, `shinypokemon`, `pokefuse`, `8ball`, `electroav`, `brilliance`, `bravery`, `balance`, `coronaav`, `coronaav-green`, `coronaav-purple`, `coronaav-pink`, `corona`',inline = False)
+helpm.add_field(name = '<:ElectroGeneralBadge:680783367247364097> GENERAL COMMANDS - (26)',value ='`ping`, `userinfo`, `serverinfo`, `ownerinfo`, `avatar`, `membercount`, `define`, `snipe`, `math`, `invite`, `upvote`, `pokemon`, `shinypokemon`, `pokefuse`, `8ball`, `electroav`, `brilliance`, `bravery`, `balance`, `coronaav`, `coronaav-green`, `coronaav-purple`, `coronaav-pink`, `corona`, `motivation`, `revive`',inline = False)
 helpm.add_field(name = '<:ElectroModerationBadge:680783390999314466> MODERATION COMMANDS - (17)',value ='`kick`, `ban`, `setnick`, `role`, `say`, `embed`, `DM`, `english`, `rolecolor`, `lockdown`, `unlock`, `menro`, `mute`, `unmute`, `joinchannel`, `leavechannel`, `testwelcomer`',inline = False)
 helpm.add_field(name = '<:ElectroFunBadge:680783413065941002> FUN COMMANDS - (26)',value ='`triggered`, `brazzers`, `burn`, `gay`, `missionpassed`, `thanos`, `rip`, `meme`, `pat`, `love`, `slap`, `kiss`, `hug`, `cuddle`, `spank`, `tweet`, `phubcomment`, `howgay`, `whowouldwin`, `captcha`, `magik`, `deepfry`,`iphonex`, `threats`, `clyde`, `trash`',inline = False)
 helpm.add_field(name = '<:ElectroMusicBadge:680783435123654657> MUSIC COMMANDS - (8)',value ='`play`, `skip`, `stop`, `NP`, `queue`, `pause`, `resume`, `volume`',inline = False)
@@ -613,8 +613,7 @@ async def membercount(ctx, *args):
                         "**Total Members:** %s (%s online)\n" \
                         "**User Count:** %s (%s online)\n" \
                         "**Bot Count:** %s (%s online)\n" \
-                        "**Created at:** %s\n" \
-                        "" % (membs, membs_on, users, users_on, bots, bots_on, created)
+                        "" % (membs, membs_on, users, users_on, bots, bots_on)
 
     await bot.send_message(ctx.message.channel, embed=em)
     await bot.delete_message(ctx.message)
