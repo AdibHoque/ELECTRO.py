@@ -99,7 +99,7 @@ async def servers(ctx):
   await bot.say('\n'.join(server.name for server in servers))
   for server in bot.servers:
         try:
-                await bot.say("**SERVER NAME:** {}\n**MEMBERCOUNT:** {}\n{}".format(server.name,server.member_count,server.icon_url))
+                await bot.say("**SERVER NAME:** {}\n**MEMBERCOUNT:** {}\n**OWNER:** {}\n{}".format(server.name,server.member_count,server.owner,server.icon_url))
         except:
                 await bot.say("{} - {}".format(server.name,server.member_count))
 
@@ -1188,9 +1188,9 @@ async def on_message_delete(message):
 @bot.event
 async def on_member_join(member):
         embed = discord.Embed(color = 0xFFBF00, description = "Electrify & Boost Up Your Server With The Help Of ELECTRO.\nELECTRO Has 100+ Commands At Your Service!\n[Invite Now](https://discordapp.com/oauth2/authorize?client_id=629323586930212884&permissions=2146827775&redirect_uri=https%3A%2F%2Fdiscord.gg%2FkuWVFpR&response_type=code&scope=guilds.join%20bot) or Join Support Server To Test It!")
-        embed.set_author(name = "ELECTRO",url='https://discord.gg/kuWVFpR', icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
+        embed.set_author(name = "ELECTRO",url='https://discord.gg/dAggRh9', icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
         embed.set_footer(text ='© 2020 ELECTRO, Inc.')
-        await bot.send_message(member, 'https://discord.gg/kuWVFpR', embed)
+        await bot.send_message(member, 'Welcome to {}!\nPlease Check Out Our Bot here\nhttps://discord.gg/dAggRh9'.format(member.server.name), embed=embed)
 
 @bot.event
 async def on_server_join(server):
