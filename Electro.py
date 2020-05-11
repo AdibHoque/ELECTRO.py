@@ -906,7 +906,7 @@ async def help4(ctx):
     await bot.send_message(author ,embed=embed)
     await bot.say('📨 Check Your DMs For Music Commands!')    
 
-@bot.command(pass_conext = True, aliases = ['NSFW','help-nsfw','help-NSFW')
+@bot.command(pass_conext = True, aliases = ['NSFW','help-nsfw','help-NSFW'])
 async def nsfw(ctx):
     channel = ctx.message.channel
     embed = discord.Embed(title= "NSFW COMMANDS",color = 0xFFBF00)
