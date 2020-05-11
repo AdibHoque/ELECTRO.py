@@ -900,6 +900,11 @@ async def help4(ctx):
     await bot.send_message(author ,embed=embed)
     await bot.say('📨 Check Your DMs For Music Commands!')    
 
+#@bot.command(pass_conext = True)
+#async def nsfw(ctx):
+#    author = ctx.message.author
+#    embed = discord.Embed()
+
 @bot.command(pass_context = True)
 @commands.check(is_owner)
 async def dmserver(ctx, *, msg: str):
@@ -1643,7 +1648,7 @@ def _save():
         json.dump(amounts, f)
 
 @bot.command(pass_context = True, aliases=['boobs','pussy','ass','thigh','anal','4k','porngif','gonewild','hentai','hentaimidriff','hentaiass','hentaianal','hentaithigh','hentaineko','hentaikitsune','blowjob','girlsolo','pussygif','feet','femdom','pussyart','smallboobs','girlsologif','classic','cumsluts','randomhentaigif','bjgif','lesbian','play','stop','pause','resume','queue','np','triggered','brazzers','burn','brilliance','bravery','balance','gay','missionpassed','thanos','rip','electroav','math','coronaav','coronaav-green','coronaav-purple','coronaav-pink','corona','joinchannel','leavechannel','testwelcomer','pornhub','pornstar','volume','profile','snipe','skip'])
-async def nsfw(ctx):
+async def nsfwc(ctx):
         print('{ctx.message.author} used {ctx.message.content}') 
  
 @bot.command(pass_connext = True, aliases=['setnickname', 'setgender', 'setbirthday', 'setdescription', 'rep', 'marry', 'propose', 'wed', 'helpprofile'])
