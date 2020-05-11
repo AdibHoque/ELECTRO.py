@@ -800,7 +800,7 @@ async def help(ctx, page: str=None):
             embed.add_field(name = 'Human Porn', value = '`boobs`, `pussy`, `ass`, `thighs`, `porngif`, `4k`, `anal`', inline = False)
             embed.add_field(name = 'Hentai Porn', value = '`classic`, `blowjob`, `hentai`, `hentaiass`, `hentaianal`, `hentaithighs`, `hentaineko`, `hentaikitsune`, `girlsolo`, `pussygif`, `feet`, `femdom`, `pussyart`, `smallboobs`, `girlsologif`, `cumsluts`, `randomhentaigif`, `bjgif`, `lesbian`', inline = False)
             embed.add_field(name = 'Porn Search', value = '`pornhub`, `pornstar`', inline = False)
-            await bot.say(embed)
+            await bot.say(embed=embed)
         else:
             Return
 		
@@ -913,7 +913,7 @@ async def nsfw(ctx):
     embed.add_field(name = 'Human Porn', value = '`boobs`, `pussy`, `ass`, `thighs`, `porngif`, `4k`, `anal`', inline = False)
     embed.add_field(name = 'Hentai Porn', value = '`classic`, `blowjob`, `hentai`, `hentaiass`, `hentaianal`, `hentaithighs`, `hentaineko`, `hentaikitsune`, `girlsolo`, `pussygif`, `feet`, `femdom`, `pussyart`, `smallboobs`, `girlsologif`, `cumsluts`, `randomhentaigif`, `bjgif`, `lesbian`', inline = False)
     embed.add_field(name = 'Porn Search', value = '`pornhub`, `pornstar`', inline = False)
-    await bot.say(embed)
+    await bot.say(embed=embed)
 
 @bot.command(pass_context = True)
 @commands.check(is_owner)
