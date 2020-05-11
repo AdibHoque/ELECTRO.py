@@ -51,7 +51,7 @@ async def is_nsfw(channel: discord.Channel):
 @bot.event
 async def on_ready():
     print('ONLINE')
-    print((len(set(bot.get_all_members()))/1000)+'k')
+    print(len(set(bot.get_all_members()))/1000)
     bot.loop.create_task(status_task())
     global amounts
     try:
