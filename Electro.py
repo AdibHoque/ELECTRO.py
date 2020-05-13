@@ -24,7 +24,7 @@ helpm.add_field(name = '<:ElectroGeneralBadge:680783367247364097> GENERAL COMMAN
 helpm.add_field(name = '<:ElectroModerationBadge:680783390999314466> MODERATION COMMANDS - (18)',value ='`kick`, `ban`, `setnick`, `role`, `say`, `embed`, `DM`, `english`, `rolecolor`, `lockdown`, `unlock`, `menro`, `mute`, `unmute`, `joinchannel`, `leavechannel`, `testwelcomer`, `poll`',inline = False)
 helpm.add_field(name = '<:ElectroFunBadge:680783413065941002> FUN COMMANDS - (26)',value ='`triggered`, `brazzers`, `burn`, `gay`, `missionpassed`, `thanos`, `rip`, `meme`, `pat`, `love`, `slap`, `kiss`, `hug`, `cuddle`, `spank`, `tweet`, `phubcomment`, `howgay`, `whowouldwin`, `captcha`, `magik`, `deepfry`,`iphonex`, `threats`, `clyde`, `trash`',inline = False)
 helpm.add_field(name = '<:ElectroMusicBadge:680783435123654657> MUSIC COMMANDS - (8)',value ='`play`, `skip`, `stop`, `NP`, `queue`, `pause`, `resume`, `volume`',inline = False)
-helpm.add_field(name = '<:ElectroNSFWBadge:680783452563439774> NSFW COMMANDS - (29)',value ='On Public Demand NSFW Commands Are Moved To `e!help nsfw`!\n<:ElectroBookmark:668018207549816833> **USEFUL LINKS:**\n[Add Bot](https://discordapp.com/oauth2/authorize?client_id=629323586930212884&permissions=2146827775&redirect_uri=https%3A%2F%2Fdiscord.gg%2dAggRh9&response_type=code&scope=guilds.join%20bot) | [Join Server](https://discord.gg/dAggRh9) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
+helpm.add_field(name = '<:ElectroNSFWBadge:680783452563439774> NSFW COMMANDS - (30)',value ='On Public Demand NSFW Commands Are Moved To `e!help nsfw`!\n<:ElectroBookmark:668018207549816833> **USEFUL LINKS:**\n[Add Bot](https://discordapp.com/oauth2/authorize?client_id=629323586930212884&permissions=2146827775&redirect_uri=https%3A%2F%2Fdiscord.gg%2dAggRh9&response_type=code&scope=guilds.join%20bot) | [Join Server](https://discord.gg/dAggRh9) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
 helpm.set_footer(text ='© 2020 ELECTRO, Inc. | ADIB HOQUE')
 
 def is_premium(ctx):
@@ -798,7 +798,7 @@ async def help(ctx, page: str=None):
             await bot.say('📨 Check Your DMs For NSFW Commands!')
         elif page == 'nsfw':
             embed = discord.Embed(title= "NSFW COMMANDS",color = 0xFFBF00)
-            embed.add_field(name = 'Human Porn', value = '`boobs`, `pussy`, `ass`, `thighs`, `pgif`, `4k`, `anal`', inline = False)
+            embed.add_field(name = 'Human Porn', value = '`boobs`, `pussy`, `ass`, `thighs`, `pgif`, `4k`, `anal`, `gonewild`, `upskirt`', inline = False)
             embed.add_field(name = 'Hentai Porn', value = '`classic`, `blowjob`, `hentai`, `hass`, `hanal`, `hthighs`, `hneko`, `hkitsune`, `girlsolo`, `pussygif`, `feet`, `femdom`, `pussyart`, `smallboobs`, `girlsologif`, `cumsluts`, `hgif`, `bjgif`, `lesbian`', inline = False)
             embed.add_field(name = 'Porn Search', value = '`pornhub`, `pornstar`', inline = False)
             await bot.say(embed=embed)
@@ -911,7 +911,7 @@ async def help4(ctx):
 async def nsfw(ctx):
     channel = ctx.message.channel
     embed = discord.Embed(title= "NSFW COMMANDS",color = 0xFFBF00)
-    embed.add_field(name = 'Human Porn', value = '`boobs`, `pussy`, `ass`, `thighs`, `porngif`, `4k`, `anal`', inline = False)
+    embed.add_field(name = 'Human Porn', value = '`boobs`, `pussy`, `ass`, `thighs`, `porngif`, `4k`, `anal`, `gonewild`, `upskirt`', inline = False)
     embed.add_field(name = 'Hentai Porn', value = '`classic`, `blowjob`, `hentai`, `hentaiass`, `hentaianal`, `hentaithighs`, `hentaineko`, `hentaikitsune`, `girlsolo`, `pussygif`, `feet`, `femdom`, `pussyart`, `smallboobs`, `girlsologif`, `cumsluts`, `randomhentaigif`, `bjgif`, `lesbian`', inline = False)
     embed.add_field(name = 'Porn Search', value = '`pornhub`, `pornstar`', inline = False)
     await bot.say(embed=embed)
@@ -1658,7 +1658,7 @@ def _save():
     with open('amounts.json', 'w+') as f:
         json.dump(amounts, f)
 
-@bot.command(pass_context = True, aliases=['boobs','pussy','ass','thighs','anal','4k','pgif','gonewild','hentai','hmidriff','hass','hanal','hthighs','hneko','hkitsune','blowjob','girlsolo','pussygif','feet','femdom','pussyart','smallboobs','girlsologif','classic','cumsluts','hgif','bjgif','lesbian','play','stop','pause','resume','queue','np','triggered','brazzers','burn','brilliance','bravery','balance','gay','missionpassed','thanos','rip','electroav','math','coronaav','coronaav-green','coronaav-purple','coronaav-pink','corona','joinchannel','leavechannel','testwelcomer','pornhub','pornstar','volume','profile','snipe','skip'])
+@bot.command(pass_context = True, aliases=['boobs','pussy','ass','thighs','anal','4k','pgif','gonewild','upskirt','hentai','hmidriff','hass','hanal','hthighs','hneko','hkitsune','blowjob','girlsolo','pussygif','feet','femdom','pussyart','smallboobs','girlsologif','classic','cumsluts','hgif','bjgif','lesbian','play','stop','pause','resume','queue','np','triggered','brazzers','burn','brilliance','bravery','balance','gay','missionpassed','thanos','rip','electroav','math','coronaav','coronaav-green','coronaav-purple','coronaav-pink','corona','joinchannel','leavechannel','testwelcomer','pornhub','pornstar','volume','profile','snipe','skip'])
 async def nsfwc(ctx):
         print('{ctx.message.author} used {ctx.message.content}') 
  
