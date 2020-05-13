@@ -798,8 +798,8 @@ async def help(ctx, page: str=None):
             await bot.say('📨 Check Your DMs For NSFW Commands!')
         elif page == 'nsfw':
             embed = discord.Embed(title= "NSFW COMMANDS",color = 0xFFBF00)
-            embed.add_field(name = 'Human Porn', value = '`boobs`, `pussy`, `ass`, `thighs`, `porngif`, `4k`, `anal`', inline = False)
-            embed.add_field(name = 'Hentai Porn', value = '`classic`, `blowjob`, `hentai`, `hentaiass`, `hentaianal`, `hentaithighs`, `hentaineko`, `hentaikitsune`, `girlsolo`, `pussygif`, `feet`, `femdom`, `pussyart`, `smallboobs`, `girlsologif`, `cumsluts`, `randomhentaigif`, `bjgif`, `lesbian`', inline = False)
+            embed.add_field(name = 'Human Porn', value = '`boobs`, `pussy`, `ass`, `thighs`, `pgif`, `4k`, `anal`', inline = False)
+            embed.add_field(name = 'Hentai Porn', value = '`classic`, `blowjob`, `hentai`, `hass`, `hanal`, `hthighs`, `hneko`, `hkitsune`, `girlsolo`, `pussygif`, `feet`, `femdom`, `pussyart`, `smallboobs`, `girlsologif`, `cumsluts`, `hgif`, `bjgif`, `lesbian`', inline = False)
             embed.add_field(name = 'Porn Search', value = '`pornhub`, `pornstar`', inline = False)
             await bot.say(embed=embed)
         else:
@@ -1658,7 +1658,7 @@ def _save():
     with open('amounts.json', 'w+') as f:
         json.dump(amounts, f)
 
-@bot.command(pass_context = True, aliases=['boobs','pussy','ass','thigh','anal','4k','porngif','gonewild','hentai','hentaimidriff','hentaiass','hentaianal','hentaithigh','hentaineko','hentaikitsune','blowjob','girlsolo','pussygif','feet','femdom','pussyart','smallboobs','girlsologif','classic','cumsluts','randomhentaigif','bjgif','lesbian','play','stop','pause','resume','queue','np','triggered','brazzers','burn','brilliance','bravery','balance','gay','missionpassed','thanos','rip','electroav','math','coronaav','coronaav-green','coronaav-purple','coronaav-pink','corona','joinchannel','leavechannel','testwelcomer','pornhub','pornstar','volume','profile','snipe','skip'])
+@bot.command(pass_context = True, aliases=['boobs','pussy','ass','thigh','anal','4k','pgif','gonewild','hentai','hmidriff','hass','hanal','hthighs','hneko','hkitsune','blowjob','girlsolo','pussygif','feet','femdom','pussyart','smallboobs','girlsologif','classic','cumsluts','hgif','bjgif','lesbian','play','stop','pause','resume','queue','np','triggered','brazzers','burn','brilliance','bravery','balance','gay','missionpassed','thanos','rip','electroav','math','coronaav','coronaav-green','coronaav-purple','coronaav-pink','corona','joinchannel','leavechannel','testwelcomer','pornhub','pornstar','volume','profile','snipe','skip'])
 async def nsfwc(ctx):
         print('{ctx.message.author} used {ctx.message.content}') 
  
