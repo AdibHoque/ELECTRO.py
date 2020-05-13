@@ -1658,7 +1658,7 @@ def _save():
     with open('amounts.json', 'w+') as f:
         json.dump(amounts, f)
 
-@bot.command(pass_context = True, aliases=['boobs','pussy','ass','thigh','anal','4k','pgif','gonewild','hentai','hmidriff','hass','hanal','hthighs','hneko','hkitsune','blowjob','girlsolo','pussygif','feet','femdom','pussyart','smallboobs','girlsologif','classic','cumsluts','hgif','bjgif','lesbian','play','stop','pause','resume','queue','np','triggered','brazzers','burn','brilliance','bravery','balance','gay','missionpassed','thanos','rip','electroav','math','coronaav','coronaav-green','coronaav-purple','coronaav-pink','corona','joinchannel','leavechannel','testwelcomer','pornhub','pornstar','volume','profile','snipe','skip'])
+@bot.command(pass_context = True, aliases=['boobs','pussy','ass','thighs','anal','4k','pgif','gonewild','hentai','hmidriff','hass','hanal','hthighs','hneko','hkitsune','blowjob','girlsolo','pussygif','feet','femdom','pussyart','smallboobs','girlsologif','classic','cumsluts','hgif','bjgif','lesbian','play','stop','pause','resume','queue','np','triggered','brazzers','burn','brilliance','bravery','balance','gay','missionpassed','thanos','rip','electroav','math','coronaav','coronaav-green','coronaav-purple','coronaav-pink','corona','joinchannel','leavechannel','testwelcomer','pornhub','pornstar','volume','profile','snipe','skip'])
 async def nsfwc(ctx):
         print('{ctx.message.author} used {ctx.message.content}') 
  
