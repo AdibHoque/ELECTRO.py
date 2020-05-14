@@ -67,17 +67,19 @@ async def on_command_error(error, ctx):
     if isinstance(error, commands.CommandOnCooldown):
         embed=discord.Embed(description="<a:ElectroError:646994154152525845> **Command On Cooldown.**\nPlease try again in **%.2fs**!"% error.retry_after, color=0xFFBF00)
         await bot.send_message(ctx.message.channel, embed=embed)
-    elif isinstance(error, commands.CommandNotFound):
-        embed=discord.Embed(description="<a:ElectroError:646994154152525845> **Command Not Found.**\nPlease type `e!help` or join [Support Server](https://discord.gg/kuWVFpR) to know the existing commands!", color=0xFFBF00)
-        await bot.send_message(ctx.message.channel, embed=embed)
     elif isinstance(error, commands.MissingRequiredArgument):
         embed=discord.Embed(description="<a:ElectroError:646994154152525845> **Missing Required Argument.**\nPlease type `e!help` or join [Support Server](https://discord.gg/kuWVFpR) to know how to use this command properly!", color=0xFFBF00)
         await bot.send_message(ctx.message.channel, embed=embed)
     elif isinstance(error, commands.CheckFailure):
-        embed=discord.Embed(description="<a:ElectroError:646994154152525845> **CHECK FAILURE**\nYou're not authenticated to use this command. This might be a premium/developer only command or you don't meet the required permissions. Join our [Support Server](https://discord.gg/kuWVFpR) for more info!", color=0xFFBF00)
+        embed=discord.Embed(description="<a:ElectroError:646994154152525845> **CHECK FAILURE**\nYou're not authenticated to use this command. This might be a premium/developer only command or you don't meet the required permissions. Join our [Support Server](https://invite.gg/electro) for more info!", color=0xFFBF00)
         await bot.send_message(ctx.message.channel, embed=embed)
     raise error
         
+#     elif isinstance(error, commands.CommandNotFound):
+#        embed=discord.Embed(description="<a:ElectroError:646994154152525845> **Command Not Found.**\nPlease type `e!help` or join [Support Server](https://discord.gg/kuWVFpR) to know the existing commands!", color=0xFFBF00)
+#        await bot.send_message(ctx.message.channel, embed=embed)
+ 
+
 @bot.command(pass_context = True)
 async def prefix(ctx):
 	embed=discord.Embed(description="The prefix for the bot is **e!** or mention.", color=0xFFBF00)
