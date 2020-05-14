@@ -33,9 +33,9 @@ def is_premium(ctx):
 async def status_task():
     while True:
         m = len(set(bot.get_all_members()))/1000
-        await bot.change_presence(game=discord.Game(name='e!help • 👥{}K Users'.format(m)))
+        await bot.change_presence(game=discord.Game(name='e!help • {}K Users'.format(m)))
         await asyncio.sleep(12)
-        await bot.change_presence(game=discord.Game(name='e!help • 🏙'+str(len(bot.servers))+' Guilds'))
+        await bot.change_presence(game=discord.Game(name='e!help • '+str(len(bot.servers))+' Guilds'))
         await asyncio.sleep(12)
 
 async def is_nsfw(channel: discord.Channel):
