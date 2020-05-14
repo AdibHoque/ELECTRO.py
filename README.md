@@ -49,7 +49,7 @@ boobs, pussy, ass, thighs, porngif, 4k, anal, upskirt, pornhub, pornstar, classi
 This project is licenced under MIT. If you have any new ideas, create an issue or a pull request. Contributions to **ELECTRO** are always welcome, whether it be improvements to the documentation or new functionality, please feel free contract us.
 <img src="https://cdn.discordapp.com/attachments/656517276832366595/682143066689241094/ELECTRODiv.png" aling="center">
  
-If you are using **ELECTRO** and love it, consider joining our **[Discord Server](https://discord.gg/kuWVFpR)** :heart:
+If you are using **ELECTRO** and love it, consider joining our **[Discord Server](https://discord.gg/dAggRh9)** :heart:
 
  
 **© 2020 ELECTRO, Inc.**
