@@ -26,22 +26,22 @@
   
 <h2 align="center">ELECTRO CATEGORIES</h2>
 <ul>
-  <li>General - (24)</li>
+  <li>General - (26)</li>
   
-`ping`, `userinfo`, `serverinfo`, `ownerinfo`, `avatar`, `membercount`, `define`, `snipe`, `math`, `invite`, `upvote`, `pokemon`, `shinypokemon`, `pokefuse`, `8ball`, `electroav`, `brilliance`, `bravery`, `balance`, `coronaav`, `coronaav-green`, `coronaav-purple`, `coronaav-pink`, `corona`
+`ping`, `userinfo`, `serverinfo`, `ownerinfo`, `avatar`, `membercount`, `define`, `snipe`, `math`, `invite`, `upvote`, `pokemon`, `shinypokemon`, `pokefuse`, `8ball`, `electroav`, `brilliance`, `bravery`, `balance`, `coronaav`, `coronaav-green`, `coronaav-purple`, `coronaav-pink`, `corona`, `motivation`, `revive`
   <li>Moderation - (17)</li>
   
 `kick`, `ban`, `setnick`, `role`, `say`, `embed`, `DM`, `english`, `rolecolor`, `lockdown`, `unlock`, `menro`, `mute`, `unmute`, `joinchannel`, `leavechannel`, `testwelcomer`
   <li>Fun - (26)</li>
   
 `triggered`, `brazzers`, `burn`, `gay`, `missionpassed`, `thanos`, `rip`, `meme`, `pat`, `love`, `slap`, `kiss`, `hug`, `cuddle`, `spank`, `tweet`, `phubcomment`, `howgay`, `whowouldwin`, `captcha`, `magik`, `deepfry`,`iphonex`, `threats`, `clyde`, `trash`
-  <li>Music - (7)</li>
+  <li>Music - (8)</li>
   
 `play`,`skip`,`stop`,`pause`,`resume`,`volume`,`np`, `queue` 
 </ul>
 <details>
-  <summary>● NSFW - (29) Click to show!</summary> 
-boobs, pussy, ass, thighs, porngif, 4k, anal, pornhub, pornstar, classic, blowjob, hentai, hentaiass, hentaianal, hentaithighs, hentaineko, hentaikitsune, girlsolo, pussygif, feet, femdom, pussyart, smallboobs, girlsologif, classic, cumsluts, randomhentaigif, bjgif, lesbian 
+  <summary>● NSFW - (30) Click to show!</summary> 
+boobs, pussy, ass, thighs, porngif, 4k, anal, upskirt, pornhub, pornstar, classic, blowjob, hentai, hentaiass, hentaianal, hentaithighs, hentaineko, hentaikitsune, girlsolo, pussygif, feet, femdom, pussyart, smallboobs, girlsologif, classic, cumsluts, randomhentaigif, bjgif, lesbian 
 </details> 
 
 <img src="https://cdn.discordapp.com/attachments/656517276832366595/682143066689241094/ELECTRODiv.png" aling="center">
