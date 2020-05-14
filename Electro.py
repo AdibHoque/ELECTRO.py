@@ -1206,15 +1206,15 @@ async def on_server_join(server):
 
 @bot.event
 async def on_server_remove(server):
-		channel = bot.get_channel('656536492977553438')
-		r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
-		embed = discord.Embed(title="I WAS REMOVED FROM A SERVER", color = 0xFFBF00)
-		embed.add_field(name = 'Server Name:',value ='{}'.format(server.name),inline = False)
-		embed.add_field(name = 'Membercount:',value ='{}'.format(str(server.member_count)),inline = False)
+                channel = bot.get_channel('656536492977553438')
+                r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
+                embed = discord.Embed(title="I WAS REMOVED FROM A SERVER", color = 0xFFBF00)
+                embed.add_field(name = 'Server Name:',value ='{}'.format(server.name),inline = False)
+                embed.add_field(name = 'Membercount:',value ='{}'.format(str(server.member_count)),inline = False)
                 embed.add_field(name = 'Server Owner:',value ='{}'.format(server.owner),inline = False)
                 embed.set_thumbnail(url = server.icon_url)
-		embed.set_footer(text ='Type e!invite for invite link!')
-		await bot.send_message(channel,  embed=embed)
+                embed.set_footer(text ='Type e!invite for invite link!')
+                await bot.send_message(channel,  embed=embed)
 			
 @bot.event
 async def on_server_role_create(role, server):
