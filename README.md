@@ -3,10 +3,10 @@
   <h2 align="center">ELECTRIFY AND BOOST UP YOUR DISCORD SERVER</h2> 
   <br>
   <a href="https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=2146827775&scope=bot">
-    <img src="https://img.shields.io/badge/ADD-BOT-orange.svg?style=for-the-badge">
+    <img src="https://img.shields.io/badge/ADD-BOT-yellow.svg?style=for-the-badge">
   </a>
   <a href="https://discord.gg/kuWVFpR">
-    <img src="https://img.shields.io/badge/JOIN-GUILD-orange.svg?style=for-the-badge">
+    <img src="https://img.shields.io/badge/JOIN-GUILD-yellow.svg?style=for-the-badge">
   </a>
   </div> 
   
