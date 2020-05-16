@@ -28,7 +28,7 @@
 <ul>
   <li>General - (22)</li>
   
-`ping`, `userinfo`, `serverinfo`, `ownerinfo`, `avatar`, `membercount`, `define`, `snipe`, `math`, `invite`, `upvote`, `pokemon`, `shinypokemon`, `pokefuse`, `8ball`, `electroav`, `brilliance`, `bravery`, `balance`, `motivation`, `revive`, `reversetext
+`ping`, `userinfo`, `serverinfo`, `ownerinfo`, `avatar`, `membercount`, `define`, `snipe`, `math`, `invite`, `upvote`, `pokemon`, `shinypokemon`, `pokefuse`, `8ball`, `electroav`, `brilliance`, `bravery`, `balance`, `motivation`, `revive`, `reversetext`
   <li>Moderation - (17)</li>
   
 `kick`, `ban`, `setnick`, `role`, `say`, `embed`, `DM`, `english`, `rolecolor`, `lockdown`, `unlock`, `menro`, `mute`, `unmute`, `joinchannel`, `leavechannel`, `testwelcomer`
