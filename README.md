@@ -15,7 +15,7 @@
 
 <img src="https://cdn.discordapp.com/attachments/656517276832366595/656760631474520074/ELECTRO_ELECTRIFY_YOUR_SERVER.gif" alt="ELECTRO" align="center">
 
-**ELECTRO** is a `general` purpose `moderation`, `fun `, `music` & `NSFW` bot. **ELECTRO** has all the `moderation` commands, tons of `fun` commands, high quality `music` commands & `NSFW` commands of all fetishes. To see the list of commands scroll down or type `e!help` or `@ELECTRO help` in a server which have **ELECTRO**. Join our discord [server](https://discord.gg/dAggRh9) to contract the bot creator `@ADIB HOQUE#6969`.
+**ELECTRO** is a `General` purpose `Moderation`, `Fun `, `Music` & `NSFW` bot. **ELECTRO** has all the `Moderation` commands, tons of `Fun` commands, high quality `Music` commands & `NSFW` commands of all fetishes. To see the list of commands scroll down or type `e!help` or `@ELECTRO help` in a server which have **ELECTRO**. Join our discord [server](https://discord.gg/dAggRh9) to contract the bot creator `@ADIB HOQUE#6969`.
 
 <h2 align="center">PREFIX OF ELECTRO</h2> 
 
