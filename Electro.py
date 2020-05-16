@@ -801,7 +801,7 @@ async def help(ctx, page: str=None):
             await bot.say('📨 Check Your DMs For NSFW Commands!')
         elif page == 'nsfw':
             embed = discord.Embed(title= "NSFW COMMANDS",color = 0xFFBF00)
-            embed.add_field(name = 'Human Porn', value = '`boobs`, `pussy`, `ass`, `thighs`, `pgif`, `4k`, `anal`, `gonewild`, `upskirt`', inline = False)
+            embed.add_field(name = 'Human Porn', value = '`boobs`, `pussy`, `dick`, `ass`, `thighs`, `pgif`, `4k`, `anal`, `gonewild`, `upskirt`, `milf`, `cosplay`, `uniform`, `scporn`, `public`, `asian`', inline = False)
             embed.add_field(name = 'Hentai Porn', value = '`classic`, `blowjob`, `hentai`, `hass`, `hanal`, `hthighs`, `hneko`, `hkitsune`, `girlsolo`, `pussygif`, `feet`, `femdom`, `pussyart`, `smallboobs`, `girlsologif`, `cumsluts`, `hgif`, `bjgif`, `lesbian`', inline = False)
             embed.add_field(name = 'Porn Search', value = '`pornhub`, `pornstar`', inline = False)
             await bot.say(embed=embed)
