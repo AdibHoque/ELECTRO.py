@@ -17,15 +17,15 @@ import urllib.request
 bot = commands.Bot(command_prefix=commands.when_mentioned_or('e!','E!'),case_insensitive=True)
 bot.remove_command("help")
 
-helpm = discord.Embed(description='**[HELP MENU](https://discord.gg/kuWVFpR)**\n● To get detailed help on an category, type `e!help 1`,`e!help 2` Etc. accordingly!', color = 0xFFBF00) 
+helpm = discord.Embed(description='**[HELP MENU](https://discord.gg/kuWVFpR)**\n● To get detailed help on a command, type `e!help <command name>` but some commands help is not available yet!', color = 0xFFBF00) 
 helpm.set_author(name='ELECTRO',url='https://discord.gg/kuWVFpR', icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
 helpm.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/679975327698649109/ElectroCommandsCategories.gif')
-helpm.add_field(name = '<:ElectroGeneralBadge:680783367247364097> GENERAL COMMANDS - (26)',value ='`ping`, `userinfo`, `serverinfo`, `ownerinfo`, `avatar`, `membercount`, `define`, `snipe`, `math`, `invite`, `upvote`, `pokemon`, `shinypokemon`, `pokefuse`, `8ball`, `electroav`, `brilliance`, `bravery`, `balance`, `coronaav`, `coronaav-green`, `coronaav-purple`, `coronaav-pink`, `corona`, `motivation`, `revive`',inline = False)
+helpm.add_field(name = '<:ElectroGeneralBadge:680783367247364097> GENERAL COMMANDS - (22)',value ='`ping`, `userinfo`, `serverinfo`, `ownerinfo`, `avatar`, `membercount`, `define`, `snipe`, `math`, `invite`, `upvote`, `pokemon`, `shinypokemon`, `pokefuse`, `8ball`, `electroav`, `brilliance`, `bravery`, `balance`, `motivation`, `revive`, `reversetext`',inline = False)
 helpm.add_field(name = '<:ElectroModerationBadge:680783390999314466> MODERATION COMMANDS - (18)',value ='`kick`, `ban`, `setnick`, `role`, `say`, `embed`, `DM`, `english`, `rolecolor`, `lockdown`, `unlock`, `menro`, `mute`, `unmute`, `joinchannel`, `leavechannel`, `testwelcomer`, `poll`',inline = False)
 helpm.add_field(name = '<:ElectroFunBadge:680783413065941002> FUN COMMANDS - (26)',value ='`triggered`, `brazzers`, `burn`, `gay`, `missionpassed`, `thanos`, `rip`, `meme`, `pat`, `love`, `slap`, `kiss`, `hug`, `cuddle`, `spank`, `tweet`, `phubcomment`, `howgay`, `whowouldwin`, `captcha`, `magik`, `deepfry`,`iphonex`, `threats`, `clyde`, `trash`',inline = False)
 helpm.add_field(name = '<:ElectroMusicBadge:680783435123654657> MUSIC COMMANDS - (8)',value ='`play`, `skip`, `stop`, `NP`, `queue`, `pause`, `resume`, `volume`',inline = False)
 helpm.add_field(name = '<:ElectroNSFWBadge:680783452563439774> NSFW COMMANDS - (30)',value ='On Public Demand NSFW Commands Are Moved To `e!help nsfw`!\n<:ElectroBookmark:668018207549816833> **USEFUL LINKS:**\n[Add Bot](https://discordapp.com/oauth2/authorize?client_id=629323586930212884&permissions=2146827775&redirect_uri=https%3A%2F%2Fdiscord.gg%2dAggRh9&response_type=code&scope=guilds.join%20bot) | [Join Server](https://discord.gg/dAggRh9) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
-helpm.set_footer(text ='© 2020 ELECTRO, Inc. | ADIB HOQUE')
+helpm.set_footer(text ='© 2020 ELECTRO, Inc.')
 
 def is_premium(ctx):
         return ctx.message.author.id == "496978159724396545"
