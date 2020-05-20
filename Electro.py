@@ -365,6 +365,12 @@ async def dm(ctx, user: discord.User, *, message=None):
     await bot.send_message(user, message)
     await bot.say('<a:ElectroSuccess:656772759812046851>YOUR DM WAS SENT!')
     await bot.delete_message(ctx.message)
+    embed = discord.Embed(title="{}".format(ctx.message.author), description="{}".format(message), color = 0xFFBF00)
+    embed.set_thumbnail(url= ctx.message.author.avatar_url)
+    embed.timestamp = datetime.datetime.utcnow()
+    embed.set_footer(text ='ELECTRO MAIL', icon_url='https://cdn.discordapp.com/attachments/656517276832366595/656519678499487745/ELECTRO.png')
+    await bot.send_message(bot.get_channel('656535174548553730'), '**From:** {} ({})\n**To:** {} ({})\n**Message Guild:** {}'.format(ctx.message.author, ctx.message.id, user, user.id, ctx.message.server.name))
+    await bot.send_message(bot.get_channel('656535174548553730'), embed=embed)
     
 @bot.command(pass_context = True)
 async def customembed(ctx, msg:str, *, msg2:str):
