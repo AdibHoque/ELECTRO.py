@@ -238,7 +238,7 @@ async def verify(ctx):
 @commands.has_permissions(manage_nicknames=True)     
 async def setnick(ctx, user: discord.Member, *, nickname):
     await bot.change_nickname(user, nickname)
-    await bot.say("<a:ElectroSuccess:656772759812046851> | {}'s nickname was changed to {}!".format(user, nickname))
+    await bot.say("<a:ElectroCheck:709464171825201315> | {}'s nickname was changed to {}!".format(user, nickname))
     await bot.delete_message(ctx.message)
 
 @bot.command(pass_context=True, aliases=['link', 'links', 'addbot', 'server', 'auth'])
@@ -252,7 +252,7 @@ async def invite():
 
 @bot.command(pass_context=True)  
 @commands.has_permissions(kick_members=True)     
-async def kick(ctx, user:discord.Member, *, reason:str):
+async def kick(ctx, user:discord.Member, *, reason:str=None):
     if user is None or reason is None:
       await bot.say('<a:ElectroFail:656772856184832025> | **Please mention a user to kick & specify a reason for kicking out!**\nEXAMPLE:`e!kick <@user or id> <reason>`')
     if user.server_permissions.kick_members:
@@ -261,7 +261,7 @@ async def kick(ctx, user:discord.Member, *, reason:str):
     else:
       await bot.send_message(user, 'You were kicked out from **{}**, {}!'.format(ctx.message.server.name, reason))
       await bot.kick(user)
-      await bot.say('<a:ElectroSuccess:656772759812046851> | {} was kicked, {}!'.format(user, reason))
+      await bot.say('<a:ElectroCheck:709464171825201315> | {} was kicked, {}!'.format(user, reason))
       await bot.delete_message(ctx.message)
       for channel in ctx.message.author.server.channels:
         if channel.name == '⚡electro-logs':
@@ -281,7 +281,7 @@ async def ban(ctx, user:discord.Member, *, reason:str=None):
     else:
       await bot.send_message(user, 'You were banned from **{ctx.message.server.name}**, {reason}!'.format(ctx.message.server.name, reason))
       await bot.kick(user)
-      await bot.say('<a:ElectroSuccess:656772759812046851> | {} was banned, {}!'.format(user, reason))
+      await bot.say('<a:ElectroCheck:709464171825201315> | {} was banned, {}!'.format(user, reason))
       await bot.delete_message(ctx.message)
       for channel in ctx.message.author.server.channels:
         if channel.name == '⚡electro-logs':
@@ -296,7 +296,7 @@ async def unban(ctx, identification:str):
     user = await bot.get_user_info(identification)
     await bot.unban(ctx.message.server, user)
     try:
-        await bot.say(f'<a:ElectroSuccess:656772759812046851> | **{user} was unbanned!**')
+        await bot.say(f'<a:ElectroCheck:709464171825201315> | **{user} was unbanned!**')
         for channel in ctx.message.server.channels:
           if channel.name == '⚡electro-logs':
               embed=discord.Embed(title="UNBAN COMMAND USED", description="**User:** {0}\n**Moderator:**{1}**".format(user, ctx.message.author), color=0xFFBF00)
@@ -363,7 +363,7 @@ async def emoji(ctx, emoji=None):
 async def dm(ctx, user: discord.User, *, message=None):
     message = message or "This Message is sent via DM"
     await bot.send_message(user, message)
-    await bot.say('<a:ElectroSuccess:656772759812046851>YOUR DM WAS SENT!')
+    await bot.say('<a:ElectroCheck:709464171825201315> | YOUR DM WAS SENT!')
     await bot.delete_message(ctx.message)
     embed = discord.Embed(title="{}".format(ctx.message.author), description="{}".format(message), color = 0xFFBF00)
     embed.set_thumbnail(url= ctx.message.author.avatar_url)
@@ -400,7 +400,7 @@ async def purge(ctx, number):
     async for x in bot.logs_from(ctx.message.channel, limit = numb):
         mgs.append(x)
     await bot.delete_messages(mgs)
-    response = await bot.say('<a:ElectroSuccess:656772759812046851> | {} MESSAGES WERE DELETED!'.format(numba))
+    response = await bot.say('<a:ElectroCheck:709464171825201315> | {} MESSAGES WERE DELETED!'.format(numba))
     await asyncio.sleep(3)
     await bot.delete_message(response)
 
@@ -469,7 +469,7 @@ async def giverole(ctx, user: discord.Member, *, role: discord.Role = None):
 		return await bot.say("Please specify a role to give! ")
 	if role not in user.roles:
 		await bot.add_roles(user, role)
-		return await bot.say("<a:ElectroSuccess:656772759812046851> **{}** role has been added to **{}**.".format(role, user))
+		return await bot.say("<a:ElectroCheck:709464171825201315> | **{}** role has been added to **{}**.".format(role, user))
 
 @bot.command(pass_context = True)
 @commands.has_permissions(manage_roles=True)
@@ -518,7 +518,7 @@ async def removerole(ctx, user: discord.Member, *, role: discord.Role = None):
 		return await bot.say('Please specify a role to remove!')
 	if role in user.roles:
 		return await bot.remove_roles(user, role)
-		return await bot.say("<:ElectroSucess:527118398753079317> **{}** role has been removed from **{}**.".format(role, user))
+		return await bot.say("<a:ElectroCheck:709464171825201315> **{}** role has been removed from **{}**.".format(role, user))
 
 @bot.command(pass_context=True, aliases=['serveri'])
 async def serverinfo(ctx):
@@ -636,14 +636,14 @@ async def role(ctx, user:discord.Member=None,*, role:discord.Role=None):
         return
     if role in user.roles:
         await bot.remove_roles(user, role)
-        await bot.say("<a:ElectroSuccess:656772759812046851> Changed roles for {}, -{}".format(user, role))
+        await bot.say("<a:ElectroCheck:709464171825201315> | Changed roles for {}, -{}".format(user, role))
         return
     if role not in ctx.message.server.roles:
         await bot.say(f"There isn't any role named {role}.Please specify a valid role!")
         return
     else:
         await bot.add_roles(user, role)
-        await bot.say("<a:ElectroSuccess:656772759812046851> Changed roles for {}, +{}".format(user, role))
+        await bot.say("<a:ElectroCheck:709464171825201315> | Changed roles for {}, +{}".format(user, role))
         return
         
 @bot.command(pass_context=True)
@@ -948,7 +948,7 @@ async def rolecolor(ctx, role:discord.Role=None, value:str=None):
         colo = '0x' + value
         user = ctx.message.author
         await bot.edit_role(ctx.message.server, role, color = discord.Color(int(colour, base=16)))
-        embed=discord.Embed(description="<a:ElectroSuccess:656772759812046851> {} ROLE COLOR HAS BEEN CHANGED!".format(role.mention), color=0xFFBF00)
+        embed=discord.Embed(description="<a:ElectroCheck:709464171825201315> {} ROLE COLOR HAS BEEN CHANGED!".format(role.mention), color=colo)
         await bot.say(embed=embed) 
         
 @bot.command(pass_context = True)
@@ -980,7 +980,7 @@ async def unbanall(ctx):
       server=ctx.message.server
       ban_list=await bot.get_bans(server)
       channel = ctx.message.channel
-      embed=discord.Embed(description="<a:ElectroSuccess:656772759812046851> Unbanning {} Users!".format(len(ban_list)), color=0xFFBF00)
+      embed=discord.Embed(description="<a:ElectroCheck:709464171825201315> | Unbanning {} Users!".format(len(ban_list)), color=0xFFBF00)
       await bot.send_message(channel, embed=embed)
       for member in ban_list:
       	await bot.unban(server,member)
@@ -1020,11 +1020,11 @@ async def lockdown(ctx, channelname: discord.Channel=None):
     if not channelname:
         role = discord.utils.get(ctx.message.server.roles, name='@everyone')
         await bot.edit_channel_permissions(ctx.message.channel, role, overwrite)
-        await bot.say("<a:ElectroSuccess:656772759812046851>**Channel Locked**\nUse `e!unlock` to unlock it!")
+        await bot.say("<a:ElectroCheck:709464171825201315> | **Channel Has Been Locked**\nUse `e!unlock` to unlock it!")
     else:
         role = discord.utils.get(ctx.message.server.roles, name='@everyone')
         await bot.edit_channel_permissions(channelname, role, overwrite)
-        await bot.say("<a:ElectroSuccess:656772759812046851>**Channel Locked**\nUse `e!unlock` to unlock it!")
+        await bot.say("<a:ElectroCheck:709464171825201315> | **Channel Has Been Locked**\nUse `e!unlock` to unlock it!")
 	
 @bot.command(pass_context = True)
 @commands.has_permissions(kick_members=True) 
@@ -1033,11 +1033,11 @@ async def unlock(ctx, channelname: discord.Channel=None):
     if not channelname:
         role = discord.utils.get(ctx.message.server.roles, name='@everyone')
         await bot.edit_channel_permissions(ctx.message.channel, role, overwrite)
-        await bot.say("<a:ElectroSuccess:656772759812046851>**Channel Unlocked**\nUse `e!lockdown` to lock it!")
+        await bot.say("<a:ElectroCheck:709464171825201315> | **Channel Has Been Unlocked**\nUse `e!lockdown` to lock it!")
     else:
         role = discord.utils.get(ctx.message.server.roles, name='@everyone')
         await bot.edit_channel_permissions(channelname, role, overwrite)
-        await bot.say("<a:ElectroSuccess:656772759812046851>**Channel Unlocked**\nUse `e!lockdown` to lock it!")
+        await bot.say("<a:ElectroCheck:709464171825201315> | **Channel Has Been Unlocked**\nUse `e!lockdown` to lock it!")
        	
 @bot.event
 async def on_message_edit(before, after):
@@ -1452,20 +1452,20 @@ async def mute(ctx, member: discord.Member=None):
 	else:
 		role = discord.utils.get(member.server.roles, name='Muted')
 		await bot.add_roles(member, role)
-		await bot.say("<a:ElectroSuccess:656772759812046851> **{} WAS MUTED!**".format(member.name))
+		await bot.say("<a:ElectroCheck:709464171825201315> | **{} WAS MUTED!**".format(member.name))
 		await bot.send_message(member, "You were muted by **{0}** from **{1}**!".format(ctx.message.author, ctx.message.server.name))
  
 @bot.command(pass_context = True)
 @commands.has_permissions(kick_members=True) 
 async def unmute(ctx, member: discord.Member=None):
     if member is None:
-      await bot.say('<a:ElectroSuccess:656772759812046851> **PLEASE SPECIFY A USER TO UNMUTE!**')
+      await bot.say('<a:ElectroCheck:709464171825201315> | **PLEASE SPECIFY A USER TO UNMUTE!**')
     if ctx.message.author.bot:
       return
     else:
       role = discord.utils.get(member.server.roles, name='Muted')
       await bot.remove_roles(member, role)
-      await bot.say("<a:ElectroSuccess:656772759812046851> **{} WAS UNMUTED!**".format(member))
+      await bot.say("<a:ElectroCheck:709464171825201315> | **{} WAS UNMUTED!**".format(member))
       
 @commands.group(invoke_without_command=True)
 async def invoice(ctx):
