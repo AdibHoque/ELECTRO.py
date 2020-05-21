@@ -948,7 +948,7 @@ async def rolecolor(ctx, role:discord.Role=None, value:str=None):
         colo = '0x' + value
         user = ctx.message.author
         await bot.edit_role(ctx.message.server, role, color = discord.Color(int(colour, base=16)))
-        embed=discord.Embed(description="<a:ElectroCheck:709464171825201315> {} ROLE COLOR HAS BEEN CHANGED!".format(role.mention), color=colo)
+        embed=discord.Embed(description="<a:ElectroCheck:709464171825201315> {} ROLE COLOR HAS BEEN CHANGED!".format(role.mention), color='{colo}')
         await bot.say(embed=embed) 
         
 @bot.command(pass_context = True)
