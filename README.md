@@ -40,7 +40,7 @@
 `play`, `skip`, `stop`, `pause`, `resume`, `volume`, `np`, `queue` 
 </ul>
 <details>
-  <summary>● NSFW - 41) Click to show!</summary> 
+  <summary>● NSFW - (41) Click to show!</summary> 
 boobs, pussy, dick, ass, thighs, pgif, 4k, anal, upskirt, milf, asian, panties, cosplay, uniform, scporn, miakhalifa, schoolgirl, celebrity, indian, pornhub, pornstar, classic, blowjob, hentai, hass, hanal, hthighs, hneko, hkitsune, girlsolo, pussygif, feet, femdom, pussyart, smallboobs, girlsologif, classic, cumsluts, hgif, bjgif, lesbian 
 </details> 
 
