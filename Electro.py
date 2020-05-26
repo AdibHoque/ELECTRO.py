@@ -25,7 +25,7 @@ helpm.add_field(name = '<:ElectroModerationBadge:680783390999314466> MODERATION 
 helpm.add_field(name = '<:ElectroFunBadge:680783413065941002> FUN COMMANDS - (26)',value ='`triggered`, `brazzers`, `burn`, `gay`, `missionpassed`, `thanos`, `rip`, `meme`, `pat`, `love`, `slap`, `kiss`, `hug`, `cuddle`, `spank`, `tweet`, `phubcomment`, `howgay`, `whowouldwin`, `captcha`, `magik`, `deepfry`,`iphonex`, `threats`, `clyde`, `trash`',inline = False)
 helpm.add_field(name = '<:ElectroMusicBadge:680783435123654657> MUSIC COMMANDS - (8)',value ='`play`, `skip`, `stop`, `NP`, `queue`, `pause`, `resume`, `volume`',inline = False)
 helpm.add_field(name = '<:ElectroNSFWBadge:680783452563439774> NSFW COMMANDS - (41)',value ='On Public Demand NSFW Commands Are Moved To `e!help nsfw`!')
-helpm.add_field(name = '<:ElectroBookmark:668018207549816833> USEFUL LINKS:',value ='[ADD BOT](https://discordapp.com/oauth2/authorize?client_id=629323586930212884&permissions=2146827775&redirect_uri=https%3A%2F%2Fdiscord.gg%2dAggRh9&response_type=code&scope=guilds.join%20bot) | [JOIN GUILD](https://discord.gg/dAggRh9) | [UPVOTE](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
+helpm.add_field(name = '<:ElectroBookmark:668018207549816833> USEFUL LINKS:',value ='[ADD BOT](https://discordapp.com/oauth2/authorize?client_id=629323586930212884&permissions=2146827775&redirect_uri=https%3A%2F%2Fdiscord.gg%2dAggRh9&response_type=code&scope=guilds.join%20bot) | [JOIN GUILD](https://discord.gg/dAggRh9) | [VOTE](https://discordbots.org/bot/629323586930212884/vote) | [WEBSITE](https://electro-bot.glitch.me/)',inline = False)
 helpm.set_footer(text ='© 2020 ELECTRO, Inc.')
 
 def is_premium(ctx):
