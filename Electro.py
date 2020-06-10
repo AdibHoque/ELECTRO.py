@@ -1130,14 +1130,12 @@ async def on_reaction_remove(reaction, user):
         
 @bot.event
 async def on_message(message):
-	if not message.author.bot:
-		await bot.process_commands(message)
-	if '<@496978159724396545>' in message.content:
-		emoji = 'a:NeonAdib:674927898100236308'
+        if not message.author.bot:
+                await bot.process_commands(message)
+        if '<@496978159724396545>' in message.content:
+                emoji = 'a:NeonAdib:674927898100236308'
                 await bot.add_reaction(message, emoji)
-        if message.author.id == "496978159724396545" and message.server.id == "646262196975960074":
-                await bot.add_reaction(message, ⭐)
-	if message.server is None and message.author != bot.user:
+        if message.server is None and message.author != bot.user:
                 channe = bot.get_channel('656535174548553730')
                 electrosucess = 'a:ElectroSuccess:656772759812046851'
                 await bot.add_reaction(message, electrosucess)
