@@ -1,21 +1,23 @@
- [
  "Normal": {
   "strong": "", 
   "weak": "Ghost",
   "resistant": "Steel, Ghost, Fighting",
-  "vulnerable": "Fighting"
+  "vulnerable": "Fighting",
+  "immune": "Ghost" 
   },
  "Fighting": {
   "strong": "Normal, Rock, Steel, Ice, Dark", 
   "weak": "Flying, Poison, Psychic, Bug, Ghost, Fairy",
   "resistant": "Rock, Bug, Dark",
-  "vulnerable": "Flying, Psychic, Fairy"
+  "vulnerable": "Flying, Psychic, Fairy",
+  "immune": "Ghost" 
   },
   "Flying": {
   "strong": "Fighting, Bug, Grass", 
   "weak": "Rock, Steel, Electric",
   "resistant": "Fighting, Ground, Bug, Grass",
-  "vulnerable": "Rock, Electric, Ice"
+  "vulnerable": "Rock, Electric, Ice",
+  "immune": "Ground" 
   },
  "Poison": {
   "strong": "Grass, Fairy", 
@@ -27,11 +29,12 @@
   "strong": "Poison, Rock, Steel, Fire, Electric", 
   "weak": "Flying, Bug, Grass",
   "resistant": "Poison, Rock, Electric",
-  "vulnerable": "Water, Grass, Ice"
+  "vulnerable": "Water, Grass, Ice",
+  "immune": "Electric"
   }, 
 "Rock": {
   "strong": "Flying, Bug, Fire, Ice", 
-  "weak": "Fighting, Ground, Steel",
+  "weak": "Fighting, Grougoeel",
   "resistant": "Normal, Flying, Poison, Fire",
   "vulnerable": "Fighting, Ground, Steel, Water, Grass"
   }, 
@@ -45,13 +48,15 @@
   "strong": "Ghost, Psychic", 
   "weak": "Normal, Dark",
   "resistant": "Normal, Fighting, Poison, Bug",
-  "vulnerable": "Ghost, Dark"
+  "vulnerable": "Ghost, Dark",
+  "immune": "Normal, Fighting" 
   }, 
 "Steel": {
   "strong": "Rock, Ice, Fairy", 
   "weak": "Steel, Fire, Water, Electric",
   "resistant": "Normal, Flying, Poison, Rock, Bug, Steel, Grass, Psychic, Ice, Dragon, Fairy",
-  "vulnerable": "Fighting, Ground, Fire"
+  "vulnerable": "Fighting, Ground, Fire",
+  "immune": "Poison" 
   }, 
 "Fire": {
   "strong": "Bug, Steel, Grass, Ice", 
@@ -99,12 +104,13 @@
   "strong": "Fighting, Dragon, Dark", 
   "weak": "Poison, Steel, Fire",
   "resistant": "Fighting, Bug, Dragon, Dark",
-  "vulnerable": "Poison, Steel"
+  "vulnerable": "Poison, Steel",
+  "immune": "Dragob" 
   }, 
 "Dark": {
   "strong": "Ghost, Psychic", 
   "weak": "Fighting, Dark, Fairy",
   "resistant": "Ghost, Psychic, Dark",
-  "vulnerable": "Fighting, Bug, Fairy"
+  "vulnerable": "Fighting, Bug, Fairy",
+  "immune": "Psychic" 
   }
-]
