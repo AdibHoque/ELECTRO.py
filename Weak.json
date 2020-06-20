@@ -11,3 +11,10 @@
   "resistant": "Rock, Bug, Dark",
   "vulnerable": "Flying, Psychic, Fairy"
   },
+  "Flying" {
+  "strong": "Fighting, Bug, Grass", 
+  "weak": "Rock, Steel, Electric",
+  "resistant": "Fighting, Ground, Bug, Grass",
+  "vulnerable": "Rock, Electric, Ice"
+  },
+ 
