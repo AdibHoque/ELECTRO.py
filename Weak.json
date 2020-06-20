@@ -28,17 +28,17 @@
   "resistant": "Poison, Rock, Electric",
   "vulnerable": "Water, Grass, Ice"
   }, 
-"": {
-  "strong": "", 
-  "weak": "",
-  "resistant": "",
-  "vulnerable": ""
+"Rock": {
+  "strong": "Flying, Bug, Fire, Ice", 
+  "weak": "Fighting, Ground, Steel",
+  "resistant": "Normal, Flying, Poison, Fire",
+  "vulnerable": "Fighting, Ground, Steel, Water, Grass"
   }, 
-"": {
-  "strong": "", 
-  "weak": "",
-  "resistant": "",
-  "vulnerable": ""
+"Bug": {
+  "strong": "Grass, Psychic, Dark", 
+  "weak": "Fighting, Flying, Poison, Ghost, Steel, Fire, Fairy",
+  "resistant": "Fighting, Ground, Grass",
+  "vulnerable": "Flying, Rock, Fire"
   }, 
 "": {
   "strong": "", 
