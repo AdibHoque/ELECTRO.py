@@ -76,17 +76,17 @@
   "resistant": "Flying, Steel, Electric",
   "vulnerable": "Ground"
   }, 
-"": {
-  "strong": "", 
-  "weak": "",
-  "resistant": "",
-  "vulnerable": ""
+"Psychic": {
+  "strong": "Fighting, Poison", 
+  "weak": "Steel, Psychic, Dark",
+  "resistant": "Fighting, Psychic",
+  "vulnerable": "Bug, Ghost, Dark"
   }, 
-"": {
-  "strong": "", 
-  "weak": "",
-  "resistant": "",
-  "vulnerable": ""
+"Ice": {
+  "strong": "Flying, Ground, Grass, Dragon", 
+  "weak": "Steel, Fire, Water, Ice",
+  "resistant": "Ice",
+  "vulnerable": "Fighting, Rock, Steel, Fire"
   }, 
 "": {
   "strong": "", 
