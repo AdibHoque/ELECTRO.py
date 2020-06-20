@@ -1,4 +1,13 @@
-{ "type": "Normal" {
-  "strong": "Rock", 
+{ "type": 
+ "Normal" {
+  "strong": "", 
   "weak": "Ghost",
-  "resistant": Steel	Ghost	Fighting
+  "resistant": "Steel, Ghost, Fighting",
+  "vulnerable": "Fighting"
+  },
+ "" {
+  "strong": "", 
+  "weak": "",
+  "resistant": "",
+  "vulnerable": ""
+  },
