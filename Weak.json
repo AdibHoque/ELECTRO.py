@@ -58,23 +58,23 @@
   "resistant": "Bug, Steel, Fire, Grass, Ice",
   "vulnerable": "Ground, Rock, Water"
   }, 
-"": {
-  "strong": "", 
-  "weak": "",
-  "resistant": "",
-  "vulnerable": ""
+"Water": {
+  "strong": "Ground, Rock, Fire", 
+  "weak": "Water, Grass, Dragon",
+  "resistant": "Steel, Fire, Water, Ice",
+  "vulnerable": "Grass, Electric"
   }, 
-"": {
-  "strong": "", 
-  "weak": "",
-  "resistant": "",
-  "vulnerable": ""
+"Grass": {
+  "strong": "Ground, Rock, Water", 
+  "weak": "Flying, Poison, Bug, Steel, Fire, Grass, Dragon",
+  "resistant": "Ground, Water, Grass, Electric",
+  "vulnerable": "Flying, Poison, Bug, Fire, Ice"
   }, 
-"": {
-  "strong": "", 
-  "weak": "",
-  "resistant": "",
-  "vulnerable": ""
+"Electric": {
+  "strong": "Flying, Water", 
+  "weak": "Ground, Grass, Electric, Dragon",
+  "resistant": "Flying, Steel, Electric",
+  "vulnerable": "Ground"
   }, 
 "": {
   "strong": "", 
