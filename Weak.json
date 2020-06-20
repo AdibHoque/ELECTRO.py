@@ -1,4 +1,5 @@
- {"Normal": {
+ [
+ "Normal": {
   "strong": "", 
   "weak": "Ghost",
   "resistant": "Steel, Ghost, Fighting",
@@ -106,5 +107,4 @@
   "resistant": "Ghost, Psychic, Dark",
   "vulnerable": "Fighting, Bug, Fairy"
   }
-}
- 
+]
