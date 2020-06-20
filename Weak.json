@@ -5,9 +5,9 @@
   "resistant": "Steel, Ghost, Fighting",
   "vulnerable": "Fighting"
   },
- "" {
-  "strong": "", 
-  "weak": "",
-  "resistant": "",
-  "vulnerable": ""
+ "Fighting" {
+  "strong": "Normal, Rock, Steel, Ice, Dark", 
+  "weak": "Flying, Poison, Psychic, Bug, Ghost, Fairy",
+  "resistant": "Rock, Bug, Dark",
+  "vulnerable": "Flying, Psychic, Fairy"
   },
