@@ -34,7 +34,7 @@
   }, 
 "Rock": {
   "strong": "Flying, Bug, Fire, Ice", 
-  "weak": "Fighting, Grougoeel",
+  "weak": "Fighting, Ground, Steel",
   "resistant": "Normal, Flying, Poison, Fire",
   "vulnerable": "Fighting, Ground, Steel, Water, Grass"
   }, 
@@ -105,7 +105,7 @@
   "weak": "Poison, Steel, Fire",
   "resistant": "Fighting, Bug, Dragon, Dark",
   "vulnerable": "Poison, Steel",
-  "immune": "Dragob" 
+  "immune": "Dragon" 
   }, 
 "Dark": {
   "strong": "Ghost, Psychic", 
