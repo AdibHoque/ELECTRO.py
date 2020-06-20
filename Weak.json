@@ -1,5 +1,4 @@
-{ "type": 
- "Normal" {
+ {"Normal" {
   "strong": "", 
   "weak": "Ghost",
   "resistant": "Steel, Ghost, Fighting",
@@ -17,4 +16,5 @@
   "resistant": "Fighting, Ground, Bug, Grass",
   "vulnerable": "Rock, Electric, Ice"
   },
+}
  
