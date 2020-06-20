@@ -40,23 +40,23 @@
   "resistant": "Fighting, Ground, Grass",
   "vulnerable": "Flying, Rock, Fire"
   }, 
-"": {
-  "strong": "", 
-  "weak": "",
-  "resistant": "",
-  "vulnerable": ""
+"Ghost": {
+  "strong": "Ghost, Psychic", 
+  "weak": "Normal, Dark",
+  "resistant": "Normal, Fighting, Poison, Bug",
+  "vulnerable": "Ghost, Dark"
   }, 
-"": {
-  "strong": "", 
-  "weak": "",
-  "resistant": "",
-  "vulnerable": ""
+"Steel": {
+  "strong": "Rock, Ice, Fairy", 
+  "weak": "Steel, Fire, Water, Electric",
+  "resistant": "Normal, Flying, Poison, Rock, Bug, Steel, Grass, Psychic, Ice, Dragon, Fairy",
+  "vulnerable": "Fighting, Ground, Fire"
   }, 
-"": {
-  "strong": "", 
-  "weak": "",
-  "resistant": "",
-  "vulnerable": ""
+"Fire": {
+  "strong": "Bug, Steel, Grass, Ice", 
+  "weak": "Rock, Fire, Water, Dragon",
+  "resistant": "Bug, Steel, Fire, Grass, Ice",
+  "vulnerable": "Ground, Rock, Water"
   }, 
 "": {
   "strong": "", 
