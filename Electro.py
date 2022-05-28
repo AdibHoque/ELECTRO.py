@@ -579,20 +579,6 @@ async def love(ctx, user: discord.Member = None, *, user2: discord.Member = None
             embed.set_image(url=res['message'])
             await bot.say(embed=embed)
  
-@bot.command(pass_context=True, aliases=['gayrate','howmuchgay','g8','lesborate'])
-async def howgay(ctx, user: discord.Member=None):
-        if user is None:
-                score = random.randint(0, 100)
-                filled_progbar = round(score / 100 * 10)
-                counter_ = '■' * filled_progbar + '□' * (10 - filled_progbar)
-                embed = discord.Embed(title=f'Gayrate of {ctx.message.author}',description=f':couple:[{counter_}](https://discord.gg/kuWVFpR):couple_mm: (**{score}%**)',color=0xFFBF00)
-                await bot.say(embed=embed)
-        else:
-                score = random.randint(0, 100)
-                filled_progbar = round(score / 100 * 10)
-                counter_ = '■' * filled_progbar + '□' * (10 - filled_progbar)
-                embed = discord.Embed(title=f'Gayrate of {user}',description=f' :couple:[{counter_}](https://discord.gg/kuWVFpR):couple_mm: (**{score}%**)',color=0xFFBF00)
-                await bot.say(embed=embed)
 
 @bot.command(pass_context = True)
 async def rolldice(ctx):
@@ -781,31 +767,6 @@ async def help(ctx, page: str=None):
             help4.set_footer(text ='© 2020 ELECTRO, Inc. | ADIB HOQUE#2212')
             await bot.send_message(ctx.message.author ,embed=help4)
             await bot.say('📨 Check Your DMs For Music Commands!')
-        elif page == '5':
-            help4 = discord.Embed(description='**[NSFW COMMANDS](https://discord.gg/kuWVFpR)**\n**REQUIRED:** A NSFW marked channel.', color = 0xFFBF00) 
-            help4.set_image(url = 'https://cdn.discordapp.com/attachments/656517276832366595/681510040372379688/ElectroHelp5.png')
-            help4.add_field(name = '<:boobs:686604888011964480> Boobs',value ='Image of women boobs!\n> Usage: `e!boobs`',inline = False)
-            help4.add_field(name = '<:pussy:686603137796014281> Pussy',value ='Image of women vagina!\n> Usage: `e!pussy`',inline = False)
-            help4.add_field(name = '<:ass:686604800930086990> Ass',value ='Image of women ass!\n> Usage: `e!ass`',inline = False)
-            help4.add_field(name = '<:thighs:686601878867673100> Thighs',value ='Image of women thighs!\n> Usage: `e!thigh` ',inline = False)
-            help4.add_field(name = '▶ Porngif',value ='A porn gif!\n> Usage: `e!porngif`',inline = False)
-            help4.add_field(name = '🎦 4k',value ='Ultra HD(4k) porn image!\n> Usage: `e!4k`',inline = False)
-            help4.add_field(name = '<:doggy:686601370043940921> Anal',value ='Image/gif of anal sex!\n> Usage: `e!anal`',inline = False)
-            help4.add_field(name = '<:hentai:686601945330614289> Hentai',value ='Everyones favorite Hentai gifs & images!\n> Usage: `e!hentai`',inline = False)
-            help4.add_field(name = '<:doggy:686601370043940921> Hentaianal',value ='Hentai image/gif of anal sex!\n> Usage:`e!hentaianal`',inline = False)
-            help4.add_field(name = '<:thighs:686601878867673100> Hentaithigh',value ='Hentai women thighs!\n> Usage: `e!hentaithigh`',inline = False)
-            help4.add_field(name = '<:hentaineko:686601982546673684> Hentaineko',value ='Hentai character neko(catgirl) images!\n> Usage: `e!hentaineko`',inline = False)
-            help4.add_field(name = '<:hentaikitsune:686602019808739338> Hentaikitsune',value ='Hentai character kitsune images!\n> Usage: `e!hentaikitsune`\n<:ElectroBookmark:668018207549816833> **[ADDITIONAL LINKS:](https://discord.gg/kuWVFpR)**\n[Add Bot](https://discordapp.com/api/oauth2/authorize?client_id=629323586930212884&permissions=8&scope=bot) | [Join Server](https://discord.gg/kuWVFpR ) | [Upvote](https://discordbots.org/bot/629323586930212884/vote)',inline = False)
-            help4.set_thumbnail(url ='https://cdn.discordapp.com/attachments/656517276832366595/680674342731907072/ElectroNSFWBadge.png')
-            help4.set_footer(text ='© 2020 ELECTRO, Inc. | ADIB HOQUE#2212')
-            await bot.send_message(ctx.message.author ,embed=help4)
-            await bot.say('📨 Check Your DMs For NSFW Commands!')
-        elif page == 'nsfw':
-            embed = discord.Embed(title= "NSFW COMMANDS",color = 0xFFBF00)
-            embed.add_field(name = 'Human Porn', value = '`boobs`, `pussy`, `dick`, `ass`, `thighs`, `pgif`, `4k`, `anal`, `gonewild`, `upskirt`, `milf`, `cosplay`, `uniform`, `scporn`, `public`, `asian`, `miakhalifa`, `indian`, `celebrity`, `schoolgirl`', inline = False)
-            embed.add_field(name = 'Hentai Porn', value = '`classic`, `blowjob`, `hentai`, `hass`, `hanal`, `hthighs`, `hneko`, `hkitsune`, `girlsolo`, `pussygif`, `feet`, `femdom`, `pussyart`, `smallboobs`, `girlsologif`, `cumsluts`, `hgif`, `bjgif`, `lesbian`', inline = False)
-            embed.add_field(name = 'Porn Search', value = '`pornhub`, `pornstar`', inline = False)
-            await bot.say(embed=embed)
         else:
             Return
 		
@@ -911,14 +872,6 @@ async def help4(ctx):
     await bot.send_message(author ,embed=embed)
     await bot.say('📨 Check Your DMs For Music Commands!')    
 
-@bot.command(pass_conext = True, aliases = ['NSFW','help-nsfw','help-NSFW'])
-async def nsfw(ctx):
-    channel = ctx.message.channel
-    embed = discord.Embed(title= "NSFW COMMANDS",color = 0xFFBF00)
-    embed.add_field(name = 'Human Porn', value = '`boobs`, `pussy`, `ass`, `thighs`, `porngif`, `4k`, `anal`, `gonewild`, `upskirt`', inline = False)
-    embed.add_field(name = 'Hentai Porn', value = '`classic`, `blowjob`, `hentai`, `hentaiass`, `hentaianal`, `hentaithighs`, `hentaineko`, `hentaikitsune`, `girlsolo`, `pussygif`, `feet`, `femdom`, `pussyart`, `smallboobs`, `girlsologif`, `cumsluts`, `randomhentaigif`, `bjgif`, `lesbian`', inline = False)
-    embed.add_field(name = 'Porn Search', value = '`pornhub`, `pornstar`', inline = False)
-    await bot.say(embed=embed)
 
 @bot.command(pass_context = True)
 @commands.check(is_owner)
@@ -1526,22 +1479,7 @@ async def membership(ctx, user: discord.Member, *,price: str):
         embed.timestamp = datetime.datetime.utcnow()
         embed.set_footer(text="Sold by: {}".format(ctx.message.author))
         await bot.say(embed=embed)
-	        
-@bot.command(pass_context=True)
-@commands.check(is_owner)
-async def searchforgays(ctx):
-	msg = await bot.say('🔍Searching for gays please wait<a:loading:587590269617176576>')
-	await asyncio.sleep(2)
-	await bot.edit_message(msg, 'Found An ant! #1')
-	await asyncio.sleep(2)
-	await bot.edit_message(msg, 'Found Glue! #2')
-	await asyncio.sleep(2)
-	await bot.edit_message(msg, 'Found Frigay! #3')
-	await asyncio.sleep(2)
-	await bot.edit_message(msg, 'Found Arigay! #4')
-	await asyncio.sleep(2)
-	await bot.edit_message(msg, ':gay_pride_flag:**Final Gay Match Results**:gay_pride_flag:\n4 Matches found:\nAn ant\nGlue\nFrigay\nArigay')
-	
+	        	
 @bot.command(pass_context = True)
 async def pokemon(ctx, *, pokemon: str):
 	embed=discord.Embed(color=0xFFBF00)
@@ -1663,9 +1601,6 @@ def _save():
     with open('amounts.json', 'w+') as f:
         json.dump(amounts, f)
 
-@bot.command(pass_context = True, aliases=['boobs','pussy','ass','thighs','anal','4k','pgif','gonewild','upskirt','hentai','hmidriff','hass','hanal','hthighs','hneko','hkitsune','blowjob','girlsolo','pussygif','feet','femdom','pussyart','smallboobs','girlsologif','classic','cumsluts','hgif','bjgif','lesbian','play','stop','pause','resume','queue','np','triggered','brazzers','burn','brilliance','bravery','balance','gay','missionpassed','thanos','rip','electroav','math','coronaav','coronaav-green','coronaav-purple','coronaav-pink','corona','joinchannel','leavechannel','testwelcomer','pornhub','pornstar','volume','profile','snipe','skip'])
-async def nsfwc(ctx):
-        print('{ctx.message.author} used {ctx.message.content}') 
  
 @bot.command(pass_connext = True, aliases=['setnickname', 'setgender', 'setbirthday', 'setdescription', 'rep', 'marry', 'propose', 'wed', 'helpprofile'])
 async def helpprofil():
