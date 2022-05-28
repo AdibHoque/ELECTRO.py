@@ -24,7 +24,6 @@ helpm.add_field(name = '<:ElectroGeneralBadge:680783367247364097> GENERAL COMMAN
 helpm.add_field(name = '<:ElectroModerationBadge:680783390999314466> MODERATION COMMANDS - (18)',value ='`kick`, `ban`, `setnick`, `role`, `say`, `embed`, `DM`, `english`, `rolecolor`, `lockdown`, `unlock`, `menro`, `mute`, `unmute`, `joinchannel`, `leavechannel`, `testwelcomer`, `poll`',inline = False)
 helpm.add_field(name = '<:ElectroFunBadge:680783413065941002> FUN COMMANDS - (26)',value ='`triggered`, `brazzers`, `burn`, `gay`, `missionpassed`, `thanos`, `rip`, `meme`, `pat`, `love`, `slap`, `kiss`, `hug`, `cuddle`, `spank`, `tweet`, `phubcomment`, `howgay`, `whowouldwin`, `captcha`, `magik`, `deepfry`,`iphonex`, `threats`, `clyde`, `trash`',inline = False)
 helpm.add_field(name = '<:ElectroMusicBadge:680783435123654657> MUSIC COMMANDS - (8)',value ='`play`, `skip`, `stop`, `NP`, `queue`, `pause`, `resume`, `volume`',inline = False)
-helpm.add_field(name = '<:ElectroNSFWBadge:680783452563439774> NSFW COMMANDS - (41)',value ='On Public Demand NSFW Commands Are Moved To `e!help nsfw`!')
 helpm.add_field(name = '<:ElectroBookmark:668018207549816833> USEFUL LINKS:',value ='[ADD BOT](https://discordapp.com/oauth2/authorize?client_id=629323586930212884&permissions=2146827775&redirect_uri=https%3A%2F%2Fdiscord.gg%2dAggRh9&response_type=code&scope=guilds.join%20bot) | [JOIN GUILD](https://discord.gg/dAggRh9) | [VOTE](https://discordbots.org/bot/629323586930212884/vote) | [WEBSITE](https://electro-bot.glitch.me/)',inline = False)
 helpm.set_footer(text ='© 2020 ELECTRO, Inc.')
 
@@ -731,10 +730,6 @@ async def help(ctx, page: str=None):
             help3.add_field(name = 'Cuddle',value ='Cuddles mentioned used!\n> Usage:``e!cuddle <@user>``',inline = False) 
             help3.add_field(name = 'Pat',value ='Pats mentioned user!\n> Usage:``e!pat <@user>``',inline = False) 
             help3.add_field(name = 'Tweet',value ='Generate a fake Twitter tweet!\n> Usage:``e!tweet [twitter name] [text]``',inline = False)
-            help3.add_field(name = 'PhubComment',value ='Generate a fake Pornhub comment!\n> Usage:``e!phubcomment [text]``',inline = False)
-            help3.add_field(name = 'Brazzers',value ='Generate a brazzers logo in users avatar!\n> Usage:`e!brazzers` || `e!brazzers <@user>`',inline = False)
-            help3.add_field(name = 'Burn',value ='Get a user avatar on fire!\n> Usage:`e!burn` || `e!burn <@user>`',inline = False) 
-            help3.add_field(name = 'Gay',value ='Make it look gay!\n> Usage:`e!gay` || `e!gay <@user>`',inline = False)
             help3.add_field(name = 'Missonpassed',value ='Generate a GTA mission passed stamp in user avatar!\n> Usage:`e!missionpassed` || `e!missionpassed <@user>`',inline = False) 
             help3.add_field(name = 'Thanos',value ='Snap mentioned users avatar!\n> Usage:`e!thanos` || `e!thanos <@user>`',inline = False) 
             help3.add_field(name = 'RIP',value ='Generate a rip image!\n> Usage:`e!rip` || `e!rip <@user>`',inline = False)  
